@@ -1,11 +1,13 @@
 
 import { Header } from "@/components/LandingPageComponents/Header";
+import { HeroSection } from "@/components/LandingPageComponents/HeroSection";
 
 
 const page = () => {
   return (
-    <div className="p-6">
+    <div className="my-4">
       <Header/>
+      <HeroSection/>
     </div>
   );
 }
