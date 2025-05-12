@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { IoIosMenu } from "react-icons/io";
+import { IoMdClose } from "react-icons/io";
 
 
 const desktopLinkClass = "hover:text-primary border-b-[3px] border-transparent  hover:border-primary duration-500  min-w-[20%] transition-all py-[3px]  text-center"
@@ -35,10 +36,10 @@ useEffect(()=>{
 
   return (
     <div className="mx-4 mdlg:static relative">
-        <div className="z-50 py-2 flex justify-between items-center bg-white">
+        <div className="z-50 py-4 flex justify-between items-center bg-white">
 
         <section>
-        <div className="relative w-[50px] h-[60px]">
+        <div className="relative mdlg:w-[50px] mdlg:h-[60px] h-[45px] w-[35px]">
         <Image alt="paige-logo" className="absolute top-0 left-0" src={"/paige-logo.jpg"} fill/>
         </div>
         </section>
@@ -52,11 +53,11 @@ useEffect(()=>{
 
 <section className=" ">
 <button className="mdlg:inline hidden bg-primary text-wht rounded-md h-[40px] px-4 cursor-pointer hover:bg-wht hover:text-primary border-[2px] border-primary transition-all duration-500  ">Find a Job</button>
-<button className="mdlg:hidden inline bg-primary text-wht rounded-md h-[40px] px-[3px] cursor-pointer hover:bg-wht hover:text-primary border-[2px] border-primary  transition-all duration-500 " onClick={()=> {
+<button className="mdlg:hidden inline bg-primary text-wht rounded-md h-[35px] px-[3px] cursor-pointer hover:bg-wht hover:text-primary border-[2px] border-primary  transition-all duration-500 " onClick={()=> {
     setShowNav(!showNav)
     console.log(showNav);
     
-}}><IoIosMenu size={30}/></button>
+}}> {showNav ? <IoMdClose size={30}/>: <IoIosMenu size={30}/>}</button>
 </section>
         </div>
         
