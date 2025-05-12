@@ -4,7 +4,7 @@ import { HeroSection } from "@/components/LandingPageComponents/HeroSection";
 
 export default function Home() {
   return (
-    <div className="">
+    <div className="my-4">
       <Header/>
       <HeroSection/>
     </div>

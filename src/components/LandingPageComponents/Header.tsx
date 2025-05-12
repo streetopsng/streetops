@@ -22,6 +22,7 @@ useEffect(()=>{
             top:"100%",
             opacity:1,
             duration:1,
+            
         })
     }
     else{
@@ -35,8 +36,8 @@ useEffect(()=>{
 
 
   return (
-    <div className=" lg:mx-16 md:mx-8 mx-4 mdlg:static relative">
-        <div style={{zIndex:"70px"}} className="  py-4 flex justify-between items-center bg-white">
+    <div  className=" lg:mx-24 md:mx-8 mx-4 mdlg:static relative">
+        <div style={{zIndex:10}} className="  py-4 flex justify-between items-center bg-white">
 
         <section>
         <div className="relative mdlg:w-[35px] mdlg:h-[50px] h-[45px] w-[35px]">
@@ -62,7 +63,7 @@ useEffect(()=>{
         </div>
         
 {/* Menu bar  for mobile*/}
-    <section className="bg-primary mdlg:hidden block absolute w-[100%] top-[100%] left-[0%] opacity-0" ref={mobileMenuRef} style={{zIndex:"30px"}}>
+    <section className="bg-primary mdlg:hidden block absolute w-[100%] top-[100%] left-[0%] opacity-0" ref={mobileMenuRef} style={{zIndex:5}} >
         <div className="flex flex-col " >
     <Link className={`${mobileLinkClass}`} href={"/"}>Home</Link>
     <Link className={`${mobileLinkClass}`} href={"/"}>About</Link>
