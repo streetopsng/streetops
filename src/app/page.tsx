@@ -1,9 +1,10 @@
+
 import { Header } from "@/components/LandingPageComponents/Header";
 
 
 const page = () => {
   return (
-    <div className="">
+    <div className="p-6">
       <Header/>
     </div>
   );
