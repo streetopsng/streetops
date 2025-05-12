@@ -1,9 +1,10 @@
-import Image from "next/image";
+import { Header } from "@/components/LandingPageComponents/Header";
+
 
 export default function Home() {
   return (
     <div className="">
-      <h1>Paige</h1>
+      <Header/>
     </div>
   );
 }
