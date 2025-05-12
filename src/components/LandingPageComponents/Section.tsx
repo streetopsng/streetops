@@ -41,10 +41,10 @@ const Section = () => {
         <div className="flex-1 bg-orange-200 p-6 rounded-lg flex flex-col items-center">
           <h2 className="font-semibold text-xl lg:text-2xl text-center">Solutions For Suppliers</h2>
           <p className="text-base pt-4 text-center">
-            We help suppliers get paid faster by providing them <br className='hidden sm:block' />
-            with access to financing options that allow them to <br className='hidden sm:block' />
-            receive payment for their invoices before they are due. <br className='hidden sm:block' />
-            This type of financing is also known as invoice financing <br className='hidden sm:block' />
+            We help suppliers get paid faster by providing them <br className='hidden sm:block md:block' />
+            with access to financing options that allow them to <br className='hidden sm:block md:block' />
+            receive payment for their invoices before they are due. <br className='hidden sm:block md:block' />
+            This type of financing is also known as invoice financing <br className='hidden sm:block md:block' />
             and provides suppliers with an efficient solution.
           </p>
           <Image alt="paige" src="/graph.png" width={400} height={250} className="mt-4 rounded-lg" />
@@ -54,10 +54,10 @@ const Section = () => {
         <div className="flex-1 bg-blue-100 p-6 rounded-lg flex flex-col items-center ">
           <h2 className="font-semibold text-xl lg:text-2xl text-center">Solutions For Financiers</h2>
           <p className="text-base pt-4 text-center">
-            We help suppliers get paid faster by providing them <br className='hidden sm:block' />
-            with access to financing options that allow them to <br className='hidden sm:block' />
-            receive payment for their invoices before they are due. <br className='hidden sm:block'/>
-            This type of financing is also known as invoice financing <br className='hidden sm:block' />
+            We help suppliers get paid faster by providing them <br className='hidden sm:block md:block' />
+            with access to financing options that allow them to <br className='hidden sm:block md:block' />
+            receive payment for their invoices before they are due. <br className='hidden sm:block md:block'/>
+            This type of financing is also known as invoice financing <br className='hidden sm:block md:block' />
             and provides suppliers with an efficient solution.
           </p>
           <Image alt="paige" src="/stat.png" width={300} height={200} className="mt-4 rounded-lg" />
