@@ -8,7 +8,7 @@ import { IoMdClose } from "react-icons/io";
 
 
 const desktopLinkClass = "hover:text-primary border-b-[3px] border-transparent  hover:border-primary duration-500  min-w-[20%] transition-all py-[3px]  text-center"
-const mobileLinkClass = "h-[50px] text-wht flex items-center transition-all duration-700 hover:bg-wht hover:text-primary px-4 border-primary border-[2px] hover:font-semibold hover:pl-2"
+const mobileLinkClass = "h-[50px] text-wht flex items-center transition-all duration-700 hover:bg-wht hover:text-primary px-4 border-primary border-[2px] hover:font-semibold hover:pl-2 "
 export const Header = () => {
 
     const [showNav,setShowNav] = useState<boolean>(false)
@@ -35,11 +35,11 @@ useEffect(()=>{
 
 
   return (
-    <div className="mx-4 mdlg:static relative">
-        <div className="z-50 py-4 flex justify-between items-center bg-white">
+    <div className=" lg:mx-16 md:mx-8 mx-4 mdlg:static relative">
+        <div style={{zIndex:"70px"}} className="  py-4 flex justify-between items-center bg-white">
 
         <section>
-        <div className="relative mdlg:w-[50px] mdlg:h-[60px] h-[45px] w-[35px]">
+        <div className="relative mdlg:w-[35px] mdlg:h-[50px] h-[45px] w-[35px]">
         <Image alt="paige-logo" className="absolute top-0 left-0" src={"/paige-logo.jpg"} fill/>
         </div>
         </section>
@@ -62,8 +62,8 @@ useEffect(()=>{
         </div>
         
 {/* Menu bar  for mobile*/}
-    <section className="z-[-50] mdlg:hidden block absolute w-[100%] top-[100%] left-[0%] opacity-0" ref={mobileMenuRef}>
-        <div className="flex flex-col bg-primary">
+    <section className="bg-primary mdlg:hidden block absolute w-[100%] top-[100%] left-[0%] opacity-0" ref={mobileMenuRef} style={{zIndex:"30px"}}>
+        <div className="flex flex-col " >
     <Link className={`${mobileLinkClass}`} href={"/"}>Home</Link>
     <Link className={`${mobileLinkClass}`} href={"/"}>About</Link>
     <Link className={`${mobileLinkClass}`} href={"/"}>Expertise</Link>
