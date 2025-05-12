@@ -1,9 +1,12 @@
-import React from 'react'
+import { Header } from "@/components/LandingPageComponents/Header";
+
 
 const page = () => {
   return (
-    <div>page</div>
-  )
+    <div className="">
+      <Header/>
+    </div>
+  );
 }
 
 export default page
