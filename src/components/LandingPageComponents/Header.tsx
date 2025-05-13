@@ -36,7 +36,7 @@ useEffect(()=>{
 
 
   return (
-    <div  className=" lg:mx-24 md:mx-8 mx-4 mdlg:static relative">
+    <div  className=" lg:mx-32 md:mx-8 mx-4 mdlg:static relative">
         <div style={{zIndex:10}} className="py-4 flex justify-between items-center  ">
 
         <section>

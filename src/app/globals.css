@@ -1,7 +1,16 @@
 @import "tailwindcss";
 
-body{
+/* body{
+background-color: #e0dcfa;
+} */
 
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 15s linear infinite;
 }
 
 @theme {
@@ -14,6 +23,7 @@ body{
   --color-blueI:#E9E8FA;
   --color-redI:#FFEFE7;
   --color-greenI:#E8F9FC;
+  --color-bgcolor:#f5f4fc;
 
   /* breakpoint */
   --breakpoint-xxs: 330px;
