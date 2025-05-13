@@ -51,7 +51,7 @@ Seamless Operations.
 
         
 <div className='relative lg:w-[420px] lg:h-[390px]  md:w-[390px] md:h-[360px] w-full min-h-[350px]'>
-    <Image alt='paige' src={"/man-shape.png"}  fill className=' absolute object-contain '/>
+    <Image alt='paige' src={"/people-search.png"}  fill className=' absolute object-contain '/>
     </div>
 {/* 
             <aside className='w-full h-full relative bg-[blue]'>
