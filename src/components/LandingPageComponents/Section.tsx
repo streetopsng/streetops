@@ -10,9 +10,9 @@ const Section = () => {
       {/* Header Section */}
       <div className="text-center space-y-4 max-w-2xl">
         <h1 className="font-semibold text-2xl sm:text-3xl lg:text-[2.7rem] leading-tight">
-          Enabling Millions of African
-          <br className="block sm:hidden" />
-          SMEs Get Financing
+          Expertise
+          {/* <br className="block sm:hidden" /> */}
+          
         </h1>
         <p className="text-base sm:text-lg">
           We offer a range of benefits that makes it the
@@ -28,34 +28,33 @@ const Section = () => {
       <div className="flex flex-col lg:flex-row items-center bg-purple-300 p-6 rounded-lg gap-6 w-full max-w-6xl">
         <div className="flex-1 space-y-4">
           <h2 className="font-semibold text-2xl lg:text-[2.2rem] leading-snug">
-            Solutions For
+          The Future of <span> </span>
             <br className="block sm:hidden" />
-            Buyers
+            Balanced Workforces.
           </h2>
           <p>
-            We help businesses free up working capital by accelerating <></>
-            <br className="hidden sm:block" />
+          Connecting you with exceptional talent and providing strategic automation guidance.
+          Recruiting across key industries and offering expertise in RPA, AI-driven automation, and workflow  optimization. <></>
+            {/* <br className="hidden sm:block" />
             payments to suppliers. This type of financing is also known as <></>
             <br className="hidden sm:block" />
             supply chain financing and provides businesses with an <></>
             <br className="hidden sm:block" />
-            efficient solution.
+            efficient solution. */}
           </p>
           <Link href="/#" className="text-primary flex items-center gap-2">
             Get Started <FaArrowRight />
           </Link>
         </div>
-        <Image alt="paige" src="/solution-1.png" width={300} height={300} />
+        <Image alt="paige" src="/connect.png" width={300} height={300} />
       </div>
 
       {/* Suppliers & Financiers Section */}
       <div className="flex flex-col lg:flex-row gap-6 w-full max-w-6xl">
-        {/* Suppliers */}
+        {/* People */}
         <div className="flex-1 bg-orange-200 p-6 rounded-lg flex flex-col items-center">
           <h2 className="font-semibold text-xl lg:text-2xl text-center">
-            Solutions For
-            <br className="block sm:hidden" />
-            Suppliers
+          People
           </h2>
           <p className="text-base pt-4 text-center">
             We help suppliers get paid faster by providing them <></>
@@ -70,19 +69,17 @@ const Section = () => {
           </p>
           <Image
             alt="paige"
-            src="/graph.png"
+            src="/people.png"
             width={250}
             height={250}
             className="mt-4 rounded-lg"
           />
         </div>
 
-        {/* Financiers */}
+        {/* Processes */}
         <div className="flex-1 bg-blue-100 p-6 rounded-lg flex flex-col items-center">
           <h2 className="font-semibold text-xl lg:text-2xl text-center">
-            Solutions For
-            <br className="block sm:hidden" />
-            Financiers
+           Processes
           </h2>
           <p className="text-base pt-4 text-center">
             We help suppliers get paid faster by providing them <></>
@@ -97,7 +94,7 @@ const Section = () => {
           </p>
           <Image
             alt="paige"
-            src="/stat.png"
+            src="/process.png"
             width={250}
             height={200}
             className="mt-4 rounded-lg"
