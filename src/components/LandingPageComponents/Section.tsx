@@ -109,7 +109,7 @@ const Section = () => {
   {/* Text Section */}
   <div className="flex-1 space-y-4">
     <h2 className="font-semibold text-2xl lg:text-[2.2rem] leading-snug">
-      Get many advantages when 
+      Get many advantages when <></>
       <br className="block sm:hidden" /><></>
        you use our application
     </h2>
