@@ -15,7 +15,7 @@ const Section = () => {
           SMEs Get Financing
         </h1>
         <p className="text-base sm:text-lg">
-          We offer a range of benefits that makes it
+          We offer a range of benefits that makes it the
           <span className="hidden sm:inline"> the </span>
           <span className="sm:hidden block"> </span>
           perfect choice for businesses <></>
