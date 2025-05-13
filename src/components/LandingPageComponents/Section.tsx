@@ -33,11 +33,11 @@ const Section = () => {
             Buyers
           </h2>
           <p>
-            We help businesses free up working capital by accelerating
+            We help businesses free up working capital by accelerating <></>
             <br className="hidden sm:block" />
-            payments to suppliers. This type of financing is also known as
+            payments to suppliers. This type of financing is also known as <></>
             <br className="hidden sm:block" />
-            supply chain financing and provides businesses with an
+            supply chain financing and provides businesses with an <></>
             <br className="hidden sm:block" />
             efficient solution.
           </p>
@@ -58,14 +58,14 @@ const Section = () => {
             Suppliers
           </h2>
           <p className="text-base pt-4 text-center">
-            We help suppliers get paid faster by providing them
+            We help suppliers get paid faster by providing them <></>
             <br className="hidden sm:block" />
-            with access to financing options that allow them to
+            with access to financing options that allow them to <></>
             <br className="hidden sm:block" />
-            receive payment for their invoices before they are due.
+            receive payment for their invoices before they are due.<></>
             <br className="hidden sm:block" />
-            This type of financing is also known as invoice financing
-            <br className="hidden sm:block" />
+            This type of financing is also known as invoice financing <></>
+            <br className="hidden sm:block" /> <></>
             and provides suppliers with an efficient
           </p>
           <Image
@@ -85,14 +85,14 @@ const Section = () => {
             Financiers
           </h2>
           <p className="text-base pt-4 text-center">
-            We help suppliers get paid faster by providing them
-            <br className="hidden sm:block" />
-            with access to financing options that allow them to
-            <br className="hidden sm:block" />
+            We help suppliers get paid faster by providing them <></>
+            <br className="hidden sm:block" /><></>
+            with access to financing options that allow them to <></>
+            <br className="hidden sm:block" /><></>
             receive payment for their invoices before they are due.
-            <br className="hidden sm:block" />
-            This type of financing is also known as invoice financing
-            <br className="hidden sm:block" />
+            <br className="hidden sm:block" /><></>
+            This type of financing is also known as invoice financing <></>
+            <br className="hidden sm:block" /><></>
             and provides suppliers with an efficient
           </p>
           <Image
@@ -110,16 +110,16 @@ const Section = () => {
   <div className="flex-1 space-y-4">
     <h2 className="font-semibold text-2xl lg:text-[2.2rem] leading-snug">
       Get many advantages when 
-      <br className="block sm:hidden" />
+      <br className="block sm:hidden" /><></>
        you use our application
     </h2>
     <p>
       We help businesses free up working capital by accelerating
-      <br className="hidden sm:block" />
+      <br className="hidden sm:block" /> <></>
       payments to suppliers. This type of financing is also known as
-      <br className="hidden sm:block" />
+      <br className="hidden sm:block" /> <></>
       supply chain financing and provides businesses with an
-      <br className="hidden sm:block" />
+      <br className="hidden sm:block" /> <></>
       efficient solution.
     </p>
     <button type="submit" className="bg-primary text-white p-2 rounded-lg">
