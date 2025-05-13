@@ -18,7 +18,7 @@ const Section = () => {
           We offer a range of benefits that makes it
           <span className="hidden sm:inline"> the </span>
           <span className="sm:hidden block"> </span>
-          perfect choice for businesses
+          perfect choice for businesses <></>
           <br className="hidden sm:block" />
           looking to optimize their cash flow and reduce supply chain risk.
         </p>
@@ -122,7 +122,7 @@ const Section = () => {
       <br className="hidden sm:block" /> <></>
       efficient solution.
     </p>
-    <button type="submit" className="bg-primary text-white p-2 rounded-lg">
+    <button type="submit" className="bg-primary text-white p-2 rounded-lg hover:bg-wht border-primary transition-all duration-500 hover:text-primary cursor-pointer">
       Read More
     </button>
   </div>
