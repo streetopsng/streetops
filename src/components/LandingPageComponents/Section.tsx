@@ -104,6 +104,33 @@ const Section = () => {
           />
         </div>
       </div>
+      {/* Get many advanatages section */}
+      <div className="flex flex-col-reverse lg:flex-row items-center mt-10 pt-10 p-6 rounded-lg gap-6 w-full max-w-6xl">
+  {/* Text Section */}
+  <div className="flex-1 space-y-4">
+    <h2 className="font-semibold text-2xl lg:text-[2.2rem] leading-snug">
+      Get many advantages when 
+      <br className="block sm:hidden" />
+       you use our application
+    </h2>
+    <p>
+      We help businesses free up working capital by accelerating
+      <br className="hidden sm:block" />
+      payments to suppliers. This type of financing is also known as
+      <br className="hidden sm:block" />
+      supply chain financing and provides businesses with an
+      <br className="hidden sm:block" />
+      efficient solution.
+    </p>
+    <button type="submit" className="bg-primary text-white p-2 rounded-lg">
+      Read More
+    </button>
+  </div>
+
+  {/* Image Section */}
+  <Image alt="paige" src="/solution-1.png" width={300} height={300} />
+</div>
+
     </div>
   );
 };
