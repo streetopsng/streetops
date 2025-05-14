@@ -42,9 +42,9 @@ const Section = () => {
             efficient solution. */}
            
           </p>
-          <Link href="/#" className="text-primary flex items-center gap-2">
+          {/* <Link href="/#" className="text-primary flex items-center gap-2">
             Get Started <FaArrowRight />
-          </Link>
+          </Link> */}
         </div>
         <Image alt="paige" src="/connect.png" width={300} height={300} />
       </div>

@@ -1,6 +1,7 @@
 "use client"
 import gsap from 'gsap';
 import Image from 'next/image'
+import { useRouter } from 'next/navigation';
 import React, { useEffect, useRef } from 'react'
 import { CiPlay1 } from "react-icons/ci";
 import { FaPlay } from "react-icons/fa";
@@ -8,6 +9,7 @@ const imageWidth = "mdlg:w-[330px] mdlg:h-[300px] w-[290px] h-[270px]"
 export const HeroSection = () => {
     const headerEl = useRef<HTMLHeadingElement | null >(null)
 
+    const router = useRouter()
 
     useEffect(()=>{
 gsap.fromTo(headerEl.current,{
@@ -34,11 +36,13 @@ Smart Talent,
 <br />
 Seamless Operations.
 </h1>
-<p className='text-[0.8rem] leading-6 my-8'>your partner for top talent  and transformative automation consulting.</p>
+<p className='mdlg:text-[1rem] text-[0.9] leading-6 my-8'>your partner for top talent  and transformative automation consulting.</p>
 
 <aside className='my-6 flex gap-x-8'>
-    <button className='bg-primary text-wht px-4 py-2 rounded-md border-[2px] hover:bg-wht border-primary transition-all duration-500 hover:text-primary cursor-pointer'>Find A Job</button> 
-    <button className='flex items-center'> <span className='bg-[#342AD51C] rounded-full w-[30px] h-[30px] flex items-center justify-center mr-2'><FaPlay  color='#100B59' size={10}/></span> How it works</button>
+    <button
+    onClick={()=> router.push("/jobs")}
+    className='bg-primary text-wht px-4 py-2 rounded-md border-[2px] hover:bg-wht border-primary transition-all duration-500 hover:text-primary cursor-pointer' >Find A Job</button> 
+    {/* <button className='flex items-center'> <span className='bg-[#342AD51C] rounded-full w-[30px] h-[30px] flex items-center justify-center mr-2'><FaPlay  color='#100B59' size={10}/></span> How it works</button> */}
 </aside>
         </section>
 

@@ -2,6 +2,7 @@
 import gsap from "gsap";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { IoIosMenu } from "react-icons/io";
 import { IoMdClose } from "react-icons/io";
@@ -13,6 +14,9 @@ export const Header = () => {
 
     const [showNav,setShowNav] = useState<boolean>(false)
 const mobileMenuRef = useRef<HTMLElement | null>(null)
+
+
+const router =useRouter()
 
 useEffect(()=>{
 
@@ -37,11 +41,21 @@ useEffect(()=>{
 
   return (
     <div  className=" xl:mx-32 md:mx-8 mx-4 mdlg:static relative">
-        <div style={{zIndex:10}} className="py-4 flex justify-between items-center  ">
+        <div style={{zIndex:10}} className="py-4 flex justify-between items-center ">
 
-        <section>
-        <div className="relative mdlg:w-[35px] mdlg:h-[50px] h-[45px] w-[35px]">
-        <Image alt="paige-logo" className="absolute top-0 left-0" src={"/paige-logo.jpg"} fill/>
+        <section className=" ">
+        <div 
+        // className="relative mdlg:w-[80px] mdlg:h-[80px] h-[60px] w-[50px] "
+        className="flex items-center pl-2 "
+        >
+        <Image alt="paige" 
+        // className="absolute top-10 left-0 object-contain"
+        className="object-contain"
+         src={"/paige.png"}
+        //  fill
+         width={58}
+         height={58}
+         />
         </div>
         </section>
 
@@ -53,7 +67,7 @@ useEffect(()=>{
 </section>
 
 <section className=" ">
-<button className="mdlg:inline hidden bg-primary text-wht rounded-md h-[40px] px-4 cursor-pointer hover:bg-wht hover:text-primary border-[2px] border-primary transition-all duration-500  ">Find a Job</button>
+<button className="mdlg:inline hidden bg-primary text-wht rounded-md h-[40px] px-4 cursor-pointer hover:bg-wht hover:text-primary border-[2px] border-primary transition-all duration-500" onClick={()=> router.push("/jobs")}>Find a Job</button>
 <button className="mdlg:hidden inline bg-primary text-wht rounded-md h-[35px] px-[3px] cursor-pointer hover:bg-wht hover:text-primary border-[2px] border-primary  transition-all duration-500 " onClick={()=> {
     setShowNav(!showNav)
     console.log(showNav);
@@ -68,7 +82,7 @@ useEffect(()=>{
     <Link className={`${mobileLinkClass}`} href={"/"}>Home</Link>
     <Link className={`${mobileLinkClass}`} href={"/"}>About</Link>
     <Link className={`${mobileLinkClass}`} href={"/"}>Expertise</Link>
-    <Link className={`${mobileLinkClass}`} href={"/"}>Find A Job</Link>
+    <Link className={`${mobileLinkClass}`} href={"/jobs"}>Find A Job</Link>
         </div>
     </section>
     </div>
