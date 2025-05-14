@@ -26,7 +26,7 @@ gsap.fromTo(headerEl.current,{
     <div style={{zIndex:2}} className='relative xl:px-32 md:px-8 px-4 flex py-8 md:flex-row flex-col'>
         {/* First Section */}
         <section className='px-2 md:w-[55%] w-full '>
-<span className='bg-[#2ABFD538] text-[#662AD5] inline-block px-4 rounded-xl text-[0.8rem] '>Powerful Platform</span>
+{/* <span className='bg-[#2ABFD538] text-[#662AD5] inline-block px-4 rounded-xl text-[0.8rem] '>Powerful Platform</span> */}
 <h1 ref={headerEl} className='font-semibold lg:text-[2.7rem] text-[2rem] opacity-0'>
 <strong>
 PAIGE:

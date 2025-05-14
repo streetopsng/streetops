@@ -1,4 +1,6 @@
 "use client"
+import HeroSection from '@/components/JobsPageComponents/HeroSection';
+import { Header } from '@/components/LandingPageComponents/Header';
 import { jobs } from '@/utils/jobs'
 import React, { useEffect, useState } from 'react'
 import { GrFormNext } from "react-icons/gr";
@@ -21,7 +23,9 @@ const page = () => {
 
   return (
     <div>
-        <h1 className=''>this page is currently undergoing maintenance,please check back later</h1>
+        {/* <Header/> */}
+        {/* <HeroSection/> */}
+        this page is currently undergoing maintenance,please check back later
     </div>
 //     <div className='xl:mx-32 md:mx-8 mx-4 '>
 

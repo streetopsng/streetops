@@ -4,7 +4,7 @@
 @import "tailwindcss";
 
 /* body{
-background-color: #e0dcfa;
+background-color: #10078c;
 } */
 
 @keyframes marquee {
@@ -20,6 +20,7 @@ background-color: #e0dcfa;
  
   /* Colors */
 
+  /* --color-primary:#10078c; */
   --color-primary:#100B59;
   --color-wht:#ffffff;
   --color-blk:#000000;
@@ -27,6 +28,17 @@ background-color: #e0dcfa;
   --color-redI:#FFEFE7;
   --color-greenI:#E8F9FC;
   --color-bgcolor:#f5f4fc;
+  /* shades of primary */
+  --color-primary-50:  #DBDDF9;
+  --color-primary-100: #BEBFE3;
+  --color-primary-200: #A1A1CC;
+  --color-primary-300: #8483B5;
+  --color-primary-400: #67659E;
+  --color-primary-500: #4A4787;
+  --color-primary-600: #2D2970;
+  --color-primary-700: #100B59;
+  --color-primary-800: #0E0A4F;
+  --color-primary-900: #0A073B;
 
   /* breakpoint */
   --breakpoint-xxs: 330px;
