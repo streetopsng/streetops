@@ -6,7 +6,7 @@ import { FaArrowRight } from 'react-icons/fa';
 
 const Section = () => {
   return (
-    <div className="xl:px-32 md:px-8 px-4 flex flex-col justify-start items-center min-h-screen px-4  lg:px-20 py-10 space-y-10 text-primary">
+    <div className="xl:px-32 md:px-8 px-4 flex flex-col bg-purple-200 justify-start items-center min-h-screen px-4  lg:px-20 py-10 space-y-10 text-primary">
       {/* Header Section */}
       {/* <div className="text-center space-y-4 max-w-2xl">
         <h1 className="font-semibold text-2xl sm:text-3xl lg:text-[2.7rem] leading-tight">
@@ -25,7 +25,7 @@ const Section = () => {
       </div> */}
 
       {/* work life balance */}
-      <div className="flex flex-col lg:flex-row  items-center bg-[#e0dcfa] p-6 rounded-lg gap-6 w-full max-w-6xl">
+      <div className="flex flex-col lg:flex-row  items-center  p-6 rounded-lg gap-6 w-full max-w-6xl">
         <div className="flex-1 space-y-4">
           <h2 className="font-semibold text-2xl lg:text-[2.2rem] leading-snug  lg:text-start text-center">
           The Future of <span> </span>
@@ -75,7 +75,7 @@ const Section = () => {
         </div>
 
         {/* Processes */}
-        <div className="flex-1 bg-purple-200 p-6 rounded-lg flex flex-col items-center">
+        <div className="flex-1 bg-purple-100 p-6 rounded-lg flex flex-col items-center">
           <h2 className=" uppercase font-semibold text-xl lg:text-2xl text-center">
            Processes
           </h2>
