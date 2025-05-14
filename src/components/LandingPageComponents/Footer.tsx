@@ -42,7 +42,7 @@ const Footer = () => {
               </Link>
             </div>
             <p className="text-sm">
-              © {new Date().getFullYear()} YourCompany. All rights reserved.
+              © {new Date().getFullYear()} Paige. All rights reserved.
             </p>
           </div>
         </div>
