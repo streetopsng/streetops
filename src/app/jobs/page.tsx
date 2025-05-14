@@ -46,9 +46,9 @@ return <div className={`flex justify-between items-center gap-x-[10px] border-gr
     <span className={spanClass}>{item.title}</span>
     <span className={spanClass}>{item.company}</span>
     <span className={spanClass}>{item.category}</span>
-    <div className={`w-[10%] flex justify-center mdlg:py-2`}>
+    <div className={`w-[10%] flex justify-center mdlg:py-2 y-[2px]`}>
         
-    <button className={`text-start bg-primary rounded-lg text-wht px-4 py-2 cursor-pointer hover:bg-wht  hover:text-primary border-[2px] border-primary transition-all duration-500`}>Apply</button>
+    <button className={`text-start bg-primary rounded-lg text-wht px-4 py-[4px] cursor-pointer hover:bg-wht  hover:text-primary border-[2px] border-primary transition-all duration-500`}>Apply</button>
     </div>
 </div>
 })}
