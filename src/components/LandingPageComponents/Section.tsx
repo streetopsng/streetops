@@ -6,7 +6,7 @@ import { FaArrowRight } from 'react-icons/fa';
 
 const Section = () => {
   return (
-    <div className="xl:px-32 md:px-8 px-4 flex flex-col justify-start items-center min-h-screen px-4  lg:px-20 py-10 space-y-10">
+    <div className="xl:px-32 md:px-8 px-4 flex flex-col justify-start items-center min-h-screen px-4  lg:px-20 py-10 space-y-10 text-primary">
       {/* Header Section */}
       {/* <div className="text-center space-y-4 max-w-2xl">
         <h1 className="font-semibold text-2xl sm:text-3xl lg:text-[2.7rem] leading-tight">
