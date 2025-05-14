@@ -30,8 +30,8 @@ const page = () => {
         {/* list of jobs */}
 
         <section>
-<div className='overflow-x-scroll md:overflow-x-hidden '>
-    <header className='flex justify-between items-center gap-x-[10px] text-wht w-full w-[1200px] bg-primary pl-2'>
+<div className='overflow-x-scroll md:overflow-x-hidden rounded-lg'>
+    <header className='flex justify-between items-center gap-x-[10px] text-wht md:w-full w-[1200px] bg-primary pl-2'>
         <span className={spanClass}>Title</span>
         <span className={spanClass}>Company</span>
         <span className={spanClass}>Category</span>
@@ -46,7 +46,7 @@ return <div className={`flex justify-between items-center gap-x-[10px] border-gr
     <span className={spanClass}>{item.title}</span>
     <span className={spanClass}>{item.company}</span>
     <span className={spanClass}>{item.category}</span>
-    <div className={`w-[10%] flex justify-center py-2`}>
+    <div className={`w-[10%] flex justify-center mdlg:py-2`}>
         
     <button className={`text-start bg-primary rounded-lg text-wht px-4 py-2 cursor-pointer hover:bg-wht  hover:text-primary border-[2px] border-primary transition-all duration-500`}>Apply</button>
     </div>
@@ -55,7 +55,7 @@ return <div className={`flex justify-between items-center gap-x-[10px] border-gr
 </div>
 <div className='flex justify-center my-4'>
     {/* prev btn */}
-    <button className='text-lg py-2 px-4' onClick={()=> {
+    <button className=' mdlg:py-2 py-[2px] mdlg:px-4 px-2' onClick={()=> {
     if (currentPage == 1) {
         console.log(currentPage,"cu");
         console.log(totalPages,"total");
@@ -63,17 +63,17 @@ return <div className={`flex justify-between items-center gap-x-[10px] border-gr
         return
     }
 setCurrentPage( currentPage - 1)
-    }}><GrFormPrevious className='text-[2rem] cursor-pointer' /></button>
+    }}><GrFormPrevious className='mdlg:text-[2rem] text-[1.5rem]' /></button>
     {Array(totalPages).fill("").map((item,index)=>{
         
-        return <button className={`text-lg py-2 px-4 rounded-lg cursor-pointer ${currentPage == index + 1 ? "bg-primary text-bgcolor " : "bg-bg-color"}`} onClick={(e)=>{
+        return <button className={`text-lg mdlg:py-2 py-[2px] mdlg:px-4 px-2 rounded-lg cursor-pointer ${currentPage == index + 1 ? "bg-primary text-bgcolor " : "bg-bg-color"}`} onClick={(e)=>{
             setCurrentPage(index + 1)
         }} key={index}>
             {index + 1} 
         </button>
     })}
     {/* Next btn */}
-    <button className='text-lg py-2 px-4 cursor-pointer' onClick={()=> 
+    <button className=' mdlg:py-2 py-[2px] mdlg:px-4 px-2 cursor-pointer' onClick={()=> 
         {
             if (currentPage == totalPages) {
                 console.log(currentPage,"cu");
@@ -83,7 +83,7 @@ setCurrentPage( currentPage - 1)
             }
             setCurrentPage( currentPage + 1)
 
-        }}><GrFormNext className='text-[2rem] ' /></button>
+        }}><GrFormNext className='mdlg:text-[2rem] text-[1.5rem] ' /></button>
 </div>
         </section>
     </div>
