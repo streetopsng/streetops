@@ -117,7 +117,7 @@ const Section = () => {
             ))}
           </div>
 
-          {/* Input */}
+          
           <div className="flex p-2 border-t">
             <input
               className="flex-1 border p-2 text-sm rounded-full focus:outline-none"
