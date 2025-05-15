@@ -91,7 +91,7 @@ const Section = () => {
         </button>
       ) : (
         <div className="fixed bottom-4 right-4 w-80 bg-white border border-gray-300 rounded-2xl shadow-xl z-50 flex flex-col overflow-hidden">
-          {/* Header */}
+          
           <div className="flex items-center justify-between p-4 border-b bg-purple-100 text-purple-800 font-semibold">
             <span>AI Assistant</span>
             <button onClick={() => setIsChatOpen(false)} aria-label="Close chat">
