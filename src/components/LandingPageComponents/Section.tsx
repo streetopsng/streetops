@@ -80,61 +80,7 @@ const Section = () => {
         </div>
       </div>
 
-      {/* Floating Chat Bubble + Chat UI */}
-      {!isChatOpen ? (
-        <button
-          className="fixed bottom-4 right-4 bg-purple-500 text-white p-4 rounded-full shadow-lg z-50 hover:bg-purple-600 transition"
-          onClick={() => setIsChatOpen(true)}
-          aria-label="Open chat"
-        >
-          <FaComments size={20} />
-        </button>
-      ) : (
-        <div className="fixed bottom-4 right-4 w-80 bg-white border border-gray-300 rounded-2xl shadow-xl z-50 flex flex-col overflow-hidden">
-          
-          <div className="flex items-center justify-between p-4 border-b bg-purple-100 text-purple-800 font-semibold">
-            <span>AI Assistant</span>
-            <button onClick={() => setIsChatOpen(false)} aria-label="Close chat">
-              <FaTimes />
-            </button>
-          </div>
-
-          {/* Messages */}
-          <div
-            id="chat-messages"
-            className="p-4 max-h-60 overflow-y-auto text-sm space-y-2 scrollbar-thin"
-          >
-            {messages.map((msg, idx) => (
-              <div key={idx} className={`${msg.role === 'user' ? 'text-right' : 'text-left'}`}>
-                <div
-                  className={`inline-block p-3 rounded-2xl max-w-[75%] ${
-                    msg.role === 'user' ? 'bg-purple-200 text-right' : 'bg-gray-100'
-                  }`}
-                >
-                  {msg.content}
-                </div>
-              </div>
-            ))}
-          </div>
-
-          
-          <div className="flex p-2 border-t">
-            <input
-              className="flex-1 border p-2 text-sm rounded-full focus:outline-none"
-              placeholder="Type a message..."
-              value={input}
-              onChange={(e) => setInput(e.target.value)}
-              onKeyDown={(e) => e.key === 'Enter' && sendMessage()}
-            />
-            <button
-              className="ml-2 text-sm bg-purple-500 text-white px-4 py-2 rounded-full hover:bg-purple-600 transition"
-              onClick={sendMessage}
-            >
-              Send
-            </button>
-          </div>
-        </div>
-      )}
+      
     </div>
   );
 };
