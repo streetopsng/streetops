@@ -15,7 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`bg-black text-wht `}
+        className={`bg-[#dabfff] text-primary `}
       >
         {children}
       </body>

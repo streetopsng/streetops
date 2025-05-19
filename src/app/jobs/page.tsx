@@ -1,5 +1,8 @@
 "use client"
 import HeroSection from '@/components/JobsPageComponents/HeroSection';
+import JobsListComponent from '@/components/JobsPageComponents/JobsListComponent';
+import LookingToHire from '@/components/JobsPageComponents/LookingToHire';
+import Testimonies from '@/components/JobsPageComponents/Testimonies';
 import { Header } from '@/components/LandingPageComponents/Header';
 import { jobs } from '@/utils/jobs'
 import React, { useEffect, useState } from 'react'
@@ -23,9 +26,12 @@ const page = () => {
 
   return (
     <div>
-        {/* <Header/> */}
-        {/* <HeroSection/> */}
-        this page is currently undergoing maintenance,please check back later
+        <Header/>
+        <HeroSection/>
+        <JobsListComponent/>
+        <LookingToHire/>
+        <Testimonies/>
+        {/* this page is currently undergoing maintenance,please check back later */}
     </div>
 //     <div className='xl:mx-32 md:mx-8 mx-4 '>
 
