@@ -78,7 +78,7 @@ return ()=> clearInterval(intervalID)
 <div className='flex flex-col justify-center h-full  gap-6 '>
 <div className='lg:text-[3.1rem] md:text-[2rem] text-[1.7rem] font-semibold lg:leading-[2.9rem] '>
 <h1 className=''>Pursue Your Career as a</h1>
-<h1 className='text-wht'>{words[wordIndex].slice(0,index)}|</h1>
+<h1 className='text-primary-200'>{words[wordIndex].slice(0,index)}|</h1>
 </div>
 
 
