@@ -12,7 +12,7 @@ const page = () => {
 
       <Header/>
       <HeroSection/> 
-      {/* <Sponsors/> */}
+      <Sponsors/>
   </div>
       <Section/>
       <Footer/>

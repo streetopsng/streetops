@@ -41,26 +41,6 @@ useEffect(()=>{
 
   return (
 
-
-    <div  className=" xl:mx-32 md:mx-8 mx-4 mdlg:static relative">
-<section className="w-full flex justify-between items-center glassphormism-header py-2  border-2 border-[white] rounded-full py-4 px-8">
-
-    <h1 className="text-primary  font-bold">
-        LOGO
-    </h1>
-
-    <aside className="w-[30%] flex justify-between">
-        <Link href={"/"}>Home</Link>
-        <Link href={"/"}>About</Link>
-        <Link href={"/"}>Expertise</Link>
-    </aside>
-
-    <button className="bg-primary text-wht px-4 py-2 rounded-full  hover:bg-wht border-primary transition-all duration-500 hover:text-primary cursor-pointer">Find a Job</button>
-</section>
-
-{/* FORMER LAYOUT, JUST REMOVE THE ASIDE ELEMETN WRAPPING IT */}
-    <aside className="hidden">
-
     <div  className=" xl:mx-32 md:mx-8 mx-4 mdlg:static relative">
         <div style={{zIndex:10}} className="py-4 flex justify-between items-center ">
 
@@ -108,8 +88,5 @@ useEffect(()=>{
     </section>
     </div>
 
-
-    </aside>
-</div>
   )
 }

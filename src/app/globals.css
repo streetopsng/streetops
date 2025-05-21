@@ -7,9 +7,9 @@
   background-image:radial-gradient(13% 15.5% at 78% 71%, #db3340 0%, rgba(255, 0, 0, 0) 100%), radial-gradient(14% 17% at 0% 0%, #db3340 0%, rgba(255, 0, 0, 0) 100%), linear-gradient(157deg, #fffdf4 0%, #fffdf4 100%)
 } */
 
-c{
+/* c{
   color: #bababa;
-}
+} */
 @keyframes marquee {
   0%   { transform: translateX(0); }
   100% { transform: translateX(-50%); }
@@ -20,7 +20,7 @@ c{
 
 }
 
-.glassphormism-header{
+/* .glassphormism-header{
   background: #ffc1c136;
   -webkit-backdrop-filter: blur(50px);
   backdrop-filter: blur(50px);
@@ -28,40 +28,33 @@ c{
   
   
   
-}
+} */
 
-.rad-gradient{
+/* .rad-gradient{
   background-image:radial-gradient(13% 15.5% at 78% 71%, #db3340 0%, rgba(255, 0, 0, 0) 100%), radial-gradient(14% 17% at 0% 0%, #db3340 0%, rgba(255, 0, 0, 0) 100%), linear-gradient(157deg, #000000 0%, #000000 100%)
 
 
-}
+} */
 
 
-.item-clip{
+/* .item-clip{
   clip-path: polygon(80.2% 0.3%, 100% 47%, 100% 100%, 0% 100%, 0% 0%);
-}
+} */
 @theme {
  
   /* Colors */
 
   /* --color-primary:#10078c; */
   /* FORMER */
-  /* --color-primary:#100B59;
+  --color-primary:#100B59;
   --color-wht:#ffffff;
   --color-blk:#000000;
   --color-blueI:#E9E8FA;
   --color-redI:#FFEFE7;
   --color-greenI:#E8F9FC;
-  --color-bgcolor:#f5f4fc; */
+  --color-bgcolor:#f5f4fc;
 
-  /*  CURRENT  */
-  --color-primary:#DB3340;
-  --color-wht:#ffffff;
-  --color-blk:#000000;
-  --color-blueI:#E9E8FA;
-  --color-redI:#FFEFE7;
-  --color-greenI:#E8F9FC;
-  --color-bgcolor:#FFFDF4;
+
   /* shades of primary */
   --color-primary-50:  #DBDDF9;
   --color-primary-100: #BEBFE3;

@@ -69,7 +69,7 @@ Seamless Operations.
 
         
 <div ref={imageDiv} className='relative lg:w-[420px] lg:h-[390px]  md:w-[390px] md:h-[360px] w-full min-h-[350px]'>
-    <Image alt='paige' src={"/office-ani.svg"}  fill className=' absolute object-contain '/>
+    <Image alt='paige' src={"/telework-amico.png"}  fill className=' absolute object-contain '/>
     </div>
         </section>
     </div>
