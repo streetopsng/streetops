@@ -7,10 +7,13 @@ import Sponsors from "@/components/LandingPageComponents/Sponsors";
 
 const page = () => {
   return (
-    <div className="my-4">
+    <div className="">
+  <div className="rad-gradient py-4">
+
       <Header/>
-      <HeroSection/>
-      <Sponsors/>
+      <HeroSection/> 
+      {/* <Sponsors/> */}
+  </div>
       <Section/>
       <Footer/>
     </div>
