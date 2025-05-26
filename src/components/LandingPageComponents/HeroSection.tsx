@@ -1,14 +1,18 @@
 "use client"
+import { dispatchType } from '@/store';
+import { closeSubmenu } from '@/store/slices/desktopSubmenuLinksSlice';
 import gsap from 'gsap';
 import Image from 'next/image'
 import { useRouter } from 'next/navigation';
 import React, { useEffect, useRef } from 'react'
 import { CiPlay1 } from "react-icons/ci";
 import { FaPlay } from "react-icons/fa";
+import { useDispatch } from 'react-redux';
 const imageWidth = "mdlg:w-[330px] mdlg:h-[300px] w-[290px] h-[270px]"
 export const HeroSection = () => {
     const headerEl = useRef<HTMLHeadingElement | null >(null)
     const imageDiv = useRef<HTMLDivElement | null>(null)
+    const dispatch = useDispatch<dispatchType>()
 
     const router = useRouter()
 
@@ -36,11 +40,13 @@ gsap.fromTo(headerEl.current,{
     })
     },[])
   return (
-    <div style={{zIndex:2}} className='relative xl:px-32 md:px-8 px-4 flex py-8 md:flex-row flex-col'>
+    <div
+    onMouseOver={()=> dispatch(closeSubmenu())}
+    className='relative xl:px-8 md:px-8 px-4 flex py-8 md:flex-row flex-col'>
         {/* First Section */}
         <section className='px-2 md:w-[55%] w-full '>
 {/* <span className='bg-[#2ABFD538] text-[#662AD5] inline-block px-4 rounded-xl text-[0.8rem] '>Powerful Platform</span> */}
-<h1 ref={headerEl} className='font-semibold lg:text-[2.7rem] text-[2rem] opacity-0'>
+<h1 ref={headerEl} className='font-semibold lg:text-[2.7rem] text-[2rem] opacity-0 animated-gradient-text'>
 <strong>
 PAIGE:
 </strong>
@@ -49,12 +55,12 @@ Smart Talent,
 <br />
 Seamless Operations.
 </h1>
-<p className='mdlg:text-[1rem] text-[0.9] leading-6 my-8'>your partner for top talent  and transformative automation consulting.</p>
+<p className='mdlg:text-[1rem] text-[0.9] leading-6 my-8 text-grayOne'>your partner for top talent  and transformative automation consulting.</p>
 
 <aside className='my-6 flex gap-x-8'>
     <button
     onClick={()=> router.push("/jobs")}
-    className='item-clip bg-primary text-wht px-4 py-2  hover:bg-wht border-primary transition-all duration-500 hover:text-primary cursor-pointer' >Find A Job</button> 
+    className='mdlg:inline hidden  text-wht rounded-md h-[40px] px-4 cursor-pointer hover:bg-primary hover:text-white border-[2px] border-primary transition-all duration-500' >Book a call</button> 
     {/* <button className='flex items-center'> <span className='bg-[#342AD51C] rounded-full w-[30px] h-[30px] flex items-center justify-center mr-2'><FaPlay  color='#100B59' size={10}/></span> How it works</button> */}
 </aside>
         </section>
@@ -69,7 +75,7 @@ Seamless Operations.
 
         
 <div ref={imageDiv} className='relative lg:w-[420px] lg:h-[390px]  md:w-[390px] md:h-[360px] w-full min-h-[350px]'>
-    <Image alt='paige' src={"/telework-amico.png"}  fill className=' absolute object-contain '/>
+    <Image alt='paige' src={"/Consulting-amico.svg"}  fill className=' absolute object-contain '/>
     </div>
         </section>
     </div>

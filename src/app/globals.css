@@ -17,6 +17,7 @@
 
 .animate-marquee {
   animation: marquee 15s linear infinite;
+  /* color: #000000; */
 
 }
 
@@ -40,19 +41,91 @@
 /* .item-clip{
   clip-path: polygon(80.2% 0.3%, 100% 47%, 100% 100%, 0% 100%, 0% 0%);
 } */
+
+.animated-gradient-text {
+  font-size: 3rem;
+  font-weight: bold;
+  background: linear-gradient(
+    270deg,
+    #f73620,
+    #991b1b,
+    #0d0d0d,
+    #dddddd,
+    #ffffff,
+    #f73620
+  );
+  background-size: 600% 600%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientMove 8s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+/* .animated-gradient-text {
+  font-size: 3rem;
+  font-weight: bold;
+  background: linear-gradient(270deg, #f73620, #c9971a, #f73620);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientShimmer 6s ease infinite;
+}
+
+@keyframes gradientShimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+} */
+
+.sublink-container {
+  background: linear-gradient(135deg, #f73620aa, #0d0d0daa);
+  backdrop-filter: blur(10px);
+
+
+}
+
+
 @theme {
  
   /* Colors */
 
   /* --color-primary:#10078c; */
-  /* FORMER */
-  --color-primary:#100B59;
+  /* NAVY BLUE */
+  /* --color-primary:#100B59;
   --color-wht:#ffffff;
   --color-blk:#000000;
   --color-blueI:#E9E8FA;
   --color-redI:#FFEFE7;
   --color-greenI:#E8F9FC;
-  --color-bgcolor:#f5f4fc;
+  --color-bgcolor:#f5f4fc; */
+
+
+
+  /* RED and Black */
+  --color-primary:#f73620;
+  --color-wht:#ffffff;
+  --color-grayOne:#DDDDDD;
+  --color-blk:#000000;
+  --color-blueI:#E9E8FA;
+  --color-redI:#FFEFE7;
+  --color-greenI:#E8F9FC;
+  --color-bgcolor:#000000;
 
 
   /* shades of primary */

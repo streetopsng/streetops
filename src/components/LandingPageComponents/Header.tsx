@@ -6,14 +6,63 @@ import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { IoIosMenu } from "react-icons/io";
 import { IoMdClose } from "react-icons/io";
+import { FaAngleDown } from "react-icons/fa6";
+import { FaAngleUp } from "react-icons/fa6";
+import { it } from "node:test";
+import { useDispatch, useSelector } from "react-redux";
+import { dispatchType, RootStateType } from "@/store";
+import { openSubmenu } from "@/store/slices/desktopSubmenuLinksSlice";
+interface menuLinksTypes {
+    id:number,
+    name:string,
+    subLinks?:string[],
+}
 
 
 const desktopLinkClass = "hover:text-primary border-b-[3px] border-transparent  hover:border-primary duration-500  min-w-[20%] transition-all py-[3px]  text-center"
 const mobileLinkClass = "h-[50px] text-wht flex items-center transition-all duration-700 hover:bg-wht hover:text-primary px-4 border-primary border-[2px] hover:font-semibold hover:pl-2 "
+
+const menuLinks:menuLinksTypes[] = [
+    {
+        id:1,
+        name:"Home",
+        subLinks:["packages","Automations","Work-Life "]
+    },
+    {
+        id:2,
+        name:"About",
+    },
+    {
+        id:3,
+        name:"Services",
+        subLinks:["Recruitment","Automations","Work-Life Integration Consulting"]
+    },
+    {
+        id:4,
+        name:"Packages",
+        
+    },
+    {
+        id:5,
+        name:"Resources",
+    },
+
+]
 export const Header = () => {
 
     const [showNav,setShowNav] = useState<boolean>(false)
 const mobileMenuRef = useRef<HTMLElement | null>(null)
+const subLinksRef = useRef<(HTMLDivElement | null)[]>([])
+const [showSub,setShowSub] = useState<boolean>(false)
+const [currentIndex,setCurrentIndex] = useState(0)
+const [elementPosition,setElementPosition] = useState<number>()
+const ulElement = useRef<(HTMLUListElement | null )[]>([])
+const dispatch = useDispatch<dispatchType>()
+
+const getState = useSelector((store:RootStateType)=>{
+
+    return store.submenuReducer
+})
 
 
 const router =useRouter()
@@ -41,11 +90,12 @@ useEffect(()=>{
 
   return (
 
-    <div  className=" xl:mx-32 md:mx-8 mx-4 mdlg:static relative">
+    <div  className=" xl:mx-8 md:mx-8 mx-4 mdlg:static relative text-grayOne">
+        
         <div style={{zIndex:10}} className="py-4 flex justify-between items-center ">
 
         <section className=" ">
-        <div 
+        {/* <div 
         // className="relative mdlg:w-[80px] mdlg:h-[80px] h-[60px] w-[50px] "
         className="flex items-center pl-2 "
         >
@@ -57,18 +107,40 @@ useEffect(()=>{
          width={58}
          height={58}
          />
-        </div>
+        </div> */}
+
+        <h1 className="text-primary font-bold italic text-[1.5rem]">LOGO</h1>
         </section>
 
 {/* Menu bar  for desktop*/}
-<section className="mdlg:flex hidden mdlg:w-[30%] justify-between">
-    <Link className={`${desktopLinkClass}`} href={"/"}>Home</Link>
+<section className="mdlg:flex hidden mdlg:w-[40%] justify-between">
+    {
+        menuLinks.map((item,index)=>{
+return <button
+
+onMouseOver={(e)=>{
+    const el = e.target as HTMLButtonElement | HTMLLinkElement
+    console.log(el.getBoundingClientRect());
+    const element = el.getBoundingClientRect()
+    const getCenter = (element.left + element.right) / 2 ;
+    if (item.subLinks && item.subLinks.length > 0) {
+        dispatch(openSubmenu({left:getCenter,subLinkList:item.subLinks}))
+    }
+    
+    
+}}
+className={`${desktopLinkClass} flex items-center justify-center text-[0.9rem]`}>
+    <span>{item.name}</span> <span className="ml-2">{item.subLinks && item.subLinks?.length > 0 ? <FaAngleDown size={13}/> : "" }</span>
+    </button>
+        })
+    }
+    {/* <Link className={`${desktopLinkClass}`} href={"/"}>Home</Link>
     <Link className={`${desktopLinkClass}`} href={"/"}>About</Link>
-    <Link className={`${desktopLinkClass}`} href={"/"}>Expertise</Link>
+    <Link className={`${desktopLinkClass}`} href={"/"}>Expertise</Link> */}
 </section>
 
 <section className=" ">
-<button className="mdlg:inline hidden bg-primary text-wht rounded-md h-[40px] px-4 cursor-pointer hover:bg-wht hover:text-primary border-[2px] border-primary transition-all duration-500" onClick={()=> router.push("/jobs")}>Find a Job</button>
+<button className="mdlg:inline hidden  text-wht rounded-md h-[40px] px-4 cursor-pointer hover:bg-primary hover:text-white border-[2px] border-primary transition-all duration-500" onClick={()=> router.push("/jobs")}>Book a call</button>
 <button className="mdlg:hidden inline bg-primary text-wht rounded-md h-[35px] px-[3px] cursor-pointer hover:bg-wht hover:text-primary border-[2px] border-primary  transition-all duration-500 " onClick={()=> {
     setShowNav(!showNav)
     console.log(showNav);
