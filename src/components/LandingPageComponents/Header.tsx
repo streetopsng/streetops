@@ -159,7 +159,7 @@ Book a call
         </div>
         
 {/* Menu bar  for mobile*/}
-    <section className="bg-primary fixed w-[50%] h-screen top-0 left-0 py-18" 
+    <section className="bg-primary fixed w-[50%] h-screen top-0 left-0 py-18 opacity-0" 
     ref={mobileMenuRef} 
     style={{zIndex:100}}
      >
