@@ -58,7 +58,7 @@ Smart Talent,
 <br />
 Seamless Operations.
 </h1>
-<p className='mdlg:text-[1rem] text-[0.9] leading-6 my-8 text-grayOne'>your partner for top talent  and transformative automation consulting.</p>
+<p className='mdlg:text-[1rem] text-[0.9] leading-6 my-8 text-grayTwo'>your partner for top talent  and transformative automation consulting.</p>
 
 {/* Slide */}
 
@@ -67,7 +67,7 @@ Seamless Operations.
 <aside className='my-6 flex gap-x-8'>
     <button
     onClick={()=> router.push("/jobs")}
-    className='mdlg:inline hidden  text-wht rounded-md h-[40px] px-4 cursor-pointer   border-[2px] border-primary relative overflow-hidden group' >
+    className='mdlg:inline   text-wht rounded-md h-[40px] px-4 cursor-pointer   border-[2px] border-primary relative overflow-hidden group' >
           <span className="relative  z-10 transition-colors duration-300 group-hover:text-wht text-primary">
           Book a call
         </span>
@@ -86,28 +86,11 @@ Seamless Operations.
 
 
         
-{/* <div ref={imageDiv} className='relative lg:w-[420px] lg:h-[390px]  md:w-[390px] md:h-[360px] w-full min-h-[350px]'>
-    <Image alt='paige' src={"/Consulting-amico.svg"}  fill className=' absolute object-contain '/>
-    </div> */}
+
         </section>
     </div>
   )
 }
 
-  {/* 
-              <aside className='w-full h-full relative bg-[blue]'>
-  
-  <article className={`${imageWidth} bg-wht p-4 rounded-lg border-[1px] border-primary absolute mdlg:top-[10%] top-[10%]  md:right-[6%] z-50`}>
-  <div className='relative w-full h-full '>
-      <Image alt='paige' src={"/man.png"}  fill className='object-cover absolute'/>
-  </div>
-  </article>
-  
-  <article className={`${imageWidth} bg-[#CBBCE8] p-4 rounded-lg border-[1px] border-primary absolute mdlg:top-[14%] top-[12%] md:right-[3%] z-40`}></article>
-  <article className={`${imageWidth} bg-primary p-4 rounded-lg border-[1px] border-primary absolute mdlg:top-[18%] top-[14%] md:right-[0%] right-`}></article>
-  
-              </aside>
-             */}
-    
 
              

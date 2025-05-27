@@ -18,6 +18,7 @@
 .animate-marquee {
   animation: marquee 15s linear infinite;
   /* color: #000000; */
+  /* color: #9b9b9b; */
 
 }
 
@@ -27,6 +28,11 @@
   background: linear-gradient(to bottom,#4501017e ,#000000eb);
 
 }
+
+/* .checked-gradient{
+  background-image: linear-gradient(to right, #0000004d, #9f1203);
+
+} */
 
 
 .animated-gradient-text {
@@ -58,9 +64,8 @@
     background-position: 0% 50%;
   }
 }
-/* .animated-gradient-text {
-  font-size: 3rem;
-  font-weight: bold;
+.animated-gradient-text-two {
+
   background: linear-gradient(270deg, #f73620, #c9971a, #f73620);
   background-size: 200% 200%;
   -webkit-background-clip: text;
@@ -78,7 +83,7 @@
   100% {
     background-position: 0% 50%;
   }
-} */
+}
 
 .sublink-container {
   background: linear-gradient(135deg, #f73620aa, #0d0d0daa);
@@ -107,7 +112,8 @@
   /* RED and Black */
   --color-primary:#f73620;
   --color-wht:#ffffff;
-  --color-grayOne:#DDDDDD;
+  --color-grayOne:#DDDDDD ;
+  --color-grayTwo:#9b9b9b ;
   --color-blk:#000000;
   --color-blueI:#E9E8FA;
   --color-redI:#FFEFE7;

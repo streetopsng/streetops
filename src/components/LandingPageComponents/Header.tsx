@@ -18,7 +18,7 @@ interface menuLinksTypes {
     subLinks?:string[],
 }
 
-
+const subLinksClass = "h-[50px] text-wht flex items-center transition-all duration-700 hover:bg-wht hover:text-primary pl-8 border-primary border-[2px] hover:font-semibold hover:pl-4 "
 const desktopLinkClass = "hover:text-primary border-b-[3px] border-transparent  hover:border-primary duration-500  min-w-[20%] transition-all py-[3px]  text-center"
 const mobileLinkClass = "h-[50px] text-wht flex items-center transition-all duration-700 hover:bg-wht hover:text-primary px-4 border-primary border-[2px] hover:font-semibold hover:pl-2 "
 
@@ -52,35 +52,39 @@ export const Header = () => {
 
     const [showNav,setShowNav] = useState<boolean>(false)
 const mobileMenuRef = useRef<HTMLElement | null>(null)
-const subLinksRef = useRef<(HTMLDivElement | null)[]>([])
-const [showSub,setShowSub] = useState<boolean>(false)
-const [currentIndex,setCurrentIndex] = useState(0)
-const [elementPosition,setElementPosition] = useState<number>()
-const ulElement = useRef<(HTMLUListElement | null )[]>([])
+const [accordion,setAccodion] = useState<string[]>([""])
+
+
 const dispatch = useDispatch<dispatchType>()
 
-const getState = useSelector((store:RootStateType)=>{
+// const getState = useSelector((store:RootStateType)=>{
 
-    return store.submenuReducer
-})
+//     return store.submenuReducer
+// })
 
 
 const router =useRouter()
 
+
+useEffect(()=>{
+
+
+},[accordion])
 useEffect(()=>{
 
     if (showNav) {
         
         gsap.to(mobileMenuRef.current,{
-            top:"100%",
+            left:0,
             opacity:1,
             duration:1,
+           
             
         })
     }
     else{
         gsap.to(mobileMenuRef.current,{
-            top:-200,
+            left:"-100%",
             opacity:0,
             duration:1,
         })
@@ -113,11 +117,11 @@ useEffect(()=>{
         </section>
 
 {/* Menu bar  for desktop*/}
-<section className="mdlg:flex hidden mdlg:w-[40%] justify-between">
+<section className="mdlg:flex hidden lg:w-[40%] mdlg:w-[60%] justify-between">
     {
         menuLinks.map((item,index)=>{
 return <button
-
+key={index}
 onMouseOver={(e)=>{
     const el = e.target as HTMLButtonElement | HTMLLinkElement
     console.log(el.getBoundingClientRect());
@@ -134,9 +138,7 @@ className={`${desktopLinkClass} flex items-center justify-center text-[0.9rem]`}
     </button>
         })
     }
-    {/* <Link className={`${desktopLinkClass}`} href={"/"}>Home</Link>
-    <Link className={`${desktopLinkClass}`} href={"/"}>About</Link>
-    <Link className={`${desktopLinkClass}`} href={"/"}>Expertise</Link> */}
+   
 </section>
 
 <section className=" ">
@@ -157,12 +159,47 @@ Book a call
         </div>
         
 {/* Menu bar  for mobile*/}
-    <section className="bg-primary mdlg:hidden block absolute w-[100%] top-[100%] left-[0%] opacity-0" ref={mobileMenuRef} style={{zIndex:5}} >
-        <div className="flex flex-col " >
-    <Link className={`${mobileLinkClass}`} href={"/"}>Home</Link>
-    <Link className={`${mobileLinkClass}`} href={"/"}>About</Link>
-    <Link className={`${mobileLinkClass}`} href={"/"}>Expertise</Link>
-    <Link className={`${mobileLinkClass}`} href={"/jobs"}>Find A Job</Link>
+    <section className="bg-primary fixed w-[50%] h-screen top-0 left-0 py-18" 
+    ref={mobileMenuRef} 
+    style={{zIndex:100}}
+     >
+        <div className="flex flex-col" >
+            {
+                menuLinks.map((item,index)=>{
+
+                    if (item.subLinks && item.subLinks.length > 0 ) {
+                        return <div className="w-full " key={index}>
+                            <button onClick={()=>{
+                                if (accordion.some(acc => acc == item.name)) {
+                                    const copyAcc = [...accordion]
+                                    const remove = copyAcc.filter(acc => acc !== item.name)
+                                    setAccodion(remove)
+                                }
+                                else{
+                                    const copyAcc = [...accordion]
+                                    copyAcc.push(item.name)
+                                    setAccodion(copyAcc)
+
+                                }
+                                
+                            }} className={`${mobileLinkClass} w-full justify-between`} >
+                                <span>{item.name}</span>
+                                <span><FaAngleDown size={13}/></span>
+                            </button>
+                           {accordion.some(acc => acc == item.name) && <aside>
+                            {
+                                    item.subLinks.map((link,ind)=>{
+
+                                        return <Link key={ind} className={`${subLinksClass}`} href={`/${link.toLocaleLowerCase()}`}>{link}</Link>
+                                    })
+                                }
+                            </aside>}
+                        </div>
+                    }
+                    return  <Link className={`${mobileLinkClass}`} href={`/${item.name.toLocaleLowerCase()}`}>{item.name}</Link>
+                })
+            }
+
         </div>
     </section>
     </div>

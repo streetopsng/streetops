@@ -10,14 +10,14 @@ const page = () => {
   return (
     <div className="">
       <SubLinksComponent/>
-  <div className="rad-gradient py-4">
+  <div className="rad-gradient pb-4">
 
       <Header/>
       <HeroSection/> 
-      <Sponsors/>
+      {/* <Sponsors/> */}
   </div>
-      {/* <Section/>
-      <Footer/> */}
+      <Section/>
+      {/* <Footer/> */}
     </div>
   );
 }

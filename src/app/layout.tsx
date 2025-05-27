@@ -17,7 +17,7 @@ export default function RootLayout({
     <html lang="en">
       <ClientProvider>
       <body
-        className={`bg-bgcolor text-primary `}
+        className={`bg-bgcolor  `}
         >
         {children}
       </body>
