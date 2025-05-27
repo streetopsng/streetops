@@ -140,7 +140,14 @@ className={`${desktopLinkClass} flex items-center justify-center text-[0.9rem]`}
 </section>
 
 <section className=" ">
-<button className="mdlg:inline hidden  text-wht rounded-md h-[40px] px-4 cursor-pointer hover:bg-primary hover:text-white border-[2px] border-primary transition-all duration-500" onClick={()=> router.push("/jobs")}>Book a call</button>
+<button
+onClick={()=> router.push("/jobs")}
+className='mdlg:inline hidden  text-wht rounded-md h-[40px] px-4 cursor-pointer   border-[2px] border-primary relative overflow-hidden group' >
+<span className="relative  z-10 transition-colors duration-300 group-hover:text-wht text-primary">
+Book a call
+</span>
+<span className="absolute inset-0 bg-primary transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out z-0" />
+</button> 
 <button className="mdlg:hidden inline bg-primary text-wht rounded-md h-[35px] px-[3px] cursor-pointer hover:bg-wht hover:text-primary border-[2px] border-primary  transition-all duration-500 " onClick={()=> {
     setShowNav(!showNav)
     console.log(showNav);

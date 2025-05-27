@@ -8,6 +8,7 @@ import React, { useEffect, useRef } from 'react'
 import { CiPlay1 } from "react-icons/ci";
 import { FaPlay } from "react-icons/fa";
 import { useDispatch } from 'react-redux';
+import ImageSlider from './ImageSlider';
 const imageWidth = "mdlg:w-[330px] mdlg:h-[300px] w-[290px] h-[270px]"
 export const HeroSection = () => {
     const headerEl = useRef<HTMLHeadingElement | null >(null)
@@ -42,7 +43,9 @@ gsap.fromTo(headerEl.current,{
   return (
     <div
     onMouseOver={()=> dispatch(closeSubmenu())}
-    className='relative xl:px-8 md:px-8 px-4 flex py-8 md:flex-row flex-col'>
+    className='relative xl:px-8 md:px-8 px-4 flex py-8 md:flex-row flex-col overflow-hidden play-color'>
+      <ImageSlider/>
+
         {/* First Section */}
         <section className='px-2 md:w-[55%] w-full '>
 {/* <span className='bg-[#2ABFD538] text-[#662AD5] inline-block px-4 rounded-xl text-[0.8rem] '>Powerful Platform</span> */}
@@ -57,10 +60,19 @@ Seamless Operations.
 </h1>
 <p className='mdlg:text-[1rem] text-[0.9] leading-6 my-8 text-grayOne'>your partner for top talent  and transformative automation consulting.</p>
 
+{/* Slide */}
+
+
+
 <aside className='my-6 flex gap-x-8'>
     <button
     onClick={()=> router.push("/jobs")}
-    className='mdlg:inline hidden  text-wht rounded-md h-[40px] px-4 cursor-pointer hover:bg-primary hover:text-white border-[2px] border-primary transition-all duration-500' >Book a call</button> 
+    className='mdlg:inline hidden  text-wht rounded-md h-[40px] px-4 cursor-pointer   border-[2px] border-primary relative overflow-hidden group' >
+          <span className="relative  z-10 transition-colors duration-300 group-hover:text-wht text-primary">
+          Book a call
+        </span>
+        <span className="absolute inset-0 bg-primary transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out z-0" />
+     </button> 
     {/* <button className='flex items-center'> <span className='bg-[#342AD51C] rounded-full w-[30px] h-[30px] flex items-center justify-center mr-2'><FaPlay  color='#100B59' size={10}/></span> How it works</button> */}
 </aside>
         </section>
@@ -74,9 +86,9 @@ Seamless Operations.
 
 
         
-<div ref={imageDiv} className='relative lg:w-[420px] lg:h-[390px]  md:w-[390px] md:h-[360px] w-full min-h-[350px]'>
+{/* <div ref={imageDiv} className='relative lg:w-[420px] lg:h-[390px]  md:w-[390px] md:h-[360px] w-full min-h-[350px]'>
     <Image alt='paige' src={"/Consulting-amico.svg"}  fill className=' absolute object-contain '/>
-    </div>
+    </div> */}
         </section>
     </div>
   )
@@ -97,3 +109,5 @@ Seamless Operations.
               </aside>
              */}
     
+
+             
