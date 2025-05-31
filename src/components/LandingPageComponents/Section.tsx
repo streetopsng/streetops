@@ -59,7 +59,7 @@ const Section = () => {
           peopleFlip:false
         })
       }}
-      className="flex flex-col lg:flex-row gap-6 w-full max-w-6xl relative ">
+      className="flex flex-col  lg:flex-row gap-6 w-full max-w-6xl relative ">
           <AnimatedParticles value={15}/>
         {/* People */}
         
