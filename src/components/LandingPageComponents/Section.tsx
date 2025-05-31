@@ -1,20 +1,29 @@
 "use client";
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import { FaComments, FaTimes } from 'react-icons/fa';
 import { GiCheckMark } from "react-icons/gi";
 import { RiCheckboxFill } from "react-icons/ri";
+import AnimatedParticles from '../AnimatedParticles';
 const checkList = ["workforcess","process","process","people"]
+
+interface typeFlip<T> {
+processFlip:T,
+peopleFlip:T
+}
 const Section = () => {
-  const [input, setInput] = React.useState('');
-  const [messages, setMessages] = React.useState<{ role: 'user' | 'assistant'; content: string }[]>([]);
-  const [isChatOpen, setIsChatOpen] = React.useState(false);
+  const [flip,setFlip] = useState<typeFlip<boolean>>({
+    processFlip:false,
+    peopleFlip:false
+  })
+
+  
 
 
   return (
     <div className="xl:px-8 md:px-8  flex flex-col  justify-start items-center   space-y-10 text-grayOne">
       {/* work life balance */}
-      <div className="flex flex-col lg:flex-row  rounded-lg w-full gap-y-16 rounded-lg lg:border-grayTwo lg:border-2 overflow-hidden lg:items-center ">
+      <div className="flex flex-col lg:flex-row  lg:rounded-lg w-full gap-y-16  lg:border-grayTwo lg:border-2 overflow-hidden lg:items-center ">
         {/* first */}
         <div className="flex-1 space-y-4 lg:max-w-[70%] px-6 ">
           <h2 className="font-semibold text-2xl lg:text-[2.2rem] leading-snug lg:text-start text-center animated-gradient-text-two uppercase font-semibold">
@@ -43,36 +52,100 @@ const Section = () => {
 
 
       {/* Suppliers & Financiers Section */}
-      <div className="flex flex-col lg:flex-row gap-6 w-full max-w-6xl">
+      <div
+      onMouseLeave={()=>{
+        setFlip({
+          processFlip:false,
+          peopleFlip:false
+        })
+      }}
+      className="flex flex-col lg:flex-row gap-6 w-full max-w-6xl relative ">
+          <AnimatedParticles value={15}/>
         {/* People */}
-        <div className="flex-1 bg-purple-100 p-6 rounded-lg flex flex-col items-center">
-          <h2 className="uppercase font-semibold text-xl lg:text-2xl text-center">People</h2>
-          <p className="text-base pt-4">
+        
+        <div className={`relative w-full min-h-[500px] text-grayTwo  leading-8 flip-class  ${flip.peopleFlip ? '[transform:rotateY(180deg)]' : ''} group-hover:[transform:rotateY(180deg)]`}  
+  onMouseOver={()=>{
+    setFlip({processFlip:false,peopleFlip:true})
+
+  }}
+
+        onClick={()=> {
+
+          if (flip.peopleFlip) {
+            setFlip({processFlip:false,peopleFlip:false})
+          }
+          else{
+            setFlip({processFlip:false,peopleFlip:true})
+          }
+        }}  
+        >
+        <div className='absolute  h-full  backface-hidden  px-4 cursor-pointer '>
+        <h2 className=" uppercase font-semibold text-xl lg:text-2xl text-center text-wht child">People</h2>
+          <p className=" pt-4 italic">
             We believe that people are the core of every successful organization. Our People section provides strategic solutions to maximize your human capital investment. We offer:
             <br />
-            <strong>Strategic Recruitment</strong>: Identifying and placing the right talent to achieve your business objectives.
+            <strong className='text-wht not-italic'>Strategic Recruitment</strong> : Identifying and placing the right talent to achieve your business objectives.
             <br />
-            <strong>Transformative Training</strong>: Equipping your workforce with the skills and knowledge needed to excel.
+            <strong className='text-wht not-italic'>Transformative Training</strong> : Equipping your workforce with the skills and knowledge needed to excel.
             <br />
-            <strong>Human Capital Leadership (Africa)</strong>: Actively contributing to the development of human capital across the African continent through webinars, training programs, and a dynamic blog, fostering a community of growth and innovation.
+            <strong className='text-wht not-italic'>Human Capital Leadership (Africa)</strong> : Actively contributing to the development of human capital across the African continent through webinars, training programs, and a dynamic blog, fostering a community of growth and innovation.
           </p>
+        </div>
+        {/* Text */}
+
+       
+        {/* Image */}
+        <div className='absolute w-full  h-full rotate-y-[180deg] backface-hidden flex items-center justify-center  px-4 cursor-pointer'>
+          
           <Image alt="paige" src="/people.png" width={250} height={250} className="mt-4 rounded-lg" />
         </div>
+         
+        </div>
+
+
+
+
 
         {/* Processes */}
-        <div className="flex-1 bg-purple-100 p-6 rounded-lg flex flex-col items-center">
-          <h2 className="uppercase font-semibold text-xl lg:text-2xl text-center">Processes</h2>
-          <p className="text-base pt-4">
+        <div 
+          onMouseOver={()=>{
+            setFlip({processFlip:true,peopleFlip:false})
+        
+          }}
+ onClick={()=> {
+
+  if (flip.peopleFlip) {
+    setFlip({processFlip:false,peopleFlip:false})
+  }
+  else{
+    setFlip({processFlip:true,peopleFlip:false})
+  }
+}}  
+        className={`relative w-full min-h-[500px] text-grayTwo rounded-lg  leading-8 flip-class ${flip.processFlip ? '[transform:rotateY(180deg)]' : ''}`}>
+     
+        {/* text */}
+         <div className='absolute  h-full  backface-hidden  px-4' >
+         <h2 className="uppercase font-semibold text-xl lg:text-2xl text-center text-wht">Processes</h2>
+          <p className=" pt-4  italic">
             We partner with organizations to transform their operations and achieve peak performance. Our Processes section delivers strategic consulting services, including:
             <br />
-            <strong>Operational Consulting</strong>: Providing expert guidance to optimize workflows, reduce costs, and improve overall operational effectiveness.
+            <strong className='text-wht not-italic'>Operational Consulting</strong> :  Providing expert guidance to optimize workflows, reduce costs, and improve overall operational effectiveness.
+            
             <br />
-            <strong>Process Automation</strong>: Leveraging automation technologies to drive efficiency, accuracy, and scalability.
+            <strong className='text-wht not-italic'>Process Automation</strong> : Leveraging automation technologies to drive efficiency, accuracy, and scalability.
             <br />
-            <strong>Comprehensive Consulting Solutions</strong>: Offering a suite of consulting services to support organizational change, improve project delivery, and enhance overall business performance.
+            <strong className='text-wht not-italic'>Comprehensive Consulting Solutions</strong> : Offering a suite of consulting services to support organizational change, improve project delivery, and enhance overall business performance.
           </p>
+         </div>
+{/* Images */}
+<div  className='absolute w-full  h-full rotate-y-[180deg] backface-hidden flex items-center justify-center  px-4'>
           <Image alt="paige" src="/processes.png" width={250} height={200} className="mt-4 rounded-lg" />
+</div>
         </div>
+
+
+
+
       </div>
 
       

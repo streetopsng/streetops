@@ -18,12 +18,6 @@ const page = () => {
     const totalPages = Math.ceil(jobs.length / itemsPerPage);
     const startIndex = (currentPage - 1) * itemsPerPage;
     const currentPosts = jobs.slice(startIndex, startIndex + itemsPerPage);
-
-
-    console.log("lol");
-    
-    
-
   return (
     <div>
         <Header/>

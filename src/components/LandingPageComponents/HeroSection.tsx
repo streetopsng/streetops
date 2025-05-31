@@ -58,7 +58,7 @@ Smart Talent,
 <br />
 Seamless Operations.
 </h1>
-<p className='mdlg:text-[1rem] text-[0.9] leading-6 my-8 text-grayTwo'>your partner for top talent  and transformative automation consulting.</p>
+<p className='mdlg:text-[1rem] text-[0.9] leading-6 my-8 text-black'>your partner for top talent  and transformative automation consulting.</p>
 
 {/* Slide */}
 

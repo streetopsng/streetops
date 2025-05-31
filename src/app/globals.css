@@ -22,17 +22,28 @@
 
 }
 
-.play-color{
-  /* background-color: rgba(22, 0, 0, 0.893); */
+
+.flip-class{
+  transform-style: preserve-3d;
+  transition: transform 1s ;
+}
+
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+/* .flip-class:hover {
+transform: rotateY(180deg);
+} */
+/* .play-color{
+  background-color: rgba(22, 0, 0, 0.893);
 
   background: linear-gradient(to bottom,#4501017e ,#000000eb);
 
-}
-
-/* .checked-gradient{
-  background-image: linear-gradient(to right, #0000004d, #9f1203);
-
 } */
+
+
 
 
 .animated-gradient-text {
@@ -93,6 +104,23 @@
 }
 
 
+
+
+/* SVG */
+@keyframes gridmove {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  100% {
+    transform: translate(40px, 40px);
+  }
+}
+
+.animate-gridmove {
+  animation: gridmove 30s linear infinite;
+}
+
+
 @theme {
  
   /* Colors */
@@ -148,4 +176,70 @@
   --font-poppins: "Poppins";
   --font-inter: "Inter";
   --font-winky: "Winky Rough" ;
+}
+
+
+
+.grid-animation {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  overflow: hidden;
+}
+
+/* Horizontal Lines */
+.grid-animation::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  background: repeating-linear-gradient(
+    to bottom,
+    red 0px,
+    red 2px,
+    black 2px,
+    black 6px
+  );
+  animation: moveVertical 4s linear infinite;
+  opacity: 0.7;
+}
+
+/* Vertical Lines */
+.grid-animation::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    to right,
+    red 0px,
+    red 2px,
+    black 2px,
+    black 6px
+  );
+  animation: moveHorizontal 6s linear infinite;
+  opacity: 0.7;
+}
+
+@keyframes moveVertical {
+  0% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes moveHorizontal {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
 }

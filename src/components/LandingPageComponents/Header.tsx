@@ -196,7 +196,7 @@ Book a call
                             </aside>}
                         </div>
                     }
-                    return  <Link className={`${mobileLinkClass}`} href={`/${item.name.toLocaleLowerCase()}`}>{item.name}</Link>
+                    return  <Link className={`${mobileLinkClass}`} href={`/${item.name.toLocaleLowerCase()}`} key={index}>{item.name}</Link>
                 })
             }
 
