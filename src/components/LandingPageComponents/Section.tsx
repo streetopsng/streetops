@@ -79,6 +79,7 @@ const Section = () => {
           }
         }}  
         >
+          {/* text */}
         <div className='absolute  h-full  backface-hidden  px-4 cursor-pointer my-4'>
         <h2 className=" uppercase font-semibold text-xl lg:text-2xl text-center text-wht child">People</h2>
           <p className=" pt-4 italic">
@@ -91,7 +92,7 @@ const Section = () => {
             <strong className='text-wht not-italic'>Human Capital Leadership (Africa)</strong> : Actively contributing to the development of human capital across the African continent through webinars, training programs, and a dynamic blog, fostering a community of growth and innovation.
           </p>
         </div>
-        {/* Text */}
+     
 
        
         {/* Image */}
@@ -109,7 +110,9 @@ const Section = () => {
         </div>
 
 
-
+<br />
+<br />
+<br />
 
 
         {/* Processes */}
