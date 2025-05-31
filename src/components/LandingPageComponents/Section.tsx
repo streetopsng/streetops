@@ -110,9 +110,11 @@ const Section = () => {
         </div>
 
 
+<div className='lg:hidden'>
 <br />
 <br />
 <br />
+</div>
 
 
         {/* Processes */}
@@ -123,7 +125,7 @@ const Section = () => {
           }}
  onClick={()=> {
 
-  if (flip.peopleFlip) {
+  if (flip.processFlip) {
     setFlip({processFlip:false,peopleFlip:false})
   }
   else{

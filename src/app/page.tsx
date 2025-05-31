@@ -23,10 +23,10 @@ const page = () => {
       <Section/>
       {/* Image */}
      
-      <div className="relative w-full lg:h-[500px] min-h-[300px]">
+      <div className="relative w-full lg:h-[500px] min-h-[300px] mt-4 mb-2">
         <Image
         className="absolute top-0 w-full h-full object-cover"
-        fill
+        fill 
         src={"/rekrut-paige.jpg"} 
         alt="rekrut-paige" />
       </div>
