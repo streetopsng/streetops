@@ -43,7 +43,7 @@ gsap.fromTo(headerEl.current,{
   return (
     <div
     onMouseOver={()=> dispatch(closeSubmenu())}
-    className='relative xl:px-8 md:px-8 px-4 flex py-8 md:flex-row flex-col overflow-hidden play-color'>
+    className='relative xl:px-8 md:px-8 px-2 flex py-8 md:flex-row flex-col overflow-hidden play-color'>
       <ImageSlider/>
 
         {/* First Section */}

@@ -149,17 +149,6 @@ transform: rotateY(180deg);
   --color-bgcolor:#000000;
 
 
-  /* shades of primary */
-  --color-primary-50:  #DBDDF9;
-  --color-primary-100: #BEBFE3;
-  --color-primary-200: #A1A1CC;
-  --color-primary-300: #8483B5;
-  --color-primary-400: #67659E;
-  --color-primary-500: #4A4787;
-  --color-primary-600: #2D2970;
-  --color-primary-700: #100B59;
-  --color-primary-800: #0E0A4F;
-  --color-primary-900: #0A073B;
 
   /* breakpoint */
   --breakpoint-xxs: 330px;

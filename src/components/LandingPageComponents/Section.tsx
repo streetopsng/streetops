@@ -79,7 +79,7 @@ const Section = () => {
           }
         }}  
         >
-        <div className='absolute  h-full  backface-hidden  px-4 cursor-pointer '>
+        <div className='absolute  h-full  backface-hidden  px-4 cursor-pointer my-4'>
         <h2 className=" uppercase font-semibold text-xl lg:text-2xl text-center text-wht child">People</h2>
           <p className=" pt-4 italic">
             We believe that people are the core of every successful organization. Our People section provides strategic solutions to maximize your human capital investment. We offer:
@@ -96,8 +96,14 @@ const Section = () => {
        
         {/* Image */}
         <div className='absolute w-full  h-full rotate-y-[180deg] backface-hidden flex items-center justify-center  px-4 cursor-pointer'>
-          
-          <Image alt="paige" src="/people.png" width={250} height={250} className="mt-4 rounded-lg" />
+          <div className='relative w-full h-full'>
+          <Image 
+            
+            alt="paige" 
+            src="/people-one.svg" 
+            fill
+            className="absolute w-full h-full inset-0" />
+            </div>
         </div>
          
         </div>
@@ -121,7 +127,7 @@ const Section = () => {
     setFlip({processFlip:true,peopleFlip:false})
   }
 }}  
-        className={`relative w-full min-h-[500px] text-grayTwo rounded-lg  leading-8 flip-class ${flip.processFlip ? '[transform:rotateY(180deg)]' : ''}`}>
+        className={`relative my-4 w-full min-h-[500px] text-grayTwo rounded-lg  leading-8 flip-class ${flip.processFlip ? '[transform:rotateY(180deg)]' : ''}`}>
      
         {/* text */}
          <div className='absolute  h-full  backface-hidden  px-4' >
@@ -139,7 +145,14 @@ const Section = () => {
          </div>
 {/* Images */}
 <div  className='absolute w-full  h-full rotate-y-[180deg] backface-hidden flex items-center justify-center  px-4'>
-          <Image alt="paige" src="/processes.png" width={250} height={200} className="mt-4 rounded-lg" />
+  <div className='relative w-full h-full'>
+  <Image 
+
+  alt="paige" 
+  src="/process-one.svg" 
+  fill
+  className="absolute w-full h-full inset-0" />
+  </div>
 </div>
         </div>
 
