@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import ClientProvider from "@/components/ClientProvider";
+import SubLinksComponent from "@/components/SubLinksComponent";
 
 
 export const metadata: Metadata = {
@@ -17,8 +18,9 @@ export default function RootLayout({
     <html lang="en">
       <ClientProvider>
       <body
-        className={`bg-bgcolor  `}
+        className={`bg-bgcolor  font-lato`}
         >
+          <SubLinksComponent/>
         {children}
       </body>
         </ClientProvider>

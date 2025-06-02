@@ -12,7 +12,7 @@ import Image from "next/image";
 const page = () => {
   return (
     <div className="">
-      <SubLinksComponent/>
+      
   <div className="rad-gradient pb-4">
 
       <Header/>

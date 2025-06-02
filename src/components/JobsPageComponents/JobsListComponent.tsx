@@ -55,11 +55,11 @@ const jobsList = [
     }
   ];
   
-  const inputClass = "border-primary border-2 rounded-md py-2 pl-2 md:w-[32%]"
+  const inputClass = "border-grayTwotext-grayTwo border-1 rounded-md py-2 pl-2 md:w-[32%] "
 const JobsListComponent = () => {
     const [jobs] = useState<any[]>(jobsList)
   return (
-    <div className="xl:px-32 md:px-8 px-4 ">
+    <div className="xl:px-32 md:px-8 px-4 text-grayOne">
 {/* form section */}
 <section className="md:flex justify-between items-center">
     {/* Keyword */}
@@ -91,15 +91,15 @@ const JobsListComponent = () => {
     {
         jobs.map((job,index)=>{
 
-            return <div key={job.id} className="border-[2px]  border-primary  rounded-md my-4 py-4 px-2 md:flex justify-between">
+            return <div key={job.id} className="border-[2px]  border-grayTwo  rounded-md my-4 py-4 px-2 md:flex justify-between">
                 <aside className="md:w-[80%]">
 <h1 className="font-bold">{job.jobTitle}</h1>
-<div className="flex items-center gap-x-2 my-2 "><span><CiLocationOn/> </span> <span>{job.location}</span></div>
-<div className="flex items-center gap-x-2 my-2 "><span><MdAccessTime/></span> <span>Full time | On-site </span></div>
+<div className="flex items-center gap-x-2 my-2 text-grayTwo"><span><CiLocationOn/> </span> <span>{job.location}</span></div>
+<div className="flex items-center gap-x-2 my-2 text-grayTwo"><span><MdAccessTime/></span> <span>Full time | On-site </span></div>
                 </aside>
 
 <aside className="flex justify-end md:items-center ">
-    <button className="bg-primary text-wht w-[100px] py-2 rounded-lg">Apply</button>
+    <button className="bg-primary  w-[100px] py-2 rounded-lg cursor-pointer hover:opacity-90">Apply</button>
 </aside>
             </div>
         })
@@ -108,7 +108,7 @@ const JobsListComponent = () => {
 {/* Total jobs */}
 <p className="text-center">1 of 241</p>
 <div className="flex justify-end">
-    <button className="bg-primary text-wht w-[100px] py-2 rounded-lg">Next</button>
+    <button className="bg-primary  w-[100px] py-2 rounded-lg">Next</button>
 </div>
     </div>
   )

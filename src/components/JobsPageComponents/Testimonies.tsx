@@ -53,10 +53,10 @@ const testimonyList:{
 const Testimonies = () => {
   return (
 
-    <div className='my-4'>
+    <div className='my-4 text-grayOne'>
 <header className='py-4'>
-<h1 className='text-primary text-[2rem] text-center font-bold hidden md-block'>What Our Candidates say</h1>
-<h1 className='text-primary text-[2rem] text-center font-bold md:hidden leading-[2rem]'>What Our 
+<h1 className=' text-[2rem] text-center font-bold hidden md-block'>What Our Candidates say</h1>
+<h1 className=' text-[2rem] text-center font-bold md:hidden leading-[2rem]'>What Our 
     <br />
     Candidates say</h1>
 </header>
@@ -106,7 +106,7 @@ const Testimonies = () => {
             </div>
           </header>
           {/* text testimonies */}
-          <section className='my-2 '>
+          <section className=' text-grayTwo my-2 '>
 <p>{item.testimonyText}</p>
           </section>
           </div>

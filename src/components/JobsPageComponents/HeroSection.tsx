@@ -72,13 +72,13 @@ return ()=> clearInterval(intervalID)
 },[index,reverse])
 
   return (
-    <div className=' xl:px-32 md:px-8 px-4 flex py-4 md:flex-row flex-col'>
+    <div className='text-grayOne xl:px-32 md:px-8 px-4 flex py-4 md:flex-row flex-col'>
 {/* First Section */}
-        <section className=' flex flex-col items-end  justify-between my-8'>
+        <section className=' flex flex-col items-end justify-between my-8'>
 <div className='flex flex-col justify-center h-full  gap-6 '>
 <div className='lg:text-[3.1rem] md:text-[2rem] text-[1.7rem] font-semibold lg:leading-[2.9rem] '>
 <h1 className=''>Pursue Your Career as a</h1>
-<h1 className='text-primary-200'>{words[wordIndex].slice(0,index)}|</h1>
+<h1 className=''>{words[wordIndex].slice(0,index)}|</h1>
 </div>
 
 
