@@ -28,7 +28,8 @@ const page = () => {
   return (
     <div>
         <Header/>
-        <div>
+        {/* Image Hero section */}
+        {/* <div>
             <div
              onMouseOver={()=> dispatch(closeSubmenu())}
              className="relative w-full lg:h-[500px] min-h-[300px] ">
@@ -38,11 +39,11 @@ const page = () => {
                 src={"/rekrut-paige.jpg"} 
                 alt="rekrut-paige" />
               </div>
-                </div>
-        {/* <HeroSection/> */}
+                </div> */}
+        <HeroSection/>
         <JobsListComponent/>
         <LookingToHire/>
-        <Testimonies/>
+        {/* <Testimonies/> */}
         <GrowYourTeam/>
         <Footer/>
         {/* this page is currently undergoing maintenance,please check back later */}

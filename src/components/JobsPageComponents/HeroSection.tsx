@@ -1,5 +1,8 @@
+import { dispatchType } from '@/store'
+import { closeSubmenu } from '@/store/slices/desktopSubmenuLinksSlice'
 import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
+import { useDispatch } from 'react-redux'
 
 
 const listOfSkills = [
@@ -20,10 +23,11 @@ const HeroSection = () => {
     const [reverse,setReverse] = useState<boolean>(false)
     const [countFromBack,setCountFromBack] = useState<boolean>(false)
     const [intervelSeconds,setIntervalSeconds] = useState<number>(100)
+    const dispatch = useDispatch<dispatchType>()
+    
 
 
-
-
+    
 
 useEffect(()=>{
     
@@ -72,17 +76,19 @@ return ()=> clearInterval(intervalID)
 },[index,reverse])
 
   return (
-    <div className='text-grayOne xl:px-32 md:px-8 px-4 flex py-4 md:flex-row flex-col'>
+    <div 
+    onMouseOver={()=> dispatch(closeSubmenu())}
+    className='text-grayOne xl:px-10 md:px-8 px-4 flex pb-4 pt-12 md:flex-row flex-col '>
 {/* First Section */}
         <section className=' flex flex-col items-end justify-between my-8'>
 <div className='flex flex-col justify-center h-full  gap-6 '>
 <div className='lg:text-[3.1rem] md:text-[2rem] text-[1.7rem] font-semibold lg:leading-[2.9rem] '>
 <h1 className=''>Pursue Your Career as a</h1>
-<h1 className=''>{words[wordIndex].slice(0,index)}|</h1>
+<h1 className='text-primary'>{words[wordIndex].slice(0,index)}|</h1>
 </div>
 
 
-<p className=''>We are championing workforce evolution, offering innovative operational strategies that drive business transformation. By integrating specialized recruitment, smart automations and workflow optimization, we empower organizations to thrive. Our focus is on delivering <q>The Future of Balanced Workforces</q> - where talent blends with technology.</p>
+<p className='lg:w-[70%]'>We are championing workforce evolution, offering innovative operational strategies that drive business transformation. By integrating specialized recruitment, smart automations and workflow optimization, we empower organizations to thrive. Our focus is on delivering <q>The Future of Balanced Workforces</q> - where talent blends with technology.</p>
             </div>
         </section>
 
@@ -94,7 +100,7 @@ return ()=> clearInterval(intervalID)
     
             
     <div className='relative lg:w-[420px] lg:h-[390px]  md:w-[390px] md:h-[360px] w-full min-h-[350px]'>
-        <Image alt='paige' src={"/Job-hunt.svg"}  fill className=' absolute object-contain '/>
+        <Image alt='paige' src={"/Job-offers.svg"}  fill className=' absolute object-contain '/>
         </div>      
             </section>
     </div>

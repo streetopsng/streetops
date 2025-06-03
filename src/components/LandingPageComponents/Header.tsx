@@ -94,6 +94,8 @@ useEffect(()=>{
 
   return (
 
+    <div className="fixed min-h-[50px] w-full bg-[#000000ed]">
+
     <div  className=" xl:mx-8 md:mx-8 mx-4 mdlg:static relative text-grayOne">
         
         <div style={{zIndex:10}} className="py-4 flex justify-between items-center ">
@@ -106,12 +108,12 @@ useEffect(()=>{
         <Image alt="paige" 
         // className="absolute top-10 left-0 object-contain"
         className="object-contain"
-         src={"/paige.png"}
+        src={"/paige.png"}
          //  fill
          width={58}
          height={58}
          />
-        </div> */}
+         </div> */}
 
         <h1 className="text-primary font-bold italic text-[1.5rem]">LOGO</h1>
         </section>
@@ -162,7 +164,7 @@ Book a call
     <section className="bg-primary fixed w-[50%] h-screen top-0 left-0 py-18 opacity-0" 
     ref={mobileMenuRef} 
     style={{zIndex:100}}
-     >
+    >
         <div className="flex flex-col" >
             {
                 menuLinks.map((item,index)=>{
@@ -203,6 +205,7 @@ Book a call
         </div>
     </section>
     </div>
+         </div>
 
   )
 }

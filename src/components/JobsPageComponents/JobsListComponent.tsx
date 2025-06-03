@@ -59,10 +59,11 @@ const jobsList = [
 const JobsListComponent = () => {
     const [jobs] = useState<any[]>(jobsList)
   return (
-    <div className="xl:px-32 md:px-8 px-4 text-grayOne">
+    <div className="xl:px-10 md:px-8 px-4 text-grayOne">
+      <h1 className="text-[2rem] text-white text-center font-semibold">Available Jobs</h1>
 {/* form section */}
-<section className="md:flex justify-between items-center">
-    {/* Keyword */}
+{/* <section className="md:flex justify-between items-center">
+    
     <div className="flex  flex-col md:flex-row md:justify-between gap-y-4 my-4 md:w-[80%] ">
     <input 
     type="text"
@@ -83,7 +84,7 @@ const JobsListComponent = () => {
     <div className="flex justify-center">
     <button className="bg-primary text-wht w-[100px] py-2 rounded-lg md:min-h-[50px]">Search Jobs</button>
     </div>
-</section>
+</section> */}
 
 
 {/* Jobs Section */}
