@@ -94,7 +94,7 @@ useEffect(()=>{
 
   return (
 
-    <div className="fixed min-h-[50px] w-full bg-[#000000ed]">
+    <div className="fixed min-h-[20px] w-full bg-[#000000ed] z-50">
 
     <div  className=" xl:mx-8 md:mx-8 mx-4 mdlg:static relative text-grayOne">
         

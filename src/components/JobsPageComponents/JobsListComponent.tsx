@@ -60,7 +60,7 @@ const JobsListComponent = () => {
     const [jobs] = useState<any[]>(jobsList)
   return (
     <div className="xl:px-10 md:px-8 px-4 text-grayOne">
-      <h1 className="text-[2rem] text-white text-center font-semibold">Available Jobs</h1>
+      <h1 className="lg:text-[2rem] text-[1.5rem] text-white text-center font-semibold">Available Jobs</h1>
 {/* form section */}
 {/* <section className="md:flex justify-between items-center">
     
