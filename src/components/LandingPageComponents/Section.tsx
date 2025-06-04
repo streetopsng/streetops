@@ -5,7 +5,7 @@ import { FaComments, FaTimes } from 'react-icons/fa';
 import { GiCheckMark } from "react-icons/gi";
 import { RiCheckboxFill } from "react-icons/ri";
 import AnimatedParticles from '../AnimatedParticles';
-const checkList = ["Creative Processes","Efficient Workforces"]
+const checkList = ["Creative Processes","Efficient Workforces","Tech-Enabled Systems"]
 
 interface typeFlip<T> {
 processFlip:T,

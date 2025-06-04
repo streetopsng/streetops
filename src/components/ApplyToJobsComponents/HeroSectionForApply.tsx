@@ -18,7 +18,7 @@ const HeroSectionForApply = () => {
     className='  '>
         <div className='lg:h-[300px] h-[200px] bg-primary flex flex-col justify-center items-center'>
 
-        <h1 className='text-wht md:text-[3rem] text-[1.8rem]'>{findJob?.jobTitle}</h1>
+        <h1 className='text-wht md:text-[3rem] text-[1.8rem]  md:px-16 px-4 text-center'>{findJob?.jobTitle}</h1>
        
         <p className='flex items-center'><span><CiLocationOn/></span> <span>{findJob?.location}</span></p>
         </div>
