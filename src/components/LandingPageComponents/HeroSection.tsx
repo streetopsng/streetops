@@ -43,7 +43,7 @@ gsap.fromTo(headerEl.current,{
   return (
     <div
     onMouseOver={()=> dispatch(closeSubmenu())}
-    className='relative xl:px-8 md:px-8 px-2 flex py-8 md:flex-row flex-col overflow-hidden play-color pt-32'>
+    className='relative xl:px-8 md:px-8 px-2 flex py-8 md:flex-row flex-col overflow-hidden play-color '>
       <ImageSlider/>
 
         {/* First Section */}
@@ -68,8 +68,8 @@ Seamless Operations.
     <button
     onClick={()=> router.push("/jobs")}
     className='mdlg:inline   text-wht rounded-md h-[40px] px-4 cursor-pointer   border-[2px] border-primary relative overflow-hidden group' >
-          <span className="relative  z-10 transition-colors duration-300 group-hover:text-wht text-primary">
-          Book a call
+          <span className="relative text-semibold z-10 transition-colors duration-300 group-hover:text-wht text-primary">
+          Paige-Auto
         </span>
         <span className="absolute inset-0 bg-primary transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out z-0" />
      </button> 

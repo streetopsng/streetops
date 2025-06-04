@@ -26,7 +26,7 @@ const menuLinks:menuLinksTypes[] = [
     {
         id:1,
         name:"Home",
-        subLinks:["packages","Automations","Work-Life "]
+        
     },
     {
         id:2,
@@ -54,7 +54,45 @@ export const Header = () => {
 const mobileMenuRef = useRef<HTMLElement | null>(null)
 const [accordion,setAccodion] = useState<string[]>([""])
 
+const headerContainerRef = useRef<HTMLDivElement | null>(null)
 
+
+useEffect(()=>{
+if (!headerContainerRef.current) {
+    return
+}
+
+const element: HTMLDivElement = headerContainerRef.current 
+const getHeight = window.innerHeight + element.getBoundingClientRect().height
+
+
+
+const scrollFunction = ()=>{
+    if (window.scrollY >= element.getBoundingClientRect().height ) {
+        element.style.position = "fixed"
+        element.style.top = "0"
+        element.style.width = "100%"
+
+
+    }
+    else if (window.scrollY <= element.getBoundingClientRect().height ) {
+        element.style.position = "static"
+        // element.style.top = "0"
+        element.style.width = "100%"
+    }
+    console.log("element");
+    
+    console.log("nav screen hight",getHeight);
+    console.log("scroll",window.scrollY);
+// console.log(window.screenY + element.getBoundingClientRect().height);
+
+
+
+}
+    window.addEventListener("scroll",scrollFunction)
+
+    return ()=> window.removeEventListener("scroll",scrollFunction)
+},[])
 const dispatch = useDispatch<dispatchType>()
 
 // const getState = useSelector((store:RootStateType)=>{
@@ -94,13 +132,13 @@ useEffect(()=>{
 
   return (
 
-    <div className="fixed min-h-[20px] w-full bg-[#000000ed] z-50">
+    <div ref={headerContainerRef}  className=" min-h-[20px] w-full bg-[#000000ed] z-50">
 
-    <div  className=" xl:mx-8 md:mx-8 mx-4 mdlg:static relative text-grayOne">
+    <div  className=" xl:mx-6 md:mx-4 mx-4 mdlg:static relative text-grayOne">
         
         <div style={{zIndex:10}} className="py-4 flex justify-between items-center ">
 
-        <section className=" ">
+        <section className="lg:pl-4 max-[10%]">
         {/* <div 
         // className="relative mdlg:w-[80px] mdlg:h-[80px] h-[60px] w-[50px] "
         className="flex items-center pl-2 "
@@ -114,15 +152,21 @@ useEffect(()=>{
          height={58}
          />
          </div> */}
-
-        <h1 className="text-primary font-bold italic text-[1.5rem]">LOGO</h1>
+<div className="relative lg:w-[30px] lg:h-[50px] h-[30px] w-[20px] ">
+        <Image 
+        className="absolute w-full h-full object-contain"
+        fill
+        src={"/logo.png"} 
+        alt="logo"/>
+        </div>
         </section>
 
 {/* Menu bar  for desktop*/}
-<section className="mdlg:flex hidden lg:w-[40%] mdlg:w-[60%] justify-between">
+<section className="mdlg:flex hidden lg:w-[50%] mdlg:w-[60%] justify-between">
     {
         menuLinks.map((item,index)=>{
-return <button
+return <Link
+href={`/${item.subLinks && item.subLinks.length > 0 ? "" : item.name == "Home" ? "" : item.name.toLocaleLowerCase()}`}
 key={index}
 onMouseOver={(e)=>{
     const el = e.target as HTMLButtonElement | HTMLLinkElement
@@ -137,21 +181,32 @@ onMouseOver={(e)=>{
 }}
 className={`${desktopLinkClass} flex items-center justify-center text-[0.9rem]`}>
     <span>{item.name}</span> <span className="ml-2">{item.subLinks && item.subLinks?.length > 0 ? <FaAngleDown size={13}/> : "" }</span>
-    </button>
+    </Link>
         })
     }
    
 </section>
 
-<section className=" ">
+<section className=" space-x-2 max-2-[30%]">
+    {/* Book a call */}
 <button
-onClick={()=> router.push("/jobs")}
-className='mdlg:inline hidden  text-wht rounded-md h-[40px] px-4 cursor-pointer   border-[2px] border-primary relative overflow-hidden group' >
+// onClick={()=> router.push("/jobs")}
+className='mdlg:inline hidden  text-wht rounded-md lg:h-[40px] h-[30px] lg:px-4 px-2 cursor-pointer   border-[2px] border-primary relative overflow-hidden group' >
 <span className="relative  z-10 transition-colors duration-300 group-hover:text-wht text-primary">
 Book a call
 </span>
 <span className="absolute inset-0 bg-primary transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out z-0" />
 </button> 
+{/* Find a Jobs */}
+<button
+onClick={()=> router.push("/jobs")}
+className='mdlg:inline hidden  text-wht rounded-md lg:h-[40px] h-[30px] lg:px-4 px-2 cursor-pointer   border-[2px] border-grayOne relative overflow-hidden group' >
+<span className="relative  z-10 transition-colors duration-300 group-hover:text-primary text-wht">
+Find a job
+</span>
+<span className="absolute inset-0 bg-grayOne transform translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out z-0" />
+</button> 
+{/* Mobile Nav */}
 <button className="mdlg:hidden inline bg-primary text-wht rounded-md h-[35px] px-[3px] cursor-pointer hover:bg-wht hover:text-primary border-[2px] border-primary  transition-all duration-500 " onClick={()=> {
     setShowNav(!showNav)
     console.log(showNav);
@@ -198,12 +253,32 @@ Book a call
                             </aside>}
                         </div>
                     }
-                    return  <Link className={`${mobileLinkClass}`} href={`/${item.name.toLocaleLowerCase()}`} key={index}>{item.name}</Link>
+                    return  <Link className={`${mobileLinkClass}`} href={`/${item.subLinks && item.subLinks.length > 0 ? "" : item.name == "Home" ? "" : item.name.toLocaleLowerCase()}`} key={index}>{item.name}</Link>
                 })
             }
 
         </div>
     </section>
+    </div>
+
+    <div className="flex justify-between py-3 px-2">
+    <button
+// onClick={()=> router.push("/jobs")}
+className='mdlg:hidden inline  text-wht rounded-md lg:h-[40px] h-[30px] lg:px-4 px-2 cursor-pointer   border-[2px] border-primary relative overflow-hidden group bg-primary' >
+<span className="relative  z-10 transition-colors duration-300 group-hover:text-wht text-wht">
+Book a call
+</span>
+<span className="absolute inset-0 bg-primary transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out z-0" />
+</button> 
+{/* Find a Jobs */}
+<button
+onClick={()=> router.push("/jobs")}
+className='mdlg:hidden inline  text-wht rounded-md lg:h-[40px] h-[30px] lg:px-4 px-2 cursor-pointer   border-[2px] border-grayOne relative overflow-hidden group bg-wht' >
+<span className="relative  z-10 transition-colors duration-300 group-hover:text-primary text-primary">
+Find a job
+</span>
+<span className="absolute inset-0 bg-grayOne transform translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out z-0" />
+</button> 
     </div>
          </div>
 

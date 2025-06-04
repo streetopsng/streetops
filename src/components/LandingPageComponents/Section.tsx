@@ -5,7 +5,7 @@ import { FaComments, FaTimes } from 'react-icons/fa';
 import { GiCheckMark } from "react-icons/gi";
 import { RiCheckboxFill } from "react-icons/ri";
 import AnimatedParticles from '../AnimatedParticles';
-const checkList = ["workforcess","process","process","people"]
+const checkList = ["Creative Processes","Efficient Workforces"]
 
 interface typeFlip<T> {
 processFlip:T,
@@ -23,19 +23,19 @@ const Section = () => {
   return (
     <div className="xl:px-8 md:px-8  flex flex-col  justify-start items-center   space-y-10 text-grayOne">
       {/* work life balance */}
-      <div className="flex flex-col lg:flex-row  lg:rounded-lg w-full gap-y-16  lg:border-grayTwo lg:border-2 overflow-hidden lg:items-center ">
+      <div className=" flex flex-col lg:flex-row  lg:rounded-lg w-full gap-y-16  lg:border-grayTwo lg:border-2 overflow-hidden lg:items-center ">
         {/* first */}
         <div className="flex-1 space-y-4 lg:max-w-[70%] px-6 ">
           <h2 className="font-semibold text-2xl lg:text-[2.2rem] leading-snug lg:text-start text-center animated-gradient-text-two uppercase font-semibold">
             The Future of <br className="block sm:hidden" />
             Balanced Workforces.
           </h2>
-          <p className='text-grayTwo lg:text-[0.9rem] '>
+          {/* <p className='text-grayTwo lg:text-[0.9rem] '>
             We are championing workforce evolution, offering innovative operational strategies that drive business transformation. By integrating specialized recruitment, smart automations and workflow optimization, we empower organizations to thrive. Our focus is on delivering <q>The Future of Balanced Workforces</q> - where talent blends with technology.
-          </p>
+          </p> */}
         </div>
 {/* second */}
-        <div className='lg:bg-gradient-to-r bg-gradient-to-b from-[rgba(0,0,0,0.3)] to-[#9f1203] lg:w-[30%] lg:px-0 px-4'>
+        <div className='lg:bg-gradient-to-r bg-gradient-to-b from-[rgba(0,0,0,0.3)] to-[#9f1203] lg:w-[30%] lg:px-0 px-4 lg:py-16'>
         {
   checkList.map((item,index)=>{
 

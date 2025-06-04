@@ -47,7 +47,7 @@ setWidth(getSubLinksState.left)
             getSubLinksState.subLinks && getSubLinksState.subLinks.map((item:string,index)=>{
                 return <Link
                 className=' py-2  mx-2 px-2  hover:bg-grayOne hover:text-black text-grayOne hover:rounded-lg hover:font-semibold'
-                key={item} href={`${item.toLocaleLowerCase()}`}>
+                key={item} href={`/${item.toLocaleLowerCase()}`}>
                     {item}
                 </Link>
             })

@@ -78,7 +78,7 @@ return ()=> clearInterval(intervalID)
   return (
     <div 
     onMouseOver={()=> dispatch(closeSubmenu())}
-    className='text-grayOne xl:px-10 md:px-8 px-4 flex pb-4 pt-12 md:flex-row flex-col '>
+    className='text-grayOne xl:px-10 md:px-8 px-4 flex pb-4  md:flex-row flex-col '>
 {/* First Section */}
         <section className=' flex flex-col items-end justify-between my-8'>
 <div className='flex flex-col justify-center h-full  gap-6 '>
