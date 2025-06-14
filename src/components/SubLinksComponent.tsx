@@ -18,7 +18,7 @@ setWidth(getSubLinksState.left)
     },[getSubLinksState])
 
     useEffect(()=>{
-        console.log("sublinks component",getSubLinksState);
+        // console.log("sublinks component",getSubLinksState);
         if (getSubLinksState.open) {
             gsap.to(container.current,{
                 opacity:1,

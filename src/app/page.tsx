@@ -4,6 +4,7 @@ import Footer from "@/components/LandingPageComponents/Footer";
 import { Header } from "@/components/LandingPageComponents/Header";
 import { HeroSection } from "@/components/LandingPageComponents/HeroSection";
 import Section from "@/components/LandingPageComponents/Section";
+import Services from "@/components/LandingPageComponents/Services";
 import Sponsors from "@/components/LandingPageComponents/Sponsors";
 
 import SubLinksComponent from "@/components/SubLinksComponent";
@@ -22,7 +23,7 @@ const page = () => {
   </div>
       <Section/>
       {/* Image */}
-     
+     <Services/>
       <div className="relative w-full lg:h-[500px] min-h-[300px] mt-4 mb-2">
         <Image
         className="absolute top-0 w-full h-full object-cover"

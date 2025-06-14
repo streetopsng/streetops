@@ -1,11 +1,13 @@
 import { configureStore } from "@reduxjs/toolkit";
 import submenuReducer from "./slices/desktopSubmenuLinksSlice";
+import jobsListReducer from "./slices/jobsSlice";
 
 
 
 const store = configureStore({
     reducer:{
-        submenuReducer:submenuReducer
+        submenuReducer:submenuReducer,
+        jobsListReducer:jobsListReducer
     }
 })
 

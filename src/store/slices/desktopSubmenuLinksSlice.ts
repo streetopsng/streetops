@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 // type initialStateStateType = {
     
@@ -12,7 +12,7 @@ const submenuSlice = createSlice({
     name:"submenu Slice",
     initialState,
     reducers:{
-        openSubmenu:(initialState,actions)=>{
+        openSubmenu:(initialState,actions:PayloadAction<any>)=>{
 const getItems = actions.payload.subLinkList
             return {
                 open:true,

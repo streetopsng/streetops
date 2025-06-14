@@ -36,8 +36,8 @@ useEffect(()=>{
   
 
     if (!reverse && index == words[wordIndex]?.length) {
-        console.log("completed");
-        console.log(index);
+        // console.log("completed");
+        // console.log(index);
         setIntervalSeconds(1500)
         setReverse(true)
         return

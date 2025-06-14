@@ -1,8 +1,9 @@
 "use client"
 import { useParams } from 'next/navigation'
 import React from 'react'
-import { jobsList } from '../JobsListComponent'
+
 import Link from 'next/link'
+import { jobsList } from '@/utils/jobs'
 
 const JobsDescription = () => {
      const param = useParams()
@@ -75,6 +76,7 @@ const JobsDescription = () => {
 {/* button for apply for the position */}
 <div className='my-6 flex justify-center'>
 
+{/* this link will take you user to google form address for the particualr job for now */}
 <Link className='bg-primary rounded-lg px-4 py-2 text-grayOne hover:opacity-50' href={`/jobs/${findJob?.id}/apply`}>Apply for Position</Link>
 
 </div>

@@ -80,10 +80,10 @@ const scrollFunction = ()=>{
         // element.style.top = "0"
         element.style.width = "100%"
     }
-    console.log("element");
     
-    console.log("nav screen hight",getHeight);
-    console.log("scroll",window.scrollY);
+    
+    // console.log("nav screen hight",getHeight);
+    // console.log("scroll",window.scrollY);
 // console.log(window.screenY + element.getBoundingClientRect().height);
 
 
@@ -209,7 +209,7 @@ Find a job
 {/* Mobile Nav */}
 <button className="mdlg:hidden inline bg-primary text-wht rounded-md h-[35px] px-[3px] cursor-pointer hover:bg-wht hover:text-primary border-[2px] border-primary  transition-all duration-500 " onClick={()=> {
     setShowNav(!showNav)
-    console.log(showNav);
+    // console.log(showNav);
     
 }}> {showNav ? <IoMdClose size={30}/>: <IoIosMenu size={30}/>}</button>
 </section>
