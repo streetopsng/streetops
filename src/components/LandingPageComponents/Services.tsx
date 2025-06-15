@@ -3,8 +3,12 @@ import { dispatchType } from '@/store'
 import { updateTop } from '@/store/slices/ServicesTopSlice'
 import React, { useEffect, useRef } from 'react'
 import { useDispatch } from 'react-redux'
+import 'swiper/css';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper/modules';
 
-const sectionClass = "w-[90%] lg:w-[30%] my-4"
+
+const sectionClass = "w-[90%] lg:w-[30%] my-4 md:px-0 p-8 "
 const headerClass = 'font-semibold text-grayOne text-lg text-[1.2rem]  '
 const Services = () => {
 const dispatch = useDispatch<dispatchType>()
@@ -60,7 +64,29 @@ console.log("from services");
        <h1 className='text-2xl lg:text-[2.2rem] uppercase animated-gradient-text-two text-[1.5rem] text-center font-semibold'>Services</h1>
       <div className='flex flex-wrap  gap-4 justify-center  '>
        {/* Workflow */}
-      <section id='workflow' ref={workflowAutomationRef} className={sectionClass}>
+       <Swiper
+    modules={[Autoplay]}
+      spaceBetween={5}
+      loop={true}
+      autoplay={{
+        delay: 4000,
+        disableOnInteraction: false,
+      }}
+      breakpoints={{
+          0: {
+              slidesPerView: 1,
+            },
+        768: {
+            slidesPerView: 2,
+        },
+        1024: {
+          slidesPerView: 2,
+        },
+    }}
+    >
+      <SwiperSlide className={sectionClass}>
+
+      <section id='workflow'  >
 <h1 className={headerClass}>Workflow Automation</h1>
 <p className=''><strong className='text-wht italic'>Automate</strong>  for peak performance.</p>
 <ul className='list-disc leading-10 px-4'>
@@ -69,8 +95,11 @@ console.log("from services");
     <li>Scale with ease. </li>
 </ul>
        </section>
+      </SwiperSlide>
        {/* Recruitment */}
-       <section id='recruitment' ref={recruitmentRef} className={sectionClass}>
+       <SwiperSlide className={sectionClass}>
+
+       <section id='recruitment' >
 <h1 className={headerClass}>Recruitment </h1>
 <p className=''><strong className='text-wht italic'>Hire</strong>   the best talent, <strong className='text-wht'>fast.</strong></p>
 <ul className='list-disc leading-10 px-4'>
@@ -79,8 +108,11 @@ console.log("from services");
     <li>Build strong teams </li>
 </ul>
        </section>
+       </SwiperSlide>
        {/* Training and Development */}
-       <section id='training' ref={trainingAndDevelopmentRef} className={sectionClass}>
+       <SwiperSlide className={sectionClass}>
+
+       <section id='training' >
 <h1 className={headerClass}>Training and Development </h1>
 <p className=''><strong className='text-wht italic'>Unleash</strong>  your team's potential. </p>
 <ul className='list-disc leading-10 px-4'>
@@ -89,8 +121,11 @@ console.log("from services");
     <li>Boost team performance.  </li>
 </ul>
        </section>
+       </SwiperSlide>
        {/* Worklife Integration Consulting */}
-       <section id='worklife' ref={worklifeIntegrationConsultingtRef} className={sectionClass}>
+       <SwiperSlide className={sectionClass}>
+
+       <section id='worklife'  >
 <h1 className={headerClass}>Worklife Integration Consulting </h1>
 <p className=''><strong className='text-wht italic'>Cultivate</strong>   sustainable well-being.</p>
 <ul className='list-disc leading-10 px-4'>
@@ -99,6 +134,8 @@ console.log("from services");
     <li>Maximize long-term productivity. </li>
 </ul>
        </section>
+       </SwiperSlide>
+       </Swiper>
       </div>
     </div>
   )
