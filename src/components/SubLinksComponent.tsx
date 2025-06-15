@@ -61,10 +61,10 @@ setWidth(getSubLinksState.left)
                  console.log(getKeys);
                  const curr = item.id
                  console.log(servicesTop);
-                 const currHeaderHeight = 120
+                 const currHeaderHeight = 220
                  const value: "workflowAutomation" | "recruitment" | "trainingAndDevelopment" | "worklifeIntegrationConsulting" = item.id as "workflowAutomation" | "recruitment" | "trainingAndDevelopment" | "worklifeIntegrationConsulting"
                     window.scrollTo({
-                        top:window.scrollY + servicesTop[value] - currHeaderHeight,
+                        top:servicesTop[value] - currHeaderHeight,
                         behavior:"smooth"
                     })
                 //  if (item.id == "workflowAutomation") {
