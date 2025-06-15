@@ -4,7 +4,7 @@ import { MdAccessTime } from "react-icons/md";
 import React, { useEffect, useState } from 'react'
 import { useQuery } from "@tanstack/react-query";
 import Link from "next/link";
-import { jobsList } from "@/components/JobsPageComponents/JobsListComponent";
+import { jobsList } from "@/utils/jobs";
 
 //   const address = process.env.NEXT_PUBLIC_WEB_ADDRESS
   const inputClass = "border-grayTwotext-grayTwo border-1 rounded-md py-2 pl-2 md:w-[32%] "

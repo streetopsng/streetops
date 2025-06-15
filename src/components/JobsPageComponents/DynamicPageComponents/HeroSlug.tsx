@@ -1,12 +1,13 @@
 "use client"
 import { useParams } from 'next/navigation';
 import React from 'react'
-import { jobsList } from '../JobsListComponent';
+
 import { closeSubmenu } from '@/store/slices/desktopSubmenuLinksSlice';
 import { useDispatch } from 'react-redux';
 import { dispatchType } from '@/store';
 import { CiLocationOn } from "react-icons/ci";
 import Link from 'next/link';
+import { jobsList } from '@/utils/jobs';
 
 const HeroSlug = () => {
     const dispatch = useDispatch<dispatchType>()

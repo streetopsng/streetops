@@ -1,10 +1,11 @@
 import React from 'react'
-import { jobsList } from '../JobsPageComponents/JobsListComponent';
+
 import { useParams } from 'next/navigation';
 import { CiLocationOn } from "react-icons/ci";
 import { dispatchType } from '@/store';
 import { useDispatch } from 'react-redux';
 import { closeSubmenu } from '@/store/slices/desktopSubmenuLinksSlice';
+import { jobsList } from '@/utils/jobs';
 
 const HeroSectionForApply = () => {
   const dispatch = useDispatch<dispatchType>()
