@@ -8,14 +8,14 @@ import { IoIosMenu } from "react-icons/io";
 import { IoMdClose } from "react-icons/io";
 import { FaAngleDown } from "react-icons/fa6";
 import { FaAngleUp } from "react-icons/fa6";
-import { it } from "node:test";
+
 import { useDispatch, useSelector } from "react-redux";
 import { dispatchType, RootStateType } from "@/store";
-import { openSubmenu } from "@/store/slices/desktopSubmenuLinksSlice";
+import { closeSubmenu, openSubmenu } from "@/store/slices/desktopSubmenuLinksSlice";
 interface menuLinksTypes {
     id:number,
     name:string,
-    subLinks?:string[],
+    subLinks?:{display:string,id:string}[],
 }
 
 const subLinksClass = "h-[50px] text-wht flex items-center transition-all duration-700 hover:bg-wht hover:text-primary pl-8 border-primary border-[2px] hover:font-semibold hover:pl-4 "
@@ -35,7 +35,7 @@ const menuLinks:menuLinksTypes[] = [
     {
         id:3,
         name:"Services",
-        subLinks:["Recruitment","Automations","Work-Life Integration Consulting"]
+        subLinks:[{display:"Workflow Automation",id:"workflowAutomation"},{display:"Recruitment",id:"recruitment"},{display:"Train and Development",id:"trainingAndDevelopment"},{display:"Worklife Integration Consulting",id:"worklifeIntegrationConsulting"}]
     },
     {
         id:4,
@@ -57,6 +57,13 @@ const [accordion,setAccodion] = useState<string[]>([""])
 const headerContainerRef = useRef<HTMLDivElement | null>(null)
 
 
+
+const servicesTop = useSelector((store:RootStateType)=>{
+
+    return store.servicesTopReducer
+})
+
+
 useEffect(()=>{
 if (!headerContainerRef.current) {
     return
@@ -64,6 +71,7 @@ if (!headerContainerRef.current) {
 
 const element: HTMLDivElement = headerContainerRef.current 
 const getHeight = window.innerHeight + element.getBoundingClientRect().height
+ 
 
 
 
@@ -95,10 +103,6 @@ const scrollFunction = ()=>{
 },[])
 const dispatch = useDispatch<dispatchType>()
 
-// const getState = useSelector((store:RootStateType)=>{
-
-//     return store.submenuReducer
-// })
 
 
 const router =useRouter()
@@ -139,19 +143,7 @@ useEffect(()=>{
         <div style={{zIndex:10}} className="py-4 flex justify-between items-center ">
 
         <section className="lg:pl-4 max-[10%]">
-        {/* <div 
-        // className="relative mdlg:w-[80px] mdlg:h-[80px] h-[60px] w-[50px] "
-        className="flex items-center pl-2 "
-        >
-        <Image alt="paige" 
-        // className="absolute top-10 left-0 object-contain"
-        className="object-contain"
-        src={"/paige.png"}
-         //  fill
-         width={58}
-         height={58}
-         />
-         </div> */}
+       
 <div className="relative lg:w-[30px] lg:h-[50px] h-[30px] w-[20px] ">
         <Image 
         className="absolute w-full h-full object-contain"
@@ -170,7 +162,7 @@ href={`/${item.subLinks && item.subLinks.length > 0 ? "" : item.name == "Home" ?
 key={index}
 onMouseOver={(e)=>{
     const el = e.target as HTMLButtonElement | HTMLLinkElement
-    console.log(el.getBoundingClientRect());
+    // console.log(el.getBoundingClientRect());
     const element = el.getBoundingClientRect()
     const getCenter = (element.left + element.right) / 2 ;
     if (item.subLinks && item.subLinks.length > 0) {
@@ -247,7 +239,24 @@ Find a job
                             {
                                     item.subLinks.map((link,ind)=>{
 
-                                        return <Link key={ind} className={`${subLinksClass}`} href={`/${link.toLocaleLowerCase()}`}>{link}</Link>
+                                        return <button key={ind} 
+                                        onClick={()=>{
+                                            const getKeys = Object.keys(servicesTop)
+                                            console.log(getKeys);
+                                            const curr = link.id
+                                            console.log(servicesTop);
+                                            const currHeaderHeight = 220
+                                            const value: "workflowAutomation" | "recruitment" | "trainingAndDevelopment" | "worklifeIntegrationConsulting" = link.id as "workflowAutomation" | "recruitment" | "trainingAndDevelopment" | "worklifeIntegrationConsulting"
+                                               window.scrollTo({
+                                                   top:window.scrollY + servicesTop[value] - currHeaderHeight,
+                                                   behavior:"smooth"
+                                               })
+
+                                            setShowNav(false)   
+                                        }}
+                                        className={`${subLinksClass}text-start w-full`}
+                                        //  href={`/${link.display.toLocaleLowerCase()}`}
+                                        >{link.display}</button>
                                     })
                                 }
                             </aside>}

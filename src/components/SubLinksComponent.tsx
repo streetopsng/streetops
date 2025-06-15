@@ -12,6 +12,13 @@ const [width,setWidth ] = useState(0)
 
         return store.submenuReducer
     })
+    const servicesTop = useSelector((store:RootStateType)=>{
+
+        return store.servicesTopReducer
+    })
+
+
+
 
     useEffect(()=>{
 setWidth(getSubLinksState.left)
@@ -44,12 +51,38 @@ setWidth(getSubLinksState.left)
     // style={{left: getSubLinksState.open ? width : "-200px",opacity:getSubLinksState.open ? 1 : 0}}
     >
         {
-            getSubLinksState.subLinks && getSubLinksState.subLinks.map((item:string,index)=>{
-                return <Link
-                className=' py-2  mx-2 px-2  hover:bg-grayOne hover:text-black text-grayOne hover:rounded-lg hover:font-semibold'
-                key={item} href={`/${item.toLocaleLowerCase()}`}>
-                    {item}
-                </Link>
+            getSubLinksState.subLinks && getSubLinksState.subLinks.map((item:{display:string,id:string},index)=>{
+                return <button
+                className=' py-2 text-start mx-2 px-4  hover:bg-grayOne hover:text-black text-grayOne hover:rounded-lg hover:font-semibold'
+                key={item.id}
+                onClick={()=>{
+
+                    const getKeys = Object.keys(servicesTop)
+                 console.log(getKeys);
+                 const curr = item.id
+                 console.log(servicesTop);
+                 const currHeaderHeight = 220
+                 const value: "workflowAutomation" | "recruitment" | "trainingAndDevelopment" | "worklifeIntegrationConsulting" = item.id as "workflowAutomation" | "recruitment" | "trainingAndDevelopment" | "worklifeIntegrationConsulting"
+                    window.scrollTo({
+                        top:window.scrollY + servicesTop[value] - currHeaderHeight,
+                        behavior:"smooth"
+                    })
+                //  if (item.id == "workflowAutomation") {
+
+                     
+                //  }
+
+                    // window.scrollTo(
+                    //     {
+                    //         top:window.screenY,
+                    //         behavior:"smooth"
+                    //     }
+                    // )
+                }}
+                //  href={`#${item.id}`}
+                 >
+                    {item.display}
+                </button>
             })
         }
     </div>
