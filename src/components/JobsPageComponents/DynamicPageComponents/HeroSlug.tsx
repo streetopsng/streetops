@@ -22,7 +22,7 @@ const HeroSlug = () => {
     <div
       onMouseOver={()=> dispatch(closeSubmenu())}
     className='  '>
-        <div className='lg:h-[300px] md:h-[250px] h-[200px] bg-primary flex flex-col justify-center items-center'>
+        <div className='lg:h-[300px] md:min-h-[250px] min-h-[200px] bg-primary flex flex-col justify-center items-center'>
 
         <h1 className='text-wht md:text-[3rem] text-[1.8rem]  md:px-16 px-4 text-center'>{findJob?.jobTitle}</h1>
        
