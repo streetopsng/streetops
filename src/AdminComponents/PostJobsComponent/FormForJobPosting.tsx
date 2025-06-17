@@ -59,7 +59,7 @@ const postData = async(formDetails:formDetailsType<string>)=>{
         alert("Empty field")
         return
     }
-    const res = await fetch(`http://localhost:3000/api/post-jobs/`,{
+    const res = await fetch(`${address}/api/post-jobs/`,{
         method:"POST",
         headers:{
             "Content-Type":"application/json"
