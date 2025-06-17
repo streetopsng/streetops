@@ -131,8 +131,14 @@ console.log(allJobs,"all jobs");
 </section>
 {/* Total jobs */}
 <p className="text-center">{currentPage + 1} of {totalPages}</p>
-<div className="flex justify-end">
-    <button className="bg-primary  w-[100px] py-2 rounded-lg" onClick={()=> {
+<div className="flex justify-between">
+<button className="bg-primary  w-[100px] py-2 rounded-lg cursor-pointer hover:opacity-500" onClick={()=> {
+      if (currentPage + 1 === 1) {
+        return
+      }
+      setCurrentPage(prev => prev - 1)
+    }}>Prev</button>
+    <button className="bg-primary  w-[100px] py-2 rounded-lg cursor-pointer hover:opacity-500" onClick={()=> {
       if (currentPage + 1 === totalPages) {
         return
       }
