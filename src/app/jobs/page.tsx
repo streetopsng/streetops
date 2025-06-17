@@ -9,17 +9,19 @@ import { Header } from '@/components/LandingPageComponents/Header';
 import { dispatchType } from '@/store';
 import { closeSubmenu } from '@/store/slices/desktopSubmenuLinksSlice';
 import { jobs } from '@/utils/jobs'
+import { useQuery } from '@tanstack/react-query';
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react'
 import { GrFormNext } from "react-icons/gr";
 import { GrFormPrevious } from "react-icons/gr";
 import { useDispatch } from 'react-redux';
 
-
+// const address = process.env.NEXT_PUBLIC_ADDRESS
 
 const spanClass = "w-[25%] text-start  "
 const page = () => {
     const [currentPage,setCurrentPage] = useState<number>(1)
+
     const itemsPerPage  = 10
     const totalPages = Math.ceil(jobs.length / itemsPerPage);
     const startIndex = (currentPage - 1) * itemsPerPage;
@@ -42,7 +44,7 @@ const page = () => {
                 </div> */}
         <HeroSection/>
         <JobsListComponent/>
-        <LookingToHire/>
+        {/* <LookingToHire/> */}
         {/* <Testimonies/> */}
         <GrowYourTeam/>
         <Footer/>

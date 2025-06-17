@@ -3,13 +3,19 @@ import { useParams } from 'next/navigation'
 import React from 'react'
 
 import Link from 'next/link'
-import { jobsList } from '@/utils/jobs'
+// import { jobsList } from '@/utils/jobs'
+import { useSelector } from 'react-redux'
+import { RootStateType } from '@/store'
 
 const JobsDescription = () => {
      const param = useParams()
     //   console.log(param);
+    const allJobs = useSelector((store:RootStateType)=>{
+
+        return store.alljobsReducer
+      })
       
-      const findJob = jobsList.find(item => item.id == Number(param.slug))
+      const findJob = allJobs.find(item => item._id == param.slug)
       console.log(findJob);
       
   return (
@@ -17,8 +23,8 @@ const JobsDescription = () => {
         {/* About Section */}
         <h1 className='text-center text-grayOne underline text-lg font-semibold italic'>Decsription</h1>
 <section className='my-8'>
-<h1 className='text-lg font-semibold text-grayOne'>{findJob?.about?.title}</h1>
-<p>{findJob?.about?.info}</p>
+<h1 className='text-lg font-semibold text-grayOne'>{findJob?.jobTitle}</h1>
+<p>{findJob?.aboutJob}</p>
 </section>
 
 {/* Role overview  */}
@@ -31,13 +37,13 @@ const JobsDescription = () => {
 
 <section className='my-4'>
     {/* Job type */}
-    <div><span  className='font-semibold text-grayOne'>Job Type</span> : <span>{findJob?.jobType}</span></div>
+    {/* <div><span  className='font-semibold text-grayOne'>Job Type</span> : <span>{findJob?.jobType}</span></div> */}
     {/* Work place */}
     <div><span className='font-semibold text-grayOne'>Work place</span> : <span> {findJob?.workPlace}</span></div>
     {/* Location */}
-    <div><span className='font-semibold text-grayOne'>Locaton</span> : <span>{findJob?.location}</span></div>
+    <div><span className='font-semibold text-grayOne'>Salaray</span> : <span>{findJob?.salary}</span></div>
     {/* Relocation */}
-    <div><span className='font-semibold text-grayOne'>Relocation</span> : <span>{findJob?.relocation}</span></div>
+    {/* <div><span className='font-semibold text-grayOne'>Relocation</span> : <span>{findJob?.relocation}</span></div> */}
 </section>
 
 {/* Requirements */}
@@ -63,7 +69,7 @@ const JobsDescription = () => {
 
 <ul className='list-disc'>
     {
-        findJob?.responsibilites?.map((item,index)=>{
+        findJob?.responsibilities?.map((item,index)=>{
 
             return <li key={index}>
 {item}
@@ -77,7 +83,7 @@ const JobsDescription = () => {
 <div className='my-6 flex justify-center'>
 
 {/* this link will take you user to google form address for the particualr job for now */}
-<Link className='bg-primary rounded-lg px-4 py-2 text-grayOne hover:opacity-50' href={`/jobs/${findJob?.id}/apply`}>Apply for Position</Link>
+<Link className='bg-primary rounded-lg px-4 py-2 text-grayOne hover:opacity-50' href={`#`}>Apply for Position</Link>
 
 </div>
     </div>

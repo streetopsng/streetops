@@ -6,11 +6,11 @@ import { useQuery } from "@tanstack/react-query";
 import Link from "next/link";
 import { jobsList } from "@/utils/jobs";
 
-//   const address = process.env.NEXT_PUBLIC_WEB_ADDRESS
+  const address = process.env.NEXT_PUBLIC_ADDRESS
   const inputClass = "border-grayTwotext-grayTwo border-1 rounded-md py-2 pl-2 md:w-[32%] "
 
   const fetJobsList = async()=> {
-    const res = await fetch(`http://localhost:3000/api/jobs`)
+    const res = await fetch(`${address}/api/jobs`)
     const response = await res.json()
     return response
   }

@@ -8,8 +8,9 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 
 
-const sectionClass = "w-[90%] lg:w-[30%] my-4 md:px-0 p-8 "
-const headerClass = 'font-semibold text-grayOne text-lg text-[1.2rem]  '
+const swiperClass = " w-full "
+const headerClass = 'font-semibold text-grayOne text-lg text-[1.2rem]   '
+const sectionClass = "my-4 md:pl-4 p-8 w-[90%]  mx-auto shadow-sm shadow-primary inset-box"
 const Services = () => {
 const dispatch = useDispatch<dispatchType>()
   const workflowAutomationRef = useRef<HTMLElement>(null)
@@ -62,7 +63,7 @@ console.log("from services");
   return (
     <div className='text-grayTwo xl:px-8 md:px-8'>
        <h1 className='text-2xl lg:text-[2.2rem] uppercase animated-gradient-text-two text-[1.5rem] text-center font-semibold'>Services</h1>
-      <div className='flex flex-wrap  gap-4 justify-center  '>
+      <div className='flex flex-wrap  gap-4 justify-center   '>
        {/* Workflow */}
        <Swiper
     modules={[Autoplay]}
@@ -80,16 +81,16 @@ console.log("from services");
             slidesPerView: 2,
         },
         1024: {
-          slidesPerView: 2,
+          slidesPerView: 3,
         },
     }}
     >
-      <SwiperSlide className={sectionClass}>
+      <SwiperSlide className={swiperClass}>
 
-      <section id='workflow'  >
+      <section id='workflow' className={sectionClass} >
 <h1 className={headerClass}>Workflow Automation</h1>
 <p className=''><strong className='text-wht italic'>Automate</strong>  for peak performance.</p>
-<ul className='list-disc leading-10 px-4'>
+<ul className='list-disc leading-10 pl-4'>
     <li>Work faster, smarter. </li>
     <li>Boost operational flow. </li>
     <li>Scale with ease. </li>
@@ -97,12 +98,12 @@ console.log("from services");
        </section>
       </SwiperSlide>
        {/* Recruitment */}
-       <SwiperSlide className={sectionClass}>
+       <SwiperSlide className={swiperClass}>
 
-       <section id='recruitment' >
+       <section id='recruitment' className={sectionClass}>
 <h1 className={headerClass}>Recruitment </h1>
 <p className=''><strong className='text-wht italic'>Hire</strong>   the best talent, <strong className='text-wht'>fast.</strong></p>
-<ul className='list-disc leading-10 px-4'>
+<ul className='list-disc leading-10 pl-4'>
     <li>Attract top talent </li>
     <li>Accelerate hiring </li>
     <li>Build strong teams </li>
@@ -110,12 +111,12 @@ console.log("from services");
        </section>
        </SwiperSlide>
        {/* Training and Development */}
-       <SwiperSlide className={sectionClass}>
+       <SwiperSlide className={swiperClass}>
 
-       <section id='training' >
+       <section id='training' className={sectionClass}>
 <h1 className={headerClass}>Training and Development </h1>
 <p className=''><strong className='text-wht italic'>Unleash</strong>  your team's potential. </p>
-<ul className='list-disc leading-10 px-4'>
+<ul className='list-disc leading-10 pl-4'>
     <li>Cultivate vital skills. </li>
     <li>Foster professional growth.</li>
     <li>Boost team performance.  </li>
@@ -123,12 +124,12 @@ console.log("from services");
        </section>
        </SwiperSlide>
        {/* Worklife Integration Consulting */}
-       <SwiperSlide className={sectionClass}>
+       <SwiperSlide className={swiperClass}>
 
-       <section id='worklife'  >
+       <section id='worklife'  className={sectionClass}>
 <h1 className={headerClass}>Worklife Integration Consulting </h1>
 <p className=''><strong className='text-wht italic'>Cultivate</strong>   sustainable well-being.</p>
-<ul className='list-disc leading-10 px-4'>
+<ul className='list-disc leading-10 pl-4'>
     <li>Design supportive cultures. </li>
     <li>Enhance employee well-being. </li>
     <li>Maximize long-term productivity. </li>

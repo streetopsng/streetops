@@ -5,6 +5,8 @@ const JobSchema = new Schema({
     aboutJob:String,
     roleOverview:String,
     workPlace:{type:String,default:"Remote"},
+    salary:String,
+    googleFormLink:String,
     responsibilities:{
         type:[Schema.Types.Mixed],
         default:[]

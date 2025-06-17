@@ -19,6 +19,15 @@
 html{
   scroll-behavior: smooth;
 }
+.inset-box {
+
+  
+  box-shadow: inset 0 0px 20px #f73620;
+  /* border: 1px solid #120f0f; */
+  border-radius: 8px;
+}
+
+
 
 @keyframes marquee {
   0%   { transform: translateX(0); }
@@ -267,3 +276,58 @@ transform: rotateY(180deg);
       transform: rotate(360deg);
   }
   } 
+
+
+
+  .page-preloader {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 6rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  .page-preloader:before,
+  .page-preloader:after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    animation: pulsOut 1.8s ease-in-out infinite;
+    filter: drop-shadow(0 0 1rem rgba(248, 128, 128, 0.75));
+  }
+  .page-preloader:before {
+    width: 100%;
+    padding-bottom: 100%;
+    box-shadow: inset 0 0 0 1rem #f73620;
+    animation-name: pulsIn;
+  }
+  .page-preloader:after {
+    width: calc(100% - 2rem);
+    padding-bottom: calc(100% - 2rem);
+    box-shadow: 0 0 0 0 #f73620;
+  }
+
+  @keyframes pulsIn {
+    0% {
+      box-shadow: inset 0 0 0 1rem #f73620;
+      opacity: 1;
+    }
+    50%, 100% {
+      box-shadow: inset 0 0 0 0 #f73620;
+      opacity: 0;
+    }
+  }
+
+  @keyframes pulsOut {
+    0%, 50% {
+      box-shadow: 0 0 0 0 #f73620;
+      opacity: 0;
+    }
+    100% {
+      box-shadow: 0 0 0 1rem #f73620;
+      opacity: 1;
+    }
+  }
+      

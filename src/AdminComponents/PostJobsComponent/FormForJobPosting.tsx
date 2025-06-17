@@ -5,6 +5,9 @@ import { FaStarOfLife } from "react-icons/fa";
 import { useMutation } from '@tanstack/react-query';
 import { Loader } from '@/utils/Loader';
 
+
+const address = process.env.NEXT_PUBLIC_ADDRESS
+
 interface formItemsType<S,N>{
     id:N,
     title:S,
@@ -42,12 +45,21 @@ interface formDetailsType<S>{
     aboutJob:S,
     roleOverview:S,
     workPlace:S,
+    googleFormLink:S,
+    salary:S,
     responsibilities:(S | null)[],
     requirements:(S | null)[]
 }
 
 const postData = async(formDetails:formDetailsType<string>)=>{
-    const res = await fetch("http://localhost:3000/api/post-jobs/",{
+    
+
+    if (!formDetails.jobTitle.trim() || !formDetails.googleFormLink.trim() || !formDetails.roleOverview.trim() || !formDetails.salary) {
+        
+        alert("Empty field")
+        return
+    }
+    const res = await fetch(`http://localhost:3000/api/post-jobs/`,{
         method:"POST",
         headers:{
             "Content-Type":"application/json"
@@ -71,11 +83,14 @@ const [tempStateRes,setTempStateRes] = useState<string>("")
         jobTitle:"",
         aboutJob:"",
         roleOverview:"",
+        salary:"",
         workPlace:"Remote",
+        googleFormLink:"",
         responsibilities:[],
         requirements:[]
     })
 
+    
     // react query mutate
     const mutation = useMutation({
         mutationFn:postData,
@@ -84,11 +99,18 @@ const [tempStateRes,setTempStateRes] = useState<string>("")
             alert("Job successfully Posted")
             
         },
+        
         onError:(error)=>{
             console.log("and error occured",error);
             
         }
     })
+
+
+//     useEffect(()=>{
+// console.log(process.env.NEXT_PUBLIC_ADDRESS ,"url" );
+
+//     },[])
 
 
     useEffect(()=>{
@@ -115,6 +137,7 @@ mutation.mutate(formDetails)
 
 <form action="" onSubmit={handleSubmit} className='rounded-md'>
 
+{/* Job title */}
 <div className='flex flex-col my-4'>
                 
                 <label htmlFor={""} className='flex items-center gap-x-4 text-wht'><span>Job title</span><span><FaStarOfLife size={10} className='text-[red]'/></span></label>
@@ -136,6 +159,18 @@ mutation.mutate(formDetails)
 onChange={(e:React.ChangeEvent<HTMLTextAreaElement>)=>{
 
     setFormDetails({...formDetails,roleOverview:e.target.value})
+
+}}
+/>
+</div>
+{/* About Job */}
+<div className='flex flex-col my-4'>
+<label htmlFor={""} className='flex items-center gap-x-4 text-wht'><span>About Job</span><span><FaStarOfLife size={10} className='text-[red]'/></span></label>
+<textarea
+ className='border-1 border-grayTwo  h-[80px] pl-2'
+onChange={(e:React.ChangeEvent<HTMLTextAreaElement>)=>{
+
+    setFormDetails({...formDetails,aboutJob:e.target.value})
 
 }}
 />
@@ -236,10 +271,47 @@ setFormDetails({...formDetails,workPlace:e.target.value})
 </ul>
 </div>
    
+
+
+   
+{/* google form Link input */}
+<div className='flex flex-col my-4'>
+                
+                <label htmlFor={""} className='flex items-center gap-x-4 text-wht'><span>Google Form Link</span><span><FaStarOfLife size={10} className='text-[red]'/></span></label>
+                <input
+                type="text"
+                name={"googleFormLink"}
+                placeholder={"Enter Google Form Link"}
+                className='border-1 border-grayTwo  h-[40px] pl-2'
+                onChange={(e:React.ChangeEvent<HTMLInputElement>)=>{
+        setFormDetails({...formDetails,googleFormLink:e.target.value})
+                }}
+                 />
+                    </div>
+   
+
+
+    {/* Salary */}
+    <div className='flex flex-col my-4'>
+                
+                <label htmlFor={""} className='flex items-center gap-x-4 text-wht'><span>Salary</span><span><FaStarOfLife size={10} className='text-[red]'/></span></label>
+                <input
+                type="text"
+                name={"salary"}
+                placeholder={"Salary"}
+                className='border-1 border-grayTwo  h-[40px] pl-2'
+                onChange={(e:React.ChangeEvent<HTMLInputElement>)=>{
+        setFormDetails({...formDetails,salary:e.target.value})
+                }}
+                 />
+                    </div>
    
     <div className='flex  py-2'>
         <button className='w-[80px] h-[40px] bg-primary text-wht rounded-md cursor-pointer flex items-center justify-center'>{mutation.isPending? <Loader/> : "Post"}</button>
     </div>
+
+
+
 </form>
 
 

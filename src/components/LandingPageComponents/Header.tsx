@@ -35,17 +35,17 @@ const menuLinks:menuLinksTypes[] = [
     {
         id:3,
         name:"Services",
-        subLinks:[{display:"Workflow Automation",id:"workflowAutomation"},{display:"Recruitment",id:"recruitment"},{display:"Train and Development",id:"trainingAndDevelopment"},{display:"Worklife Integration Consulting",id:"worklifeIntegrationConsulting"}]
+        // subLinks:[{display:"Workflow Automation",id:"workflowAutomation"},{display:"Recruitment",id:"recruitment"},{display:"Train and Development",id:"trainingAndDevelopment"},{display:"Worklife Integration Consulting",id:"worklifeIntegrationConsulting"}]
     },
-    {
-        id:4,
-        name:"Packages",
+    // {
+    //     id:4,
+    //     name:"Packages",
         
-    },
-    {
-        id:5,
-        name:"Resources",
-    },
+    // },
+    // {
+    //     id:5,
+    //     name:"Resources",
+    // },
 
 ]
 export const Header = () => {
@@ -135,16 +135,16 @@ useEffect(()=>{
 
 
   return (
+    // bg-[#000000ed]
+    <div ref={headerContainerRef}  className=" min-h-[20px] w-full bg-[#000000ed] z-50  ">
 
-    <div ref={headerContainerRef}  className=" min-h-[20px] w-full bg-[#000000ed] z-50">
-
-    <div  className=" xl:mx-6 md:mx-4 mx-4 mdlg:static relative text-grayOne">
+    <div  className=" xl:mx-6 md:mx-4 lg:mt-2 mx-4 mdlg:static relative text-grayOne ">
         
-        <div style={{zIndex:10}} className="py-4 flex justify-between items-center ">
+        <div style={{zIndex:10}} className="lg:py-0 py-4 flex justify-between items-center  ">
 
-        <section className="lg:pl-4 max-[10%]">
+        <section className="lg:pl-4 ">
        
-<div className="relative lg:w-[30px] lg:h-[50px] h-[30px] w-[20px] ">
+<div className="relative lg:w-[30px] lg:h-[50px] h-[30px] w-[20px] bg-">
         <Image 
         className="absolute w-full h-full object-contain"
         fill
@@ -154,7 +154,7 @@ useEffect(()=>{
         </section>
 
 {/* Menu bar  for desktop*/}
-<section className="mdlg:flex hidden lg:w-[50%] mdlg:w-[60%] justify-between">
+<section className="mdlg:flex hidden lg:w-[30%] mdlg:w-[60%] justify-between ">
     {
         menuLinks.map((item,index)=>{
 return <Link
@@ -179,7 +179,7 @@ className={`${desktopLinkClass} flex items-center justify-center text-[0.9rem]`}
    
 </section>
 
-<section className=" space-x-2 max-2-[30%]">
+<section className=" space-x-2">
     {/* Book a call */}
 <button
 // onClick={()=> router.push("/jobs")}
