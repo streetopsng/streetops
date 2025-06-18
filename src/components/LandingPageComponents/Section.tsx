@@ -5,7 +5,7 @@ import { FaComments, FaTimes } from 'react-icons/fa';
 import { GiCheckMark } from "react-icons/gi";
 import { RiCheckboxFill } from "react-icons/ri";
 import AnimatedParticles from '../AnimatedParticles';
-const checkList = ["Creative Processes","Efficient Workforces","Tech-Enabled Systems"]
+const checkList = ["Smart automations","Liberated employees","Efficient workforces","Tech-Enabled Systems"]
 
 interface typeFlip<T> {
 processFlip:T,
@@ -83,13 +83,23 @@ const Section = () => {
         <div className='absolute  h-full  backface-hidden  px-4 cursor-pointer my-4'>
         <h2 className=" uppercase font-semibold text-xl lg:text-2xl text-center text-wht child">People</h2>
           <p className=" pt-4 italic">
-            We believe that people are the core of every successful organization. Our People section provides strategic solutions to maximize your human capital investment. We offer:
+Automation powers modern business efficiency. Our "Processes" services offer specialized consulting and implement tailored automation solutions that advance your organization, regardless of its size.
+<br />
+<br />
+<strong className='text-grayOne not-italic'>Tailored Automation Packages SMEs:</strong> Streamline operations, reduce manual work, and improve accuracy, including sales and digital automations.
+<br />
+<br />
+<strong className='text-grayOne not-italic'>Enterprises:</strong>Integrate complex systems, automate large-scale processes, and achieve substantial savings and efficiency. This includes comprehensive sales and digital automation strategies.
+<br />
+<br />
+<strong className='text-grayOne not-italic'>Startups:</strong>Establish scalable operations from day one, automate core functions, and accelerate growth. This package includes efficient sales pipelines and foundational digital automation.
+            {/* We believe that people are the core of every successful organization. Our People section provides strategic solutions to maximize your human capital investment. We offer:
             <br />
             <strong className='text-wht not-italic'>Strategic Recruitment</strong> : Identifying and placing the right talent to achieve your business objectives.
             <br />
             <strong className='text-wht not-italic'>Transformative Training</strong> : Equipping your workforce with the skills and knowledge needed to excel.
             <br />
-            <strong className='text-wht not-italic'>Human Capital Leadership (Africa)</strong> : Actively contributing to the development of human capital across the African continent through webinars, training programs, and a dynamic blog, fostering a community of growth and innovation.
+            <strong className='text-wht not-italic'>Human Capital Leadership (Africa)</strong> : Actively contributing to the development of human capital across the African continent through webinars, training programs, and a dynamic blog, fostering a community of growth and innovation. */}
           </p>
         </div>
      
@@ -137,16 +147,27 @@ const Section = () => {
         {/* text */}
          <div className='absolute  h-full  backface-hidden  px-4' >
          <h2 className="uppercase font-semibold text-xl lg:text-2xl text-center text-wht">Processes</h2>
-          <p className=" pt-4  italic">
-            We partner with organizations to transform their operations and achieve peak performance. Our Processes section delivers strategic consulting services, including:
+          <article className=" pt-4  italic">
+While automation drives efficiency, we strengthen your human capital. Our "People" services support this by ensuring your teams focus on high-value contributions and continuous growth.
+
+<h1 className='font-semibold text-center text-grayOne not-italic'>Our Talent Solutions</h1>
+<strong className='text-grayOne not-italic'>Recruitment:</strong> We find and place the right talent to excel in efficient workplaces. We build strong teams that fit your systems.
+
+<br />
+<br />
+<strong className='text-grayOne not-italic'>Training & Development:</strong> We give your teams the skills they need to thrive in an automated environment, building their critical thinking and adaptability.
+<br />
+<br />
+<strong className='text-grayOne not-italic'>Work-Life Integration Consulting:</strong>We help create supportive cultures where employee well-being improves, leading to better long-term productivity.
+            {/* We partner with organizations to transform their operations and achieve peak performance. Our Processes section delivers strategic consulting services, including:
             <br />
             <strong className='text-wht not-italic'>Operational Consulting</strong> :  Providing expert guidance to optimize workflows, reduce costs, and improve overall operational effectiveness.
             
             <br />
             <strong className='text-wht not-italic'>Process Automation</strong> : Leveraging automation technologies to drive efficiency, accuracy, and scalability.
             <br />
-            <strong className='text-wht not-italic'>Comprehensive Consulting Solutions</strong> : Offering a suite of consulting services to support organizational change, improve project delivery, and enhance overall business performance.
-          </p>
+            <strong className='text-wht not-italic'>Comprehensive Consulting Solutions</strong> : Offering a suite of consulting services to support organizational change, improve project delivery, and enhance overall business performance. */}
+          </article>
          </div>
 {/* Images */}
 <div  className='absolute w-full  h-full rotate-y-[180deg] backface-hidden flex items-center justify-center  px-4'>

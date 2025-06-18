@@ -37,6 +37,10 @@ const menuLinks:menuLinksTypes[] = [
         name:"Services",
         // subLinks:[{display:"Workflow Automation",id:"workflowAutomation"},{display:"Recruitment",id:"recruitment"},{display:"Train and Development",id:"trainingAndDevelopment"},{display:"Worklife Integration Consulting",id:"worklifeIntegrationConsulting"}]
     },
+    {
+id:4,
+name:"Jobs"
+    },
     // {
     //     id:4,
     //     name:"Packages",
@@ -168,8 +172,6 @@ onMouseOver={(e)=>{
     if (item.subLinks && item.subLinks.length > 0) {
         dispatch(openSubmenu({left:getCenter,subLinkList:item.subLinks}))
     }
-    
-    
 }}
 className={`${desktopLinkClass} flex items-center justify-center text-[0.9rem]`}>
     <span>{item.name}</span> <span className="ml-2">{item.subLinks && item.subLinks?.length > 0 ? <FaAngleDown size={13}/> : "" }</span>
@@ -189,12 +191,12 @@ Book a call
 </span>
 <span className="absolute inset-0 bg-primary transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out z-0" />
 </button> 
-{/* Find a Jobs */}
+{/* Hire A talent */}
 <button
-onClick={()=> router.push("/jobs")}
+onClick={()=> router.push("/hire-a-talent")}
 className='mdlg:inline hidden  text-wht rounded-md lg:h-[40px] h-[30px] lg:px-4 px-2 cursor-pointer   border-[2px] border-grayOne relative overflow-hidden group' >
 <span className="relative  z-10 transition-colors duration-300 group-hover:text-primary text-wht">
-Find a job
+Hire a Talent
 </span>
 <span className="absolute inset-0 bg-grayOne transform translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out z-0" />
 </button> 
@@ -284,7 +286,7 @@ Book a call
 onClick={()=> router.push("/jobs")}
 className='mdlg:hidden inline  text-wht rounded-md lg:h-[40px] h-[30px] lg:px-4 px-2 cursor-pointer   border-[2px] border-grayOne relative overflow-hidden group bg-wht' >
 <span className="relative  z-10 transition-colors duration-300 group-hover:text-primary text-primary">
-Find a job
+Automate with us
 </span>
 <span className="absolute inset-0 bg-grayOne transform translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out z-0" />
 </button> 

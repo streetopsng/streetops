@@ -1,3 +1,4 @@
+
 import { dispatchType } from '@/store'
 import { closeSubmenu } from '@/store/slices/desktopSubmenuLinksSlice'
 import Image from 'next/image'
@@ -100,7 +101,7 @@ return ()=> clearInterval(intervalID)
     
             
     <div className='relative lg:w-[420px] lg:h-[390px]  md:w-[390px] md:h-[360px] w-full min-h-[350px]'>
-        <Image alt='paige' src={"/Job-offers.svg"}  fill className=' absolute object-contain '/>
+        <Image alt='paige' src={"/talent.svg"}  fill className=' absolute object-contain '/>
         </div>      
             </section>
     </div>

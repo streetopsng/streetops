@@ -9,6 +9,7 @@ import { CiPlay1 } from "react-icons/ci";
 import { FaPlay } from "react-icons/fa";
 import { useDispatch } from 'react-redux';
 import ImageSlider from './ImageSlider';
+import { BsHourglassSplit } from "react-icons/bs";
 const imageWidth = "mdlg:w-[330px] mdlg:h-[300px] w-[290px] h-[270px]"
 export const HeroSection = () => {
     const headerEl = useRef<HTMLHeadingElement | null >(null)
@@ -54,11 +55,11 @@ gsap.fromTo(headerEl.current,{
 PAIGE:
 </strong>
 <br />
-Smart Talent, 
+Smart Automation, 
 <br />
-Seamless Operations.
+Smarter Talent.
 </h1>
-<p className='mdlg:text-[1rem] text-[0.9] leading-6 my-8 text-black'>your partner for top talent  and transformative automation consulting.</p>
+<p className='mdlg:text-[1rem] text-[0.9] leading-6 my-8 text-black'>Drive efficiency. Empower your workforce. Shape the future of work.</p>
 
 {/* Slide */}
 
