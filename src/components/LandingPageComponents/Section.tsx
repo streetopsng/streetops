@@ -21,7 +21,7 @@ const Section = () => {
 
 
   return (
-    <div className="xl:px-8 md:px-8  flex flex-col  justify-start items-center   space-y-10 text-grayOne">
+    <div className="my-4 xl:px-8 md:px-8  flex flex-col  justify-start items-center   space-y-10 text-grayOne">
       {/* work life balance */}
       <div className=" flex flex-col lg:flex-row  lg:rounded-lg w-full gap-y-16  lg:border-grayTwo lg:border-2 overflow-hidden lg:items-center ">
         {/* first */}
@@ -85,12 +85,9 @@ const Section = () => {
           <p className=" pt-4 italic">
 Automation powers modern business efficiency. Our "Processes" services offer specialized consulting and implement tailored automation solutions that advance your organization, regardless of its size.
 <br />
-<br />
 <strong className='text-grayOne not-italic'>Tailored Automation Packages SMEs:</strong> Streamline operations, reduce manual work, and improve accuracy, including sales and digital automations.
 <br />
-<br />
 <strong className='text-grayOne not-italic'>Enterprises:</strong>Integrate complex systems, automate large-scale processes, and achieve substantial savings and efficiency. This includes comprehensive sales and digital automation strategies.
-<br />
 <br />
 <strong className='text-grayOne not-italic'>Startups:</strong>Establish scalable operations from day one, automate core functions, and accelerate growth. This package includes efficient sales pipelines and foundational digital automation.
             {/* We believe that people are the core of every successful organization. Our People section provides strategic solutions to maximize your human capital investment. We offer:
@@ -152,11 +149,8 @@ While automation drives efficiency, we strengthen your human capital. Our "Peopl
 
 <h1 className='font-semibold text-center text-grayOne not-italic'>Our Talent Solutions</h1>
 <strong className='text-grayOne not-italic'>Recruitment:</strong> We find and place the right talent to excel in efficient workplaces. We build strong teams that fit your systems.
-
-<br />
 <br />
 <strong className='text-grayOne not-italic'>Training & Development:</strong> We give your teams the skills they need to thrive in an automated environment, building their critical thinking and adaptability.
-<br />
 <br />
 <strong className='text-grayOne not-italic'>Work-Life Integration Consulting:</strong>We help create supportive cultures where employee well-being improves, leading to better long-term productivity.
             {/* We partner with organizations to transform their operations and achieve peak performance. Our Processes section delivers strategic consulting services, including:
