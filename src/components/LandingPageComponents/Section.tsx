@@ -63,7 +63,7 @@ const Section = () => {
           <AnimatedParticles value={15}/>
         {/* People */}
         
-        <div className={`relative w-full min-h-[500px] text-grayTwo  leading-8 flip-class  ${flip.peopleFlip ? '[transform:rotateY(180deg)]' : ''} group-hover:[transform:rotateY(180deg)]`}  
+        <div className={`relative w-full min-h-[500px] text-grayTwo   flip-class  ${flip.peopleFlip ? '[transform:rotateY(180deg)]' : ''} group-hover:[transform:rotateY(180deg)]`}  
   onMouseOver={()=>{
     setFlip({processFlip:false,peopleFlip:true})
 
@@ -139,7 +139,7 @@ Automation powers modern business efficiency. Our "Processes" services offer spe
     setFlip({processFlip:true,peopleFlip:false})
   }
 }}  
-        className={`relative my-4 w-full min-h-[500px] text-grayTwo rounded-lg  leading-8 flip-class ${flip.processFlip ? '[transform:rotateY(180deg)]' : ''}`}>
+        className={`relative my-4 w-full min-h-[500px] text-grayTwo rounded-lg   flip-class ${flip.processFlip ? '[transform:rotateY(180deg)]' : ''}`}>
      
         {/* text */}
          <div className='absolute  h-full  backface-hidden  px-4' >
