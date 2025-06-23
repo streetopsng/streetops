@@ -146,7 +146,7 @@ useEffect(()=>{
         
         <div style={{zIndex:10}} className="lg:py-0 py-4 flex justify-between items-center  ">
 
-        <section className="lg:pl-4 ">
+        <section className="lg:pl-4 flex flex-col items-center gap-x-2">
        
 <div className="relative lg:w-[30px] lg:h-[50px] h-[30px] w-[20px] bg-">
         <Image 
@@ -155,6 +155,7 @@ useEffect(()=>{
         src={"/logo.png"} 
         alt="logo"/>
         </div>
+        <h1 className="text-primary font-semibold">PAIGE</h1>
         </section>
 
 {/* Menu bar  for desktop*/}
@@ -182,12 +183,12 @@ className={`${desktopLinkClass} flex items-center justify-center text-[0.9rem]`}
 </section>
 
 <section className=" space-x-2">
-    {/* Book a call */}
+    {/* Start Automating */}
 <button
 // onClick={()=> router.push("/jobs")}
 className='mdlg:inline hidden  text-wht rounded-md lg:h-[40px] h-[30px] lg:px-4 px-2 cursor-pointer   border-[2px] border-primary relative overflow-hidden group' >
 <span className="relative  z-10 transition-colors duration-300 group-hover:text-wht text-primary">
-Book a call
+Start Automating
 </span>
 <span className="absolute inset-0 bg-primary transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out z-0" />
 </button> 
@@ -277,16 +278,16 @@ Hire a Talent
 // onClick={()=> router.push("/jobs")}
 className='mdlg:hidden inline  text-wht rounded-md lg:h-[40px] h-[30px] lg:px-4 px-2 cursor-pointer   border-[2px] border-primary relative overflow-hidden group bg-primary' >
 <span className="relative  z-10 transition-colors duration-300 group-hover:text-wht text-wht">
-Book a call
+Start Automating
 </span>
 <span className="absolute inset-0 bg-primary transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out z-0" />
 </button> 
 {/* Find a Jobs */}
 <button
-onClick={()=> router.push("/jobs")}
+// onClick={()=> router.push("/jobs")}
 className='mdlg:hidden inline  text-wht rounded-md lg:h-[40px] h-[30px] lg:px-4 px-2 cursor-pointer   border-[2px] border-grayOne relative overflow-hidden group bg-wht' >
 <span className="relative  z-10 transition-colors duration-300 group-hover:text-primary text-primary">
-Automate with us
+Hire a Talent
 </span>
 <span className="absolute inset-0 bg-grayOne transform translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out z-0" />
 </button> 

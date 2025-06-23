@@ -38,16 +38,16 @@ const Footer = () => {
             <h2 className="text-xl font-semibold text-primary mb-3">Explore</h2>
             <ul className="space-y-2 text-sm text-grayTwo ">
               <li>
-                <Link href="/people" className={linkClass}>Team</Link>
+                <Link href="/" className={linkClass}>Team</Link>
               </li>
               <li>
-                <Link href="/processes" className={linkClass}>Services</Link>
+                <Link href="/" className={linkClass}>Services</Link>
               </li>
               <li>
-                <Link href="/contact" className={linkClass}>Contact</Link>
+                <Link href="/" className={linkClass}>Contact</Link>
               </li>
               <li>
-                <Link href="/blog" className={linkClass}>Blog</Link>
+                <Link href="/" className={linkClass}>Blog</Link>
               </li>
             </ul>
           </div>
@@ -59,7 +59,7 @@ const Footer = () => {
               <Link href="https://twitter.com" className={linkClass} target="_blank">
                 <FaTwitter className="text-lg text-grayTwo hover:text-grayOne" />
               </Link>
-              <Link href="https://linkedin.com" className={linkClass} target="_blank" >
+              <Link href="https://www.linkedin.com/company/paigeautos/" className={linkClass} target="_blank" >
                 <FaLinkedin className="text-lg text-grayTwo hover:text-grayOne" />
               </Link>
               <Link href="https://facebook.com" className={linkClass} target="_blank" >

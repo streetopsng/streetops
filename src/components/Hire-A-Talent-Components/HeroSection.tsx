@@ -7,12 +7,12 @@ import { useDispatch } from 'react-redux'
 
 
 const listOfSkills = [
-    "Data scientists",
-    "Talent manager",
+    "Data Scientist",
+    "Talent Manager",
     "Legal Manager",
     "Frontend Developer",
     "Banker",
-    "Data analyst"
+    "Data Analyst"
     
 ]
 const HeroSection = () => {
@@ -89,7 +89,11 @@ return ()=> clearInterval(intervalID)
 </div>
 
 
-<p className='lg:w-[70%]'>We are partners with Rekrut Consulting, working together to bring you exclusive job opportunities.We have various opportunities in industries like; FMCGs, Banking, Manufacturing, Human management, Tech, and so on.</p>
+<p className='lg:w-[70%]'>Finding the right person for the job can change everything; and that's where we come in.
+    <br />
+At Paige, our recruitment process is thorough, thoughtful, and designed to connect you with people who are not only qualified but aligned with your goals and values.
+    <br />
+Book a call with us to get started..</p>
             </div>
         </section>
 

@@ -59,7 +59,7 @@ Smart Automation,
 <br />
 Smarter Talent.
 </h1>
-<p className='mdlg:text-[1rem] text-[0.9] leading-6 my-8 text-black'>Drive efficiency. Empower your workforce. Shape the future of work.</p>
+<p className='mdlg:text-[1rem] text-[0.9] leading-6 my-8 animated-gradient-text-two'>Drive efficiency. Empower your workforce. Shape the future of work.</p>
 
 {/* Slide */}
 
@@ -68,11 +68,12 @@ Smarter Talent.
 <aside className='my-6 flex gap-x-8'>
     <button
     onClick={()=> router.push("/jobs")}
-    className='mdlg:inline   text-wht rounded-md h-[40px] px-4 cursor-pointer   border-[2px] border-primary relative overflow-hidden group' >
+    className='mdlg:inline   text-wht rounded-md h-[40px] px-4 cursor-pointer   border-[2px] border-primary relative  group' >
           <span className="relative text-semibold z-10 transition-colors duration-300 group-hover:text-wht text-primary">
           Paige-Auto
         </span>
-        <span className="absolute inset-0 bg-primary transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out z-0" />
+        {/* <span className="absolute inset-0 bg-primary transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out z-0" /> */}
+        <span className="animate-blink text-white text-[0.5rem] absolute top-[-35%] left-[85%] rounded-full border-red-500 border-1 p-1 bg-primary z-100 font-medium">Coming Soon</span>
      </button> 
     {/* <button className='flex items-center'> <span className='bg-[#342AD51C] rounded-full w-[30px] h-[30px] flex items-center justify-center mr-2'><FaPlay  color='#100B59' size={10}/></span> How it works</button> */}
 </aside>

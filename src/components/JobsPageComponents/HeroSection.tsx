@@ -6,12 +6,12 @@ import { useDispatch } from 'react-redux'
 
 
 const listOfSkills = [
-    "Data scientists",
-    "Talent manager",
+    "Data Scientist",
+    "Talent Manager",
     "Legal Manager",
     "Frontend Developer",
     "Banker",
-    "Data analyst"
+    "Data Analyst"
     
 ]
 const HeroSection = () => {

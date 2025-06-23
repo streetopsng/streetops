@@ -46,7 +46,7 @@ const page = () => {
         <JobsListComponent/>
         {/* <LookingToHire/> */}
         {/* <Testimonies/> */}
-        <GrowYourTeam/>
+        {/* <GrowYourTeam/> */}
         <Footer/>
         {/* this page is currently undergoing maintenance,please check back later */}
     </div>
