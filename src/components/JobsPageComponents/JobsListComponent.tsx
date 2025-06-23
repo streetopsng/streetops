@@ -14,7 +14,7 @@ import { allJobsType } from "@/utils/types";
 
 const address = process.env.NEXT_PUBLIC_ADDRESS
 async function fetchData() {
-  const res = await fetch(`${address}/api/jobs`)
+  const res = await fetch(`/api/jobs`)
   const response = await res.json()
 return response
 }
