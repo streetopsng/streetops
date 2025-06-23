@@ -284,7 +284,7 @@ Start Automating
 </button> 
 {/* Find a Jobs */}
 <button
-// onClick={()=> router.push("/jobs")}
+onClick={()=> router.push("/hire-a-talent")}
 className='mdlg:hidden inline  text-wht rounded-md lg:h-[40px] h-[30px] lg:px-4 px-2 cursor-pointer   border-[2px] border-grayOne relative overflow-hidden group bg-wht' >
 <span className="relative  z-10 transition-colors duration-300 group-hover:text-primary text-primary">
 Hire a Talent
