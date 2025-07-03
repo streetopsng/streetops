@@ -8,12 +8,13 @@ import Services from "@/components/LandingPageComponents/Services";
 import Sponsors from "@/components/LandingPageComponents/Sponsors";
 
 import SubLinksComponent from "@/components/SubLinksComponent";
+import WhatsApp from "@/components/Whatsapp";
 import Image from "next/image";
 
 const page = () => {
   return (
     <div className="">
-      
+      <WhatsApp/>
   <div className="rad-gradient pb-4">
 
       <Header/>

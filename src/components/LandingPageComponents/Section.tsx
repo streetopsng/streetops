@@ -81,7 +81,7 @@ const Section = () => {
         >
           {/* text */}
         <div className='absolute  h-full  backface-hidden  px-4 cursor-pointer my-4'>
-        <h2 className=" uppercase font-semibold text-xl lg:text-2xl text-center text-wht child">People</h2>
+        <h2 className=" uppercase font-semibold text-xl lg:text-2xl text-center text-wht child">Processes</h2>
           <p className=" pt-4 italic">
 Automation powers modern business efficiency. Our "Processes" services offer specialized consulting and implement tailored automation solutions that advance your organization, regardless of its size.
 <br />
@@ -143,7 +143,7 @@ Automation powers modern business efficiency. Our "Processes" services offer spe
      
         {/* text */}
          <div className='absolute  h-full  backface-hidden  px-4' >
-         <h2 className="uppercase font-semibold text-xl lg:text-2xl text-center text-wht">Processes</h2>
+         <h2 className="uppercase font-semibold text-xl lg:text-2xl text-center text-wht">People</h2>
           <article className=" pt-4  italic">
 While automation drives efficiency, we strengthen your human capital. Our "People" services support this by ensuring your teams focus on high-value contributions and continuous growth.
 

@@ -52,7 +52,7 @@ const CompaniesForm = () => {
    <section className='lg:w-[50%] '>
    <h1 className='text-[2rem]  font-semibold text-wht'>Looking To Grow
    Your Team?</h1>
-   <p>If you're looking for your next software engineer, product manager, or to build your entire leadership team with our assistance - we specialise in helping FinTech companies like yours uncover the talent necessary to optimise growth.</p>
+   <p>Growing your team effectively starts here. Let us help you find exceptional individuals.</p>
    </section>
    
    <form action="" className='border-grayTwo rounded-md lg:border-1 lg:w-[50%] lg:px-4'>

@@ -7,12 +7,16 @@ import { useDispatch } from 'react-redux'
 
 
 const listOfSkills = [
+    "Software Engineer",
+    "Product Manager",
     "Data Scientist",
-    "Talent Manager",
-    "Legal Manager",
-    "Frontend Developer",
-    "Banker",
-    "Data Analyst"
+    "Specialist",
+    "Project Coordinato",
+    "UX Designer",
+    "Sales Executive",
+    "Financial Analyst",
+    "Operations Manager",
+    "Customer Success Lead",
     
 ]
 const HeroSection = () => {
@@ -86,6 +90,7 @@ return ()=> clearInterval(intervalID)
 <div className='lg:text-[3.1rem] md:text-[2rem] text-[1.7rem] font-semibold lg:leading-[2.9rem] '>
 <h1 className=''>Pursue Your Career as a</h1>
 <h1 className='text-primary'>{words[wordIndex].slice(0,index)}|</h1>
+<p className='text-sm font-normal'> Building exceptional teams, one perfect match at a time.</p>
 </div>
 
 
