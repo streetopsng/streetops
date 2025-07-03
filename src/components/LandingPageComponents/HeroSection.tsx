@@ -73,7 +73,7 @@ Smarter Talent.
           Paige-Auto
         </span>
         {/* <span className="absolute inset-0 bg-primary transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out z-0" /> */}
-        <span className="animate-blink text-white text-[0.5rem] absolute top-[-35%] left-[85%] rounded-full border-red-500 border-1 p-1 bg-primary z-100 font-medium">Coming Soon</span>
+        <span className="animate-blink text-white text-[0.5rem] absolute top-[-35%] left-[85%] rounded-full border-green-500 border-1 p-1 bg-green-500 z-20 font-medium">Coming Soon</span>
      </button> 
     {/* <button className='flex items-center'> <span className='bg-[#342AD51C] rounded-full w-[30px] h-[30px] flex items-center justify-center mr-2'><FaPlay  color='#100B59' size={10}/></span> How it works</button> */}
 </aside>

@@ -146,7 +146,7 @@ useEffect(()=>{
         
         <div style={{zIndex:10}} className="lg:py-0 py-4 flex justify-between items-center  ">
 
-        <section className="lg:pl-4 flex items-center gap-x-[2px]">
+        <section className="lg:pl-4 flex items-center gap-x-2">
        
 <div className="relative lg:w-[30px] lg:h-[50px] h-[30px] w-[20px] bg-">
         <Image 
@@ -155,7 +155,7 @@ useEffect(()=>{
         src={"/logo.png"} 
         alt="logo"/>
         </div>
-        <h1 className="text-primary font-medium">PAIGE</h1>
+        <h1 className="text-primary font-semibold">PAIGE</h1>
         </section>
 
 {/* Menu bar  for desktop*/}

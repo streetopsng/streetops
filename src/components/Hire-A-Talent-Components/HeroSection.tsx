@@ -85,20 +85,17 @@ return ()=> clearInterval(intervalID)
     onMouseOver={()=> dispatch(closeSubmenu())}
     className='text-grayOne xl:px-10 md:px-8 px-4 flex pb-4  md:flex-row flex-col '>
 {/* First Section */}
-        <section className=' flex flex-col items-end justify-between my-8'>
+        <section className=' flex flex-col  justify-between my-8 lg:w-[70%]'>
 <div className='flex flex-col justify-center h-full  gap-6 '>
 <div className='lg:text-[3.1rem] md:text-[2rem] text-[1.7rem] font-semibold lg:leading-[2.9rem] '>
-<h1 className=''>Pursue Your Career as a</h1>
+<h1 className=''>Hire your next</h1>
 <h1 className='text-primary'>{words[wordIndex].slice(0,index)}|</h1>
-<p className='text-sm font-normal'> Building exceptional teams, one perfect match at a time.</p>
+
 </div>
 
 
-<p className='lg:w-[70%]'>Finding the right person for the job can change everything; and that's where we come in.
-    <br />
-At Paige, our recruitment process is thorough, thoughtful, and designed to connect you with people who are not only qualified but aligned with your goals and values.
-    <br />
-Book a call with us to get started..</p>
+<p className='lg:w-[70%] text-lg'>Building exceptional teams, one perfect match at a time.</p>
+{/* <p className='text-sm font-normal my-4 lg:min-w-[70%]'> Building exceptional teams, one perfect match at a time.</p> */}
             </div>
         </section>
 
