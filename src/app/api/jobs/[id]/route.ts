@@ -4,9 +4,9 @@ import { NextRequest, NextResponse } from "next/server";
 
 
 
-export const DELETE = async(req:NextRequest,{params}:{params:{id:string}})=>{
+export const DELETE = async(req:NextRequest,{params}:{params:Promise<{id:string}>})=>{
 
-const id =  params.id
+const {id} = await params
 
 try {
     const deletedJob =await Job.findByIdAndDelete(id)

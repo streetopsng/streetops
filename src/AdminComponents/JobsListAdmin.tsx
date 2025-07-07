@@ -52,6 +52,7 @@ const mutation = useMutation({
     mutationFn:deleteJob,
     onSuccess:(data)=>{
 console.log(data);
+setCurrJobClicked("")
 if (data.success) {
     window.location.reload()
     
@@ -61,9 +62,10 @@ else{
     throw new Error(data.message)
 }
 
-    },
-    onError:(data)=>{
-
+},
+onError:(data)=>{
+    
+    setCurrJobClicked("")
         alert("something went wrong, can't delete jobs now")
         console.log("something went wrong, can't delete jobs now",data);
         
