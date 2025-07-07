@@ -11,8 +11,6 @@ import { getFetchedJobs } from "@/store/slices/allJobsSlice";
 import PageLoader from "next/dist/client/page-loader";
 import PagePreloader from "@/utils/PagePreloader";
 import { allJobsType } from "@/utils/types";
-
-const address = process.env.NEXT_PUBLIC_ADDRESS
 async function fetchData() {
   const res = await fetch(`/api/jobs`)
   const response = await res.json()
@@ -22,7 +20,6 @@ return response
 const JobsListComponent = () => {
   const dispatch = useDispatch<dispatchType>()
   const allJobs = useSelector((store:RootStateType)=>{
-
     return store.alljobsReducer
   })
 
@@ -32,7 +29,7 @@ const JobsListComponent = () => {
     queryFn:fetchData
   })
   // pagination 
-  const [jobs] = useState<any[]>(jobsList)
+  // const [jobs] = useState<any[]>(jobsList)
     const [itemsToDiplay,setItemsToDisplay] = useState<allJobsType[]>([])
     const [currentPage,setCurrentPage] = useState<number>(0)
     const [totalPages,setTotalPages] = useState<number>(0)
@@ -71,19 +68,31 @@ console.log(allJobs,"all jobs");
 
     if (error) {
       return <div className="xl:px-10 md:px-8 px-4 text-grayOne w-full h-[60vh] flex items-center justify-center flex-col">
-<h1>Failed to load jobs</h1>
+<h1>Failed to load jobs at the moment, please try again later</h1>
       </div>
     }
-    if (allJobs.length < 1) {
+    if (isLoading) {
       
       return <div className="xl:px-10 md:px-8 px-4 text-grayOne w-full h-[60vh] flex items-center justify-center flex-col">
         <PagePreloader/>
         <h1 className="italic my-2 ">Loading Available Jobs...</h1>
       </div>
     }
+
+// EMPTY ARRAY RETURNED FROM DATABASE
+if (!isLoading && allJobs.length == 0) {
+  return <div className="xl:px-10 md:px-8 px-4 text-grayOne py-16">
+     <h1 className="lg:text-[2rem] text-[1.5rem] text-white text-center font-semibold underline">Available Jobs</h1>
+  <h1 className="text-center my-8 font-semibold">
+  No Jobs Available at the moment, please check back later
+  </h1>
+      </div>
+}
+
+// content return
   return (
     <div className="xl:px-10 md:px-8 px-4 text-grayOne">
-      <h1 className="lg:text-[2rem] text-[1.5rem] text-white text-center font-semibold">Available Jobs</h1>
+      <h1 className="lg:text-[2rem] text-[1.5rem] text-white text-center font-semibold underline">Available Jobs</h1>
 {/* form section */}
 {/* <section className="md:flex justify-between items-center">
     
