@@ -37,10 +37,10 @@ const menuLinks:menuLinksTypes[] = [
         name:"Services",
         // subLinks:[{display:"Workflow Automation",id:"workflowAutomation"},{display:"Recruitment",id:"recruitment"},{display:"Train and Development",id:"trainingAndDevelopment"},{display:"Worklife Integration Consulting",id:"worklifeIntegrationConsulting"}]
     },
-    {
-id:4,
-name:"Jobs"
-    },
+//     {
+// id:4,
+// name:"Jobs"
+//     },
     // {
     //     id:4,
     //     name:"Packages",
@@ -184,20 +184,20 @@ className={`${desktopLinkClass} flex items-center justify-center text-[0.9rem]`}
 
 <section className=" space-x-2">
     {/* Start Automating */}
-<button
+{/* <button
 // onClick={()=> router.push("/jobs")}
 className='mdlg:inline hidden  text-wht rounded-md lg:h-[40px] h-[30px] lg:px-4 px-2 cursor-pointer   border-[2px] border-primary relative overflow-hidden group' >
 <span className="relative  z-10 transition-colors duration-300 group-hover:text-wht text-primary">
 Start Automating
 </span>
 <span className="absolute inset-0 bg-primary transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out z-0" />
-</button> 
+</button>  */}
 {/* Hire A talent */}
 <button
 onClick={()=> router.push("/hire-a-talent")}
 className='mdlg:inline hidden  text-wht rounded-md lg:h-[40px] h-[30px] lg:px-4 px-2 cursor-pointer   border-[2px] border-grayOne relative overflow-hidden group' >
 <span className="relative  z-10 transition-colors duration-300 group-hover:text-primary text-wht">
-Hire a Talent
+Become our Client
 </span>
 <span className="absolute inset-0 bg-grayOne transform translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out z-0" />
 </button> 
@@ -274,20 +274,20 @@ Hire a Talent
     </div>
 
     <div className="flex justify-between py-3 px-2">
-    <button
+    {/* <button
 // onClick={()=> router.push("/jobs")}
 className='mdlg:hidden inline  text-wht rounded-md lg:h-[40px] h-[30px] lg:px-4 px-2 cursor-pointer   border-[2px] border-primary relative overflow-hidden group bg-primary' >
 <span className="relative  z-10 transition-colors duration-300 group-hover:text-wht text-wht">
 Start Automating
 </span>
 <span className="absolute inset-0 bg-primary transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out z-0" />
-</button> 
+</button>  */}
 {/* Find a Jobs */}
 <button
 onClick={()=> router.push("/hire-a-talent")}
 className='mdlg:hidden inline  text-wht rounded-md lg:h-[40px] h-[30px] lg:px-4 px-2 cursor-pointer   border-[2px] border-grayOne relative overflow-hidden group bg-wht' >
 <span className="relative  z-10 transition-colors duration-300 group-hover:text-primary text-primary">
-Hire a Talent
+Become our Client
 </span>
 <span className="absolute inset-0 bg-grayOne transform translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out z-0" />
 </button> 

@@ -67,7 +67,7 @@ Smarter Talent.
 
 <aside className='my-6 flex gap-x-8'>
     <button
-    onClick={()=> router.push("/jobs")}
+    // onClick={()=> router.push("/jobs")}
     className='mdlg:inline   text-wht rounded-md h-[40px] px-4 cursor-pointer   border-[2px] border-primary relative  group' >
           <span className="relative text-semibold z-10 transition-colors duration-300 group-hover:text-wht text-primary">
           Paige-Auto

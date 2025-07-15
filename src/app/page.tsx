@@ -25,13 +25,14 @@ const page = () => {
       <Section/>
       {/* Image */}
      <Services/>
-      <div className="relative w-full lg:h-[500px] min-h-[300px] mt-4 mb-2">
+     {/* Rekrut */}
+      {/* <div className="relative w-full lg:h-[500px] min-h-[300px] mt-4 mb-2">
         <Image
         className="absolute top-0 w-full h-full object-cover"
         fill 
         src={"/rekrut-paige.jpg"} 
         alt="rekrut-paige" />
-      </div>
+      </div> */}
       <Footer/>
     
     </div>
