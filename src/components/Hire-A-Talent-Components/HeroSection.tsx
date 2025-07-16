@@ -18,7 +18,7 @@ import { useDispatch } from 'react-redux'
 //     "Customer Success Lead",
     
 // ]
-const listOfSkills = ["speak","to us","today"]
+const listOfSkills = ["Speak to us today","Speak to us today","Speak to us today"]
 const HeroSection = () => {
     const [words,setWords] =useState<string[]>(listOfSkills)
     const [currentWord,setCurrentWord] = useState<string>("")
