@@ -5,20 +5,20 @@ import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
 
-
-const listOfSkills = [
-    "Software Engineer",
-    "Product Manager",
-    "Data Scientist",
-    "Specialist",
-    "Project Coordinato",
-    "UX Designer",
-    "Sales Executive",
-    "Financial Analyst",
-    "Operations Manager",
-    "Customer Success Lead",
+// [
+//     "Software Engineer",
+//     "Product Manager",
+//     "Data Scientist",
+//     "Specialist",
+//     "Project Coordinato",
+//     "UX Designer",
+//     "Sales Executive",
+//     "Financial Analyst",
+//     "Operations Manager",
+//     "Customer Success Lead",
     
-]
+// ]
+const listOfSkills = ["speak","to us","today"]
 const HeroSection = () => {
     const [words,setWords] =useState<string[]>(listOfSkills)
     const [currentWord,setCurrentWord] = useState<string>("")
@@ -88,13 +88,13 @@ return ()=> clearInterval(intervalID)
         <section className=' flex flex-col  justify-between my-8 lg:w-[70%]'>
 <div className='flex flex-col justify-center h-full  gap-6 '>
 <div className='lg:text-[3.1rem] md:text-[2rem] text-[1.7rem] font-semibold lg:leading-[2.9rem] '>
-<h1 className=''>Hire your next</h1>
+<h1 className=''>Scale Your Operations </h1>
 <h1 className='text-primary'>{words[wordIndex].slice(0,index)}|</h1>
 
 </div>
 
 
-<p className='lg:w-[70%] text-lg'>Building exceptional teams, one perfect match at a time.</p>
+<p className='lg:w-[70%] text-lg'>Our team members are always available at your service .</p>
 {/* <p className='text-sm font-normal my-4 lg:min-w-[70%]'> Building exceptional teams, one perfect match at a time.</p> */}
             </div>
         </section>

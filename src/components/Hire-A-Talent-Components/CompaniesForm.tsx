@@ -14,7 +14,7 @@ const formItems: formItemsType<string,number>[] =[
     },
     {
         id:2,
-        title:"Surname",
+        title:"Full Name",
         type:"text"
     },
     {
@@ -24,7 +24,7 @@ const formItems: formItemsType<string,number>[] =[
     },
     {
         id:4,
-        title:"Work Email Address",
+        title:"Email Address",
         type:"email"
     },
     {
@@ -37,11 +37,11 @@ const formItems: formItemsType<string,number>[] =[
         title:"Company website",
         type:"text"
     },
-    {
-        id:6,
-        title:"Your position at the company",
-        type:"text"
-    },
+    // {
+    //     id:6,
+    //     title:"Your position at the company",
+    //     type:"text"
+    // },
 
 ]
 
@@ -49,11 +49,11 @@ const CompaniesForm = () => {
   return (
     <div className='text-grayTwo flex flex-col lg:flex-row xl:px-8 md:px-8 px-4 gap-y-6 lg:gap-y-0 my-6' >
    {/* First Section */}
-   <section className='lg:w-[50%] '>
+   {/* <section className='lg:w-[50%] '>
    <h1 className='text-[2rem]  font-semibold text-wht'>Looking To Grow
    Your Team?</h1>
    <p>Growing your team effectively starts here. Let us help you find exceptional individuals.</p>
-   </section>
+   </section> */}
    
    <form action="" className='border-grayTwo rounded-md lg:border-1 lg:w-[50%] lg:px-4'>
        {
@@ -72,7 +72,7 @@ const CompaniesForm = () => {
            })
        }
        {/* radio  */}
-       <div className='my-4'>
+       {/* <div className='my-4'>
           <label htmlFor="" className='text-wht'> Do you have job description?</label>
           <div className='flex gap-x-4 my-2'>
            <section className='flex gap-2'>
@@ -90,7 +90,7 @@ const CompaniesForm = () => {
                type="radio" name="desc" id="no" />
                </section>
           </div>
-       </div>
+       </div> */}
    
    
        {/* Check box */}
