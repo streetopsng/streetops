@@ -163,7 +163,13 @@ useEffect(()=>{
     {
         menuLinks.map((item,index)=>{
 return <Link
-href={`/${item.subLinks && item.subLinks.length > 0 ? "" : item.name == "Home" ? "" : item.name.toLocaleLowerCase()}`}
+href={`/${item.subLinks && item.subLinks.length > 0 ? "" : item.name == "Home" ? "" : ""}`}
+onClick={(e)=>{
+    e.preventDefault()
+    const servicesEl = document.getElementById("services")
+    servicesEl?.scrollIntoView({behavior:"smooth"})
+
+}}
 key={index}
 onMouseOver={(e)=>{
     const el = e.target as HTMLButtonElement | HTMLLinkElement
@@ -195,8 +201,8 @@ Start Automating
 {/* Hire A talent */}
 <button
 onClick={()=> router.push("/hire-a-talent")}
-className='mdlg:inline hidden  text-wht rounded-md lg:h-[40px] h-[30px] lg:px-4 px-2 cursor-pointer   border-[2px] border-grayOne relative overflow-hidden group' >
-<span className="relative  z-10 transition-colors duration-300 group-hover:text-primary text-wht">
+className='mdlg:inline hidden  text-wht rounded-md lg:h-[40px] h-[30px] lg:px-4 px-2 cursor-pointer   border-[2px] border-primary relative overflow-hidden group' >
+<span className="relative  z-10 transition-colors duration-300 hover:text-primary text-primary">
 Become our Client
 </span>
 <span className="absolute inset-0 bg-grayOne transform translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out z-0" />
@@ -273,7 +279,7 @@ Become our Client
     </section>
     </div>
 
-    <div className="flex justify-between py-3 px-2">
+    <div className="flex justify-between py-3 px-2 ">
     {/* <button
 // onClick={()=> router.push("/jobs")}
 className='mdlg:hidden inline  text-wht rounded-md lg:h-[40px] h-[30px] lg:px-4 px-2 cursor-pointer   border-[2px] border-primary relative overflow-hidden group bg-primary' >
@@ -285,8 +291,8 @@ Start Automating
 {/* Find a Jobs */}
 <button
 onClick={()=> router.push("/hire-a-talent")}
-className='mdlg:hidden inline  text-wht rounded-md lg:h-[40px] h-[30px] lg:px-4 px-2 cursor-pointer   border-[2px] border-grayOne relative overflow-hidden group bg-wht' >
-<span className="relative  z-10 transition-colors duration-300 group-hover:text-primary text-primary">
+className='mdlg:hidden inline  text-wht rounded-md lg:h-[40px] h-[40px] lg:px-4 px-2  cursor-pointer   border-[2px] border-primary relative overflow-hidden group  w-full' >
+<span className="relative  z-10 transition-colors duration-300 hover:text-primary text-primary">
 Become our Client
 </span>
 <span className="absolute inset-0 bg-grayOne transform translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out z-0" />

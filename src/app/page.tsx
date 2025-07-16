@@ -1,5 +1,6 @@
 
 
+import LookingToHire from "@/components/JobsPageComponents/LookingToHire";
 import Footer from "@/components/LandingPageComponents/Footer";
 import { Header } from "@/components/LandingPageComponents/Header";
 import { HeroSection } from "@/components/LandingPageComponents/HeroSection";
@@ -25,6 +26,7 @@ const page = () => {
       <Section/>
       {/* Image */}
      <Services/>
+     <LookingToHire/>
      {/* Rekrut */}
       {/* <div className="relative w-full lg:h-[500px] min-h-[300px] mt-4 mb-2">
         <Image

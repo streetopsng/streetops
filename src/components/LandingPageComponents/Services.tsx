@@ -61,7 +61,7 @@ console.log("from services");
 },[])
 
   return (
-    <div className='text-grayTwo xl:px-8 md:px-8'>
+    <div className='text-grayTwo xl:px-8 md:px-8' id='services'>
        <h1 className='text-2xl lg:text-[2.2rem] uppercase animated-gradient-text-two text-[1.5rem] text-center font-semibold'>Services</h1>
       <div className='flex flex-wrap  gap-4 justify-center   '>
        {/* Workflow */}
