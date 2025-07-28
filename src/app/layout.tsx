@@ -23,6 +23,28 @@ export default function RootLayout({
   return (
     <html lang="en">
          <Head>
+
+          {/* google analytics */}
+<Script
+src="https://www.googletagmanager.com/gtag/js?id=G-D46FPRL34X"
+strategy="afterInteractive"
+/>
+<Script
+id="google-analytics"
+strategy="afterInteractive"
+>
+  {
+    `
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-D46FPRL34X');
+  `
+  }
+
+</Script>
+
+{/*  */}
          <Script id="gtm-init" strategy="afterInteractive">
           {`
     (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
