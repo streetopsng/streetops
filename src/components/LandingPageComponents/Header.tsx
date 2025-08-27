@@ -200,10 +200,10 @@ Start Automating
 </button>  */}
 {/* Hire A talent */}
 <button
-onClick={()=> router.push("/hire-a-talent")}
+onClick={()=> router.push("/blog")}
 className='mdlg:inline hidden  text-wht rounded-md lg:h-[40px] h-[30px] lg:px-4 px-2 cursor-pointer   border-[2px] border-primary relative overflow-hidden group' >
 <span className="relative  z-10 transition-colors duration-300 hover:text-primary text-primary">
-Become our Client
+Blog
 </span>
 <span className="absolute inset-0 bg-grayOne transform translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out z-0" />
 </button> 
@@ -293,7 +293,7 @@ Start Automating
 onClick={()=> router.push("/hire-a-talent")}
 className='mdlg:hidden inline  text-wht rounded-md lg:h-[40px] h-[40px] lg:px-4 px-2  cursor-pointer   border-[2px] border-primary relative overflow-hidden group  w-full' >
 <span className="relative  z-10 transition-colors duration-300 hover:text-primary text-primary">
-Become our Client
+Blog
 </span>
 <span className="absolute inset-0 bg-grayOne transform translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out z-0" />
 </button> 

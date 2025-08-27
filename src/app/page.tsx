@@ -7,6 +7,7 @@ import { HeroSection } from "@/components/LandingPageComponents/HeroSection";
 import Section from "@/components/LandingPageComponents/Section";
 import Services from "@/components/LandingPageComponents/Services";
 import Sponsors from "@/components/LandingPageComponents/Sponsors";
+import SlideContent from "@/components/SlideContent";
 
 import SubLinksComponent from "@/components/SubLinksComponent";
 import WhatsApp from "@/components/Whatsapp";
@@ -15,13 +16,14 @@ import Image from "next/image";
 const page = () => {
   return (
     <div className="">
-      <WhatsApp/>
+      {/* <WhatsApp/> */}
   <div className="rad-gradient pb-4">
 
       <Header/>
-      <HeroSection/> 
+      <SlideContent/>
+      {/* <HeroSection/>  */}
       
-      {/* <Sponsors/> */}
+      <Sponsors/>
   </div>
       <Section/>
       {/* Image */}

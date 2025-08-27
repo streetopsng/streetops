@@ -8,6 +8,10 @@
 
 @import "tailwindcss";
 
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
 /* body{
   background-image:radial-gradient(13% 15.5% at 78% 71%, #db3340 0%, rgba(255, 0, 0, 0) 100%), radial-gradient(14% 17% at 0% 0%, #db3340 0%, rgba(255, 0, 0, 0) 100%), linear-gradient(157deg, #fffdf4 0%, #fffdf4 100%)
 } */
@@ -16,19 +20,15 @@
   color: #f15a49;
 } */
 
-
 html{
   scroll-behavior: smooth;
 }
 .inset-box {
 
-  
   box-shadow: inset 0 0px 20px #f73620;
   /* border: 1px solid #120f0f; */
   border-radius: 8px;
 }
-
-
 
 @keyframes marquee {
   0%   { transform: translateX(0); }
@@ -42,12 +42,10 @@ html{
 
 }
 
-
 .flip-class{
   transform-style: preserve-3d;
   transition: transform 1s ;
 }
-
 
 .backface-hidden {
   backface-visibility: hidden;
@@ -63,9 +61,23 @@ transform: rotateY(180deg);
 
 } */
 
-
-
-
+.animated-gradient-slide-text{
+  /* font-size: 3rem; */
+  /* font-weight: bold; */
+  background: linear-gradient(
+    270deg,
+    #f73620,
+    #991b1b,
+    #0d0d0d,
+    #dddddd,
+    #ffffff,
+    #f73620
+  );
+  background-size: 600% 600%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientMove 8s ease infinite;
+}
 .animated-gradient-text {
   font-size: 3rem;
   font-weight: bold;
@@ -120,11 +132,7 @@ transform: rotateY(180deg);
   background: linear-gradient(135deg, #f73620aa, #0d0d0daa);
   backdrop-filter: blur(10px);
 
-
 }
-
-
-
 
 /* SVG */
 @keyframes gridmove {
@@ -140,9 +148,8 @@ transform: rotateY(180deg);
   animation: gridmove 30s linear infinite;
 }
 
-
 @theme {
- 
+
   /* Colors */
 
   /* --color-primary:#10078c; */
@@ -155,8 +162,6 @@ transform: rotateY(180deg);
   --color-greenI:#E8F9FC;
   --color-bgcolor:#f5f4fc; */
 
-
-
   /* RED and Black */
   --color-primary:#f73620;
   --color-wht:#ffffff;
@@ -167,8 +172,6 @@ transform: rotateY(180deg);
   --color-redI:#FFEFE7;
   --color-greenI:#E8F9FC;
   --color-bgcolor:#000000;
-
-
 
   /* breakpoint */
   --breakpoint-xxs: 330px;
@@ -189,8 +192,6 @@ transform: rotateY(180deg);
   --font-lato: "Lato" ;
 }
 
-
-
 .grid-animation {
   position: relative;
   width: 100%;
@@ -198,6 +199,45 @@ transform: rotateY(180deg);
   background: #000;
   overflow: hidden;
 }
+
+
+
+.fade-in-top {
+  opacity: 0;
+  transform: translateY(-30px); 
+  animation: fadeInTop 2s ease-out forwards;
+}
+
+@keyframes fadeInTop {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+    
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+   
+  }
+}
+
+.fade-in-bottom {
+  opacity: 0;
+  transform: translateY(30px); 
+  animation: fadeInBottom 2s ease-out forwards;
+}
+
+@keyframes fadeInBottom {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 /* Horizontal Lines */
 .grid-animation::before {
@@ -237,8 +277,6 @@ transform: rotateY(180deg);
   opacity: 0.7;
 }
 
-
-
 @keyframes moveVertical {
   0% {
     transform: translateY(-50%);
@@ -256,7 +294,6 @@ transform: rotateY(180deg);
     transform: translateX(0%);
   }
 }
-
 
 .loader {
   width: 25px;
@@ -277,8 +314,6 @@ transform: rotateY(180deg);
       transform: rotate(360deg);
   }
   } 
-
-
 
   .page-preloader {
     position: relative;
@@ -331,7 +366,7 @@ transform: rotateY(180deg);
       opacity: 1;
     }
   }
-      
+
   @keyframes blink {
     0%, 100% { color: white; }
     50% { color: black; }
@@ -339,4 +374,14 @@ transform: rotateY(180deg);
 
   .animate-blink {
     animation: blink 2s infinite;
+  }
+
+
+
+  .ProseMirror {
+    height: 100%;
+    min-height: 300px;
+    max-height: 300px;
+    overflow-y: auto;
+    padding: 8px;
   }

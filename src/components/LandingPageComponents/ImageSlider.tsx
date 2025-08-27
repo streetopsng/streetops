@@ -62,6 +62,7 @@ export default function ImageSlider() {
             className="min-w-full h-full object-cover "
           />
         ))}
+
       </div>
     </div>
   );
