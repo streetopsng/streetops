@@ -3,7 +3,7 @@ import Blog from "@/models/BlogModel";
 import { NextRequest, NextResponse } from "next/server";
 
 
-export const GET = async(req:NextRequest,res:NextResponse)=>{
+export const GET = async()=>{
     const dbCheck = await connectDatabase()
 if (!dbCheck.success) {
     
