@@ -16,7 +16,8 @@ dispatch(storeBlogs(blogs))
             },[])
 
   return (
-    <div>PersistBlogPosts</div>
+    <>
+    </>
   )
 }
 
