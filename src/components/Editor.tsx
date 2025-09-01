@@ -191,7 +191,7 @@ setFormInfo({...formInfo,title:e.target.value})
 </div>
 {/* blog  image */}
 <div className="text-grayOne  py-4 ">
-    <label htmlFor="image" className="font-semibold block text-center bg-grayOne text-black w-[50%] border-black border-1 rounded-md">upload Image </label>
+    <label htmlFor="image" className="font-semibold block text-center bg-grayOne text-bgcolor w-[50%] border-black border-1 rounded-md">upload Image </label>
     
     <br />
     <input type="file"
@@ -222,7 +222,7 @@ className="font-semibold text-grayOne"
       <button
     type="button"
     onClick={() => editor.chain().focus().toggleBold().run()}
-    className={`${buttonStyle} px-3 py-1 border rounded ${
+    className={`${buttonStyle} px-3 py-1 border rounded  bg-gray-500${
       editor.isActive("bold") ? "bg-black text-white" : ""
     }`}
   >
@@ -234,7 +234,7 @@ className="font-semibold text-grayOne"
   <button
     type="button"
     onClick={() => editor.chain().focus().toggleItalic().run()}
-    className={`${buttonStyle} px-3 py-1 border rounded ${
+    className={`${buttonStyle} px-3 py-1 border rounded bg-gray-500 ${
       editor.isActive("italic") ? "bg-black text-white" : ""
     }`}
   >
@@ -245,7 +245,7 @@ className="font-semibold text-grayOne"
   <button
     type="button"
     onClick={() => editor.chain().focus().toggleUnderline().run()}
-    className={`${buttonStyle} px-3 py-1 border rounded ${
+    className={`${buttonStyle} px-3 py-1 border rounded  bg-gray-500 ${
       editor.isActive("underline") ? "bg-black text-white" : ""
     }`}
   >
@@ -253,7 +253,7 @@ className="font-semibold text-grayOne"
   </button>
 
   {/* Paragraph */}
-  <button
+  {/* <button
     type="button"
     onClick={() => editor.chain().focus().setParagraph().run()}
     className={`${buttonStyle} px-3 py-1 border rounded ${
@@ -261,7 +261,7 @@ className="font-semibold text-grayOne"
     }`}
   >
     P
-  </button>
+  </button> */}
 
   {/* Double Line Break */}
   <button
@@ -269,7 +269,7 @@ className="font-semibold text-grayOne"
     onClick={() =>
       editor.chain().focus().insertContent([{ type: "hardBreak" }, { type: "hardBreak" }]).run()
     }
-    className={`${buttonStyle} px-3 py-1 border rounded`}
+    className={`${buttonStyle} px-3 py-1 border rounded bg-gray-500`}
   >
     ↵↵
   </button>

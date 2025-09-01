@@ -36,7 +36,7 @@ const Section = () => {
           </p> */}
         </div>
 {/* second */}
-        <div className='lg:bg-gradient-to-r bg-gradient-to-b from-[rgba(0,0,0,0.3)] to-[#9f1203] lg:w-[40%] lg:px-2 px-4 lg:py-16'>
+        <div className='lg:bg-gradient-to-r bg-gradient-to-b from-bgcolor to-[#9f1203] lg:w-[40%] lg:px-2 px-4 lg:py-16'>
         {
   checkList.map((item,index)=>{
 
@@ -53,7 +53,7 @@ const Section = () => {
 
 
       {/* Suppliers & Financiers Section */}
-      <div
+      {/* <div
       onMouseLeave={()=>{
         setFlip({
           processFlip:false,
@@ -62,7 +62,7 @@ const Section = () => {
       }}
       className="flex flex-col  lg:flex-row gap-6 w-full max-w-6xl relative ">
           <AnimatedParticles value={15}/>
-        {/* People */}
+    
         
         <div className={`relative w-full min-h-[500px] text-grayTwo   flip-class  ${flip.peopleFlip ? '[transform:rotateY(180deg)]' : ''} group-hover:[transform:rotateY(180deg)]`}  
   onMouseOver={()=>{
@@ -80,7 +80,7 @@ const Section = () => {
           }
         }}  
         >
-          {/* text */}
+ 
         <div className='absolute  h-full  backface-hidden  px-4 cursor-pointer my-4'>
         <h2 className=" uppercase font-semibold text-xl lg:text-2xl text-center text-wht child">Processes</h2>
           <p className=" pt-4 italic">
@@ -91,19 +91,13 @@ Automation powers modern business efficiency. Our "Processes" services offer spe
 <strong className='text-grayOne not-italic'>Enterprises:</strong>Integrate complex systems, automate large-scale processes, and achieve substantial savings and efficiency. This includes comprehensive sales and digital automation strategies.
 <br />
 <strong className='text-grayOne not-italic'>Startups:</strong>Establish scalable operations from day one, automate core functions, and accelerate growth. This package includes efficient sales pipelines and foundational digital automation.
-            {/* We believe that people are the core of every successful organization. Our People section provides strategic solutions to maximize your human capital investment. We offer:
-            <br />
-            <strong className='text-wht not-italic'>Strategic Recruitment</strong> : Identifying and placing the right talent to achieve your business objectives.
-            <br />
-            <strong className='text-wht not-italic'>Transformative Training</strong> : Equipping your workforce with the skills and knowledge needed to excel.
-            <br />
-            <strong className='text-wht not-italic'>Human Capital Leadership (Africa)</strong> : Actively contributing to the development of human capital across the African continent through webinars, training programs, and a dynamic blog, fostering a community of growth and innovation. */}
+    
           </p>
         </div>
      
 
        
-        {/* Image */}
+        
         <div className='absolute w-full  h-full rotate-y-[180deg] backface-hidden flex items-center justify-center  px-4 cursor-pointer'>
           <div className='relative w-full h-full'>
           <Image 
@@ -124,8 +118,6 @@ Automation powers modern business efficiency. Our "Processes" services offer spe
 <br />
 </div>
 
-
-        {/* Processes */}
         <div 
           onMouseOver={()=>{
             setFlip({processFlip:true,peopleFlip:false})
@@ -142,7 +134,7 @@ Automation powers modern business efficiency. Our "Processes" services offer spe
 }}  
         className={`relative my-4 w-full min-h-[500px] text-grayTwo rounded-lg   flip-class ${flip.processFlip ? '[transform:rotateY(180deg)]' : ''}`}>
      
-        {/* text */}
+    
          <div className='absolute  h-full  backface-hidden  px-4' >
          <h2 className="uppercase font-semibold text-xl lg:text-2xl text-center text-wht">People</h2>
           <article className=" pt-4  italic">
@@ -154,17 +146,10 @@ While automation drives efficiency, we strengthen your human capital. Our "Peopl
 <strong className='text-grayOne not-italic'>Training & Development:</strong> We give your teams the skills they need to thrive in an automated environment, building their critical thinking and adaptability.
 <br />
 <strong className='text-grayOne not-italic'>Work-Life Integration Consulting:</strong>We help create supportive cultures where employee well-being improves, leading to better long-term productivity.
-            {/* We partner with organizations to transform their operations and achieve peak performance. Our Processes section delivers strategic consulting services, including:
-            <br />
-            <strong className='text-wht not-italic'>Operational Consulting</strong> :  Providing expert guidance to optimize workflows, reduce costs, and improve overall operational effectiveness.
-            
-            <br />
-            <strong className='text-wht not-italic'>Process Automation</strong> : Leveraging automation technologies to drive efficiency, accuracy, and scalability.
-            <br />
-            <strong className='text-wht not-italic'>Comprehensive Consulting Solutions</strong> : Offering a suite of consulting services to support organizational change, improve project delivery, and enhance overall business performance. */}
+         
           </article>
          </div>
-{/* Images */}
+
 <div  className='absolute w-full  h-full rotate-y-[180deg] backface-hidden flex items-center justify-center  px-4'>
   <div className='relative w-full h-full'>
   <Image 
@@ -177,10 +162,7 @@ While automation drives efficiency, we strengthen your human capital. Our "Peopl
 </div>
         </div>
 
-
-
-
-      </div>
+      </div> */}
 
       
     </div>

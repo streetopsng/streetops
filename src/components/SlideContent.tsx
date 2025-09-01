@@ -13,18 +13,18 @@ type SlideProps = {
 const slides: SlideProps[] = [
   {
     image: "/img-one.jpg",
-    title: "PAIGE",
+    title: "Transforming Lives One Person at a Time",
     description: "From chaos to clarity: Paige helps African businesses run smarter, faster, stronge",
   },
   {
     image: "/img-two.jpg",
-    title: "PAIGE",
-    description: "We Make SMEs Unstoppable",
+    title: "Transforming Lives One Person at a Time",
+    description: "We are impacting learners through resources and community where they can thrive.",
   },
   {
     image: "/img-three.jpg",
-    title: "PAIGE",
-    description: "Make Paige  your operational efficiency partner      ",
+    title: "Transforming Lives One Person at a Time",
+    description: "We are committed to leverage on technology to provide easy access to quality education. ",
   },
 ];
 
@@ -77,8 +77,8 @@ useEffect(() => {
   }}
 
   >
-<h1 className={`text-8xl font-semibold animated-gradient-slide-text  ${index == curr ? "fade-in-top" :""}`}>{item.title}</h1>    
-<h1 className={`text-xl text-white ${index == curr ? "fade-in-bottom" :""} `} 
+<h1 className={`lg:text-7xl md:text-3xl text-4xl font-semibold animated-gradient-slide-text md:w-[60%] text-center   ${index == curr ? "fade-in-top" :""}`}>{item.title}</h1>    
+<h1 className={`text-xl text-white text-center ${index == curr ? "fade-in-bottom" :""} `} 
 
 style={{
   whiteSpace:"pre-line"
@@ -113,7 +113,7 @@ className="w-full h-full"
       {/* Overlay */}
       <div className="absolute inset-0  flex flex-col justify-center animated-gradient-text">
         
-        <h2 className="text-[5rem] font-bold ">{slide.title}</h2>
+        <h2 className="text-[1rem] font-semibold text-center ">{slide.title}</h2>
         <p className="text-lg  text-[1.5rem]">
           {slide.description}
         </p>

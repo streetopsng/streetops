@@ -89,7 +89,7 @@ const scrollFunction = ()=>{
     }
     else if (window.scrollY <= element.getBoundingClientRect().height ) {
         element.style.position = "static"
-        // element.style.top = "0"
+        element.style.top = "0%"
         element.style.width = "100%"
     }
     
@@ -140,9 +140,9 @@ useEffect(()=>{
 
   return (
     // bg-[#000000ed]
-    <div ref={headerContainerRef}  className=" min-h-[20px] w-full bg-[#000000ed] z-50  ">
+    <div ref={headerContainerRef}  className=" min-h-[20px] w-full bg-bgcolorTwo z-50 ">
 
-    <div  className=" xl:mx-6 md:mx-4 lg:mt-2 mx-4 mdlg:static relative text-grayOne ">
+    <div  className=" xl:mx-6 md:mx-4 pt-4  mx-4 mdlg:static relative text-grayOne ">
         
         <div style={{zIndex:10}} className="lg:py-0 py-4 flex justify-between items-center  ">
 
@@ -155,7 +155,7 @@ useEffect(()=>{
         src={"/logo.png"} 
         alt="logo"/>
         </div>
-        <h1 className="text-primary font-semibold">PAIGE</h1>
+        <h1 className="text-primary font-semibold">streetOps</h1>
         </section>
 
 {/* Menu bar  for desktop*/}
@@ -163,10 +163,10 @@ useEffect(()=>{
     {
         menuLinks.map((item,index)=>{
 return <Link
-href={`/${item.subLinks && item.subLinks.length > 0 ? "" : item.name == "Home" ? "" : ""}`}
+href={`#`}
 onClick={(e)=>{
     e.preventDefault()
-    const servicesEl = document.getElementById("services")
+    const servicesEl = document.getElementById(item.name.toLocaleLowerCase())
     servicesEl?.scrollIntoView({behavior:"smooth"})
 
 }}

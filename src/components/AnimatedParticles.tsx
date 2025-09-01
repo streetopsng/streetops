@@ -22,7 +22,7 @@ const AnimatedParticles = ({value}:{value:number}) => {
         <defs>
           <radialGradient id="bubbleGlow" cx="50%" cy="50%" r="50%">
             <stop offset="0%" stopColor="#f73620" stopOpacity="0.8" />
-            <stop offset="100%" stopColor="black" stopOpacity="0" />
+            <stop offset="100%" stopColor="white" stopOpacity="0" />
           </radialGradient>
         </defs>
 

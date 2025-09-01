@@ -9,8 +9,8 @@ import PersistBlogPosts from "@/components/PersistBlogPosts";
 
 
 export const metadata: Metadata = {
-  title: "Paige",
-  description: "Paige",
+  title: "StreetOps",
+  description: "StreetOps",
   icons:{
     icon:"/logo.png"
   }

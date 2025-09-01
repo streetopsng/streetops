@@ -165,13 +165,14 @@ transform: rotateY(180deg);
   /* RED and Black */
   --color-primary:#f73620;
   --color-wht:#ffffff;
-  --color-grayOne:#DDDDDD ;
-  --color-grayTwo:#9b9b9b ;
+  --color-grayOne:#000000 ;
+  --color-grayTwo:##505050 ;
   --color-blk:#000000;
   --color-blueI:#E9E8FA;
   --color-redI:#FFEFE7;
   --color-greenI:#E8F9FC;
-  --color-bgcolor:#000000;
+  --color-bgcolor:#F8F8F8;
+  --color-bgcolorTwo:#DCE0E6;
 
   /* breakpoint */
   --breakpoint-xxs: 330px;

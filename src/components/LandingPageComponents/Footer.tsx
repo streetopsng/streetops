@@ -8,7 +8,7 @@ import AnimatedParticles from "../AnimatedParticles";
 const linkClass = "hover:text-grayOne"
 const Footer = () => {
   return (
-    <footer className=" text-grayOne mt-2 py-4 relative">
+    <footer className=" text-grayOne mt-2 py-4 relative bg-bgcolorTwo">
       <AnimatedParticles value={30}/>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
