@@ -12,18 +12,18 @@ type SlideProps = {
 const slides: SlideProps[] = [
   {
     image: "/sme-img-one.jpg",
-    title: "Transforming Lives One Person at a Time",
-    description: "From chaos to clarity: Paige helps African businesses run smarter, faster, stronge",
+    title: "Streeting out your Brand",
+    description: "Go-to-Market: Crafting the perfect launch strategy to capture best value",
   },
   {
     image: "/sme-img-two.jpg",
-    title: "Transforming Lives One Person at a Time",
-    description: "We are impacting learners through resources and community where they can thrive.",
+    title: "Streeting out your Brand",
+    description: "Structuring & Ops: Building solid and efficient workflows that aids brand delivery",
   },
   {
     image: "/sme-img-three.jpg",
-    title: "Transforming Lives One Person at a Time",
-    description: "We are committed to leverage on technology to provide easy access to quality education. ",
+    title: "Streeting out your Brand",
+    description: "Startup Consulting: Your startup playbook for success.",
   },
 ];
 
