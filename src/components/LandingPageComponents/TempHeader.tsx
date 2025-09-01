@@ -10,7 +10,7 @@ const TempHeader = () => {
 
     <div  className=" xl:mx-6 md:mx-4 py-4  mx-4 mdlg:static relative text-grayOne ">
         
-        <div className="lg:py-0 py-4 flex justify-between items-center  ">
+        <div className="lg:py-0  flex justify-between items-center  ">
 
 <section className="lg:pl-4 flex items-center gap-x-2">
 <div className="relative lg:w-[30px] lg:h-[50px] h-[30px] w-[20px] bg-">
@@ -30,7 +30,6 @@ console.log(formElement);
 
     if (formElement) {
       formElement.scrollIntoView({
-       
         behavior: "smooth",
       });
     } else {

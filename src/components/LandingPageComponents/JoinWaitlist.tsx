@@ -9,7 +9,7 @@ const JoinWaitlist = () => {
 e.preventDefault()
     }
   return (
-    <div className='my-8 formsection'>
+    <div className='my-8 formsection px-4'>
 
 <form   action="https://formspree.io/f/xnnbzzgv"
   method="POST"

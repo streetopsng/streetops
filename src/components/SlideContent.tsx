@@ -94,31 +94,3 @@ style={{
 
 export default ImageSlider;
 
-
-<Swiper
-modules={[Autoplay]}
-autoplay={{ delay: 3000, disableOnInteraction: false }}
-loop={false} 
-spaceBetween={0}
-slidesPerView={1}
-className="w-full h-full"
->
-{slides.map((slide, idx) => (
-  <SwiperSlide key={idx}>
-    
-    <div
-      className="w-full h-full bg-cover bg-center"
-      style={{ backgroundImage: `url(${slide.image})` }}
-    >
-      {/* Overlay */}
-      <div className="absolute inset-0  flex flex-col justify-center animated-gradient-text">
-        
-        <h2 className="text-[1rem] font-semibold text-center ">{slide.title}</h2>
-        <p className="text-lg  text-[1.5rem]">
-          {slide.description}
-        </p>
-      </div>
-    </div>
-  </SwiperSlide>
-))}
-</Swiper>
