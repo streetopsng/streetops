@@ -37,7 +37,7 @@ console.log(formElement);
     }
 
 }}
-className=' inline  text-wht rounded-md lg:h-[40px] h-[40px] lg:px-4 px-2  cursor-pointer   border-[2px] border-primary relative overflow-hidden group ' >
+className=' inline  text-wht rounded-md lg:h-[40px] h-[30px] lg:px-4 px-2  cursor-pointer   border-[2px] border-primary relative overflow-hidden group ' >
 <span className="relative  z-10  text-primary">
 Join Waitlist
 </span>

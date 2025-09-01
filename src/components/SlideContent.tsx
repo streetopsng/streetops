@@ -59,7 +59,7 @@ useEffect(() => {
 }, [curr])
 
   return (
-    <div className="w-full h-[80vh] relative overflow-hidden">
+    <div className="w-full md:h-[80vh] h-[70vh] relative overflow-hidden">
    <div className="w-full h-full flex transition-all ease-in-out duration-300"
    style={{
     transform:`translateX(-${curr * 100}%)`
