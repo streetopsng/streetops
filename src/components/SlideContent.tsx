@@ -1,8 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
-import "swiper/css";
+
+
 
 type SlideProps = {
   image: string;
@@ -12,17 +11,17 @@ type SlideProps = {
 
 const slides: SlideProps[] = [
   {
-    image: "/img-one.jpg",
+    image: "/sme-img-one.jpg",
     title: "Transforming Lives One Person at a Time",
     description: "From chaos to clarity: Paige helps African businesses run smarter, faster, stronge",
   },
   {
-    image: "/img-two.jpg",
+    image: "/sme-img-two.jpg",
     title: "Transforming Lives One Person at a Time",
     description: "We are impacting learners through resources and community where they can thrive.",
   },
   {
-    image: "/img-three.jpg",
+    image: "/sme-img-three.jpg",
     title: "Transforming Lives One Person at a Time",
     description: "We are committed to leverage on technology to provide easy access to quality education. ",
   },
@@ -50,6 +49,7 @@ useEffect(() => {
         setCurr(prev => prev - 1)
         return
         
+        
       }
       setCurr(prev => prev + 1)
   }, 5000)
@@ -68,11 +68,11 @@ useEffect(() => {
 
 {slides.map((item,index)=>{
 
-  return <aside key={index + 1} className="min-w-full h-full flex flex-col justify-center items-center px-8"
+  return <aside key={index + 1} className="min-w-full h-full flex flex-col justify-center items-center lg:px-8 px-4 bg-center lg:bg-left-top"
   style={{
     backgroundImage:`url(${item.image})`,
     backgroundSize:"cover",
-    backgroundPosition:"center"
+    // backgroundPosition:"center"
     
   }}
 

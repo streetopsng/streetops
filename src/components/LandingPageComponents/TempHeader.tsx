@@ -20,7 +20,7 @@ fill
 src={"/logo.png"} 
 alt="logo"/>
 </div>
-<h1 className="text-primary font-semibold">streetOps</h1>
+<h1 className="text-primary font-semibold  md:text-2xl text-xl">StreetOps</h1>
 </section>
 
         <button
