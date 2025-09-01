@@ -48,8 +48,7 @@ useEffect(() => {
         }
         setCurr(prev => prev - 1)
         return
-        
-        
+
       }
       setCurr(prev => prev + 1)
   }, 5000)
