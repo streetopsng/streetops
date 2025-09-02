@@ -68,30 +68,43 @@ useEffect(() => {
 
 {slides.map((item,index)=>{
 
-  return <aside key={index + 1} className="min-w-full h-full flex flex-col justify-center items-center lg:px-8 px-4  lg:bg-left-top relative z-0"
-  style={{
-    backgroundImage:`url(${item.image})`,
-    backgroundSize:"cover",
-    backgroundPosition:"center"
+  return <aside key={index + 1} className="min-w-full h-full f relative z-0"
+  // style={{
+  //   backgroundImage:`url(${item.image})`,
+  //   backgroundSize:"cover",
+  //   backgroundPosition:"center"
     
-  }}
+  // }}
 
 
   >
-    <div className="bg-primaary  w-full h-full absolute z-100"></div>
-<h1 className={`lg:text-7xl md:text-3xl text-4xl font-semibold text-black md:w-[60%] text-center   ${index == curr ? "fade-in-top" :""}`}>{item.title}</h1>    
-<h1 className={`text-xl font-semibold text-center text-black animated-gradient-text-two ${index == curr ? "fade-in-bottom" :""} `} 
+    <div 
+    className="lg:bg-left-top w-full h-full lg:px-8 px-4 flex flex-col justify-center items-center"
+      style={{
+        backgroundImage:`url(${item.image})`,
+        backgroundSize:"cover",
+        backgroundPosition:"center"
+        
+      }}
+    >
+<div className="absolute w-full h-full bg-black opacity-60">
+
+</div>
+    <div className="bg-primaary  w-full h-full absolute z-100 "></div>
+<h1 className={`lg:text-8xl md:text-3xl text-4xl font-semibold text-white md:w-[60%] text-center animated-gradient-text    ${index == curr ? "fade-in-top" :""}`}>{item.title}</h1>    
+<h1 className={`text-xl  text-center text-white  ${index == curr ? "fade-in-bottom" :""} `} 
 
 style={{
   whiteSpace:"pre-line"
 }}>{item.description}</h1>    
 
+</div>
   </aside>
 })}
    </div>
 
-    </div>
-  );
+</div>
+);
 };
 
 export default ImageSlider;
