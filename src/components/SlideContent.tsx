@@ -79,11 +79,11 @@ useEffect(() => {
 
   >
     <div 
-    className="lg:bg-left-top w-full h-full lg:px-8 px-4 flex flex-col justify-center items-center"
+    className={`lg:bg-left-top w-full h-full lg:px-8 px-4 flex flex-col justify-center items-center `}
       style={{
         backgroundImage:`url(${item.image})`,
         backgroundSize:"cover",
-        backgroundPosition:"center"
+        backgroundPosition:index == 2 ? "" :"center"
         
       }}
     >
