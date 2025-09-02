@@ -68,7 +68,7 @@ useEffect(() => {
 
 {slides.map((item,index)=>{
 
-  return <aside key={index + 1} className="min-w-full h-full flex flex-col justify-center items-center lg:px-8 px-4 bg-center lg:bg-left-top"
+  return <aside key={index + 1} className="min-w-full h-full flex flex-col justify-center items-center lg:px-8 px-4  lg:bg-left-top"
   style={{
     backgroundImage:`url(${item.image})`,
     backgroundSize:"cover",
