@@ -68,7 +68,7 @@ useEffect(() => {
 
 {slides.map((item,index)=>{
 
-  return <aside key={index + 1} className="min-w-full h-full flex flex-col justify-center items-center lg:px-8 px-4  lg:bg-left-top"
+  return <aside key={index + 1} className="min-w-full h-full flex flex-col justify-center items-center lg:px-8 px-4  lg:bg-left-top relative z-0"
   style={{
     backgroundImage:`url(${item.image})`,
     backgroundSize:"cover",
@@ -76,9 +76,11 @@ useEffect(() => {
     
   }}
 
+
   >
-<h1 className={`lg:text-7xl md:text-3xl text-4xl font-semibold animated-gradient-slide-text md:w-[60%] text-center   ${index == curr ? "fade-in-top" :""}`}>{item.title}</h1>    
-<h1 className={`text-xl text-white text-center ${index == curr ? "fade-in-bottom" :""} `} 
+    <div className="bg-primaary  w-full h-full absolute z-100"></div>
+<h1 className={`lg:text-7xl md:text-3xl text-4xl font-semibold text-black md:w-[60%] text-center   ${index == curr ? "fade-in-top" :""}`}>{item.title}</h1>    
+<h1 className={`text-xl font-semibold text-center text-black animated-gradient-text-two ${index == curr ? "fade-in-bottom" :""} `} 
 
 style={{
   whiteSpace:"pre-line"
