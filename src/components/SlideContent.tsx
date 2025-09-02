@@ -60,7 +60,7 @@ useEffect(() => {
 }, [curr])
 
   return (
-    <div className="w-full md:h-[120vh] h-[80vh] relative overflow-hidden">
+    <div className="w-full md:h-[120vh] h-screen relative overflow-hidden">
    <div className="w-full h-full flex transition-all ease-in-out duration-300"
    style={{
     transform:`translateX(-${curr * 100}%)`
@@ -81,22 +81,22 @@ useEffect(() => {
   >
     <div 
     className={`lg:bg-left-top w-full h-full lg:px-8 px-4 flex flex-col justify-center items-center `}
-      // style={{
-      //   backgroundImage:`url(${item.image})`,
-      //   backgroundSize:"cover",
-      //   backgroundPosition:index == 2 ? "" :"center"
+      style={{
+        backgroundImage:`url(${item.image})`,
+        backgroundSize:"cover",
+        backgroundPosition:index == 2 ? "" :"center"
         
-      // }}
+      }}
     >
 
-<div className="absolute w-full h-full">
+{/* <div className="absolute w-full h-full">
 <div className="relative w-full h-full">
 <Image
 fill
-className="absolute object-cover"
+className="absolute inset-0 md:object-cover "
 src={item.image} alt={item.title} />
       </div>
-</div>
+</div> */}
 <div className="absolute w-full h-full bg-black opacity-60">
 
 </div>
