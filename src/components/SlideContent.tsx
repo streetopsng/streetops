@@ -90,7 +90,7 @@ useEffect(() => {
     >
 
 <div className="absolute w-full h-full">
-<div className="relative w-full min-h-full">
+<div className="relative w-full h-full">
 <Image
 fill
 className="absolute object-cover"
@@ -101,8 +101,8 @@ src={item.image} alt={item.title} />
 
 </div>
  
-<h1 className={`lg:text-7xl md:text-3xl text-3xl font-semibold text-white md:w-[60%] text-center animated-gradient-text    ${index == curr ? "fade-in-top" :""}`}>{item.title}</h1>    
-<h1 className={`text-xl  text-center text-white  ${index == curr ? "fade-in-bottom" :""} `} 
+<h1 className={`lg:text-7xl md:text-6xl text-5xl font-semibold text-white md:w-[60%] text-center animated-gradient-text    ${index == curr ? "fade-in-top" :""}`}>{item.title}</h1>    
+<h1 className={`md:text-xl lg:text-lg  text-center text-white  ${index == curr ? "fade-in-bottom" :""} `} 
 
 style={{
   whiteSpace:"pre-line"
