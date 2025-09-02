@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
 
@@ -59,7 +60,7 @@ useEffect(() => {
 }, [curr])
 
   return (
-    <div className="w-full md:h-[80vh] h-[70vh] relative overflow-hidden">
+    <div className="w-full md:h-[120vh] h-[80vh] relative overflow-hidden">
    <div className="w-full h-full flex transition-all ease-in-out duration-300"
    style={{
     transform:`translateX(-${curr * 100}%)`
@@ -80,18 +81,27 @@ useEffect(() => {
   >
     <div 
     className={`lg:bg-left-top w-full h-full lg:px-8 px-4 flex flex-col justify-center items-center `}
-      style={{
-        backgroundImage:`url(${item.image})`,
-        backgroundSize:"cover",
-        backgroundPosition:index == 2 ? "" :"center"
+      // style={{
+      //   backgroundImage:`url(${item.image})`,
+      //   backgroundSize:"cover",
+      //   backgroundPosition:index == 2 ? "" :"center"
         
-      }}
+      // }}
     >
+
+<div className="absolute w-full h-full">
+<div className="relative w-full min-h-full">
+<Image
+fill
+className="absolute object-cover"
+src={item.image} alt={item.title} />
+      </div>
+</div>
 <div className="absolute w-full h-full bg-black opacity-60">
 
 </div>
-    <div className="bg-primaary  w-full h-full absolute z-100 "></div>
-<h1 className={`lg:text-8xl md:text-3xl text-4xl font-semibold text-white md:w-[60%] text-center animated-gradient-text    ${index == curr ? "fade-in-top" :""}`}>{item.title}</h1>    
+ 
+<h1 className={`lg:text-7xl md:text-3xl text-3xl font-semibold text-white md:w-[60%] text-center animated-gradient-text    ${index == curr ? "fade-in-top" :""}`}>{item.title}</h1>    
 <h1 className={`text-xl  text-center text-white  ${index == curr ? "fade-in-bottom" :""} `} 
 
 style={{
