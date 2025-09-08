@@ -12,7 +12,7 @@ const TempHeader = () => {
   return (
     <div   className=" min-h-[20px] w-full bg-bgcolorTwo z-50 ">
 
-    <div  className=" xl:mx-6 md:mx-4 py-4  mx-4 mdlg:static relative text-grayOne ">
+    <div  className=" xl:mx-6 md:mx-4 py-4  lg:mx-4 mx-2 mdlg:static relative text-grayOne ">
         
         <div className="lg:py-0  flex justify-between items-center  ">
 
