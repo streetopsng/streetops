@@ -3,7 +3,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import React from 'react'
-import { FaTwitter, FaLinkedin, FaFacebookF } from "react-icons/fa";
+import { FaTwitter, FaTiktok,FaInstagram  } from "react-icons/fa";
+
 
 
 const linkClass = "hover:text-grayOne"
@@ -28,6 +29,18 @@ alt="logo"/>
 </section>
 
       <section className='flex items-center gap-x-2'>
+<aside className='flex lg:gap-x-3 gap-x-2 items-center'>
+<Link href="https://x.com/StreetOpsng" className={linkClass} target="_blank">
+                <FaTwitter className="md:text-xl text-lg text-primary hover:text-grayOne" />
+              </Link>
+              
+              <Link href="https://www.tiktok.com/@streetops.ng" className={linkClass} target="_blank" >
+                <FaTiktok  className="md:text-xl text-lg text-primary hover:text-grayOne" />
+              </Link>
+              <Link href="https://www.instagram.com/street_opsng" className={linkClass} target="_blank" >
+                <FaInstagram className="md:text-xl text-lg hover:text-grayOne text-primary text-lg" />
+              </Link>
+</aside>
         {/* blog page btn */}
       <button
 // onClick={()=> {
@@ -54,17 +67,6 @@ Blog
 </button> 
 {/* Social Btn */}
 
-<aside className='flex gap-x-2 items-center'>
-<Link href="https://twitter.com" className={linkClass} target="_blank">
-                <FaTwitter className="text-lg text-grayTwo hover:text-grayOne" />
-              </Link>
-              <Link href="https://www.linkedin.com/company/paigeautos/" className={linkClass} target="_blank" >
-                <FaLinkedin className="text-lg text-grayTwo hover:text-grayOne" />
-              </Link>
-              <Link href="https://facebook.com" className={linkClass} target="_blank" >
-                <FaFacebookF className="hover:text-grayOne text-grayTwo text-lg" />
-              </Link>
-</aside>
 
       </section>
     </div>
