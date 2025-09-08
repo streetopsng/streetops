@@ -62,8 +62,10 @@ return store.blogsReducer
     dangerouslySetInnerHTML={{ __html: "<p><u>kslsksjdsdslslfjsdfkjoesldkfsdjfdndmdklsaldisfslaofsl</u></p><p></p><p><strong><u>chris</u></strong></p><p></p><p><em>i dont play</em></p>" }}
     >
     </div> */}
+    <div>
+<h1 className='text-center font-semibold md:text-[1.7rem] text-[1.4rem]  animated-gradient-text-two '>BLOGS</h1>
  {blogs.length < 1 && isLoading  ? (
-
+     
 <div className="xl:px-10 md:px-8 px-4 text-grayOne w-full h-[60vh] flex items-center justify-center flex-col">
         <PagePreloader/>
         <h1 className="italic my-2 ">Loading Available Blogs...</h1>
@@ -98,6 +100,7 @@ return store.blogsReducer
 })}
 
  </article>}
+</div>
 
  {/* <Footer/> */}
     </div>
