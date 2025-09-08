@@ -42,10 +42,10 @@ const page = () => {
       <Header/> */}
       <TempHeader/>
       <SlideContent/>
+      <Sponsors/>
       <JoinWaitlist/>
       {/* <HeroSection/>  */}
       
-      {/* <Sponsors/> */}
   </div>
       {/* <Section/> */}
       {/* Image */}

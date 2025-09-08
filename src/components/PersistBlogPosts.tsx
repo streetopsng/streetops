@@ -11,8 +11,9 @@ const PersistBlogPosts = () => {
             const dispatch = useDispatch<dispatchType>()
             useEffect(()=>{
 const blogs = localStorage.getItem("blogs") ? JSON.parse(localStorage.getItem("blogs") as string) : []
-
-dispatch(storeBlogs(blogs))
+localStorage.removeItem("blogs")
+localStorage.setItem("blogs",JSON.stringify([...blogs]))
+dispatch(storeBlogs([...blogs.splice(0,5)]))
             },[])
 
   return (

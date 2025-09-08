@@ -16,7 +16,7 @@ const blogSlice = createSlice({
     name:"blogSlice",
     initialState,
     reducers:{
-        storeBlogs:(state,actions:PayloadAction)=>{
+        storeBlogs:(state,actions:PayloadAction<any[]>)=>{
 return actions.payload
         }
     }

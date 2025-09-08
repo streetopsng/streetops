@@ -119,8 +119,12 @@ setLoading(false)
 
 
   const handleSubmit = async(e:React.FormEvent<HTMLFormElement>) => {
-setLoading(true)
     e.preventDefault();
+
+    if (loading) {
+      return
+    }
+setLoading(true)
 
     
       if (editor) {
@@ -214,10 +218,10 @@ setImagePrev(URL.createObjectURL(imageFile))
 </div>
 
 <label htmlFor=""
-className="font-semibold text-grayOne"
+className="font-semibold text-grayOne text-centre"
 >Blog content</label>
 <br />
-      <div className="flex gap-2 mb-3 bg-grayTwo py-2 justify-center">
+      <div className="flex gap-2 mb-3 bg-grayTwo py-2 rounded-lg border-1 border-gray-500 px-2">
         
       <button
     type="button"
@@ -286,7 +290,7 @@ className="font-semibold text-grayOne"
         <div className="my-4">
             <button type="submit" 
            
-            className="bg-primary rounded-lg px-6 py-2">{loading ? "posting..." : "post blog"}</button>
+            className="bg-primary rounded-lg px-6 py-2">{loading ? "----" : "post blog"}</button>
         </div>
         </form>
     </div>

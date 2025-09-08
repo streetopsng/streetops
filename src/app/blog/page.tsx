@@ -3,7 +3,6 @@ import { Header } from '@/components/LandingPageComponents/Header'
 import React, { useEffect } from 'react'
 
 import Image from 'next/image';
-import { blogContent } from '@/utils/blogs-content';
 import { useRouter } from 'next/navigation';
 import { useDispatch, useSelector } from 'react-redux';
 import { dispatchType, RootStateType } from '@/store';
@@ -11,6 +10,7 @@ import { useQuery } from '@tanstack/react-query';
 import { blogPostType, storeBlogs } from '@/store/slices/allBlogs';
 import Footer from '@/components/LandingPageComponents/Footer';
 import PagePreloader from '@/utils/PagePreloader';
+import TempHeader from '@/components/LandingPageComponents/TempHeader';
 
 
 async function fetchData() {
@@ -45,14 +45,14 @@ return store.blogsReducer
           const router = useRouter()
   return (
     <div className=''>
- <Header/>
+ <TempHeader/>
 
 
  {/* <SlideContent/> */}
  <div className="w-full lg:h-[80vh] h-[50vh] relative flex flex-col justify-center items-center px-8 text-center">
 
- <h1 className={`lg:text-5xl md:text-3xl text-2xl font-semibold animated-gradient-slide-text lg:w-[60%] w-full`}>Explore Experts Insights and Practical Tips on Paige</h1>    
-<p className={`text-lg text-white lg:w-[60%] w-full `}>Stay informed and empowered with valuable articles, expert advice, and actionable tips to help you navigate your financial journey with confidence</p> 
+ <h1 className={`lg:text-5xl md:text-3xl text-2xl font-semibold animated-gradient-slide-text lg:w-[60%] w-full`}>Explore Experts Insights and Practical Tips on StreetOps</h1>  
+<p className={`text-xl lg:w-[60%] w-full `}>Stay informed and empowered with valuable articles, expert advice, and actionable tips to help you navigate your financial journey with confidence</p> 
  </div>
 
  {/* <p><u>kslsksjdsdslslfjsdfkjoesldkfsdjfdndmdklsaldisfslaofsl</u></p><p></p><p><strong><u>chris</u></strong></p><p></p><p><em>i dont play</em></p> */}
@@ -62,20 +62,24 @@ return store.blogsReducer
     dangerouslySetInnerHTML={{ __html: "<p><u>kslsksjdsdslslfjsdfkjoesldkfsdjfdndmdklsaldisfslaofsl</u></p><p></p><p><strong><u>chris</u></strong></p><p></p><p><em>i dont play</em></p>" }}
     >
     </div> */}
- {blogs.length < 1 && (
+ {blogs.length < 1 && isLoading  ? (
 
 <div className="xl:px-10 md:px-8 px-4 text-grayOne w-full h-[60vh] flex items-center justify-center flex-col">
         <PagePreloader/>
         <h1 className="italic my-2 ">Loading Available Blogs...</h1>
       </div>
-)}
+): blogs.length < 1 ? (
+    <div className='py-4'>
+        <h1 className='text-center text-primary text-lg'>no blog available at the moment</h1>
+    </div>
+): ""}
 
-    {blogs.length > 0 && <article className='flex justify-between flex-wrap gap-x-8 gap-y-4 px-4 my-4 py-4'>
+    {blogs.length > 0 && <article className=' mx-auto w-[90%] flex  flex-wrap   my-4 py-4  '>
 {/* mapp through blog */}
 
 {blogs.map((item:blogPostType,index:any)=>{
 
-    return <div key={index} className='text-grayOne cursor-pointer lg:w-[30%] md:w-[45%] w-[95%]' onClick={()=> router.push(`/blog/${item.title.replace(/ /g,"-").toLocaleLowerCase()}-${item._id}`)}>
+    return <div key={index} className='text-grayOne cursor-pointer lg:w-[30%] md:w-[45%] w-[95%] mx-auto ' onClick={()=> router.push(`/blog/${item.title.replace(/ /g,"-").toLocaleLowerCase()}-${item._id}`)}>
         <div className='relative w-[100%] min-h-[250px]'>
             <Image
             src={item.imageUrl}  

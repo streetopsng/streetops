@@ -84,7 +84,7 @@ useEffect(() => {
       style={{
         backgroundImage:`url(${item.image})`,
         backgroundSize:"cover",
-        backgroundPosition:index == 2 ? "" :"center"
+        backgroundPosition:"center"
         
       }}
     >
