@@ -57,11 +57,11 @@ alt="logo"/>
 
 // }}
 onClick={()=>{
-  router.push("/blog")
+  router.push("/blogs")
 }}
 className=' inline  text-wht rounded-md lg:h-[40px] h-[30px] lg:px-4 px-2  cursor-pointer   border-[2px] border-primary relative overflow-hidden group ' >
 <span className="relative  z-10  text-primary">
-Blog
+Blogs
 </span>
 <span className="absolute inset-0  transform translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out z-0" />
 </button> 
