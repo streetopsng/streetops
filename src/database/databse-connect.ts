@@ -57,7 +57,7 @@ export async function connectDatabase(): Promise<{ success: boolean }> {
 
   if (!cached.promise) {
     cached.promise = mongoose.connect(MONGODB_URI, {
-      dbName: 'paige_db',
+      dbName: 'blogs_db',
       bufferCommands: false,
     });
   }
@@ -68,7 +68,7 @@ export async function connectDatabase(): Promise<{ success: boolean }> {
     return { success: true };
   } catch (err) {
     cached.promise = null; // Clear promise so we can retry next time
-    console.error('❌ MongoDB connection failed:', err);
+    console.error(' MongoDB connection failed:', err);
     return { success: false };
   }
 }
