@@ -244,7 +244,7 @@ Blog
 </div>
 
 {/* <h1 className={`lg:text-7xl md:text-6xl text-5xl font-semibold text-white md:w-[60%] text-center animated-gradient-text    ${index == curr ? "fade-in-top" :""}`}>{item.title}</h1> */}
-<h1 className={`md:text-5xl text-3xl   text-white lg:w-[50%] md:w-[60%]   ${index == curr ? "fade-in-bottom" :""} `} 
+<h1 className={`md:text-5xl text-[1.7rem] font-medium  leading-13  text-white lg:w-[50%] md:w-[60%]   ${index == curr ? "fade-in-bottom" :""} `} 
 
 style={{
   // whiteSpace:"pre-line"
