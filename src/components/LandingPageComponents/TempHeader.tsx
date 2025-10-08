@@ -11,21 +11,24 @@ const linkClass = "hover:text-grayOne"
 const TempHeader = () => {
     const router = useRouter()
   return (
-    <div   className=" min-h-[20px] w-full bg-bgcolorTwo z-50 ">
+    <div   className=" min-h-[20px] w-full bg-gray-500   z-50 ">
 
+{/* <div className="absolute left-0 w-full h-full bg-black opacity-70">
+
+</div> */}
     <div  className=" xl:mx-6 md:mx-4 py-4  lg:mx-4 mx-2 mdlg:static relative text-grayOne ">
         
         <div className="lg:py-0  flex justify-between items-center  ">
 
 <section className="lg:pl-4 flex items-center gap-x-2">
-<div className="relative lg:w-[30px] lg:h-[50px] h-[30px] w-[20px] bg-">
+<div className="relative lg:w-[30px] lg:h-[50px] h-[30px] min-w-[120px] bg-">
 <Image 
-className="absolute w-full h-full object-contain"
+className="absolute w-full h-full "
 fill
-src={"/logo.png"} 
+src={"/streetopslogo.png"} 
 alt="logo"/>
 </div>
-<h1 className="text-primary font-semibold  md:text-2xl text-xl">StreetOps</h1>
+{/* <h1 className="text-primary font-semibold  md:text-2xl text-xl">StreetOps</h1> */}
 </section>
 
       <section className='flex items-center gap-x-2'>
@@ -42,20 +45,8 @@ alt="logo"/>
               </Link>
 </aside>
         {/* blog page btn */}
-      <button
-// onClick={()=> {
-//     const formElement = document.querySelector(".formsection") as HTMLElement | null;
-// console.log(formElement);
+      {/* <button
 
-//     if (formElement) {
-//       formElement.scrollIntoView({
-//         behavior: "smooth",
-//       });
-//     } else {
-//       console.error("Element with class .formsection not found");
-//     }
-
-// }}
 onClick={()=>{
   router.push("/blogs")
 }}
@@ -64,7 +55,7 @@ className=' inline  text-wht rounded-md lg:h-[40px] h-[30px] lg:px-4 px-2  curso
 Blogs
 </span>
 <span className="absolute inset-0  transform translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out z-0" />
-</button> 
+</button>  */}
 {/* Social Btn */}
 
 

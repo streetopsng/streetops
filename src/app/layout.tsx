@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: "StreetOps",
   description: "StreetOps",
   icons:{
-    icon:"/logo.png"
+    icon:"/icon.png"
   }
 };
 

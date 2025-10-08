@@ -55,13 +55,7 @@ return store.blogsReducer
 <p className={`md:text-xl text-lg lg:w-[60%] w-full `}>Stay informed and empowered with valuable articles, expert advice, and actionable tips to help you navigate your financial journey with confidence</p> 
  </div>
 
- {/* <p><u>kslsksjdsdslslfjsdfkjoesldkfsdjfdndmdklsaldisfslaofsl</u></p><p></p><p><strong><u>chris</u></strong></p><p></p><p><em>i dont play</em></p> */}
-    {/* <div
-    
-    className='text-[red]'
-    dangerouslySetInnerHTML={{ __html: "<p><u>kslsksjdsdslslfjsdfkjoesldkfsdjfdndmdklsaldisfslaofsl</u></p><p></p><p><strong><u>chris</u></strong></p><p></p><p><em>i dont play</em></p>" }}
-    >
-    </div> */}
+
     <div>
 <h1 className='text-center font-semibold md:text-[1.7rem] text-[1.4rem]  animated-gradient-text-two '>BLOGS</h1>
  {blogs.length < 1 && isLoading  ? (
