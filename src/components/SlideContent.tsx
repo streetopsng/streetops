@@ -24,14 +24,8 @@ const slides: SlideProps[] = [
     title: "Streeting out your Brand",
     description: (
       <p>
-      We strip inefficiencies from
-      <br />
-      your <span className="text-primary">business</span> and replace
-      <br />
-      them with <span className="text-primary">systems</span> that <span className="text-primary">work</span>
-
-      <br />
-      while you sleep.
+      We strip inefficiencies from 
+      your <span className="text-primary">business</span> and replace them with <span className="text-primary">systems</span> that <span className="text-primary">work</span> while you sleep.
       </p>
     ),
   },
@@ -40,11 +34,7 @@ const slides: SlideProps[] = [
     title: "Streeting out your Brand",
     description: (
       <p>
-        Because African <span className="text-primary">SMEs</span>
-        <br />
-         deserve more than survival.
-         <br />
-          They <span className="text-primary">deserve systems.</span>
+        Because African <span className="text-primary">SMEs</span> deserve more than survival. They <span className="text-primary">deserve systems.</span>
       </p>
     ),
   },
@@ -53,10 +43,7 @@ const slides: SlideProps[] = [
     title: "Streeting out your Brand",
     description:(
 <p>
-<span className="text-primary" >StreetOps</span>
-: Where <span className="text-primary">business</span>
-<br />
-chaos meets <span className="text-primary">clarity.</span> 
+<span className="text-primary" >StreetOps</span> : Where <span className="text-primary"> business</span> chaos meets <span className="text-primary">clarity.</span> 
 </p>
     ),
   },
@@ -244,7 +231,7 @@ Blog
 </div>
 
 {/* <h1 className={`lg:text-7xl md:text-6xl text-5xl font-semibold text-white md:w-[60%] text-center animated-gradient-text    ${index == curr ? "fade-in-top" :""}`}>{item.title}</h1> */}
-<h1 className={`pb-4 md:text-5xl text-[1.7rem] font-medium  leading-13  text-white lg:w-[55%] md:w-[75%]   ${index == curr ? "fade-in-bottom" :""} `} 
+<h1 className={`pb-4 md:text-5xl text-[1.7rem] font-medium  leading-13  text-white lg:w-[50%] md:w-[70%]   ${index == curr ? "fade-in-bottom" :""} `} 
 
 style={{
   // whiteSpace:"pre-line"
