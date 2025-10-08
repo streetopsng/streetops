@@ -177,7 +177,7 @@ Blog
 
       {/* input and sponsors */}
 
-      <div className="absolute bottom-[8%] z-10 px-8 lg:w-[30%] md:w-[50%] w-full">
+      <div className="absolute bottom-[8%] z-10 px-4 lg:w-[30%] md:w-[50%] w-full">
 <section className="bg-white rounded-full py-1 px-2 w-full">
   <input 
   type="email"
@@ -218,7 +218,7 @@ Blog
   return <aside key={index + 1} className="min-w-full min-h-full  relative z-0"
   >
     <div 
-    className={`lg:bg-left-top w-full min-h-screen pl-8 px-4 flex flex-col justify-center md:bg-[length:100%] bg-cover `}
+    className={`lg:bg-left-top w-full min-h-screen pl-4 px-4 flex flex-col justify-center md:bg-[length:100%] bg-cover `}
       style={{
         backgroundImage:`url(${item.image})`,
         // backgroundSize:"cover",
@@ -244,7 +244,7 @@ Blog
 </div>
 
 {/* <h1 className={`lg:text-7xl md:text-6xl text-5xl font-semibold text-white md:w-[60%] text-center animated-gradient-text    ${index == curr ? "fade-in-top" :""}`}>{item.title}</h1> */}
-<h1 className={`md:text-5xl text-2xl   text-white lg:w-[50%] md:w-[60%]   ${index == curr ? "fade-in-bottom" :""} `} 
+<h1 className={`md:text-5xl text-3xl   text-white lg:w-[50%] md:w-[60%]   ${index == curr ? "fade-in-bottom" :""} `} 
 
 style={{
   // whiteSpace:"pre-line"
