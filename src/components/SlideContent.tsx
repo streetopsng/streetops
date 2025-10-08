@@ -148,7 +148,7 @@ if (!form.email) {
 }
 
   return (
-    <div className="w-full md:h-[100vh] h-screen relative overflow-hidden bg-[red]">
+    <div className="w-full  min-h-screen relative overflow-hidden bg-[red]">
       {/* nav */}
       <nav className="lg:px-8 px-4 bg-transparent flex justify-between absolute top-[1%] left-[0%] z-10 w-full my-4">
         <div className="relative w-[130px] h-[40px]">
@@ -162,8 +162,8 @@ fill
 
         <button
 onClick={()=> router.push("/blog")}
-className='mdlg:inline   text-wht rounded-md lg:h-[35px] h-[30px] lg:px-4 px-2 cursor-pointer   border-[2px] border-primary relative overflow-hidden group' >
-<span className="relative  z-10  duration-300 hover:text-primary text-primary">
+className='mdlg:inline   text-wht rounded-md lg:h-[35px] h-[30px] lg:px-4 px-2 cursor-pointer   border-[2px] border-white relative overflow-hidden group' >
+<span className="relative  z-10  duration-300 hover:text-primary text-white">
 Blog
 </span>
 <span className="absolute inset-0 bg-white  opacity-80 transform translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out z-0" />
@@ -177,7 +177,7 @@ Blog
 
       {/* input and sponsors */}
 
-      <div className="absolute bottom-[8%] z-10 px-4 lg:w-[30%] md:w-[50%] w-full">
+      <div className="absolute bottom-[3%] z-10 px-4 lg:w-[30%] md:w-[50%] w-full">
 <section className="bg-white rounded-full py-1 px-2 w-full">
   <input 
   type="email"
@@ -196,7 +196,7 @@ Blog
 </section>
 
 <section className="text-white text-sm my-4 flex flex-col justify-between gap-4">
-  <h1 className="text-sm">Trusted By</h1>
+  <h1 className="text-sm font-semibold underline">Trusted By</h1>
   <div className="flex justify-between ">
     {[...trustedBy,...trustedBy].map((item,index)=>{
 
@@ -244,7 +244,7 @@ Blog
 </div>
 
 {/* <h1 className={`lg:text-7xl md:text-6xl text-5xl font-semibold text-white md:w-[60%] text-center animated-gradient-text    ${index == curr ? "fade-in-top" :""}`}>{item.title}</h1> */}
-<h1 className={`md:text-5xl text-[1.7rem] font-medium  leading-13  text-white lg:w-[50%] md:w-[60%]   ${index == curr ? "fade-in-bottom" :""} `} 
+<h1 className={`pb-4 md:text-5xl text-[1.7rem] font-medium  leading-13  text-white lg:w-[55%] md:w-[75%]   ${index == curr ? "fade-in-bottom" :""} `} 
 
 style={{
   // whiteSpace:"pre-line"

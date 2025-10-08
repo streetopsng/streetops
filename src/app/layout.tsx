@@ -58,7 +58,7 @@ strategy="afterInteractive"
       </Head>
       <ClientProvider>
       <body
-        className={`bg-bgcolor  font-lato`}
+        className={`bg-bgcolor  font-roboto`}
         >
         <noscript>
           <iframe
