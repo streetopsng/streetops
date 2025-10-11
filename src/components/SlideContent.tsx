@@ -141,7 +141,7 @@ if (!form.email) {
   return (
     <div className="w-full  min-h-screen relative overflow-hidden bg-[red]">
       {/* nav */}
-      <nav className="lg:px-8 px-4 bg-transparent flex justify-between absolute top-[1%] left-[0%] z-10 w-full my-4">
+      <nav className="lg:px-8 md:px-4 px-2 bg-transparent flex justify-between absolute top-[1%] left-[0%] z-10 w-full my-4">
         <div className="relative w-[130px] h-[40px]">
 <Image
 src={"/streetopslogo.png"}
@@ -175,7 +175,7 @@ Blog
 
       {/* input and sponsors */}
 
-      <div className="absolute bottom-[3%] z-10 px-4 lg:w-[30%] md:w-[50%] w-full">
+      <div className="absolute bottom-[3%] z-10 md:px-4 px-2 lg:w-[30%] md:w-[50%] w-full">
 <section className="bg-white rounded-full py-1 px-2 w-full">
   <input 
   type="email"
@@ -216,7 +216,7 @@ Blog
   return <aside key={index + 1} className="min-w-full min-h-full  relative z-0"
   >
     <div 
-    className={`lg:bg-left-top w-full h-screen pl-4 px-4 flex flex-col justify-center md:bg-[length:100%] bg-cover 
+    className={`lg:bg-left-top w-full h-screen  md:px-4 px-2 flex flex-col justify-center md:bg-[length:100%] bg-cover 
 `}
       style={{
         backgroundImage:`url(${item.image})`,
