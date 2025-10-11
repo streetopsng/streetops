@@ -12,7 +12,7 @@ export const POST = async(req:NextRequest)=>{
     if (!dbCheck.success) {
         
         console.log("cant connect to db");
-        return NextResponse.json({success:true,message:"an error occured, please try again "})
+        return NextResponse.json({success:false,message:"an error occured, please try again "})
         // throw new Error("Something went wrong") 
     }
 
