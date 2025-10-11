@@ -6,6 +6,10 @@ import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
 import { IoIosMenu } from "react-icons/io";
+import { FaInstagram } from "react-icons/fa6";
+import { RiTwitterXFill } from "react-icons/ri";
+import { RiTiktokLine } from "react-icons/ri";
+import { RxLinkedinLogo } from "react-icons/rx";
 
 type SlideProps = {
   image: string;
@@ -24,14 +28,8 @@ const slides: SlideProps[] = [
     title: "Streeting out your Brand",
     description: (
       <p>
-      We strip inefficiencies from
-      <br />
-      your <span className="text-primary">business</span> and replace
-      <br />
-      them with <span className="text-primary">systems</span> that <span className="text-primary">work</span>
-
-      <br />
-      while you sleep.
+      We strip inefficiencies from 
+      your <span className="text-primary">business</span> and replace them with <span className="text-primary">systems</span> that <span className="text-primary">work</span> while you sleep.
       </p>
     ),
   },
@@ -40,11 +38,7 @@ const slides: SlideProps[] = [
     title: "Streeting out your Brand",
     description: (
       <p>
-        Because African <span className="text-primary">SMEs</span>
-        <br />
-         deserve more than survival.
-         <br />
-          They <span className="text-primary">deserve systems.</span>
+        Because African <span className="text-primary">SMEs</span> deserve more than survival. They <span className="text-primary">deserve systems.</span>
       </p>
     ),
   },
@@ -53,10 +47,7 @@ const slides: SlideProps[] = [
     title: "Streeting out your Brand",
     description:(
 <p>
-<span className="text-primary" >StreetOps</span>
-: Where <span className="text-primary">business</span>
-<br />
-chaos meets <span className="text-primary">clarity.</span> 
+<span className="text-primary" >StreetOps</span> : Where <span className="text-primary"> business</span> chaos meets <span className="text-primary">clarity.</span> 
 </p>
     ),
   },
@@ -159,15 +150,22 @@ className="absolute w-full h-full"
 fill
 />
         </div>
-
+<div className="flex items-center gap-x-4">
+  <aside className="flex items-center gap-x-2">
+    <a target="_blank" href="https://www.instagram.com/street_opsng/"><FaInstagram className="text-wht hover:text-primary" size={20}/></a>
+    <a target="_blank" href="https://x.com/StreetOpsng"><RiTwitterXFill className="text-wht hover:text-primary" size={20}/></a>
+    <a target="_blank" href="https://www.tiktok.com/@streetops.ng"><RiTiktokLine className="text-wht hover:text-primary" size={20}/></a>
+    <a target="_blank" href="https://www.instagram.com/street_opsng/"><RxLinkedinLogo className="text-wht hover:text-primary" size={20}/></a>
+  </aside>
         <button
 onClick={()=> router.push("/blog")}
-className='mdlg:inline   text-wht rounded-md lg:h-[35px] h-[30px] lg:px-4 px-2 cursor-pointer   border-[2px] border-white relative overflow-hidden group' >
-<span className="relative  z-10  duration-300 hover:text-primary text-white">
+className='mdlg:inline   text-wht rounded-md lg:h-[35px] h-[30px] lg:px-4 px-2 cursor-pointer   border-[2px] border-wht hover:border-primary relative overflow-hidden group hover:text-primary transition-all ease-in-out duration-300' >
 Blog
+{/* <span className="relative  z-10  duration-300 hover:text-primary text-white">
 </span>
-<span className="absolute inset-0 bg-white  opacity-80 transform translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out z-0" />
+<span className="absolute inset-0 bg-white  opacity-80 transform translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out z-0" /> */}
 </button> 
+</div>
         {/* <button className="cursor-pointer"><IoIosMenu
         className="text-white"
         size={25}/></button> */}
@@ -196,11 +194,11 @@ Blog
 </section>
 
 <section className="text-white text-sm my-4 flex flex-col justify-between gap-4">
-  <h1 className="text-sm font-semibold underline">Trusted By</h1>
+  <h1 className="text-sm font-semibold">Trusted By</h1>
   <div className="flex justify-between ">
     {[...trustedBy,...trustedBy].map((item,index)=>{
 
-      return <span key={index + 1} className={index % 2 == 0 ? "font-semibold" :  ""}>{item}</span>
+      return <span key={index + 1} className={index % 2 == 0 ? "font-medium" :  ""}>{item}</span>
     })}
   </div>
 
@@ -218,13 +216,15 @@ Blog
   return <aside key={index + 1} className="min-w-full min-h-full  relative z-0"
   >
     <div 
-    className={`lg:bg-left-top w-full min-h-screen pl-4 px-4 flex flex-col justify-center md:bg-[length:100%] bg-cover `}
+    className={`lg:bg-left-top w-full h-screen pl-4 px-4 flex flex-col justify-center md:bg-[length:100%] bg-cover 
+`}
       style={{
         backgroundImage:`url(${item.image})`,
         // backgroundSize:"cover",
         backgroundRepeat:"no-repeat",
         
-        backgroundPosition:"center"
+        backgroundPosition:"center",
+        backgroundPositionY:"40%"
         
       }}
     >
@@ -244,7 +244,7 @@ Blog
 </div>
 
 {/* <h1 className={`lg:text-7xl md:text-6xl text-5xl font-semibold text-white md:w-[60%] text-center animated-gradient-text    ${index == curr ? "fade-in-top" :""}`}>{item.title}</h1> */}
-<h1 className={`pb-4 md:text-5xl text-[1.7rem] font-medium  leading-13  text-white lg:w-[55%] md:w-[75%]   ${index == curr ? "fade-in-bottom" :""} `} 
+<h1 className={`pb-4 md:text-5xl text-[2rem] font-medium  md:leading-13 leading-10  text-white lg:w-[50%] md:w-[70%]   ${index == curr ? "fade-in-bottom" :""} `} 
 
 style={{
   // whiteSpace:"pre-line"
