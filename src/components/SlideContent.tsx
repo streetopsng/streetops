@@ -150,8 +150,8 @@ className="absolute w-full h-full"
 fill
 />
         </div>
-<div className="flex items-center gap-x-4">
-  <aside className="flex items-center gap-x-2">
+<div className="flex items-center md:gap-x-4 gap-x-2 ">
+  <aside className="flex items-center md:gap-x-2 gap-x-1">
     <a target="_blank" href="https://www.instagram.com/street_opsng/"><FaInstagram className="text-wht hover:text-primary" size={20}/></a>
     <a target="_blank" href="https://x.com/StreetOpsng"><RiTwitterXFill className="text-wht hover:text-primary" size={20}/></a>
     <a target="_blank" href="https://www.tiktok.com/@streetops.ng"><RiTiktokLine className="text-wht hover:text-primary" size={20}/></a>
