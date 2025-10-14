@@ -28,8 +28,7 @@ const slides: SlideProps[] = [
     title: "Streeting out your Brand",
     description: (
       <p>
-      We strip inefficiencies from 
-      your <span className="text-primary">business</span> and replace them with <span className="text-primary">systems</span> that <span className="text-primary">work</span> while you sleep.
+     Structured for the <span className="text-primary">Streets</span>. Scale Your <span className="text-primary">Hustle.</span>
       </p>
     ),
   },
@@ -38,7 +37,7 @@ const slides: SlideProps[] = [
     title: "Streeting out your Brand",
     description: (
       <p>
-        Because African <span className="text-primary">SMEs</span> deserve more than survival. They <span className="text-primary">deserve systems.</span>
+       The <span className="text-primary">Backbone</span> Your Business Needs. Simple <span className="text-primary">Ops</span>, Big Growth.
       </p>
     ),
   },
@@ -47,7 +46,7 @@ const slides: SlideProps[] = [
     title: "Streeting out your Brand",
     description:(
 <p>
-<span className="text-primary" >StreetOps</span> : Where <span className="text-primary"> business</span> chaos meets <span className="text-primary">clarity.</span> 
+Your Network is Your Net Worth. Let's Build <span className="text-primary">Together</span>.
 </p>
     ),
   },
@@ -155,7 +154,7 @@ fill
     <a target="_blank" href="https://www.instagram.com/street_opsng/"><FaInstagram className="text-wht hover:text-primary" size={20}/></a>
     <a target="_blank" href="https://x.com/StreetOpsng"><RiTwitterXFill className="text-wht hover:text-primary" size={20}/></a>
     <a target="_blank" href="https://www.tiktok.com/@streetops.ng"><RiTiktokLine className="text-wht hover:text-primary" size={20}/></a>
-    <a target="_blank" href="https://www.instagram.com/street_opsng/"><RxLinkedinLogo className="text-wht hover:text-primary" size={20}/></a>
+    <a target="_blank" href="https://www.linkedin.com/company/streetopsng"><RxLinkedinLogo className="text-wht hover:text-primary" size={20}/></a>
   </aside>
         <button
 onClick={()=> router.push("/blog")}

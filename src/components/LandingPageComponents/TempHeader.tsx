@@ -3,7 +3,11 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import React from 'react'
-import { FaTwitter, FaTiktok,FaInstagram  } from "react-icons/fa";
+
+import { FaInstagram } from "react-icons/fa6";
+import { RiTwitterXFill } from "react-icons/ri";
+import { RiTiktokLine } from "react-icons/ri";
+import { RxLinkedinLogo } from "react-icons/rx";
 
 
 
@@ -21,7 +25,7 @@ const TempHeader = () => {
         <div className="lg:py-0  flex justify-between items-center  ">
 
 <section className="lg:pl-4 flex items-center gap-x-2">
-<div className="relative lg:w-[30px] lg:h-[50px] h-[30px] min-w-[120px] bg-">
+<div className="relative lg:w-[30px] lg:h-[40px] h-[30px] min-w-[130px] bg-">
 <Image 
 className="absolute w-full h-full "
 fill
@@ -33,16 +37,10 @@ alt="logo"/>
 
       <section className='flex items-center gap-x-2'>
 <aside className='flex lg:gap-x-3 gap-x-2 items-center'>
-<Link href="https://x.com/StreetOpsng" className={linkClass} target="_blank">
-                <FaTwitter className="md:text-xl text-lg text-primary hover:text-grayOne" />
-              </Link>
-              
-              <Link href="https://www.tiktok.com/@streetops.ng" className={linkClass} target="_blank" >
-                <FaTiktok  className="md:text-xl text-lg text-primary hover:text-grayOne" />
-              </Link>
-              <Link href="https://www.instagram.com/street_opsng" className={linkClass} target="_blank" >
-                <FaInstagram className="md:text-xl text-lg hover:text-grayOne text-primary text-lg" />
-              </Link>
+<a target="_blank" href="https://www.instagram.com/street_opsng/"><FaInstagram className="text-wht hover:text-primary" size={20}/></a>
+      <a target="_blank" href="https://x.com/StreetOpsng"><RiTwitterXFill className="text-wht hover:text-primary" size={20}/></a>
+      <a target="_blank" href="https://www.tiktok.com/@streetops.ng"><RiTiktokLine className="text-wht hover:text-primary" size={20}/></a>
+      <a target="_blank" href="https://www.linkedin.com/company/streetopsng"><RxLinkedinLogo className="text-wht hover:text-primary" size={20}/></a>
 </aside>
         {/* blog page btn */}
       {/* <button
