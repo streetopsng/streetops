@@ -17,7 +17,24 @@ type SlideProps = {
   description: React.ReactNode;
 };
 
-
+const trustedLogo = [
+  {
+    id:1,
+    src:"/trusted-logo-one.png"
+  },
+  {
+    id:2,
+    src:"/trusted-logo-two.png"
+  },
+  {
+    id:3,
+    src:"/trusted-logo-three.png"
+  },
+  {
+    id:4,
+    src:"/trusted-logo-four.png"
+  },
+]
 const trustedBy = [
   "Stableblocks",
   "flick",
@@ -28,7 +45,7 @@ const slides: SlideProps[] = [
     title: "Streeting out your Brand",
     description: (
       <p>
-     Structured for the <span className="text-primary">Streets</span>. Scale Your <span className="text-primary">Hustle.</span>
+     Structured for the <span className="text-primary">Streets</span>, Scale Your <span className="text-primary">Hustle.</span>
       </p>
     ),
   },
@@ -37,7 +54,9 @@ const slides: SlideProps[] = [
     title: "Streeting out your Brand",
     description: (
       <p>
-       The <span className="text-primary">Backbone</span> Your Business Needs. Simple <span className="text-primary">Ops</span>, Big Growth.
+       The <span className="text-primary">Backbone</span> Your Business Needs. 
+       <br />
+       Simple <span className="text-primary">Ops</span>, Big Growth.
       </p>
     ),
   },
@@ -195,9 +214,15 @@ Blog
 <section className="text-white text-sm my-4 flex flex-col justify-between gap-4">
   <h1 className="text-sm font-semibold">Trusted By</h1>
   <div className="flex justify-between ">
-    {[...trustedBy,...trustedBy].map((item,index)=>{
+    {trustedLogo.map((item,index)=>{
 
-      return <span key={index + 1} className={index % 2 == 0 ? "font-medium" :  ""}>{item}</span>
+      return <div className="relative w-[40px] h-[40px] overflow-hidden rounded-full ">
+        {/* <img src={item.src} alt={item.id.toString()} /> */}
+        <Image src={item.src}
+         alt={item.id.toString()}
+         className="w-full h-full absolute inset-0 object-contain"
+         fill />
+       </div>
     })}
   </div>
 

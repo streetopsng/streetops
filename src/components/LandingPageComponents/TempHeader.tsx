@@ -25,13 +25,15 @@ const TempHeader = () => {
         <div className="lg:py-0  flex justify-between items-center  ">
 
 <section className="lg:pl-4 flex items-center gap-x-2">
-<div className="relative lg:w-[30px] lg:h-[40px] h-[30px] min-w-[130px] bg-">
+<Link href={"/"}>
+<div className="relative lg:w-[30px] lg:h-[40px] h-[30px] min-w-[130px] " >  
 <Image 
 className="absolute w-full h-full "
 fill
 src={"/streetopslogo.png"} 
 alt="logo"/>
 </div>
+</Link>
 {/* <h1 className="text-primary font-semibold  md:text-2xl text-xl">StreetOps</h1> */}
 </section>
 
