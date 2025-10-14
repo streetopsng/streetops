@@ -52,7 +52,7 @@ return store.blogsReducer
  <div className="w-full lg:h-[80vh] h-[50vh] relative flex flex-col justify-center items-center px-8 text-center">
 
  <h1 className={`lg:text-5xl md:text-3xl text-2xl font-semibold animated-gradient-slide-text lg:w-[60%] w-full`}>Explore Experts Insights and Practical Tips on StreetOps</h1>  
-<p className={`md:text-xl text-lg lg:w-[60%] w-full `}>Stay informed and empowered with valuable articles, expert advice, and actionable tips to help you navigate your financial journey with confidence</p> 
+ <p className={`md:text-xl text-lg lg:w-[60%] w-full `}>Stay informed and empowered with valuable articles, expert advice, and actionable tips to help you scale your operations</p> 
  </div>
 
 
