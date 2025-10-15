@@ -213,10 +213,12 @@ Blog
 
 <section className="text-white text-sm my-4 flex flex-col justify-between gap-4">
   <h1 className="text-sm font-semibold">Trusted By</h1>
-  <div className="flex justify-between ">
-    {trustedLogo.map((item,index)=>{
 
-      return <div className="relative w-[40px] h-[40px] overflow-hidden rounded-full ">
+<div className="overflow-hidden py-2">
+  <div className="flex justify-between  animate-marquee space-x-12">
+    {[...trustedLogo,...trustedLogo].map((item,index)=>{
+      
+      return <div className="relative min-w-[40px] min-h-[40px] overflow-hidden rounded-full ">
         {/* <img src={item.src} alt={item.id.toString()} /> */}
         <Image src={item.src}
          alt={item.id.toString()}
@@ -225,6 +227,7 @@ Blog
        </div>
     })}
   </div>
+    </div>
 
 </section>
       </div>
