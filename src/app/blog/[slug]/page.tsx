@@ -26,7 +26,7 @@ const getLastValue = value.split("-")[value.split("-").length - 1]
     // console.log(content);
     if (!content) {
         return <div>
-            content not available
+            content unavailable
         </div>
     }
     
