@@ -53,7 +53,7 @@ const getLastValue = value.split("-")[value.split("-").length - 1]
     </div> */}
 </article>
 
-<Footer/>
+{/* <Footer/> */}
     </div>
   )
 }
