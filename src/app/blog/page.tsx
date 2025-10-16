@@ -70,18 +70,18 @@ return store.blogsReducer
     </div>
 ): ""}
 
-    {blogs.length > 0 && <article className=' mx-auto w-[90%] flex  flex-wrap   my-4 py-4  '>
+    {blogs.length > 0 && <article className='mx-auto w-[90%] grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1  gap-4 '>
 {/* mapp through blog */}
 
 {blogs.map((item:blogPostType,index:any)=>{
 
-    return <div key={index} className='text-grayOne cursor-pointer lg:w-[30%] md:w-[45%] w-[95%] mx-auto ' onClick={()=> router.push(`/blog/${item.title.replace(/ /g,"-").toLocaleLowerCase()}-${item._id}`)}>
+    return <div key={index} className='text-grayOne cursor-pointer  w-[95%]' onClick={()=> router.push(`/blog/${item.title.replace(/ /g,"-").toLocaleLowerCase()}-${item._id}`)}>
         <div className='relative w-[100%] min-h-[250px]'>
             <Image
             src={item.imageUrl}  
             alt={item.date}
             fill
-            className='absolute w-full h-full rounded-lg object-cover'
+            className='absolute w-full h-full rounded-lg object-fit'
             />
         </div>
         <div>

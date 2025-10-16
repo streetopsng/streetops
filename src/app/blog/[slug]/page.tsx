@@ -1,6 +1,7 @@
 "use client"
 import Footer from '@/components/LandingPageComponents/Footer'
 import { Header } from '@/components/LandingPageComponents/Header'
+import TempHeader from '@/components/LandingPageComponents/TempHeader'
 import { RootStateType } from '@/store'
 import { blogContent } from '@/utils/blogs-content'
 import { useParams } from 'next/navigation'
@@ -32,8 +33,7 @@ const getLastValue = value.split("-")[value.split("-").length - 1]
     
   return (
     <div className='text-grayOne'>
-<Header/>
-
+<TempHeader/>
 <article className='lg:px-32 md:px-16 px-4 my-8'>
 
     <section className=''>
