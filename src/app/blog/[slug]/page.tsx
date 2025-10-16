@@ -16,12 +16,11 @@ const page = () => {
     const value = slug as string
     if (!slug) {
         return <div>
-            blog no available
+            blog not available
         </div>
     }
 const getLastValue = value.split("-")[value.split("-").length - 1]
-    console.log(getLastValue);
-
+ 
     const content = blogs.find(item => item._id.toString() == getLastValue)
     
     // console.log(content);
@@ -44,7 +43,7 @@ const getLastValue = value.split("-")[value.split("-").length - 1]
     </section>
         <div
     
-    className='text-grayOne md:text-lg leading-10'
+    className='text-grayOne md:text-[1rem] leading-8'
     dangerouslySetInnerHTML={{ __html: content.content }}
     >
     </div>
