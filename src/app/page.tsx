@@ -2,7 +2,9 @@
 
 import LookingToHire from "@/components/JobsPageComponents/LookingToHire";
 import Footer from "@/components/LandingPageComponents/Footer";
-import { Header } from "@/components/LandingPageComponents/Header";
+import  Header from "@/components/NewLandingPage/header";
+import Hero from "@/components/NewLandingPage/hero";
+import ImageGallery from "@/components/NewLandingPage/image-gallery";
 import { HeroSection } from "@/components/LandingPageComponents/HeroSection";
 import JoinWaitlist from "@/components/LandingPageComponents/JoinWaitlist";
 import Section from "@/components/LandingPageComponents/Section";
@@ -37,20 +39,13 @@ const ourStoryData = [
 
 const page = () => {
   return (
-    <div className="">
-      {/* <WhatsApp/> */}
-  <div className="p-0">
-
-      {/* <Header/> */}
+  <div >
+      {<Header/> }
+      {<Hero/>}
+      {<ImageGallery/>}
       {/* <TempHeader/> */}
-      <SlideContent/>
-     
-     
-      
+      {/* <SlideContent/> */}    
   </div>
-
-    
-    </div>
   );
 }
 
