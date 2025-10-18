@@ -2,15 +2,21 @@
 
 import { useState } from "react"
 import { GraduationCap,NotebookPen } from 'lucide-react';
+import Image from "next/image";
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
     
-    <header className="relative flex items-center justify-between p-5 md:px-12 md:mt-0 sm:mt-[-80px]">
-      <div className="md:mt-[-80px] ">
-        <img src="logo.png" alt="StreetOps Logo" className="h-[200px]" />
-      </div>
+    <header className="relative flex items-center justify-between   py-4">
+<div className="relative w-[130px] h-[35px]">
+<Image
+src={"/red-logo.png"}
+alt="logo"
+className="absolute w-full h-full object-contain"
+fill
+/>
+</div>
 
       
       <button
@@ -18,6 +24,8 @@ export default function Header() {
         className="md:hidden text-foreground hover:text-muted-foreground transition-colors"
         aria-label="Toggle menu"
       >
+
+        
         {isOpen ? (
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -30,7 +38,7 @@ export default function Header() {
       </button>
 
       {/* Desktop Navigation */}
-      <nav className="hidden md:flex items-center gap-8 mt-[-80px]">
+      <nav className="hidden md:flex items-center ">
         {/* <a href="#" className="text-foreground hover:text-muted-foreground flex text-red-600 transition-colors ">
         <GraduationCap className="mr-1"/>Academy
         </a> */}

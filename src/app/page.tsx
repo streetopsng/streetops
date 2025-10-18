@@ -39,9 +39,11 @@ const ourStoryData = [
 
 const page = () => {
   return (
-  <div >
+  <div  className="">
+    <div className="md:px-8  px-4">
       {<Header/> }
       {<Hero/>}
+    </div>
       {<ImageGallery/>}
       {/* <TempHeader/> */}
       {/* <SlideContent/> */}    

@@ -2,6 +2,8 @@
 import type React from "react"
 import { useState } from "react"
 import ImageGallery from "./image-gallery"
+import {motion,useInView} from "motion/react"
+
 export default function Hero() {
   const [email, setEmail] = useState("")
 
@@ -15,9 +17,13 @@ export default function Hero() {
   return (
     <>
    <section
-  className="flex  flex-col items-center justify-center p-6 md:flex-row md:p-12 lg:p-24 md:mt-[-130px] sm:mt-[-90px]"
+  className="flex  flex-col items-center justify-center py-6 md:flex-row md:py-12 lg:pb-24 overflow-x-hidden "
 >
-  <div className="w-full text-center md:w-4/5 md:pr-12 md:text-left">
+  <motion.div
+  initial={{opacity:0,x:-50}}
+  animate={{opacity:1,x:0}}
+  transition={{duration:1.4,ease:"linear"}}
+  className="w-full text-center md:w-4/5 md:pr-12 md:text-left">
     <h1
       className=" text-5xl tracking-tighter Hero font-bold  text-red-600 md:text-6xl"
     >
@@ -25,18 +31,28 @@ export default function Hero() {
       <br />
      YOUR GRIND.
     </h1>
-  </div>
+  </motion.div>
 
   <div
-    className="mt-12 w-full max-w-md flex-col items-center text-center md:mt-0 md:w-2/5 md:items-start md:text-left sm:mt-2"
+    className="overflow-y-hidden mt-12 w-full max-w-md flex-col items-center text-center md:mt-0 md:w-2/5 md:items-start md:text-left sm:mt-2"
   >
-    <p className=" max-w-2xl two text-base  text-muted-foreground text-[#525151] md:text-sm">
+
+    <motion.p
+    initial={{opacity:0,y:-50}} 
+    animate={{opacity:1,y:0}}
+    transition={{duration:2,ease:"easeInOut"}}
+
+    className=" max-w-2xl two text-base  text-muted-foreground text-[#525151] md:text-sm">
       From sales and inventory to AI-powered strategy,<br /> StreetOps handles the
       backend so you can focus on <br /> building your legacy.
-    </p>
+    </motion.p>
 
     <form onSubmit={handleSubmit} className="flex w-full flex-col items-center pt-2 md:pt-6 sm:mt-4">
-      <div className="flex w-full flex-col gap-3 sm:flex-row">
+      <motion.div
+        initial={{opacity:0,y:50}} 
+        animate={{opacity:1,y:0}}
+        transition={{duration:2,ease:"easeInOut"}}
+      className="flex w-full flex-col gap-3 sm:flex-row">
         
         <div className="relative flex-1">
           <div
@@ -74,7 +90,7 @@ export default function Hero() {
           Join waitlist
         </button>
 
-      </div>
+      </motion.div>
     </form>
   </div>
 </section>
