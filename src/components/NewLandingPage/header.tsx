@@ -52,7 +52,7 @@ fill
             <a target="_blank" href="https://www.tiktok.com/@streetops.ng"><RiTiktokLine className="text-primary hover:text-grayOne" size={20}/></a>
             <a target="_blank" href="https://www.linkedin.com/company/streetopsng"><RxLinkedinLogo className="text-primary hover:text-grayOne" size={20}/></a>
           </aside>
-        <a href="/blog" className="hover:text-grayOne text-foreground flex hover:text-muted-foreground transition-colors text-red-600 font-medium border-1 rounded-md border-primary px-2">
+        <a href="/blog" className="hover:text-grayOne text-primary flex hover:text-muted-foreground transition-colors text-red-600 font-medium md:border-0 border-1 rounded-md border-primary px-2">
         BLOG  <NotebookPen className="mr-1 md:block hidden"/> 
         </a>
       </nav>
