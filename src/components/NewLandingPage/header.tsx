@@ -7,12 +7,16 @@ import { RiTwitterXFill } from "react-icons/ri";
 import { RiTiktokLine } from "react-icons/ri";
 import { RxLinkedinLogo } from "react-icons/rx";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
+  const pathName = usePathname()
+  
 
   return (
     
     <header className="relative flex items-center justify-between   py-4">
+      <a href="/">
 <div className="relative w-[130px] h-[35px]">
 <Image
 src={"/red-logo-two.png"}
@@ -21,6 +25,7 @@ className="absolute w-full h-full object-cover"
 fill
 />
 </div>
+</a>
 
       
       {/* <button
@@ -52,25 +57,15 @@ fill
             <a target="_blank" href="https://www.tiktok.com/@streetops.ng"><RiTiktokLine className="text-primary hover:text-grayOne" size={20}/></a>
             <a target="_blank" href="https://www.linkedin.com/company/streetopsng"><RxLinkedinLogo className="text-primary hover:text-grayOne" size={20}/></a>
           </aside>
-        <a href="/blog" className="hover:text-grayOne text-primary flex hover:text-muted-foreground transition-colors text-red-600 font-medium md:border-0 border-1 rounded-md border-primary px-2">
-        BLOG  <NotebookPen className="mr-1 md:block hidden"/> 
-        </a>
+          {
+            !pathName.includes("blog") &&  <a href="/blog" className="hover:text-grayOne text-primary flex hover:text-muted-foreground transition-colors text-red-600 font-medium md:border-0 border-1 rounded-md border-primary px-2">
+            BLOG
+          </a>
+          }
+       
       </nav>
 
-      
-      <nav
-        className={`${
-          isOpen ? 'flex' : 'hidden'
-        } md:hidden flex-col gap-4 absolute top-full left-0 w-full bg-white shadow-md py-4 px-6 mt-[-100px]`}
-      >
-        {/* <a href="#" className="text-foreground hover:text-muted-foreground text-red-600 transition-colors">
-        <GraduationCap className="mr-1 inline"/>Academy
-        </a> */}
-        <a href="#" className="text-foreground hover:text-muted-foreground text-red-600 transition-colors">
-        <NotebookPen className="mr-1 inline"/> Blog
-        </a>
-        
-      </nav>
+
     </header>
   )
 }

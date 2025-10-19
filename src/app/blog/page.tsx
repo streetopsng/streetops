@@ -1,5 +1,5 @@
 "use client"
-import { Header } from '@/components/LandingPageComponents/Header'
+
 import React, { useEffect } from 'react'
 
 import Image from 'next/image';
@@ -11,6 +11,7 @@ import { blogPostType, storeBlogs } from '@/store/slices/allBlogs';
 import Footer from '@/components/LandingPageComponents/Footer';
 import PagePreloader from '@/utils/PagePreloader';
 import TempHeader from '@/components/LandingPageComponents/TempHeader';
+import Header from '@/components/NewLandingPage/header';
 
 
 async function fetchData() {
@@ -44,8 +45,9 @@ return store.blogsReducer
           },[isLoading])
           const router = useRouter()
   return (
-    <div className=''>
- <TempHeader/>
+    <div className='xl:px-10 md:px-8 px-4'>
+ {/* <TempHeader/> */}
+ <Header/>
 
 
  {/* <SlideContent/> */}
@@ -60,7 +62,7 @@ return store.blogsReducer
 <h1 className='text-center font-semibold md:text-[1.7rem] text-[1.4rem]  animated-gradient-text-two '>BLOGS</h1>
  {blogs.length < 1 && isLoading  ? (
      
-<div className="xl:px-10 md:px-8 px-4 text-grayOne w-full h-[60vh] flex items-center justify-center flex-col">
+<div className=" text-grayOne w-full h-[60vh] flex items-center justify-center flex-col">
         <PagePreloader/>
         <h1 className="italic my-2 ">Loading Available Blogs...</h1>
       </div>

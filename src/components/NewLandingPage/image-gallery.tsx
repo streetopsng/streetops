@@ -28,12 +28,12 @@ export default function ImageGallery() {
  return (
  <section className="relative  ">
  <div className="absolute inset-x-0 bottom-0 h-3/4 bg-[#1D0101]"></div>
- <div className="relative flex justify-center items-center gap-4 md:gap-4  flex-wrap  md:px-0 px-4">
+ <div className="relative flex justify-center items-center gap-4 md:gap-4 md:gap-x-8 flex-wrap  md:px-0 px-4 py-8">
  {images.map((image, index) => {
 const ref = useRef(null);
 const isInView = useInView(ref, { once: true });
 
-return  <motion.div
+return   <motion.div
 
 ref={ref}
 initial={{opacity:0,y:50}}
