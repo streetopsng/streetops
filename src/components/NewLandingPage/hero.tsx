@@ -3,15 +3,62 @@ import type React from "react"
 import { useState } from "react"
 import ImageGallery from "./image-gallery"
 import {motion,useInView} from "motion/react"
+import { useMutation } from "@tanstack/react-query"
+import { Loader } from "@/utils/Loader"
+
+
+
+
+
+const postData = async(formData:any)=>{
+  const res = await fetch("/api/waitlist",{
+      method:'POST',
+      body:JSON.stringify(formData)
+  })
+
+  if (!res.ok) {
+      console.log("something went wrong");
+      return
+      
+  }
+  const response = await res.json()
+  return response
+  
+}
+
 
 export default function Hero() {
   const [email, setEmail] = useState("")
+const [form,setForm] = useState({
+  email:""
+})
+
+  const mutation = useMutation({
+    mutationFn:postData,
+    onSuccess:(data)=>{
+        console.log(data);
+        if (data.success) {
+            alert(data.message)
+            setForm({email:""})
+            
+        }
+        else{
+            alert("unable to sumbit email")
+        }
+       
+        
+    },
+    onError:(error)=>{
+  console.log(error);
+  alert("an error occured")
+  
+    }
+  })
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    console.log("Email submitted:", email)
-    // You can add your form submission logic here (e.g., API call)
-    setEmail("")
+
+mutation.mutate(form)
   }
 
   return (
@@ -47,14 +94,14 @@ export default function Hero() {
       backend so you can focus on <br /> building your legacy.
     </motion.p>
 
-    <form onSubmit={handleSubmit} className="flex w-full flex-col items-center pt-2 md:pt-6 sm:mt-4">
+    <form onSubmit={handleSubmit} className="flex w-full flex-col items-center pt-2 md:pt-6 sm:mt-4 px-2">
       <motion.div
         initial={{opacity:0,y:50}} 
         animate={{opacity:1,y:0}}
         transition={{duration:2,ease:"easeInOut"}}
-      className="flex w-full flex-col gap-3 sm:flex-row">
+      className="flex w-full flex-col gap-3 sm:flex-row  items-center">
         
-        <div className="relative flex-1">
+        <div className="relative flex-1 ">
           <div
             className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4"
           >
@@ -76,18 +123,22 @@ export default function Hero() {
           <input
             type="email"
             placeholder="Enter your email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            className="w-full rounded-full  bg-gray-100 py-3 pl-12 pr-6 text-foreground placeholder:text-[#525151] text-sm transition-shadow focus:outline-none focus:ring-2 focus:ring-red-600"
+            onChange={(e)=> setForm({email:e.target.value})}
+  value={form.email}
+            className="w-full rounded-full  bg-gray-100 py-3 pl-12 pr-6 text-foreground placeholder:text-[#525151] text-sm transition-shadow focus:outline-none focus:ring-1 focus:ring-primary"
             required
           />
         </div>
 
         <button
           type="submit"
-          className="whitespace-nowrap rounded-full bg-red-600 px-7 py-3 font-semibold text-white shadow-lg  transition-colors hover:bg-red-700 "
+          className="whitespace-nowrap rounded-full bg-primary cursor-pointer px-7 py-2 font-semibold text-white shadow-lg  transition-colors hover:bg-red-700 "
         >
-          Join waitlist
+        {
+          mutation.isPending ?"loading..." : "Join waitlist "
+        }
+        {/* <Loader/>  */}
+        
         </button>
 
       </motion.div>
