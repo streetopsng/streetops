@@ -4,8 +4,7 @@ import { useState } from "react"
 import ImageGallery from "./image-gallery"
 import {motion,useInView} from "motion/react"
 import { useMutation } from "@tanstack/react-query"
-import { Loader } from "@/utils/Loader"
-
+import { Loader } from "lucide-react"
 
 
 
@@ -99,9 +98,9 @@ mutation.mutate(form)
         initial={{opacity:0,y:50}} 
         animate={{opacity:1,y:0}}
         transition={{duration:2,ease:"easeInOut"}}
-      className="flex w-full flex-col gap-3 sm:flex-row  items-center">
+      className="flex w-full flex-col gap-3 sm:flex-row">
         
-        <div className="relative flex-1 ">
+        <div className="relative flex-1">
           <div
             className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4"
           >
@@ -132,13 +131,11 @@ mutation.mutate(form)
 
         <button
           type="submit"
-          className="whitespace-nowrap rounded-full bg-primary cursor-pointer px-7 py-2 font-semibold text-white shadow-lg  transition-colors hover:bg-red-700 "
+          className="whitespace-nowrap rounded-full bg-primary cursor-pointer px-7 py-3 font-semibold text-white shadow-lg  transition-colors hover:bg-red-700 "
         >
         {
-          mutation.isPending ?"loading..." : "Join waitlist "
+          mutation.isPending ? "loading..." : "Join waitlist "
         }
-        {/* <Loader/>  */}
-        
         </button>
 
       </motion.div>
