@@ -35,7 +35,7 @@ export default function ClientLogos() {
     <section className="py-16 md:py-24 px-6 ">
 
 <div className="overflow-hidden py-2">
-  <div className="flex justify-between  animate-marquee space-x-64">
+  <div className="flex justify-between  animate-marquee lg:space-x-64 md:space-x-32 space-x-16">
     {[...trustedLogo,...trustedLogo,...trustedLogo,].map((item,index)=>{
       
       return <div className="relative min-w-[40px] min-h-[40px] overflow-hidden rounded-full ">
