@@ -111,9 +111,9 @@ mutation.mutate(form)
   <button
   // onClick={handleSubmit}
   type="submit"
-  className="text-primary rounded-full text-white bg-primary w-[35%] py-2 cursor-pointer hover:opacity-60 flex items-center justify-center">
+  className="text-primary rounded-full text-white bg-primary w-[35%] py-2 px-2 md:text-md text-[0.9rem]   cursor-pointer hover:opacity-60 flex items-center justify-center">
 {
-  mutation.isPending ? <Loader/> : "Join waitlist "
+  mutation.isPending ? <Loader/> : "Join waitlist"
 }
 {/* <Loader/> */}
   </button>
