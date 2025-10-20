@@ -22,7 +22,7 @@ export const POST = async(req:NextRequest)=>{
             console.log("something went wrong cant post blog");
             return NextResponse.json({success:false,message:"unable to process request, please try again later"})
         }
-        return NextResponse.json({success:true,info:postWaitlist,message:"your email has been added to the wailist successfully"})
+        return NextResponse.json({success:true,info:postWaitlist,message:"your email has been successfully added to the waitlist "})
     } catch (error) {
         console.log("something went wrong");
         

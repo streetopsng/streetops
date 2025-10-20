@@ -5,6 +5,9 @@ import ImageGallery from "./image-gallery"
 import {motion,useInView} from "motion/react"
 import { useMutation } from "@tanstack/react-query"
 import { Loader } from "@/utils/Loader"
+import { openModal } from "@/store/slices/modalSlice"
+import { useDispatch } from "react-redux"
+import { dispatchType } from "@/store"
 
 
 
@@ -28,7 +31,8 @@ const postData = async(formData:any)=>{
 
 
 export default function Hero() {
-  const [email, setEmail] = useState("")
+
+  const dispatch = useDispatch<dispatchType>()
 const [form,setForm] = useState({
   email:""
 })
@@ -38,7 +42,8 @@ const [form,setForm] = useState({
     onSuccess:(data)=>{
         console.log(data);
         if (data.success) {
-            alert(data.message)
+            // alert(data.message)
+            dispatch(openModal(data.message))
             setForm({email:""})
             
         }
