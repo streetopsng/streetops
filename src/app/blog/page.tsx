@@ -77,7 +77,7 @@ return store.blogsReducer
 
 {blogs.map((item:blogPostType,index:any)=>{
 
-    return <div key={index} className='text-grayOne cursor-pointer  w-[95%]' onClick={()=> router.push(`/blog/${item.title.replace(/ /g,"-").toLocaleLowerCase()}-${item._id}`)}>
+    return <div key={index} className='text-grayOne cursor-pointer  w-[95%]' onClick={()=> router.push(`/blog/${item.title.replace(/ /g,"-").toLocaleLowerCase()}---${item._id}`)}>
         <div className='relative w-[100%] min-h-[250px]'>
             <Image
             src={item.imageUrl}  
