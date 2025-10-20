@@ -41,7 +41,7 @@ animate={isInView ?{ opacity:1,y:0} : {}}
 transition={{delay:index * 0.2,duration:1}}
 
         key={image.id}
-        className={`${index == 0 ? "rotate-8 md:-translate-y-10" : index == 2 ? "rotate-[-8deg] md:-translate-y-10" : ""}  relative  w-[90%] md:mx-0 mx-auto md:w-[28%]   rounded-lg  rounded-lg overflow-hidden`}
+        className={`${index == 0 ? "rotate-8 md:-translate-y-8" : index == 2 ? "rotate-[-8deg] md:-translate-y-8" : ""}  relative  w-[90%] md:mx-0 mx-auto md:w-[28%]   rounded-lg  rounded-xl overflow-hidden`}
         // style={{
         // transform: `translateY(${index === 1 ? "20px" : "0"})`,
         // }}
