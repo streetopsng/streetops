@@ -32,7 +32,7 @@ export default function TiptapEditor() {
     title:"",
     content:"",
     imageUrl:"",
-    date:dayjs(new Date()).format("D, MMM, YYYY")
+    date: dayjs(new Date()).format("MMMM D, YYYY")
   })
   const [imagePrev,setImagePrev] = useState<string | null>(null)
   const [content, setContent] = useState("");

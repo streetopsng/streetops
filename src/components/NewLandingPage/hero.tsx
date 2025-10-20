@@ -4,7 +4,8 @@ import { useState } from "react"
 import ImageGallery from "./image-gallery"
 import {motion,useInView} from "motion/react"
 import { useMutation } from "@tanstack/react-query"
-import { Loader } from "lucide-react"
+import { Loader } from "@/utils/Loader"
+
 
 
 
@@ -99,7 +100,7 @@ mutation.mutate(form)
         animate={{opacity:1,y:0}}
         transition={{duration:2,ease:"easeInOut"}}
       className="flex w-full flex-col gap-3 sm:flex-row">
-        <section className="bg-[#F9F8F8] rounded-full py-1 px-2 w-full">
+        <section className="bg-[#F9F8F8] rounded-full py-1 px-2 w-full flex items-center">
   <input 
   type="email"
   onChange={(e)=> setForm({email:e.target.value})}
@@ -108,11 +109,13 @@ mutation.mutate(form)
   placeholder="enter your email"
   />
   <button
-  onClick={handleSubmit}
-  className="text-primary rounded-full text-white bg-primary w-[35%] py-2 cursor-pointer hover:opacity-60">
+  // onClick={handleSubmit}
+  type="submit"
+  className="text-primary rounded-full text-white bg-primary w-[35%] py-2 cursor-pointer hover:opacity-60 flex items-center justify-center">
 {
   mutation.isPending ? <Loader/> : "Join waitlist "
 }
+{/* <Loader/> */}
   </button>
 </section>
         
