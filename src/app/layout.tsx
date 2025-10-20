@@ -71,7 +71,7 @@ strategy="afterInteractive"
 
           <ReactQueryProvider>
           <SubLinksComponent/>
-          <PersistBlogPosts/>
+          {/* <PersistBlogPosts/> */}
         {children}
           </ReactQueryProvider>
       </body>

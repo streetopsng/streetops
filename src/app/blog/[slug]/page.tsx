@@ -1,9 +1,8 @@
 "use client"
-import Footer from '@/components/LandingPageComponents/Footer'
-import { Header } from '@/components/LandingPageComponents/Header'
-import TempHeader from '@/components/LandingPageComponents/TempHeader'
+
+import Header from '@/components/NewLandingPage/header'
 import { RootStateType } from '@/store'
-import { blogContent } from '@/utils/blogs-content'
+
 import { useParams } from 'next/navigation'
 import React from 'react'
 import { useSelector } from 'react-redux'
@@ -31,9 +30,9 @@ const getLastValue = value.split("-")[value.split("-").length - 1]
     }
     
   return (
-    <div className='text-grayOne'>
-<TempHeader/>
-<article className='lg:px-32 md:px-16 px-4 my-8'>
+    <div className='text-grayOne xl:px-10 md:px-8 px-4'>
+ <Header/>
+<article className='lg:px-16 md:px-8 px-4 my-8'>
 
     <section className=''>
         <span className='text-sm'>{content?.date}</span>
