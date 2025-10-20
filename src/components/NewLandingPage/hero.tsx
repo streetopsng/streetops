@@ -99,8 +99,24 @@ mutation.mutate(form)
         animate={{opacity:1,y:0}}
         transition={{duration:2,ease:"easeInOut"}}
       className="flex w-full flex-col gap-3 sm:flex-row">
+        <section className="bg-[#F9F8F8] rounded-full py-1 px-2 w-full">
+  <input 
+  type="email"
+  onChange={(e)=> setForm({email:e.target.value})}
+  value={form.email}
+  className="rounded-lg border-none outline-none  h-[90%] pl-4 py-2 w-[65%]"
+  placeholder="enter your email"
+  />
+  <button
+  onClick={handleSubmit}
+  className="text-primary rounded-full text-white bg-primary w-[35%] py-2 cursor-pointer hover:opacity-60">
+{
+  mutation.isPending ? <Loader/> : "Join waitlist "
+}
+  </button>
+</section>
         
-        <div className="relative flex-1">
+        {/* <div className="relative flex-1">
           <div
             className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4"
           >
@@ -136,7 +152,7 @@ mutation.mutate(form)
         {
           mutation.isPending ? "loading..." : "Join waitlist "
         }
-        </button>
+        </button> */}
 
       </motion.div>
     </form>

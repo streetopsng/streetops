@@ -52,13 +52,13 @@ fill
         <GraduationCap className="mr-1"/>Academy
         </a> */}
           <aside className="flex items-center md:gap-x-3 gap-x-1">
-            <a target="_blank" href="https://www.instagram.com/street_opsng/"><FaInstagram className="text-primary hover:text-grayOne" size={20}/></a>
-            <a target="_blank" href="https://x.com/StreetOpsng"><RiTwitterXFill className="text-primary hover:text-grayOne" size={20}/></a>
-            <a target="_blank" href="https://www.tiktok.com/@streetops.ng"><RiTiktokLine className="text-primary hover:text-grayOne" size={20}/></a>
-            <a target="_blank" href="https://www.linkedin.com/company/streetopsng"><RxLinkedinLogo className="text-primary hover:text-grayOne" size={20}/></a>
+            <a target="_blank" href="https://www.instagram.com/street_opsng/"><FaInstagram className="text-secondPrimary hover:text-primary" size={20}/></a>
+            <a target="_blank" href="https://x.com/StreetOpsng"><RiTwitterXFill className="text-secondPrimary hover:text-primary" size={20}/></a>
+            <a target="_blank" href="https://www.tiktok.com/@streetops.ng"><RiTiktokLine className="text-secondPrimary hover:text-primary" size={20}/></a>
+            <a target="_blank" href="https://www.linkedin.com/company/streetopsng"><RxLinkedinLogo className="text-secondPrimary hover:text-primary" size={20}/></a>
           </aside>
           {
-            !pathName.includes("blog") &&  <a href="/blog" className="hover:text-grayOne text-primary flex hover:text-muted-foreground transition-colors text-red-600 font-medium md:border-0 border-1 rounded-md border-primary px-2">
+            !pathName.includes("blog") &&  <a href="/blog" className="hover:text-primary text-secondPrimary  flex hover:text-muted-foreground transition-colors text-red-600 font-medium md:border-0 border-1 rounded-md border-secondPrimary px-2">
             BLOG
           </a>
           }

@@ -175,6 +175,7 @@ transform: rotateY(180deg);
 
   /* RED and Black */
   --color-primary:#FB030C;
+  --color-secondPrimary:#660000;
   --color-wht:#ffffff;
   --color-grayOne:#000000 ;
   --color-grayTwo:##505050 ;
