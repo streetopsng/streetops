@@ -13,7 +13,9 @@ export const metadata: Metadata = {
   title: "StreetOps",
   description: "StreetOps",
   icons:{
-    icon:"/icon.png"
+    icon:"/icon.png",
+    shortcut:"/favicon.ico",
+    apple:"/icon.png"
   }
 };
 
