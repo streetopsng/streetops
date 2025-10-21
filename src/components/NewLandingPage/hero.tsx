@@ -48,14 +48,16 @@ const [form,setForm] = useState({
             
         }
         else{
-            alert("unable to sumbit email")
+            // alert("unable to sumbit email")
+            dispatch(openModal("unable to add your email to the waitlist"))
         }
        
         
     },
     onError:(error)=>{
   console.log(error);
-  alert("an error occured")
+  // alert("an error occured")
+  dispatch(openModal("an error occured, please try again"))
   
     }
   })
