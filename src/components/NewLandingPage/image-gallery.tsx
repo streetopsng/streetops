@@ -18,7 +18,7 @@ export default function ImageGallery() {
       id: 3,
       src: "image-3.png",
       alt: "Inventory management",
-//       rotation: -1,
+//       rotation: ,
     },
   ]
 
