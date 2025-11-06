@@ -4,6 +4,8 @@
 import  Header from "@/components/NewLandingPage/header";
 import Hero from "@/components/NewLandingPage/hero";
 import ImageGallery from "@/components/NewLandingPage/image-gallery";
+import SectionTwo from "@/components/NewLandingPage/section-two";
+import SectionThree from "@/components/NewLandingPage/section-three";
 import dayjs from "dayjs";
 
 
@@ -38,6 +40,8 @@ const page = () => {
       {<Hero/>}
     </div>
       {<ImageGallery/>}
+      {<SectionTwo/>}
+      {<SectionThree/>}
       {/* <TempHeader/> */}
       {/* <SlideContent/> */}    
   </div>
