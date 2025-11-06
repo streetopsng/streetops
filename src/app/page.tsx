@@ -1,21 +1,11 @@
 
 
-import LookingToHire from "@/components/JobsPageComponents/LookingToHire";
-import Footer from "@/components/LandingPageComponents/Footer";
+
 import  Header from "@/components/NewLandingPage/header";
 import Hero from "@/components/NewLandingPage/hero";
 import ImageGallery from "@/components/NewLandingPage/image-gallery";
-import { HeroSection } from "@/components/LandingPageComponents/HeroSection";
-import JoinWaitlist from "@/components/LandingPageComponents/JoinWaitlist";
-import Section from "@/components/LandingPageComponents/Section";
-import Services from "@/components/LandingPageComponents/Services";
-import Sponsors from "@/components/LandingPageComponents/Sponsors";
-import TempHeader from "@/components/LandingPageComponents/TempHeader";
-import SlideContent from "@/components/SlideContent";
+import dayjs from "dayjs";
 
-import SubLinksComponent from "@/components/SubLinksComponent";
-import WhatsApp from "@/components/Whatsapp";
-import Image from "next/image";
 
 const ourStoryData = [
   {
@@ -38,10 +28,15 @@ const ourStoryData = [
 ]
 
 const page = () => {
+
+ 
+  
   return (
-  <div >
+  <div  className="bg-white">
+    <div className="md:px-8  px-4">
       {<Header/> }
       {<Hero/>}
+    </div>
       {<ImageGallery/>}
       {/* <TempHeader/> */}
       {/* <SlideContent/> */}    

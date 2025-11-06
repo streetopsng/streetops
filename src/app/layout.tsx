@@ -6,13 +6,16 @@ import ReactQueryProvider from "@/components/ReactQueryProvider";
 import Head from "next/head";
 import Script from "next/script";
 import PersistBlogPosts from "@/components/PersistBlogPosts";
+import Modal from "@/components/modal";
 
 
 export const metadata: Metadata = {
   title: "StreetOps",
   description: "StreetOps",
   icons:{
-    icon:"/icon.png"
+    icon:"/icon.png",
+    shortcut:"/favicon.ico",
+    apple:"/icon.png"
   }
 };
 
@@ -70,8 +73,9 @@ strategy="afterInteractive"
         </noscript>
 
           <ReactQueryProvider>
-          <SubLinksComponent/>
-          <PersistBlogPosts/>
+          {/* <SubLinksComponent/> */}
+          {/* <PersistBlogPosts/> */}
+          <Modal/>
         {children}
           </ReactQueryProvider>
       </body>

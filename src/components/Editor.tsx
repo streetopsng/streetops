@@ -17,6 +17,7 @@ const postData = async(formData:any)=>{
 
     if (!res.ok) {
         console.log("something went wrong");
+        alert("can't post blog at the moment, please try again later")
         return
         
     }
@@ -32,14 +33,14 @@ export default function TiptapEditor() {
     title:"",
     content:"",
     imageUrl:"",
-    date:dayjs(new Date()).format("D, MMM, YYYY")
+    date: dayjs(new Date()).format("MMMM D, YYYY")
   })
   const [imagePrev,setImagePrev] = useState<string | null>(null)
   const [content, setContent] = useState("");
   const mutation = useMutation({
     mutationFn:postData,
     onSuccess:(data)=>{
-        console.log(data);
+       
         if (data.success) {
             alert("posted blog successfully")
             window.location.reload()
@@ -51,7 +52,7 @@ export default function TiptapEditor() {
         
     },
     onError:(error)=>{
-console.log(error);
+
 alert("an error occured, couldn't post blog")
 setLoading(false)
 
@@ -65,6 +66,8 @@ setLoading(false)
     
     setIsClient(true);
   }, []);
+
+
 
   const editor = useEditor({
     extensions: [StarterKit, Underline, TextAlign.configure({
@@ -97,7 +100,7 @@ setLoading(false)
     const data = await res.json();
     if (data.success) {
    
-      console.log(data.result.secure_url);
+      // console.log(data.result.secure_url);
       return {
         url:data.result.secure_url,
         success:true,
@@ -136,7 +139,7 @@ setLoading(true)
             return
           }
 
-   console.log(imageUploadResponse);
+  //  console.log(imageUploadResponse);
    
       
       if (imageUploadResponse.success) {
@@ -144,7 +147,7 @@ setLoading(true)
             ...formInfo,
             content:html,
             imageUrl:imageUploadResponse.url as string,
-            date:dayjs(new Date()).format("D, MMM, YYYY")
+            date:dayjs(new Date()).format("MMMM D, YYYY")
         
           })
 
@@ -152,7 +155,7 @@ setLoading(true)
             ...formInfo,
             content:html,
             imageUrl:imageUploadResponse.url as string,
-            date:dayjs(new Date()).format("D, MMM, YYYY")
+            date:dayjs(new Date()).format("MMMM D, YYYY")
         
           })
           
@@ -203,7 +206,7 @@ setFormInfo({...formInfo,title:e.target.value})
     accept="image/*"
     className="w-full  border-1 border-grayOne px-2 hidden"
     onChange={(e)=> {
-console.log(e?.target?.files?.[0]);
+// console.log(e?.target?.files?.[0]);
 const imageFile: File = e?.target?.files?.[0] as File
 setImage(imageFile)
 setImagePrev(URL.createObjectURL(imageFile))
