@@ -5,13 +5,13 @@ import { Button } from "@/components/ui/button"
 
 export default function Header() {
   return (
-    <header className="absolute top-0 left-0 right-0 z-50 px-6 py-4">
+    <header className="absolute top-0 left-0 right-0 z-50 px-6 py-4 mt-[-40] lg:mt-0">
       <div className="max-w-7xl mx-auto flex items-center justify-between lg:mt-[-50]">
-       <div className="relative lg:w-[150px] lg:h-[150px] h-[30px] w-[20px] bg-">
+       <div className="relative lg:w-[150px] lg:h-[150px] h-[125px] w-[125px]  bg-">
          <Image 
                className="absolute w-full h-full object-contain"
                fill
-               src={"/blclogo.png"} 
+               src={"/image.png"} 
                alt="logo"
                
         />

@@ -8,15 +8,10 @@ export default function Footer() {
           {/* Logo and description */}
           <div className="col-span-2 md:col-span-1">
             <Link href="/" className="flex items-center gap-0.5 mb-4">
-              <span className="text-[#c41e3a] text-xl font-bold">Street</span>
-              <span className="text-[#c41e3a]">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                  <circle cx="12" cy="12" r="10" />
-                </svg>
-              </span>
-              <span className="text-[#2d1f1f] text-xl font-bold">ps</span>
+              <img src="red-logo.png" alt="" className=" lg:mt-[-20]"  />
+              {/* <span className="text-[#2d1f1f] text-xl font-bold">ps</span> */}
             </Link>
-            <p className="text-[#2d1f1f]/60 text-sm mb-4 leading-relaxed">
+            <p className="text-[#2d1f1f]/60 text-sm mb-4 leading-relaxed lg:mt-[-15] ">
               The essential backbone that supports and strengthens your daily grind.
             </p>
             <p className="text-[#2d1f1f]/40 text-xs">© 2025 All Rights Reserved</p>

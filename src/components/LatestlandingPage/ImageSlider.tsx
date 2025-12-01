@@ -20,19 +20,19 @@ export default function SwiperSlider() {
       className="w-full h-[300px]"
     >
       <SwiperSlide className="relative w-full h-full">
-         <Image src="/staff.png" alt="Slide 1" fill className="object-cover" />
+         <Image src="/staff.png" alt="Slide 1" fill className="object-contain" />
       </SwiperSlide>
       <SwiperSlide className="relative w-full h-full">
-         <Image src="/recruit.png" alt="Slide 2" fill className="object-cover" />
+         <Image src="/recruit.png" alt="Slide 2" fill className="object-contain" />
       </SwiperSlide>
         <SwiperSlide className="relative w-full h-full">
-            <Image src="/onboard.png" alt="Slide 3" fill className="object-cover" />
+            <Image src="/onboard.png" alt="Slide 3" fill className="object-contain" />
         </SwiperSlide>
         <SwiperSlide className="relative w-full h-full">
-            <Image src="/train.png" alt="Slide 3" fill className="object-cover" />
+            <Image src="/train.png" alt="Slide 3" fill className="object-contain" />
         </SwiperSlide>
         <SwiperSlide className="relative w-full h-full">
-            <Image src="/team.png" alt="Slide 3" fill className="object-cover" />
+            <Image src="/team.png" alt="Slide 3" fill className="object-contain" />
         </SwiperSlide>
     </Swiper>
   );
