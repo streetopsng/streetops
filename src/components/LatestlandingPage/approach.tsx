@@ -4,7 +4,7 @@ export default function Approach() {
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-8 mb-12">
           <div>
-            <p className="text-[#c41e3a] text-sm font-medium mb-2">About us</p>
+            <p className="text-[#FA2120] text-sm font-medium mb-2">About us</p>
             <h2 className="text-3xl md:text-4xl font-bold text-[#2d1f1f] tracking-wide Hero" >
               OUR APPROACH
             </h2>
@@ -42,12 +42,12 @@ export default function Approach() {
             </div>
             <h3 className="text-lg Hero font-semibold mb-3 text-[#2d1f1f]">The Platform</h3>
             <p className="text-sm text-[#2d1f1f]/70 leading-relaxed">
-              Tracks engagement, connection, and contribution. Generates personalized onboarding journeys.
+              Personalizes team journeys, tracks engagement, build relationships and boost productivity
             </p>
           </div>
 
           {/* The services - red card */}
-          <div className="p-8 rounded-2xl text-center bg-[#c41e3a] border border-[#c41e3a]">
+          <div className="p-8 rounded-2xl text-center bg-[#FA2120] border border-[#c41e3a]">
             <div className="mx-auto mb-4 text-white">
               <svg
                 width="48"
@@ -64,7 +64,7 @@ export default function Approach() {
             </div>
             <h3 className="text-lg font-semibold mb-3 Hero text-white">The services</h3>
             <p className="text-sm text-white/90 leading-relaxed">
-              Expert vectors facilitate onboarding, training, and team bonding. Cluture transfer, not information
+              Expert vectors facilitate onboarding, training, and team bonding. Culture transfer, not information
               transfer.
             </p>
           </div>

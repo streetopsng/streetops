@@ -8,7 +8,7 @@ export default function Hero() {
   const [name, setName] = useState("")
 
   return (
-    <section className="relative w-screen left-1/2 -translate-x-1/2 min-h-[700px] md:min-h-[800px] bg-gradient-to-b from-[#c41e3a] to-[#a01830] pt-24 pb-0 overflow-hidden">
+    <section className="relative w-screen left-1/2 -translate-x-1/2 min-h-[700px] md:min-h-[800px] bg-gradient-to-b from-[#FA2120] to-[#941413] pt-24 pb-0 overflow-hidden">
       {/* Background city pattern - red tinted city buildings */}
       <div
         className="absolute inset-0 opacity-30"
@@ -22,13 +22,13 @@ export default function Hero() {
       {/* Main Content Container */}
       <div className="relative z-10 max-w-4xl mx-auto text-center px-6">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 font-serif leading-tight">
-          Onboarding that
+          Social Productivity For 
           <br />
-          actually works
+          All Teams
         </h1>
 
         <p className="text-white/90 text-lg mb-8 max-w-xl mx-auto">
-          Personalized onboarding experiences that create energy,
+          Personalized energy that creates energy,
           <br />
           connection, and productivity
         </p>

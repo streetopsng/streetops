@@ -22,7 +22,7 @@ export default function Header() {
             About
           </Link>
           <Link href="#" className="text-white Hero text-sm hover:text-white/80 transition-colors">
-            Products
+            Ratecard
           </Link>
           <Link href="#" className="text-white Hero text-sm hover:text-white/80 transition-colors">
             Services
@@ -32,7 +32,7 @@ export default function Header() {
           </Link>
         </nav>
 
-        <Button className="bg-[#c41e3a] hover:bg-[#a01830] text-white Hero rounded-full px-6 text-sm">Get started</Button>
+        <Button className="bg-[#FA2120] hover:bg-[#FA2120] text-white Hero rounded-full px-6 text-sm">Get started</Button>
       </div>
     </header>
   )
