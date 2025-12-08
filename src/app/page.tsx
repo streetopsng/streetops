@@ -1,9 +1,14 @@
 
 
 
-import  Header from "@/components/NewLandingPage/header";
-import Hero from "@/components/NewLandingPage/hero";
-import ImageGallery from "@/components/NewLandingPage/image-gallery";
+import  Header from "@/components/LatestlandingPage/header";
+import Hero from "@/components/LatestlandingPage/hero";
+import Approach from "@/components/LatestlandingPage/approach";
+import CtaSection from "@/components/LatestlandingPage/cta-section";
+import HowItWorks from "@/components/LatestlandingPage/how-it-works";
+import Services from "@/components/LatestlandingPage/services";
+import WhoWereBuilding from "@/components/LatestlandingPage/who-were-building";
+import Footer from "@/components/LatestlandingPage/footer";
 import dayjs from "dayjs";
 
 
@@ -32,13 +37,18 @@ const page = () => {
  
   
   return (
-  <div  className="bg-white">
+  <div  className="">
     <div className="md:px-8  px-4">
       {<Header/> }
       {<Hero/>}
     </div>
-      {<ImageGallery/>}
-      {/* <TempHeader/> */}
+      {<Approach/>}
+      {<Services/>}
+      
+       {<WhoWereBuilding/>}
+       {<HowItWorks/>}
+      {<CtaSection/>}
+      <Footer/>
       {/* <SlideContent/> */}    
   </div>
   );
