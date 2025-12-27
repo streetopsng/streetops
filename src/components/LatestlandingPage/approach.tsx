@@ -1,6 +1,6 @@
 export default function Approach() {
   return (
-    <section className="py-16 px-6 bg-white ">
+    <section id='about' className="py-16 px-6 bg-white ">
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-8 mb-12">
           <div>

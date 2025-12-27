@@ -54,7 +54,7 @@ export default function HowItWorks() {
   }, [])
 
   return (
-    <section className="relative py-16 px-6 bg-[#fff8f8] overflow-hidden">
+    <section id='how-it-works' className="relative py-16 px-6 bg-[#fff8f8] overflow-hidden">
       
       <div className="absolute top-0 left-0 right-0 h-4 bg-[#2d1f1f]">
         <svg className="w-full h-full" viewBox="0 0 1200 16" preserveAspectRatio="none">

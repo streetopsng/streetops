@@ -2,10 +2,10 @@ import { Users } from "lucide-react"
 
 export default function WhoWereBuilding() {
   const businessTypes = [
-    { number: "01", title: "Solo-preneur", description: "onboarding for your first hire", position: "left" },
+    { number: "01", title: "Solo-preneur", description: "Onboarding for your first hire", position: "left" },
     { number: "02", title: "SME", description: "Simple onboarding for growing teams", position: "right" },
-    { number: "03", title: "Enterprise", description: "structure for large teams", position: "left" },
-    { number: "04", title: "Social", description: "community and volunteer onboarding", position: "right" },
+    { number: "03", title: "Enterprise", description: "Structure for large teams", position: "left" },
+    { number: "04", title: "Social", description: "Community and volunteer onboarding", position: "right" },
     { number: "05", title: "Project", description: "Dev and technical teams", position: "left" },
     {
       number: "06",
