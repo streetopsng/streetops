@@ -1,18 +1,18 @@
 import { Users } from "lucide-react"
 
-export default function WhoWereBuilding() {
+export default function Customization() {
   const businessTypes = [
-    { number: "01", title: "Solo-preneur", description: "Onboarding for your first hire", position: "left" },
-    { number: "02", title: "SME", description: "Simple onboarding for growing teams", position: "right" },
-    { number: "03", title: "Enterprise", description: "Structure for large teams", position: "left" },
-    { number: "04", title: "Social", description: "Community and volunteer onboarding", position: "right" },
-    { number: "05", title: "Project", description: "Dev and technical teams", position: "left" },
-    {
-      number: "06",
-      title: "Street plan",
-      description: "simple onboarding for informal workers make icons very simple and warm.",
-      position: "right",
-    },
+    { number: "01", title: "Initial Consultation", description: "We discuss your needs timeline, and learning preference in a friendly conversation", position: "left" },
+    { number: "02", title: "Goal Assessment", description: "We identify your specific objectives and create measurable milestones for success", position: "right" },
+    { number: "03", title: "Plan Creation", description: "We design a personalized training  program tailored to your unique requirements", position: "left" },
+    { number: "04", title: "Launch & Support", description: "We begin your training journey with ongoing guidance and continuous support", position: "right" },
+    // { number: "05", title: "Project", description: "Dev and technical teams", position: "left" },
+    // {
+    //   number: "06",
+    //   title: "Street plan",
+    //   description: "simple onboarding for informal workers make icons very simple and warm.",
+    //   position: "right",
+    // },
   ]
 
   return (
@@ -37,8 +37,9 @@ export default function WhoWereBuilding() {
 
       <div className="relative z-10 max-w-4xl mx-auto pt-12">
         <h2 className="text-3xl md:text-4xl font-bold text-white Hero text-center mb-20">
-          Who we're building for
+          How we customize <br /> your training
         </h2>
+        <p>A simple, proven process tailored to your goals.</p>
 
         <div className="relative">
           {/* Center dashed line */}

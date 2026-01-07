@@ -23,7 +23,7 @@ export default function Header() {
             About
           </Link>
           <Link href="#ratecard" className="text-white Hero text-sm hover:text-white/80 transition-colors">
-            Ratecard
+            Products
           </Link>
           <Link href="#services" className="text-white Hero text-sm hover:text-white/80 transition-colors">
             Services
