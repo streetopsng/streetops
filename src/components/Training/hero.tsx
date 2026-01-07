@@ -21,7 +21,7 @@ export default function Hero() {
 
       {/* Main Content Container */}
       <div className="relative z-10 max-w-4xl mx-auto text-center px-6 ">
-        <h1 className="text-4xl Hero md:text-5xl lg:text-[54px] font-bold text-white mb-5 font-serif leading-[1.15]">
+        <h1 className="text-4xl Hero md:text-5xl lg:text-[54px] font-bold text-white mb-5 font-serif leading-[1.15] ">
           Productivity training
           <br />
           built on your values

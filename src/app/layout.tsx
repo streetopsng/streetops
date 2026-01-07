@@ -2,11 +2,12 @@ import type { Metadata } from "next";
 import "./globals.css";
 import ClientProvider from "@/components/ClientProvider";
 import SubLinksComponent from "@/components/SubLinksComponent";
-import ReactQueryProvider from "@/components/ReactQueryProvider";
+
 import Head from "next/head";
 import Script from "next/script";
 import PersistBlogPosts from "@/components/PersistBlogPosts";
 import Modal from "@/components/modal";
+import ReactQueryProvider from "@/components/ReactQueryProvider";
 
 export const metadata: Metadata = {
   title: "StreetOps",
@@ -51,25 +52,24 @@ export default function RootLayout({
           `}
         </Script>
       </Head>
-      <ClientProvider>
-        <ReactQueryProvider>
-          <body className={`bg-bgcolor  font-roboto`}>
-            <noscript>
-              <iframe
-                src="https://www.googletagmanager.com/ns.html?id=GTM-M6843CTP"
-                height="0"
-                width="0"
-                style={{ display: "none", visibility: "hidden" }}
-              ></iframe>
-            </noscript>
-
+      <body className={`bg-bgcolor  font-roboto`}>
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-M6843CTP"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          ></iframe>
+        </noscript>
+        <ClientProvider>
+          <ReactQueryProvider>
             {/* <SubLinksComponent/> */}
             {/* <PersistBlogPosts/> */}
-            <Modal />
+            {/* <Modal /> */}
             {children}
-          </body>
-        </ReactQueryProvider>
-      </ClientProvider>
+          </ReactQueryProvider>
+        </ClientProvider>
+      </body>
     </html>
   );
 }
