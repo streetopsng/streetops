@@ -26,7 +26,7 @@ export default function Header() {
         <nav className="hidden md:flex items-center gap-8 ">
           <Link
             href="/#about"
-            className="text-white Hero text-sm hover:bg-white hover:text-primary transition duration-300 px-1 rounded-full"
+            className="text-white Hero text-sm hover:text-gray-300 transition-colors duration-500"
           >
             About
           </Link>
@@ -38,16 +38,16 @@ export default function Header() {
           </Link> */}
           <Link
             href="/#services"
-            className="text-white  Hero text-sm  hover:bg-white hover:text-primary transition duration-300 px-1 rounded-full"
+            className="text-white Hero text-sm hover:text-gray-300 transition-colors duration-500"
           >
             Services
           </Link>
-          {/* <Link
+          <Link
             href="#how-it-works"
-            className="text-white Hero text-sm hover:text-white/80 transition-colors"
+            className="text-white Hero text-sm hover:text-gray-300 transition-colors duration-500"
           >
             How it works
-          </Link> */}
+          </Link>
         </nav>
 
         {pathName == "/blog" ? (

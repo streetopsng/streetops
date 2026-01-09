@@ -57,7 +57,10 @@ export default function Services() {
 
           {services.map((item, index) => {
             return (
-              <div className="lg:w-4/5 md:w-[95%] w-full mx-auto rounded-lg shadow-xl mt-8 border border-red-300">
+              <div
+                key={index}
+                className="lg:w-4/5 md:w-[95%] w-full mx-auto rounded-lg shadow-xl mt-8 border border-red-300"
+              >
                 <img src="/dash.png" alt="pattern" />
                 <aside className="md:w-2/5 md:pl-8 px-4  md:text-start text-center">
                   <h1 className="font-bold text-xl">{item.title}</h1>

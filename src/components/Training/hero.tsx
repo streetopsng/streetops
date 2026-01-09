@@ -1,27 +1,66 @@
 "use client";
 
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-
+import { useEffect, useRef, useState } from "react";
+import gsap from "gsap";
+import SplitText from "gsap/src/SplitText";
+import { motion } from "framer-motion";
+gsap.registerPlugin(SplitText);
 export default function Hero() {
   const [name, setName] = useState("");
+  const gsapCtx = useRef<gsap.Context | null>(null);
 
+  useEffect(() => {
+    gsapCtx.current = gsap.context(() => {
+      const split = new SplitText(".hero-text", {
+        type: "words",
+        wordsClass: "Hero",
+      });
+
+      gsap.from(split.words, {
+        duration: 2.5,
+        autoAlpha: 0,
+        yPercent: "random([-100,100])",
+        stagger: {
+          amount: 1,
+          from: "random",
+        },
+        ease: "power3.out",
+      });
+    });
+
+    return () => gsapCtx.current?.revert();
+  }, []);
+
+  useEffect(() => {
+    gsapCtx.current = gsap.context(() => {});
+  }, []);
   return (
-    <section className="flex flex-col justify-between  min-h-[90vh]  pt-10 max-w-4xl mx-auto text-center px-6">
+    <section className="flex flex-col md:justify-between justify-end min-h-[90vh]  pt-10 max-w-4xl mx-auto text-center px-6  ">
       {/* Main Content Container */}
 
-      <aside>
-        <h1 className="text-4xl Hero md:text-6xl lg:text-7xl font-bold text-white mb-5 font-serif leading-[1.15] ">
+      <aside className="">
+        <h1 className="text-4xl Hero hero-text md:text-6xl lg:text-7xl font-bold  text-white mb-5  leading-[1.15] ">
           Productivity training
           <br />
           built on your values
         </h1>
 
-        <p className="text-white/90 text-lg mb-8 max-w-xl mx-auto leading-relaxed">
-          Transform your team's productivity through culturally aligned
-          trainings that honour Nigerian work values and drives results.
-        </p>
+        <div className="overflow-y-hidden ">
+          <motion.p
+            // initial={{ opacity: 0, y: 100 }}
+            // whileInView={{ opacity: 1, y: 0 }}
+            // transition={{ duration: 2, ease: "easeIn" }}
+            // viewport={{ once: true }}
+            initial={{ opacity: 0, y: 60 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 2, ease: "easeOut", delay: 1 }}
+            viewport={{ once: true, amount: 0.3 }}
+            className="text-white/90 text-lg mb-8 max-w-xl mx-auto leading-relaxed  z-10"
+          >
+            Transform your team's productivity through culturally aligned
+            trainings that honour Nigerian work values and drives results.
+          </motion.p>
+        </div>
       </aside>
       {/* Input Field Area */}
       {/* <div className="flex items-center justify-center max-w-md mx-auto">

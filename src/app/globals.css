@@ -72,6 +72,10 @@ transform: rotateY(180deg);
 
 } */
 
+.serif {
+  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
 .animated-gradient-slide-text {
   /* font-size: 3rem; */
   /* font-weight: bold; */
