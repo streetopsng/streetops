@@ -1,3 +1,8 @@
+"use client";
+import { useWindowWidth } from "@/custom-hooks/useScreenWidth";
+import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+
 const features = [
   {
     title: "The Platform",
@@ -19,24 +24,63 @@ const features = [
   },
 ];
 export default function Approach() {
+  const width: number = useWindowWidth();
+  const [isMobile, setIsMobile] = useState<boolean>(false);
+
+  useEffect(() => {
+    setIsMobile(width <= 650);
+  }, []);
+
   return (
-    <section id="about" className="py-16 px-6 bg-white ">
-      <div className="max-w-6xl mx-auto">
+    <section id="about" className="py-16 px-6 bg-white">
+      <div className="max-w-6xl mx-auto  overflow-hidden">
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-8 mb-12">
-          <div>
-            <p className=" font-medium md:text-2xl text-md  gradient-text-one ">
-              About us
-            </p>
-            <h2 className="text-3xl md:text-4xl font-bold text-thirdPrimary tracking-wide Hero">
-              OUR APPROACH
-            </h2>
-          </div>
+          <motion.div
+            variants={{
+              // hidden: { opacity: 0, x: -100 },
+              visible: { opacity: 1, x: 0 },
+            }}
+            initial={{ opacity: 0, x: -100 }}
+            whileInView="visible"
+            transition={{ duration: 1, ease: "easeIn" }}
+            viewport={{ once: true, amount: 0.3 }}
+          >
+            <div>
+              <p className=" font-medium md:text-2xl text-md  gradient-text-one ">
+                About us
+              </p>
+              <h2 className="text-3xl md:text-4xl font-bold text-thirdPrimary tracking-wide Hero">
+                OUR APPROACH
+              </h2>
+            </div>
+          </motion.div>
           <div className="flex items-center gap-3 max-w-md">
-            <img src="/new-assets/about-us-frame.svg" alt="about us frame" />
-            <p className=" text-sm  Hero leading-6">
+            <motion.img
+              variants={{
+                // hidden: { opacity: 0, height: 0 },
+                visible: { opacity: 1, height: "max-content" },
+              }}
+              initial={{ opacity: 0, height: 0 }}
+              whileInView="visible"
+              transition={{ duration: 1, ease: "easeInOut" }}
+              viewport={{ once: true, amount: 0.3 }}
+              src="/new-assets/about-us-frame.svg"
+              alt="about us frame"
+            />
+            <motion.p
+              variants={{
+                // hidden: { opacity: 0, x: 100 },
+                visible: { opacity: 1, x: 0 },
+              }}
+              initial={{ opacity: 0, x: 100 }}
+              whileInView="visible"
+              transition={{ duration: 1, ease: "easeInOut" }}
+              viewport={{ once: true, amount: 0.3 }}
+              className=" text-sm  Hero leading-6"
+            >
               Our model delivers holistic team performance by combining
               behavioural technology, human delivery, and proven methodology.
-            </p>
+            </motion.p>
           </div>
         </div>
 
@@ -48,9 +92,36 @@ export default function Approach() {
             {/* Scaled Down Features Grid */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {features.map((feature, index) => (
-                <div
+                <motion.div
+                  variants={{
+                    // hidden: { opacity: 0, x: -100 },
+                    visible: { opacity: 1, x: 0, y: 0 },
+                  }}
+                  initial={{
+                    opacity: 0,
+                    x: isMobile ? -60 : 0,
+                    y:
+                      !isMobile && index % 2 == 0
+                        ? -60
+                        : !isMobile && index % 2 !== 0
+                        ? 60
+                        : 0,
+                  }}
+                  //  y:
+                  //   !isMobile && index % 2 == 0
+                  //     ? -60
+                  //     : !isMobile && index % 2 !== 0
+                  //     ? 60
+                  //     : 0,
+                  whileInView="visible"
+                  transition={{
+                    duration: 1.5,
+                    ease: "easeInOut",
+                    delay: isMobile ? 1 : index + 1,
+                  }}
+                  viewport={{ once: false, amount: 0.3 }}
                   key={index}
-                  className="bg-[#FFF8F7] rounded-3xl p-6 flex flex-col items-center text-center transition-transform hover:scale-[1.01] duration-300 border border-[#FAD9D9]/30"
+                  className="bg-[#FFF8F7] rounded-3xl p-6 flex flex-col items-center text-center border border-[#FAD9D9]/30"
                 >
                   {/* Smaller Icon Circle */}
                   <div className="w-12 h-12 bg-[#FAD9D9] rounded-full flex items-center justify-center mb-4">
@@ -64,7 +135,7 @@ export default function Approach() {
                   <p className="text-[#2d1f1f]/70 leading-relaxed text-sm">
                     {feature.description}
                   </p>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>

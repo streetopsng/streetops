@@ -1,4 +1,5 @@
-import SwiperSlider from "./ImageSlider";
+"use client";
+import { motion } from "framer-motion";
 
 const services = [
   {
@@ -57,7 +58,15 @@ export default function Services() {
 
           {services.map((item, index) => {
             return (
-              <div
+              <motion.div
+                variants={{
+                  hidden: { opacity: 0, y: -100 },
+                  visible: { opacity: 1, y: 0 },
+                }}
+                initial={{ opacity: 0, y: -100 }}
+                whileInView="visible"
+                transition={{ duration: 1, ease: "easeIn" }}
+                viewport={{ once: true, amount: 0.3 }}
                 key={index}
                 className="lg:w-4/5 md:w-[95%] w-full mx-auto rounded-lg shadow-xl mt-8 border border-red-300"
               >
@@ -76,7 +85,7 @@ export default function Services() {
                     className="h-60 md:translate-x-10 md:translate-y-12"
                   />
                 </aside>
-              </div>
+              </motion.div>
             );
           })}
         </div>
