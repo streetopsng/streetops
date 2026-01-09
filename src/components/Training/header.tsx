@@ -2,12 +2,17 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
+  const pathName = usePathname();
+
+  console.log(pathName);
+
   return (
     <header className="lg:py-8 py-2 px-4 z-30">
       <div className="max-w-7xl mx-auto flex items-center justify-between ">
-        <div className="relative lg:w-[150px] lg:h-[50px] h-[50px] w-[125px]">
+        <div className="relative lg:w-37.5 lg:h-12.5 h-12.5 w-31.25">
           <Link href="/">
             <Image
               className="absolute w-full h-full object-contain cursor-pointer"
@@ -20,7 +25,7 @@ export default function Header() {
 
         <nav className="hidden md:flex items-center gap-8 ">
           <Link
-            href="#about"
+            href="/#about"
             className="text-white Hero text-sm hover:bg-white hover:text-primary transition duration-300 px-1 rounded-full"
           >
             About
@@ -32,7 +37,7 @@ export default function Header() {
             Products
           </Link> */}
           <Link
-            href="#services"
+            href="/#services"
             className="text-white  Hero text-sm  hover:bg-white hover:text-primary transition duration-300 px-1 rounded-full"
           >
             Services
@@ -45,11 +50,24 @@ export default function Header() {
           </Link> */}
         </nav>
 
-        <Link href="/blog">
+        {pathName == "/blog" ? (
+          <Link href="/">
+            <Button className="bg-white  text-slate-700 Hero rounded-full px-6 text-sm cursor-pointer hover:bg-white hover:text-primary transition duration-300 ">
+              Home
+            </Button>
+          </Link>
+        ) : (
+          <Link href="/blog">
+            <Button className="bg-white  text-slate-700 Hero rounded-full px-6 text-sm cursor-pointer hover:bg-white hover:text-primary transition duration-300 ">
+              Blog
+            </Button>
+          </Link>
+        )}
+        {/* <Link href="/blog">
           <Button className="bg-primary  text-white Hero rounded-full px-6 text-sm cursor-pointer hover:bg-white hover:text-primary transition duration-300 ">
             Blog
           </Button>
-        </Link>
+        </Link> */}
       </div>
     </header>
   );
