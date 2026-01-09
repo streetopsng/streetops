@@ -61,14 +61,14 @@ export default function RootLayout({
             style={{ display: "none", visibility: "hidden" }}
           ></iframe>
         </noscript>
-        <ClientProvider>
-          <ReactQueryProvider>
+        <ReactQueryProvider>
+          <ClientProvider>
             {/* <SubLinksComponent/> */}
             {/* <PersistBlogPosts/> */}
-            {/* <Modal /> */}
+            <Modal />
             {children}
-          </ReactQueryProvider>
-        </ClientProvider>
+          </ClientProvider>
+        </ReactQueryProvider>
       </body>
     </html>
   );

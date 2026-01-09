@@ -16,6 +16,7 @@ import Services from "@/components/LatestlandingPage/services";
 import WhoWereBuilding from "@/components/LatestlandingPage/who-were-building";
 import Footer from "@/components/LatestlandingPage/footer";
 import dayjs from "dayjs";
+import Approach from "@/components/LatestlandingPage/approach";
 
 const ourStoryData = [
   {
@@ -47,21 +48,32 @@ const ourStoryData = [
 const page = () => {
   return (
     <div className="">
-      <div className="">
+      <div className="relative ">
+        <>
+          <div className="absolute h-full -z-1 w-full bg-linear-to-b from-[#FA2120] to-[#941413] " />
+          <div
+            className="absolute inset-0 opacity-25 -z-1"
+            style={{
+              backgroundImage: `url('/bric.png')`,
+              backgroundSize: "cover",
+              backgroundPosition: "center top",
+            }}
+          />
+        </>
         {<Header />}
         {<Hero />}
       </div>
-      {<TrainingSection />}
+      {<Approach />}
+      {/* {<TrainingSection />}
       {<TrainingFormats />}
       {<TrainingTopics />}
-      {<TrainingCalendar />}
+      {<TrainingCalendar />} */}
       {<Customization />}
-      {<TestimonialSection />}
+      {/* {<TestimonialSection />}
       {<FAQSection />}
       {<ChoiceSection />}
-      {<TrainingCta />}
-      {/* {<Approach/>} */}
-      {/* {<Services/>} */}
+      {<TrainingCta />} */}
+      {<Services />}
 
       {/* {<WhoWereBuilding/>} */}
       {/* {<HowItWorks/>} */}
