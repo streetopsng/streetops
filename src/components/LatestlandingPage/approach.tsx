@@ -42,7 +42,7 @@ export default function Approach() {
             }}
             initial={{ opacity: 0, x: -100 }}
             whileInView="visible"
-            transition={{ duration: 1, ease: "easeIn" }}
+            transition={{ duration: 2, ease: "easeIn", delay: 1 }}
             viewport={{ once: true, amount: 0.3 }}
           >
             <div>
@@ -62,7 +62,7 @@ export default function Approach() {
               }}
               initial={{ opacity: 0, height: 0 }}
               whileInView="visible"
-              transition={{ duration: 1, ease: "easeInOut" }}
+              transition={{ duration: 2, ease: "easeInOut", delay: 1 }}
               viewport={{ once: true, amount: 0.3 }}
               src="/new-assets/about-us-frame.svg"
               alt="about us frame"
@@ -74,7 +74,7 @@ export default function Approach() {
               }}
               initial={{ opacity: 0, x: 100 }}
               whileInView="visible"
-              transition={{ duration: 1, ease: "easeInOut" }}
+              transition={{ duration: 2, ease: "easeInOut", delay: 1 }}
               viewport={{ once: true, amount: 0.3 }}
               className=" text-sm  Hero leading-6"
             >
