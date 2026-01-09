@@ -68,15 +68,15 @@ const page = () => {
       {<TrainingFormats />}
       {<TrainingTopics />}
       {<TrainingCalendar />} */}
+      {<Services />}
       {<Customization />}
       {/* {<TestimonialSection />}
       {<FAQSection />}
       {<ChoiceSection />}
       {<TrainingCta />} */}
-      {<Services />}
 
       {/* {<WhoWereBuilding/>} */}
-      {/* {<HowItWorks/>} */}
+      {<HowItWorks />}
       {/* {<CtaSection/>} */}
       <Footer />
       {/* <SlideContent/> */}

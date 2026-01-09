@@ -1,70 +1,57 @@
-"use client" // 1. Add this because we are using hooks
+"use client";
 
-import { useState, useEffect } from "react"
-import { Button } from "@/components/ui/button"
-import { title } from "process"
+import { useState, useEffect } from "react";
 
-// 2. Define your content here
 const steps = [
   {
     title: "Step 1: Choose your plan",
     lines: [
       "choose your plan",
       "we personalize your onboarding we",
-      "deliver it track progress and grow"
-    ]
+      "deliver it track progress and grow",
+    ],
   },
   {
     title: "Step 2: We personalize your onboarding",
     lines: [
       "choose your plan",
       "we personalize your onboarding we",
-      "deliver it track progress and grow"
-    ]
+      "deliver it track progress and grow",
+    ],
   },
   {
     title: "Step 3: We deliver it",
     lines: [
-       "choose your plan",
+      "choose your plan",
       "we personalize your onboarding we",
-      "deliver it track progress and grow"
-    ]
+      "deliver it track progress and grow",
+    ],
   },
   {
     title: "Step 4: Track progress and grow",
     lines: [
-         "choose your plan",
+      "choose your plan",
       "we personalize your onboarding we",
-      "deliver it track progress and grow"
-    ]
-
-  }
-]
+      "deliver it track progress and grow",
+    ],
+  },
+];
 
 export default function HowItWorks() {
-  const [currentStep, setCurrentStep] = useState(0)
+  const [currentStep, setCurrentStep] = useState(0);
 
-  // 3. Logic to auto-rotate the text
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentStep((prev) => (prev + 1) % steps.length)
-    }, 3000) // Change 3000 to 500 if you really want 0.5 seconds
-
-    return () => clearInterval(timer)
-  }, [])
+      setCurrentStep((prev) => (prev + 1) % steps.length);
+    }, 3000);
+    return () => clearInterval(timer);
+  }, []);
 
   return (
-    <section id='how-it-works' className="relative py-16 px-6 bg-[#fff8f8] overflow-hidden">
-      
-      <div className="absolute top-0 left-0 right-0 h-4 bg-[#2d1f1f]">
-        <svg className="w-full h-full" viewBox="0 0 1200 16" preserveAspectRatio="none">
-          <path
-            d="M0,16 Q30,0 60,16 T120,16 T180,16 T240,16 T300,16 T360,16 T420,16 T480,16 T540,16 T600,16 T660,16 T720,16 T780,16 T840,16 T900,16 T960,16 T1020,16 T1080,16 T1140,16 T1200,16 V0 H0 Z"
-            fill="#2d1f1f"
-          />
-        </svg>
-      </div>
-
+    <section
+      id="how-it-works"
+      className="relative py-16 px-6 bg-[#fff8f8] overflow-hidden"
+    >
       <div
         className="absolute left-0 top-0 bottom-0 w-24 opacity-20"
         style={{
@@ -86,9 +73,7 @@ export default function HowItWorks() {
         </h2>
 
         <div className="flex flex-col md:flex-row items-center gap-12 md:gap-16 pl-0 lg:pl-16">
-          
-          
-          <div className="relative flex-shrink-0">
+          <div className="relative shrink-0">
             <svg
               className="absolute -inset-3 w-[calc(100%+24px)] h-[calc(100%+24px)]"
               viewBox="0 0 340 420"
@@ -110,44 +95,43 @@ export default function HowItWorks() {
             </div>
           </div>
 
-          
-          <div className="flex-1 h-[250px] flex flex-col justify-center">
-             
-            <div 
-                key={currentStep} 
-                className="animate-in fade-in slide-in-from-bottom-4 duration-500"
+          <div className="flex-1 h-62.5 flex flex-col justify-center">
+            <div
+              key={currentStep}
+              className="animate-in fade-in slide-in-from-bottom-4 duration-500"
             >
               <h3 className="text-2xl md:text-3xl font-bold  text-[#2d1f1f] mb-4">
                 {steps[currentStep].title}
               </h3>
-              
+
               <div className="text-[#2d1f1f]/70 mb-6 space-y-1">
                 {steps[currentStep].lines.map((line, index) => (
-                    <p key={index}>{line}</p>
+                  <p key={index}>{line}</p>
                 ))}
               </div>
 
-              <Button className="bg-[#c41e3a] hover:bg-[#a01830] text-white rounded-full px-8">
+              {/* <Button className="bg-[#c41e3a] hover:bg-[#a01830] text-white rounded-full px-8">
                 Get started
-              </Button>
+              </Button> */}
             </div>
 
             {/* Optional: Slider Indicators (Dots) */}
             <div className="flex gap-2 mt-8">
-                {steps.map((_, index) => (
-                    <button 
-                        key={index}
-                        onClick={() => setCurrentStep(index)}
-                        className={`h-2 w-2 rounded-full transition-all ${
-                            index === currentStep ? "bg-[#c41e3a] w-6" : "bg-[#c41e3a]/30"
-                        }`}
-                    />
-                ))}
+              {steps.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentStep(index)}
+                  className={`h-2 w-2 rounded-full transition-all ${
+                    index === currentStep
+                      ? "bg-[#c41e3a] w-6"
+                      : "bg-[#c41e3a]/30"
+                  }`}
+                />
+              ))}
             </div>
           </div>
-
         </div>
       </div>
     </section>
-  )
+  );
 }
