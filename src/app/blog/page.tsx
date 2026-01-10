@@ -11,8 +11,10 @@ import { blogPostType, storeBlogs } from "@/store/slices/allBlogs";
 import Footer from "@/components/LandingPageComponents/Footer";
 import PagePreloader from "@/utils/PagePreloader";
 import Header from "@/components/Training/header";
-import Hero from "@/components/Training/hero";
-
+import { motion } from "framer-motion";
+import gsap from "gsap";
+import { ScrambleTextPlugin } from "gsap/ScrambleTextPlugin";
+gsap.registerPlugin(ScrambleTextPlugin);
 async function fetchData() {
   const res = await fetch(`/api/blog/get-blogs`);
   if (!res.ok) {
@@ -41,9 +43,20 @@ const page = () => {
       localStorage.setItem("blogs", JSON.stringify(data.data));
     }
   }, [isLoading]);
+
+  useEffect(() => {
+    gsap.to(".span-text", {
+      duration: 2,
+      scrambleText: "Explore Experts Insights",
+    });
+    gsap.to(".span-text-2", {
+      duration: 2,
+      scrambleText: "Tips on StreetOps",
+    });
+  }, []);
   const router = useRouter();
   return (
-    <div className="">
+    <div className="overflow-x-hidden">
       {/* <TempHeader/> */}
 
       {/* <SlideContent/> */}
@@ -71,15 +84,23 @@ const page = () => {
           {/* Main Content Container */}
 
           <aside>
-            <h1 className="text-4xl Hero md:text-6xl lg:text-7xl font-bold text-white mb-5 font-serif leading-[1.15]  ">
-              Explore Experts Insights <br /> and Practical <br /> Tips on
-              StreetOps
+            <h1 className="text-4xl Hero hero-text md:text-6xl lg:text-7xl font-bold text-white mb-5 font-serif leading-[1.15]  ">
+              <span className="span-text">Explore Experts Insights</span> <br />{" "}
+              and Practical <br />{" "}
+              <span className="span-text-2">Tips on StreetOps</span>
             </h1>
 
-            <p className="text-white/90 text-lg mb-8 max-w-xl mx-auto leading-relaxed">
+            <motion.p
+              initial={{ opacity: 0, y: 60 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 2, ease: "easeOut", delay: 1 }}
+              viewport={{ once: true, amount: 0.3 }}
+              className="text-white/90 text-lg mb-8 max-w-xl mx-auto leading-relaxed  z-10"
+              // className="text-white/90 text-lg mb-8 max-w-xl mx-auto leading-relaxed"
+            >
               Stay informed and empowered with valuable articles, expert advice,
               and actionable tips to help you scale your operations
-            </p>
+            </motion.p>
           </aside>
           {/* Input Field Area */}
           {/* <div className="flex items-center justify-center max-w-md mx-auto">
@@ -109,8 +130,8 @@ const page = () => {
       </div>
 
       <div className="mt-8">
-        <h1 className="text-3xl md:text-5xl font-bold text-thirdPrimary Hero md:mb-6 mb-2 tracking-tight text-center ">
-          BLOGS
+        <h1 className="text-3xl Hero md:text-5xl font-bold text-thirdPrimary Hero md:mb-6 mb-2 tracking-tight text-center ">
+          Blogs
         </h1>
         {blogs.length < 1 && isLoading ? (
           <div className=" text-grayOne w-full h-[60vh] flex items-center justify-center flex-col">
@@ -128,7 +149,7 @@ const page = () => {
         )}
 
         {blogs.length > 0 && (
-          <article className="mx-auto w-[90%] grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1  gap-4 ">
+          <article className="mx-auto w-[90%] grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1  lg:gap-4 gap-y-8  justify-center  justify-items-center">
             {/* mapp through blog */}
 
             {blogs.map((item: blogPostType, index: any) => {
@@ -144,19 +165,19 @@ const page = () => {
                     )
                   }
                 >
-                  <div className="relative w-[100%] min-h-[250px]">
+                  <div className="relative w-full min-h-62.5">
                     <Image
                       src={item.imageUrl}
                       alt={item.date}
                       fill
-                      className="absolute w-full h-full rounded-lg object-fit"
+                      className="absolute w-full h-full rounded-lg object-fit hover:scale-[1.01] transition-transform duration-500"
                     />
                   </div>
                   <div>
                     <span className="text-sm">{item.date}</span>
                   </div>
                   <div>
-                    <h1 className="font-bold text-lg text-grayTwo">
+                    <h1 className=" font-semibold  text-grayTwo">
                       {item.title}
                     </h1>
                   </div>
@@ -167,7 +188,7 @@ const page = () => {
         )}
       </div>
 
-      {/* <Footer/> */}
+      <Footer />
     </div>
   );
 };
