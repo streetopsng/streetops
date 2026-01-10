@@ -98,13 +98,13 @@ const page = () => {
         </div> */}
 
           {/* Bottom Image */}
-          <div className="flex justify-center w-full mt-16">
+          {/* <div className="flex justify-center w-full mt-16">
             <img
               src="/new-assets/blog.svg"
               alt="blog"
               className="max-w-[90%] md:max-w-[70%] h-auto object-contain select-none"
             />
-          </div>
+          </div> */}
         </section>
       </div>
 
