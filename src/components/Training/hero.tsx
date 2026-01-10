@@ -40,9 +40,9 @@ export default function Hero() {
 
       <aside className="">
         <h1 className="text-4xl Hero hero-text md:text-6xl lg:text-7xl font-bold  text-white mb-5  leading-[1.15] ">
-          Productivity training
+          Productive Teams
           <br />
-          built on your values
+          Achieving Business Goals
         </h1>
 
         <div className="overflow-y-hidden ">
