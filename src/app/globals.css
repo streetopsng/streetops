@@ -19,6 +19,9 @@
   color: #f15a49;
 } */
 
+body {
+  font-family: "Montserrat", sans-serif;
+}
 html {
   scroll-behavior: smooth;
 }
@@ -54,6 +57,10 @@ html {
 .Hero {
   font-family: "Bizmo Trial", sans-serif;
   /* font-optical-sizing: auto; */
+}
+
+.bizmo-font {
+  font-family: "Bizmo Trial", sans-serif;
 }
 * {
   font-family: "Montserrat", sans-serif;

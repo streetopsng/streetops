@@ -10,14 +10,14 @@ export default function Header() {
   console.log(pathName);
 
   return (
-    <header className="lg:py-8 py-2 px-4 z-30">
+    <header className="lg:py-8 py-4 lg:px-8 px-4 z-30 p">
       <div className="max-w-7xl mx-auto flex items-center justify-between ">
-        <div className="relative lg:w-37.5 lg:h-12.5 h-12.5 w-31.25">
+        <div className="relative lg:w-37.5 h-10  w-31.25">
           <Link href="/">
             <Image
               className="absolute w-full h-full object-contain cursor-pointer"
               fill
-              src={"/image-crop.png"}
+              src={"/streetopslogo.png"}
               alt="logo"
             />
           </Link>

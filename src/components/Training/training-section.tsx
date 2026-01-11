@@ -1,3 +1,4 @@
+"use client";
 import { Target, Brain, Presentation } from "lucide-react";
 
 const features = [
@@ -16,7 +17,7 @@ const features = [
   {
     title: "Expert-Led Facilitation",
     description:
-      "Led by seasoned facilitators who blend deep expertise with genuine human connection, creating safe spaces for growth.",
+      "Led by seasoned facilitators who blend deep expertise with genuine human connection, creating safe spaces where participants feel empowered to learn, grow and transform.",
     icon: <Presentation className="w-5 h-5 text-[#F28C8C]" />,
   },
 ];
@@ -50,7 +51,11 @@ export default function TrainingSection() {
                 {feature.icon}
               </div>
 
-              <h3 className="text-lg font-bold text-[#433838] Hero mb-2">
+              <h3
+                className={`${
+                  feature.title.length > 25 ? "text-md " : "text-lg"
+                }font-semibold text-[#433838] Hero mb-2`}
+              >
                 {feature.title}
               </h3>
 
