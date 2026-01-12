@@ -7,8 +7,6 @@ import { usePathname } from "next/navigation";
 export default function Header() {
   const pathName = usePathname();
 
-  console.log(pathName);
-
   return (
     <header className="lg:py-8 py-4 lg:px-8 px-4 z-30 p">
       <div className="max-w-7xl mx-auto flex items-center justify-between ">

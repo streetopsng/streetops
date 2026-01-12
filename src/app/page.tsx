@@ -4,7 +4,7 @@ import TrainingSection from "@/components/Training/training-section";
 import TrainingFormats from "@/components/Training/training-format";
 import TrainingTopics from "@/components/Training/training-topics";
 import TrainingCalendar from "@/components/Training/training-calendar";
-import Customization from "@/components/Training/training-customization";
+
 import TestimonialSection from "@/components/Training/testimonial";
 import FAQSection from "@/components/Training/faq";
 import ChoiceSection from "@/components/Training/choice";
@@ -17,6 +17,7 @@ import WhoWereBuilding from "@/components/LatestlandingPage/who-were-building";
 import Footer from "@/components/LatestlandingPage/footer";
 import dayjs from "dayjs";
 import Approach from "@/components/LatestlandingPage/approach";
+import Customization from "@/components/LatestlandingPage/customization";
 
 const ourStoryData = [
   {

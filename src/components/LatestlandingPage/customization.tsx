@@ -4,32 +4,40 @@ export default function Customization() {
   const businessTypes = [
     {
       number: "01",
-      title: "Initial Consultation",
-      description:
-        "We discuss your needs, timeline, and learning preferences in a friendly conversation.",
+      title: "Solo-preneur",
+      description: "onboarding for your first hire",
       position: "left",
     },
     {
       number: "02",
-      title: "Goal Assessment",
-      description:
-        "We identify your specific objectives and create measurable milestones for success.",
+      title: "SME",
+      description: " Simple onboarding for growing teams",
       position: "right",
     },
     {
       number: "03",
-      title: "Plan Creation ",
-      description:
-        "We design a personalized training program tailored to your unique requirements.",
+      title: "Enterprise",
+      description: "structure for large teams",
       position: "left",
     },
     {
       number: "04",
-      title: "Launch & Support ",
-      description:
-        "We begin your training journey with ongoing guidance and continuous support.",
+      title: "Social",
+      description: "community and volunteer onboarding",
       position: "right",
     },
+    {
+      number: "05",
+      title: "Project",
+      description: "Dev and technical teams",
+      position: "left",
+    },
+    // {
+    //   number: "06",
+    //   title: "Street plan",
+    //   description: "simple onboarding for informal workers make icons very simple and warm.",
+    //   position: "right",
+    // },
   ];
 
   return (
@@ -57,15 +65,10 @@ export default function Customization() {
       </div>
 
       <div className="relative z-10 max-w-4xl mx-auto pt-12">
-        <header className="text-center mb-10">
-          <h2 className="text-3xl md:text-4xl font-bold text-white Hero">
-            How we customize
-            <br /> your training
-          </h2>
-          <p className="text-white">
-            A simple, proven process tailored to your goals.
-          </p>
-        </header>
+        <h2 className="text-3xl md:text-4xl font-bold text-white Hero text-center mb-20">
+          Who we're <br /> building for
+        </h2>
+        <p>A simple, proven process tailored to your goals.</p>
 
         <div className="relative">
           {/* Center dashed line */}
