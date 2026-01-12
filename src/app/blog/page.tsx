@@ -8,7 +8,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { dispatchType, RootStateType } from "@/store";
 import { useQuery } from "@tanstack/react-query";
 import { blogPostType, storeBlogs } from "@/store/slices/allBlogs";
-import Footer from "@/components/LandingPageComponents/Footer";
+import Footer from "@/components/LatestlandingPage/footer";
 import PagePreloader from "@/utils/PagePreloader";
 import Header from "@/components/Training/header";
 import { motion } from "framer-motion";

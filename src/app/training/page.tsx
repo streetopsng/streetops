@@ -31,7 +31,7 @@ const Page = () => {
         {<Header />}
         {<Hero />}
       </div>
-      {<Approach />}
+      {/* {<Approach />} */}
       {<TrainingSection />}
       {<TrainingFormats />}
       {<TrainingTopics />}

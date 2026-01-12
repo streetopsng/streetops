@@ -42,7 +42,7 @@ export default function Approach() {
             }}
             initial={{ opacity: 0, x: -100 }}
             whileInView="visible"
-            transition={{ duration: 2, ease: "easeIn", delay: 1 }}
+            transition={{ duration: 2, ease: "easeIn", delay: 0.3 }}
             viewport={{ once: true, amount: 0.3 }}
           >
             <div>
@@ -62,7 +62,7 @@ export default function Approach() {
               }}
               initial={{ opacity: 0, height: 0 }}
               whileInView="visible"
-              transition={{ duration: 2, ease: "easeInOut", delay: 1 }}
+              transition={{ duration: 2, ease: "easeInOut", delay: 0.3 }}
               viewport={{ once: true, amount: 0.3 }}
               src="/new-assets/about-us-frame.svg"
               alt="about us frame"
@@ -74,7 +74,7 @@ export default function Approach() {
               }}
               initial={{ opacity: 0, x: 100 }}
               whileInView="visible"
-              transition={{ duration: 2, ease: "easeInOut", delay: 1 }}
+              transition={{ duration: 2, ease: "easeInOut", delay: 0.3 }}
               viewport={{ once: true, amount: 0.3 }}
               className=" text-sm  Hero leading-6"
             >
@@ -117,9 +117,9 @@ export default function Approach() {
                   transition={{
                     duration: 1.5,
                     ease: "easeInOut",
-                    delay: isMobile ? 1 : index + 1,
+                    delay: isMobile ? 0.3 : index + 0.5,
                   }}
-                  viewport={{ once: false, amount: 0.3 }}
+                  viewport={{ once: true, amount: 0.3 }}
                   key={index}
                   className="bg-[#FFF8F7] rounded-3xl p-6 flex flex-col items-center text-center border border-[#FAD9D9]/30"
                 >

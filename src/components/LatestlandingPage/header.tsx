@@ -1,44 +1,71 @@
-"use client"
-import Image from "next/image"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
+"use client";
+import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
+  const pathName = usePathname();
   return (
-    <header className="absolute top-0 left-0 right-0 z-50 px-6 py-4 mt-[-40] lg:mt-0">
-      <div className="max-w-7xl mx-auto flex items-center justify-between lg:mt-[-50]">
-        <div className="relative lg:w-[150px] lg:h-[150px] h-[125px] w-[125px]">
+    <header className="lg:py-4 py-2 lg:px-8 px-4 z-30 ">
+      <div className="max-w-7xl mx-auto flex items-center justify-between ">
+        <div className="relative lg:w-37.5 h-10  w-31.25">
           <Link href="/">
-            <Image 
+            <Image
               className="absolute w-full h-full object-contain cursor-pointer"
               fill
-              src={"/image.png"} 
+              src={"/streetopslogo.png"}
               alt="logo"
             />
           </Link>
         </div>
 
         <nav className="hidden md:flex items-center gap-8 ">
-          <Link href="#about" className="text-white Hero text-sm hover:text-white/80 transition-colors">
+          <Link
+            href="/#about"
+            className="text-white Hero text-sm hover:text-gray-300 transition-colors duration-500"
+          >
             About
           </Link>
-          <Link href="#ratecard" className="text-white Hero text-sm hover:text-white/80 transition-colors">
-            Ratecard
-          </Link>
-          <Link href="#services" className="text-white Hero text-sm hover:text-white/80 transition-colors">
+          {/* <Link
+            href="#ratecard"
+            className="text-white Hero text-sm hover:text-white/80 transition-colors"
+          >
+            Products
+          </Link> */}
+          <Link
+            href="/#services"
+            className="text-white Hero text-sm hover:text-gray-300 transition-colors duration-500"
+          >
             Services
           </Link>
-          <Link href="#how-it-works" className="text-white Hero text-sm hover:text-white/80 transition-colors">
+          <Link
+            href="#how-it-works"
+            className="text-white Hero text-sm hover:text-gray-300 transition-colors duration-500"
+          >
             How it works
           </Link>
         </nav>
 
-        <Link href="/get-started">
-          <Button className="bg-[#FA2120] hover:bg-[#FA2120] text-white Hero rounded-full px-6 text-sm">
-            Get started
+        {pathName == "/blog" ? (
+          <Link href="/">
+            <Button className="bg-white  text-slate-700 Hero rounded-full px-6 text-sm cursor-pointer hover:bg-white hover:text-primary transition duration-300 ">
+              Home
+            </Button>
+          </Link>
+        ) : (
+          <Link href="/blog">
+            <Button className="bg-white  text-slate-700 Hero rounded-full px-6 text-sm cursor-pointer hover:bg-white hover:text-primary transition duration-300 ">
+              Blog
+            </Button>
+          </Link>
+        )}
+        {/* <Link href="/blog">
+          <Button className="bg-primary  text-white Hero rounded-full px-6 text-sm cursor-pointer hover:bg-white hover:text-primary transition duration-300 ">
+            Blog
           </Button>
-        </Link>
+        </Link> */}
       </div>
     </header>
-  )
+  );
 }
