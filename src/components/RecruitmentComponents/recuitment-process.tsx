@@ -1,34 +1,41 @@
 import { SlidersHorizontal, Users } from "lucide-react";
 
-export default function Customization() {
+export default function RecuitmentProcess() {
   const businessTypes = [
     {
       number: "01",
-      title: "Initial Consultation",
+      title: "Discovery & Mapping",
       description:
-        "We discuss your needs, timeline, and learning preferences in a friendly conversation.",
+        "We analyze your compay culture, values, and specific role requirements to create a detailed candidate profile.",
       position: "left",
     },
     {
       number: "02",
-      title: "Goal Assessment",
+      title: "Talent Sourcing",
       description:
-        "We identify your specific objectives and create measurable milestones for success.",
+        "Our team leverages extensive networks and advanced tools to identify top-tier candidates matching your criteria.",
       position: "right",
     },
     {
       number: "03",
-      title: "Plan Creation ",
+      title: "Behavioral Assessment ",
       description:
-        "We design a personalized training program tailored to your unique requirements.",
+        "Comprehensive evaluation of candidates through structured interviews and personality assessments.",
       position: "left",
     },
     {
       number: "04",
-      title: "Launch & Support ",
+      title: "Shortlist & Interview ",
       description:
-        "We begin your training journey with ongoing guidance and continuous support.",
+        "We present carefully vetted candidates and coordinate the interview process for seamless selection.",
       position: "right",
+    },
+    {
+      number: "05",
+      title: "Integration Support",
+      description:
+        "Ongoing support during onboarding to ensure smooth transition and long-term success of new hires.",
+      position: "left",
     },
   ];
 
@@ -59,11 +66,12 @@ export default function Customization() {
       <div className="relative z-10 max-w-4xl mx-auto pt-12">
         <header className="text-center mb-10">
           <h2 className="text-3xl md:text-4xl font-bold text-white Hero">
-            How we customize
-            <br /> your training
+            Our <span className="font-sans">5</span>-Step Recruitment
+            <br /> Process
           </h2>
           <p className="text-white">
-            A simple, proven process tailored to your goals.
+            A systematic approach designed to find and secure the best talent
+            for your organization.
           </p>
         </header>
 

@@ -489,6 +489,7 @@ transform: rotateY(180deg);
   --font-winky: "Winky Rough";
   --font-roboto: "Roboto";
   --font-lato: "Lato";
+  --font-mont: "Montserrat";
 }
 
 :root {

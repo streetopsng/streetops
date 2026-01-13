@@ -58,7 +58,7 @@ export default function TrainingFormatsSmall() {
       </div>
 
       {/* Grid - Reduced width and padding */}
-      <div className="md:w-[90%] w-full bg-[#FD8D8C]/10 mx-auto flex flex-wrap justify-center gap-5 py-4">
+      <div className=" w-full bg-[#FD8D8C]/10 mx-auto flex flex-wrap justify-center gap-5 py-4">
         {formats.map((item, index) => (
           <div
             key={index}

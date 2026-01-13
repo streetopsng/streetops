@@ -67,7 +67,7 @@ export default function TrainingSection() {
         </div>
       </div>
 
-      <div className="absolute bottom-0 left-0 w-full h-16 opacity-10 pointer-events-none bg-[url('/pattern.png')] bg-repeat-x bg-contain rotate-180" />
+      {/* <div className="absolute bottom-0 left-0 w-full h-16 opacity-10 pointer-events-none bg-[url('/pattern.png')] bg-repeat-x bg-contain rotate-180" /> */}
       <img src="dash.png" alt="" />
     </section>
   );
