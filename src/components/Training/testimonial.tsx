@@ -30,7 +30,7 @@ export default function TestimonialSection() {
     <section className="py-10 px-4 bg-white font-sans">
       {/* Header Section - More Compact */}
       <div className="max-w-2xl mx-auto text-center mb-10">
-        <h2 className="text-3xl font-black text-red-950 mb-3 tracking-tight">
+        <h2 className="text-3xl font-semibold text-red-950 mb-3 tracking-tight">
           What Teams Say
         </h2>
         <p className="text-gray-500 text-sm leading-snug">
@@ -41,13 +41,13 @@ export default function TestimonialSection() {
       {/* Testimonial Cards Grid - Tighter Gaps */}
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-5 mb-10">
         {testimonials.map((t, index) => (
-          <div key={index} className="bg-[#FFF9F9] p-5 rounded-[24px] flex flex-col border border-red-50/50">
+          <div key={index} className="bg-[#FFF9F9] p-5 rounded-3xl flex flex-col border border-red-50/50">
             {/* Smaller Quote Icon */}
             <div className="w-9 h-9 bg-red-100 rounded-full flex items-center justify-center mb-4">
               <span className="text-red-400 text-xl font-serif">“</span>
             </div>
 
-            <p className="text-gray-600 text-sm leading-relaxed mb-6 flex-grow">
+            <p className="text-gray-600 text-sm leading-relaxed mb-6 grow">
               {t.content}
             </p>
 

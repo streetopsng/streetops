@@ -47,7 +47,7 @@ const page = () => {
   const mutation = useMutation({
     mutationFn: fetchBlog,
     onSuccess: (data) => {
-      console.log(data);
+      // console.log(data);
       setContent(data.data);
     },
     onError: (data) => {

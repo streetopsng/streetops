@@ -32,7 +32,8 @@ export default function Footer() {
             <div className="flex items-center gap-2">
               {/* LinkedIn */}
               <Link
-                href="#"
+                target="_blank"
+                href="https://www.linkedin.com/company/streetopsng"
                 className="text-[#2d1f1f] hover:text-[#c41e3a] transition-colors"
               >
                 <svg
@@ -46,7 +47,8 @@ export default function Footer() {
               </Link>
               {/* Instagram */}
               <Link
-                href="#"
+                target="_blank"
+                href="https://www.instagram.com/street_opsng/"
                 className="text-[#2d1f1f] hover:text-[#c41e3a] transition-colors"
               >
                 <svg
@@ -60,7 +62,8 @@ export default function Footer() {
               </Link>
               {/* X/Twitter */}
               <Link
-                href="#"
+                target="_blank"
+                href="https://x.com/StreetOpsng"
                 className="text-[#2d1f1f] hover:text-[#c41e3a] transition-colors"
               >
                 <svg
@@ -74,7 +77,8 @@ export default function Footer() {
               </Link>
               {/* TikTok */}
               <Link
-                href="#"
+                target="_blank"
+                href="https://www.tiktok.com/@streetops.ng"
                 className="text-[#2d1f1f] hover:text-[#c41e3a] transition-colors"
               >
                 <svg
