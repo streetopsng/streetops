@@ -94,7 +94,6 @@ export default function Approach() {
               {features.map((feature, index) => (
                 <motion.div
                   variants={{
-                    // hidden: { opacity: 0, x: -100 },
                     visible: { opacity: 1, x: 0, y: 0 },
                   }}
                   initial={{
@@ -104,15 +103,9 @@ export default function Approach() {
                       !isMobile && index % 2 == 0
                         ? -60
                         : !isMobile && index % 2 !== 0
-                        ? 60
-                        : 0,
+                          ? 60
+                          : 0,
                   }}
-                  //  y:
-                  //   !isMobile && index % 2 == 0
-                  //     ? -60
-                  //     : !isMobile && index % 2 !== 0
-                  //     ? 60
-                  //     : 0,
                   whileInView="visible"
                   transition={{
                     duration: 1.5,

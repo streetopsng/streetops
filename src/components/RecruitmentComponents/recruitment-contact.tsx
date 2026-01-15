@@ -20,7 +20,7 @@ const contactInfo = [
 ];
 const RecruitmentContact = () => {
   return (
-    <div className="flex flex-wrap justify-between lg:px-16 md:px-8 px-4   gap-y-4">
+    <div className="flex flex-wrap justify-between lg:px-16 md:px-8 px-4   gap-y-4  bg-white py-6">
       {contactInfo.map((item, index) => {
         return (
           <section

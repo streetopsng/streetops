@@ -3,9 +3,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { usePathname } from "next/navigation";
+import { useDispatch } from "react-redux";
+import { dispatchType } from "@/store";
+import { Menu } from "lucide-react";
+import { openMobileMenu } from "@/store/slices/opemMobileMenuSlice";
 
 export default function Header() {
   const pathName = usePathname();
+  const dispatch = useDispatch<dispatchType>();
 
   return (
     <header className="lg:py-8 py-4 lg:px-8 px-4 z-30 p">
@@ -23,10 +28,10 @@ export default function Header() {
 
         <nav className="hidden md:flex items-center gap-8 ">
           <Link
-            href="/#about"
+            href="/training"
             className="text-white Hero text-sm hover:text-gray-300 transition-colors duration-500"
           >
-            About
+            Training
           </Link>
           {/* <Link
             href="#ratecard"
@@ -35,32 +40,40 @@ export default function Header() {
             Products
           </Link> */}
           <Link
-            href="/#services"
+            href="/recruitment"
             className="text-white Hero text-sm hover:text-gray-300 transition-colors duration-500"
           >
-            Services
+            Recruitment
           </Link>
           <Link
-            href="#how-it-works"
+            href="/team-bonding"
             className="text-white Hero text-sm hover:text-gray-300 transition-colors duration-500"
           >
-            How it works
+            Team Bonding
           </Link>
         </nav>
 
-        {pathName == "/blog" ? (
-          <Link href="/">
-            <Button className="bg-white  text-slate-700 Hero rounded-full px-6 text-sm cursor-pointer hover:bg-white hover:text-primary transition duration-300 ">
-              Home
-            </Button>
-          </Link>
-        ) : (
-          <Link href="/blog">
-            <Button className="bg-white  text-slate-700 Hero rounded-full px-6 text-sm cursor-pointer hover:bg-white hover:text-primary transition duration-300 ">
-              Blog
-            </Button>
-          </Link>
-        )}
+        <aside className="flex justify-between items-center gap-x-2">
+          {pathName == "/blog" ? (
+            <Link href="/">
+              <Button className="bg-white  text-slate-700 Hero rounded-full px-6 text-sm cursor-pointer hover:bg-white hover:text-primary transition duration-300 ">
+                Home
+              </Button>
+            </Link>
+          ) : (
+            <Link href="/blog">
+              <Button className="bg-white  text-slate-700 Hero rounded-full px-6 text-sm cursor-pointer hover:bg-white hover:text-primary transition duration-300 ">
+                Blog
+              </Button>
+            </Link>
+          )}
+          <Button
+            onClick={() => dispatch(openMobileMenu())}
+            className="md:hidden bg-white text-black hover:text-primary hover:bg-gray-300"
+          >
+            <Menu />
+          </Button>
+        </aside>
         {/* <Link href="/blog">
           <Button className="bg-primary  text-white Hero rounded-full px-6 text-sm cursor-pointer hover:bg-white hover:text-primary transition duration-300 ">
             Blog

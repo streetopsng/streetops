@@ -1,3 +1,4 @@
+"use client";
 import Header from "@/components/Training/header";
 import Hero from "@/components/Training/hero";
 import TrainingSection from "@/components/Training/training-section";
@@ -18,6 +19,7 @@ import Footer from "@/components/LatestlandingPage/footer";
 import dayjs from "dayjs";
 import Approach from "@/components/LatestlandingPage/approach";
 import Customization from "@/components/LatestlandingPage/customization";
+import { useState } from "react";
 
 const ourStoryData = [
   {
@@ -48,40 +50,42 @@ const ourStoryData = [
 
 const page = () => {
   return (
-    <div className="">
-      <div className="relative ">
-        <>
-          <div className="absolute h-full -z-1 w-full bg-linear-to-b from-[#FA2120] to-[#941413] " />
-          <div
-            className="absolute inset-0 opacity-25 -z-1"
-            style={{
-              backgroundImage: `url('/bric.png')`,
-              backgroundSize: "cover",
-              backgroundPosition: "center top",
-            }}
-          />
-        </>
-        {<Header />}
-        {<Hero />}
-      </div>
-      {<Approach />}
-      {/* {<TrainingSection />}
+    <>
+      <div className="">
+        <div className="relative ">
+          <>
+            <div className="absolute h-full -z-1 w-full bg-linear-to-b from-[#FA2120] to-[#941413] " />
+            <div
+              className="absolute inset-0 opacity-25 -z-1"
+              style={{
+                backgroundImage: `url('/bric.png')`,
+                backgroundSize: "cover",
+                backgroundPosition: "center top",
+              }}
+            />
+          </>
+          {<Header />}
+          {<Hero />}
+        </div>
+        {<Approach />}
+        {/* {<TrainingSection />}
       {<TrainingFormats />}
       {<TrainingTopics />}
       {<TrainingCalendar />} */}
-      {<Services />}
-      {<Customization />}
-      {/* {<TestimonialSection />}
+        {<Services />}
+        {<Customization />}
+        {/* {<TestimonialSection />}
       {<FAQSection />}
       {<ChoiceSection />}
       {<TrainingCta />} */}
 
-      {/* {<WhoWereBuilding/>} */}
-      {<HowItWorks />}
-      {/* {<CtaSection/>} */}
-      <Footer />
-      {/* <SlideContent/> */}
-    </div>
+        {/* {<WhoWereBuilding/>} */}
+        {<HowItWorks />}
+        {/* {<CtaSection/>} */}
+        <Footer />
+        {/* <SlideContent/> */}
+      </div>
+    </>
   );
 };
 

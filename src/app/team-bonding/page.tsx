@@ -11,7 +11,7 @@ import React from "react";
 
 const Page = () => {
   return (
-    <div>
+    <div className="">
       <div className="relative ">
         <>
           <div className="absolute h-full -z-1 w-full bg-linear-to-b from-[#FA2120] to-[#941413] " />
@@ -35,6 +35,7 @@ const Page = () => {
       <LetUsBuildYourTeam />
       {/* contact form from recruitment */}
       <RecruitmentContact />
+
       <Footer />
     </div>
   );
