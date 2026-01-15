@@ -1,5 +1,5 @@
 import React from "react";
-import RecruitmentForm from "./recruitment-form";
+import RecruitmentForm from "../RecruitmentComponents/recruitment-form";
 
 const LetUsBuildYourTeam = () => {
   return (

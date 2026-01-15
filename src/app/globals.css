@@ -471,6 +471,7 @@ transform: rotateY(180deg);
   --color-greenI: #e8f9fc;
   --color-bgcolor: #f8f8f8;
   --color-bgcolorTwo: #dce0e6;
+  --color-lightPink: #fd8d8c;
 
   /* break points */
   --breakpoint-xxs: 330px;
