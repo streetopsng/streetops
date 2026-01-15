@@ -98,7 +98,7 @@ const WaysToBuild = () => {
               <p className="py-2">{item.description}</p>
             </header>
 
-            <article className=" w-full bg-white rounded-full py-2 text-sm">
+            <article className=" w-full bg-white rounded-2xl py-2 text-sm">
               {/* team sizes */}
 
               <section className="mt-2">
