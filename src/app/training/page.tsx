@@ -34,7 +34,7 @@ const Page = () => {
       {<TrainingSection />}
       {<TrainingFormats />}
       {<TrainingTopics />}
-      {<TrainingCalendar />}
+      {/* {<TrainingCalendar />} */}
       {<Customization />}
       {<TestimonialSection />}
       {<FAQSection />}

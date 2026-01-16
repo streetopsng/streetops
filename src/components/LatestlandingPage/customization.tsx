@@ -32,12 +32,6 @@ export default function Customization() {
       description: "Dev and technical teams",
       position: "left",
     },
-    // {
-    //   number: "06",
-    //   title: "Street plan",
-    //   description: "simple onboarding for informal workers make icons very simple and warm.",
-    //   position: "right",
-    // },
   ];
 
   return (
@@ -95,7 +89,7 @@ export default function Customization() {
                     </div>
 
                     {/* Center icon */}
-                    <div className="absolute left-1/2 transform -translate-x-1/2 w-14 h-14 rounded-full border-2 border-[#c41e3a] bg-[#1a0f0f] flex items-center justify-center z-10">
+                    <div className="absolute left-1/2 transform -translate-x-1/2 w-10 h-10 rounded-full border-2 border-[#c41e3a] bg-[#1a0f0f] flex items-center justify-center z-10">
                       <Users className="w-5 h-5 text-[#c41e3a]" />
                     </div>
 
@@ -134,7 +128,7 @@ export default function Customization() {
                     </div>
 
                     {/* Center icon */}
-                    <div className="absolute left-1/2 transform -translate-x-1/2 w-14 h-14 rounded-full border-2 border-[#c41e3a] bg-[#1a0f0f] flex items-center justify-center z-10">
+                    <div className="absolute left-1/2 transform -translate-x-1/2 w-10 h-10 rounded-full border-2 border-[#c41e3a] bg-[#1a0f0f] flex items-center justify-center z-10">
                       <Users className="w-5 h-5 text-[#c41e3a]" />
                     </div>
 
