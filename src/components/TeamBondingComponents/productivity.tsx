@@ -1,4 +1,8 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
+
+import { useWindowWidth } from "@/custom-hooks/useScreenWidth";
+import { motion } from "framer-motion";
 const recruitmentData = [
   {
     title: "Trust = Speed",
@@ -19,6 +23,12 @@ const recruitmentData = [
 ];
 
 const Productivity = () => {
+  const width: number = useWindowWidth();
+  const [isMobile, setIsMobile] = useState<boolean>(false);
+
+  useEffect(() => {
+    setIsMobile(width <= 650);
+  }, []);
   return (
     <section className="bg-white py-12  font-sans lg:px-20 md:px-20 px-4">
       <img src="dash.png" alt="" className="pb-10" />
@@ -37,7 +47,27 @@ const Productivity = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {recruitmentData.map((item, index) => (
-          <div
+          <motion.div
+            variants={{
+              visible: { opacity: 1, x: 0, y: 0 },
+            }}
+            initial={{
+              opacity: 0,
+              x: isMobile ? -60 : 0,
+              y:
+                !isMobile && index % 2 == 0
+                  ? -60
+                  : !isMobile && index % 2 !== 0
+                    ? 60
+                    : 0,
+            }}
+            whileInView="visible"
+            transition={{
+              duration: 1.5,
+              ease: "easeInOut",
+              delay: isMobile ? 0.3 : index + 0.5,
+            }}
+            viewport={{ once: true, amount: 0.3 }}
             key={index}
             className="bg-[#FFF8F7] rounded-3xl p-6 flex flex-col items-start transition-transform hover:scale-[1.01] duration-300 border border-[#FAD9D9]/30"
           >
@@ -57,7 +87,7 @@ const Productivity = () => {
             <p className="text-[#2d1f1f]/70 leading-relaxed text-sm">
               {item.description}
             </p>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>

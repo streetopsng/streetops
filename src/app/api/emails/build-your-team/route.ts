@@ -34,7 +34,8 @@ export async function POST(request: NextRequest) {
     const { data, error } = await resend.emails.send({
       from: "onboarding@resend.dev",
       to: "streetopsng@gmail.com",
-      subject: "New Build Your Team Request",
+      subject: `New Recruitment Request from ${companyName}`,
+      replyTo: email,
       react: BuildYourTeam({
         fullName,
         email,

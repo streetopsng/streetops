@@ -8,6 +8,7 @@ import Script from "next/script";
 import PersistBlogPosts from "@/components/PersistBlogPosts";
 import Modal from "@/components/modal";
 import ReactQueryProvider from "@/components/ReactQueryProvider";
+import { MobileMenu } from "@/components/mobile-menu";
 
 export const metadata: Metadata = {
   title: "StreetOps",
@@ -66,6 +67,7 @@ export default function RootLayout({
             {/* <SubLinksComponent/> */}
             {/* <PersistBlogPosts/> */}
             <Modal />
+            <MobileMenu />
             {children}
           </ClientProvider>
         </ReactQueryProvider>

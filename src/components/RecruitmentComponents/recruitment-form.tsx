@@ -79,12 +79,13 @@ export default function RecruitmentForm() {
             "Your request was successfully sent , we'll get back to you promptly"
           )
         );
+        form.reset();
       } else if (response.status == 400) {
         dispatch(openModal(response.error));
       } else {
         dispatch(
           openModal(
-            "sorry, currently unable to process your request at this, kinldy try again later or reach out to us via streetopsng@gmail.com"
+            "sorry, currently unable to process your request at this, kinldy try again later or reach out to us via our email: streetopsng@gmail.com"
           )
         );
       }
@@ -237,6 +238,7 @@ export default function RecruitmentForm() {
           <div className="flex justify-center pt-4">
             <Button
               type="submit"
+              disabled={isLoading}
               className="px-10 rounded-full bg-secondPrimary hover:bg-[#4a0c0c] w-2/4"
             >
               {isLoading ? (

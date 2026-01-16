@@ -77,7 +77,7 @@ const TeamBondingExperience = () => {
         ))}
       </div>
 
-      <div className="">
+      <div className=" lg:mt-8 mt-4">
         <p className="text-center my-2">
           Ready to transform your team dynamics?
         </p>

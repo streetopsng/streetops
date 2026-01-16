@@ -35,6 +35,9 @@ export default function BuildYourTeam({
       <Body style={body}>
         <Container style={container}>
           <Heading style={heading}>Build Your Team Request</Heading>
+          <Text style={paragraph}>
+            This message was sent from the recruitment form on your website.
+          </Text>
 
           <Text style={paragraph}>
             You have received a new recruitment request with the following
