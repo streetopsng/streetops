@@ -86,8 +86,8 @@ const WaysToBuild = () => {
                 item.type == "onsite"
                   ? "text-[#24D80C] bg-[#E0F6DE]"
                   : item.type == "remote"
-                  ? "text-[#0A66C2] bg-[#E4F2FF]"
-                  : "text-[#F59E0B] bg-[#FDEFD9]"
+                    ? "text-[#0A66C2] bg-[#E4F2FF]"
+                    : "text-[#F59E0B] bg-[#FDEFD9]"
               } font-bold px-4  rounded-full uppercase`}
             >
               {item.type}
@@ -98,7 +98,7 @@ const WaysToBuild = () => {
               <p className="py-2">{item.description}</p>
             </header>
 
-            <article className=" w-full bg-white rounded-2xl py-2 text-sm   ">
+            <article className=" w-full bg-white rounded-lg  p-2 text-[0.85rem]   ">
               {/* team sizes */}
 
               <section className="mt-2">

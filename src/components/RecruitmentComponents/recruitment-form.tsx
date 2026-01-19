@@ -239,7 +239,7 @@ export default function RecruitmentForm() {
             <Button
               type="submit"
               disabled={isLoading}
-              className="px-10 rounded-full bg-secondPrimary hover:bg-[#4a0c0c] w-2/4"
+              className="px-10 rounded-full bg-secondPrimary hover:bg-[#4a0c0c] md:w-2/4 w-4/5"
             >
               {isLoading ? (
                 <Loader2 className="animate-spin" />
