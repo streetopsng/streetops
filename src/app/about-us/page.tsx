@@ -5,6 +5,7 @@ import OurKeyApproach from "@/components/AboutUsComponents/our-key-approach";
 import OurVisionForward from "@/components/AboutUsComponents/our-vision-forward";
 import ReadyToBuild from "@/components/AboutUsComponents/ready-to-build";
 import Footer from "@/components/LatestlandingPage/footer";
+import TeamMembers from "@/components/team-members";
 import Header from "@/components/Training/header";
 import React from "react";
 
@@ -29,6 +30,7 @@ const Page = () => {
         </div>
 
         {/*  */}
+        <TeamMembers />
         <OurBrandStory />
         <OurCoreMission />
         <OurKeyApproach />
