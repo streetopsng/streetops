@@ -570,3 +570,7 @@ transform: rotateY(180deg);
     @apply bg-background text-foreground;
   }
 }
+
+.underline-text {
+  text-decoration: underline;
+}
