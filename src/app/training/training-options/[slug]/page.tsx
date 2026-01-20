@@ -1,12 +1,9 @@
 import { formats } from "@/utils/formats";
 
-type PageProps = {
-  params: {
-    slug: string;
-  };
+type ProgramPageProps = {
+  params: { slug: string };
 };
-
-export default function ProgramPage({ params }: PageProps) {
+export default function ProgramPage({ params }: ProgramPageProps) {
   const program = formats.find((f) => f.slug === params.slug);
 
   if (!program) {
