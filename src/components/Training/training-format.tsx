@@ -1,45 +1,57 @@
+"use client";
 import React from "react";
-import { Zap, Clock, Calendar, Sun, Settings2, ArrowRight } from "lucide-react";
+import {
+  Zap,
+  Clock,
+  Calendar,
+  Sun,
+  Settings2,
+  ArrowRight,
+  Router,
+} from "lucide-react";
+import { formats } from "@/utils/formats";
+import { useRouter } from "next/navigation";
 
-const formats = [
-  {
-    title: "Quick Hit",
-    duration: "15 - 30 mins",
-    description:
-      "Best for busy teams needing focused skill boosts and immediate takeaways.",
-    icon: <Zap className="w-5 h-5 text-red-400" />,
-  },
-  {
-    title: "Half-Day",
-    duration: "3 - 4 hours",
-    description:
-      "Best for deep dives into specific topics with hands-on practice.",
-    icon: <Clock className="w-5 h-5 text-red-400" />,
-  },
-  {
-    title: "Full-Day",
-    duration: "6 - 8 hours",
-    description:
-      "Best for comprehensive skill transformation with immersive learning.",
-    icon: <Sun className="w-5 h-5 text-red-400" />,
-  },
-  {
-    title: "Multi-Session",
-    duration: "2 - 6 weeks",
-    description:
-      "Best for busy building behavioural change through spaced learning.",
-    icon: <Calendar className="w-5 h-5 text-red-400" />,
-  },
-  {
-    title: "Custom",
-    duration: "Tailored",
-    description:
-      "Best for unique organizational challenges requiring specialized solutions.",
-    icon: <Settings2 className="w-5 h-5 text-red-400" />,
-  },
-];
+// const formats = [
+//   {
+//     title: "Quick Hit",
+//     duration: "15 - 30 mins",
+//     description:
+//       "Best for busy teams needing focused skill boosts and immediate takeaways.",
+//     icon: <Zap className="w-5 h-5 text-red-400" />,
+//   },
+//   {
+//     title: "Half-Day",
+//     duration: "3 - 4 hours",
+//     description:
+//       "Best for deep dives into specific topics with hands-on practice.",
+//     icon: <Clock className="w-5 h-5 text-red-400" />,
+//   },
+//   {
+//     title: "Full-Day",
+//     duration: "6 - 8 hours",
+//     description:
+//       "Best for comprehensive skill transformation with immersive learning.",
+//     icon: <Sun className="w-5 h-5 text-red-400" />,
+//   },
+//   {
+//     title: "Multi-Session",
+//     duration: "2 - 6 weeks",
+//     description:
+//       "Best for busy building behavioural change through spaced learning.",
+//     icon: <Calendar className="w-5 h-5 text-red-400" />,
+//   },
+//   {
+//     title: "Custom",
+//     duration: "Tailored",
+//     description:
+//       "Best for unique organizational challenges requiring specialized solutions.",
+//     icon: <Settings2 className="w-5 h-5 text-red-400" />,
+//   },
+// ];
 
 export default function TrainingFormatsSmall() {
+  const router = useRouter();
   return (
     <section className="bg-white py-12 px-2 font-sans">
       {/* <img src="dash.png" alt="" /> */}
@@ -76,11 +88,16 @@ export default function TrainingFormatsSmall() {
                 {item.title}
               </h3>
               <p className="text-gray-500 text-xs leading-normal mb-6">
-                {item.description}
+                {item.subtitle}
               </p>
             </div>
 
-            <button className="flex items-center text-red-400 font-bold hover:text-red-500 transition-colors text-[11px] group">
+            <button
+              onClick={() => {
+                router.push(`/training/training-options/${item.slug}`);
+              }}
+              className="flex items-center text-red-400 font-bold hover:text-red-500 transition-colors text-[11px] group cursor-pointer"
+            >
               Explore this format
               <ArrowRight className="ml-1.5 w-3 h-3 transition-transform group-hover:translate-x-1" />
             </button>

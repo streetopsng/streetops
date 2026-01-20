@@ -5,7 +5,7 @@ import gsap from "gsap";
 import SplitText from "gsap/src/SplitText";
 import { motion } from "framer-motion";
 gsap.registerPlugin(SplitText);
-export default function Hero() {
+export default function AboutUsHero() {
   const [name, setName] = useState("");
   const gsapCtx = useRef<gsap.Context | null>(null);
 
@@ -40,9 +40,7 @@ export default function Hero() {
 
       <aside className="">
         <h1 className="text-4xl Hero hero-text md:text-6xl lg:text-7xl font-bold  text-white mb-5  leading-[1.15] ">
-          Productive Teams
-          <br />
-          Achieving Business Goals
+          StreetOps - The Brand
         </h1>
 
         <div className="overflow-y-hidden ">
@@ -57,8 +55,8 @@ export default function Hero() {
             viewport={{ once: true, amount: 0.3 }}
             className="text-white/90 text-lg mb-8 max-w-xl mx-auto leading-relaxed  z-10"
           >
-            Plan the right workforce for your business model using behavioural
-            Technology
+            StreetOps is a social productivity company, helping Nigerian
+            businesses turn disconnected employees into productive teams.
           </motion.p>
         </div>
       </aside>
@@ -81,9 +79,9 @@ export default function Hero() {
       {/* Bottom Image */}
       <div className="flex justify-center w-full mt-16">
         <img
-          src="/people.png"
+          src="/new-assets/about-us.png"
           alt="People collaboration"
-          className="max-w-[90%] md:max-w-full h-auto object-contain select-none"
+          className="lg:w-[90%] md:w-[50%] w-[90%] h-75 lg:h-100 object-contain select-none"
         />
       </div>
     </section>

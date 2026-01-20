@@ -62,7 +62,7 @@ export default function Customization() {
         <h2 className="text-3xl md:text-4xl font-bold text-white Hero text-center mb-20">
           Who we're <br /> building for
         </h2>
-        <p>A simple, proven process tailored to your goals.</p>
+        {/* <p>A simple, proven process tailored to your goals.</p> */}
 
         <div className="relative">
           {/* Center dashed line */}

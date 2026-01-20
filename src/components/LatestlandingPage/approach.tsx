@@ -7,7 +7,7 @@ const features = [
   {
     title: "The Platform",
     description:
-      "Tracks engagement, connection, and contribution. Generates personalized onboarding journeys.",
+      "Tracks engagement, connection and contribution. Generates personalized team plans.",
     icon: "/new-assets/vector.svg",
   },
   {
