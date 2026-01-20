@@ -1,10 +1,11 @@
 import { formats } from "@/utils/formats";
 
-type ProgramPageProps = {
-  params: { slug: string };
-};
-export default function ProgramPage({ params }: ProgramPageProps) {
-  const program = formats.find((f) => f.slug === params.slug);
+interface PageProps {
+  params: Promise<{ slug: string }>;
+}
+export default async function ProgramPage({ params }: PageProps) {
+  const { slug } = await params;
+  const program = formats.find((f) => f.slug === slug);
 
   if (!program) {
     return <div>Program not found</div>;
