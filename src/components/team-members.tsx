@@ -215,8 +215,8 @@ const TeamMembers = () => {
       x: 0,
       transition: {
         duration: 1,
-        ease: "easeInOut",
-        delay: 0.5,
+        ease: "easeIn",
+        delay: 0.2,
       },
     },
   };
@@ -229,7 +229,7 @@ const TeamMembers = () => {
             THE SQUAD
           </h1>
         </div>
-        <section className="flex flex-wrap items-center gap-x-2 gap-y-8">
+        <section className="flex flex-wrap justify-center gap-x-2 gap-y-8  py-2">
           {data.map((item, index) => {
             const isEven = index % 2 === 0;
 
@@ -240,12 +240,12 @@ const TeamMembers = () => {
                 variants={itemVariants}
                 initial={isEven ? "hiddenLeft" : "hiddenRight"}
                 whileInView="visible"
-                viewport={{ once: false, amount: 0.3 }}
+                viewport={{ once: false, amount: 0.2 }}
               >
                 <img
                   src={item.img}
                   alt={item.name}
-                  className="grayscale hover:grayscale-0 object-cover h-50 w-50 rounded-md"
+                  className="grayscale transition-all duration-500 hover:grayscale-0 focus:grayscale-0 object-cover h-50 w-50 rounded-md"
                 />
 
                 <span className="font-barlow font-semibold uppercase text-md text-primary my-4">
