@@ -10,32 +10,32 @@ const OurKeyApproach = () => {
         </h2>
       </div>
 
-      <article className="text-center bg-[#FFF9F9] md:px-4 px-2 py-8 rounded-lg border-lightPink border text-sm flex flex-col gap-y-2">
+      <article className="text-center bg-[#FFF9F9] md:px-4 px-2 py-8 rounded-lg border-lightPink border text-sm flex flex-col items-center gap-y-2">
         <p>
           The <span className="font-semibold">STREET</span> Framework defines
           ideal team traits:
         </p>
         <aside className="text-center">
-          <p>
+          <div className="flex items-center gap-x-4">
             <span className="font-semibold">S</span> - <span>Sharp</span>
-          </p>
-          <p>
+          </div>
+          <div className="flex items-center gap-x-4">
             <span className="font-semibold">T</span> - <span>Tenacious</span>
-          </p>
-          <p>
+          </div>
+          <div className="flex items-center gap-x-4">
             <span className="font-semibold">R</span> -{" "}
             <span>Reflective, Resourceful</span>
-          </p>
-          <p>
+          </div>
+          <div className="flex items-center gap-x-4">
             <span className="font-semibold">E</span> - <span>Energetic</span>
-          </p>
-          <p>
+          </div>
+          <div className="flex items-center gap-x-4">
             <span className="font-semibold">E</span> -{" "}
             <span> Entrepreneurial</span>
-          </p>
-          <p>
+          </div>
+          <div className="flex items-center gap-x-4">
             <span className="font-semibold">T</span> - <span>Team-first</span>
-          </p>
+          </div>
         </aside>
         <p>
           Services like Recruitment, Onboarding, Training, and Team Bonding make

@@ -20,6 +20,7 @@ import dayjs from "dayjs";
 import Approach from "@/components/LatestlandingPage/approach";
 import Customization from "@/components/LatestlandingPage/customization";
 import { useState } from "react";
+import StreetOpsApp from "@/components/LatestlandingPage/streetops-app";
 
 const ourStoryData = [
   {
@@ -72,6 +73,7 @@ const page = () => {
       {<TrainingFormats />}
       {<TrainingTopics />}
       {<TrainingCalendar />} */}
+        <StreetOpsApp />
         {<Services />}
         {<Customization />}
         {/* {<TestimonialSection />}
