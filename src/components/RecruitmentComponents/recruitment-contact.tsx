@@ -2,18 +2,21 @@ const contactInfo = [
   {
     id: 1,
     title: "Email Us",
+    link: "mailto:info@streetops.ng",
     value: "streetopsng@gmail.com",
     icon: "/new-assets/email-us.svg",
   },
   {
     id: 2,
     title: "Call Us",
+    link: "#",
     value: "+234 800 STREETOPS",
     icon: "/new-assets/call-us.svg",
   },
   {
     id: 3,
     title: "Visit Us",
+    link: "#",
     value: "Lagos, Nigeria",
     icon: "/new-assets/visit-us.svg",
   },
@@ -23,7 +26,8 @@ const RecruitmentContact = () => {
     <div className="flex flex-wrap justify-between lg:px-16 md:px-8 px-4   gap-y-4  bg-white py-6">
       {contactInfo.map((item, index) => {
         return (
-          <section
+          <a
+            href={item.link}
             key={index}
             className="bg-white shadow-2xl md:w-[30%] w-full rounded-2xl flex flex-col items-center justify-center py-4"
           >
@@ -32,7 +36,7 @@ const RecruitmentContact = () => {
             </div>
             <h1 className="font-semibold">{item.title}</h1>
             <p className="text-sm">{item.value}</p>
-          </section>
+          </a>
         );
       })}
     </div>

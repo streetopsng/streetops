@@ -9,8 +9,8 @@ gsap.registerPlugin(SplitText);
 const data = [
   {
     id: 1,
-    name: "Eden",
-    img: "vectors/Eden-Okerezi.jpg",
+    name: "Gozienna",
+    img: "vectors/Gozienna-Anamelechi.jpeg",
   },
   {
     id: 2,
@@ -49,13 +49,18 @@ const data = [
   },
   {
     id: 9,
-    name: "Onyekachi",
-    img: "/vectors/Onyekachi-Nwabeke.jpg",
+    name: "Nkemakonam",
+    img: "/vectors/Nkemakonam-Okoh.jpg",
   },
   {
     id: 10,
     name: "Tomilola",
     img: "/vectors/Tomilola.jpg",
+  },
+  {
+    id: 11,
+    name: "Onyekachi",
+    img: "/vectors/Onyekachi-Nwabeke.jpg",
   },
 ];
 
@@ -226,7 +231,7 @@ const TeamMembers = () => {
       <aside className="lg:hidden overflow-hidden">
         <div className="overflow-y-hidden my-8">
           <h1 className="team-members text-center text-secondPrimary  text-[2rem] font-black underline ">
-            THE SQUAD
+            THE FLEET
           </h1>
         </div>
         <section className="flex flex-wrap justify-center gap-x-2 gap-y-8  py-2">
@@ -259,7 +264,7 @@ const TeamMembers = () => {
       <aside className="lg:block hidden">
         <div className="overflow-y-hidden">
           <h1 className="team-members text-center text-secondPrimary  text-[6rem] font-black ">
-            THE SQUAD
+            THE FLEET
           </h1>
         </div>
 
