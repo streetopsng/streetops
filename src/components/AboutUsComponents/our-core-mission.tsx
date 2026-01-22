@@ -11,7 +11,7 @@ const OurCoreMission = () => {
       </div>
 
       <article className="text-center bg-[#FFF9F9] md:px-4 px-2 py-8 rounded-lg border-lightPink border text-sm flex flex-col gap-y-2">
-        <p>
+        <p className="lg:w-[70%] md:w-[85%] w-full mx-auto">
           StreetOps creates social productivity in every team touched, solving
           the expensive issue of disconnected employees. The platform tracks
           engagement, connection, and contribution, while expert services handle

@@ -2,36 +2,36 @@
 import { motion } from "framer-motion";
 
 const services = [
+  // {
+  //   id: "01",
+  //   title: "Staff mapping",
+  //   description:
+  //     "Strategic role planning before hire. Know what you need and how it fits together",
+  //   img: "/new-assets/staff-mapping.svg",
+  // },
   {
     id: "01",
-    title: "Staff mapping",
-    description:
-      "Strategic role planning before hire. Know what you need and how it fits together",
-    img: "/new-assets/staff-mapping.svg",
-  },
-  {
-    id: "02",
     title: "Recruitment",
     description:
       "Culture-fit candidates who thrive in your environment. Skills get them in. Culture keeps them. ",
     img: "/new-assets/recruit.svg",
   },
   {
-    id: "03",
+    id: "02",
     title: "Onboarding",
     description:
       "Transform strangers into productive teammates in 30 days. Delivered by expert vectors. Tracked by platform.",
     img: "/new-assets/onboarding.svg",
   },
   {
-    id: "04",
+    id: "03",
     title: "Training and Development",
     description:
       "High-engagement skills training. Collaborative learning that actually sticks. ",
     img: "/new-assets/training.svg",
   },
   {
-    id: "05",
+    id: "04",
     title: "Team Bonding (Fun Street)",
     description:
       "Monthly experiences that strengthen connections and show up in productivity.",
@@ -45,7 +45,7 @@ export default function Services() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-thirdPrimary Hero md:mb-6 mb-2 tracking-tight">
-            The streetops <br className="md:hidden" /> service
+            The Streetops <br className="md:hidden" /> Service
           </h2>
           <p className="text-[#2d1f1f]/80 md:text-lg text-sm max-w-2xl mx-auto leading-relaxed">
             StreetOps creates solutions for building stronger, cultured, and
