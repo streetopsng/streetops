@@ -25,7 +25,9 @@ export default function Footer() {
             <h4 className="font-semibold text-[#2d1f1f] mb-4 text-sm">
               Contact us
             </h4>
-            <p className="text-[#2d1f1f]/60 text-sm mb-4">Info@streetops.com</p>
+            <p className="text-[#2d1f1f]/60 text-sm mb-4">
+              <a href="mailto:info@streetops.ng">info@streetops.ng</a>
+            </p>
             <h4 className="font-semibold text-[#2d1f1f] mb-3 text-sm">
               Follow us
             </h4>
@@ -109,7 +111,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="/blog"
                   className="text-[#2d1f1f]/60 text-sm hover:text-[#c41e3a] transition-colors"
                 >
                   Blog

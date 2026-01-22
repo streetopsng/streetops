@@ -1,23 +1,28 @@
 import { Button } from "@react-email/components";
+import { link } from "fs";
 import { Clock } from "lucide-react";
+import Link from "next/link";
 import React from "react";
 import { BsWhatsapp } from "react-icons/bs";
 const contactInfo = [
   {
     id: 1,
     title: "Email Us",
+    link: "mailto:info@streetops.ng",
     value: "streetopsng@gmail.com",
     icon: "/new-assets/email-us.svg",
   },
   {
     id: 2,
     title: "Call Us",
+    link: "#",
     value: "+234 800 STREETOPS",
     icon: "/new-assets/call-us.svg",
   },
   {
     id: 3,
     title: "Visit Us",
+    link: "#",
     value: "Lagos, Nigeria",
     icon: "/new-assets/visit-us.svg",
   },
@@ -41,7 +46,8 @@ const ReadyToBuild = () => {
           <section className="flex flex-wrap justify-between lg:px-16 md:px-8 px-4   gap-y-4 ">
             {contactInfo.map((item, index) => {
               return (
-                <section
+                <Link
+                  href={item.link}
                   key={index}
                   className="bg-white shadow-2xl md:w-[30%] w-full rounded-2xl flex flex-col items-center justify-center py-4"
                 >
@@ -50,19 +56,19 @@ const ReadyToBuild = () => {
                   </div>
                   <h1 className="font-semibold">{item.title}</h1>
                   <p className="text-sm">{item.value}</p>
-                </section>
+                </Link>
               );
             })}
           </section>
 
-          <aside className="flex justify-around md:flex-row flex-col items-center  text-white font-medium my-4">
-            <p className="flex items-center p-2 gap-x-2">
+          <aside className="flex md:justify-around md:flex-row flex-col md:items-center   justify-center text-white font-medium my-4">
+            <p className="flex items-center p-2 gap-x-2 ">
               <span className="bg-white p-1 rounded-full">
                 <Clock className="text-red-500" />
               </span>{" "}
               <span>We respond within 24 hours</span>
             </p>
-            <p className="flex  items-center gap-x-2">
+            <p className="flex  items-center p-2 gap-x-2 ">
               <span className="bg-white p-2 rounded-full">
                 <BsWhatsapp className="text-green-600" />
               </span>{" "}
