@@ -10,7 +10,7 @@ const OurBrandStory = () => {
         </h2>
       </div>
 
-      <article className="text-center bg-[#FFF9F9] md:px-4 lg:px-2 py-8 rounded-lg border-lightPink border text-sm flex flex-col gap-y-2">
+      <article className="text-center bg-[#FFF9F9] md:px-4 px-2 py-8 rounded-lg border-lightPink border text-sm flex flex-col gap-y-2">
         <p>
           StreetOps is a social productivity company that transforms how
           Nigerian businesses integrate teams. Founders shared a common

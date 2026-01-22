@@ -240,7 +240,7 @@ const TeamMembers = () => {
                 variants={itemVariants}
                 initial={isEven ? "hiddenLeft" : "hiddenRight"}
                 whileInView="visible"
-                viewport={{ once: false, amount: 0.2 }}
+                viewport={{ once: true, amount: 0.2 }}
               >
                 <img
                   src={item.img}
