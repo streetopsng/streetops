@@ -51,6 +51,12 @@ export default function Header() {
           >
             Team Bonding
           </Link>
+          <Link
+            href="/about"
+            className="text-white Hero text-sm hover:text-gray-300 transition-colors duration-500"
+          >
+            About
+          </Link>
         </nav>
 
         <aside className="flex justify-between items-center gap-x-2">

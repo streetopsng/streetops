@@ -10,20 +10,22 @@ const OurBrandStory = () => {
         </h2>
       </div>
 
-      <article className="text-center bg-[#FFF9F9] md:px-4 lg:px-2 py-8 rounded-lg border-lightPink border text-sm flex flex-col gap-y-2">
-        <p>
-          StreetOps is a social productivity company that transforms how
-          Nigerian businesses integrate teams. Founders shared a common
-          frustration:
-        </p>
-        <p className="font-semibold">
-          “Talented teams underperformed due to disconnection, not lack of
-          skills or tools.”
-        </p>
-        <p>
-          The solution lies in addressing the social problem - creating
-          belonging to unlock productivity.
-        </p>
+      <article className=" text-center bg-[#FFF9F9] md:px-4 px-2 py-8 rounded-lg border-lightPink border text-sm flex flex-col gap-y-2">
+        <aside className="lg:w-[70%] md:w-[85%] w-full mx-auto">
+          <p>
+            StreetOps is a social productivity company that transforms how
+            Nigerian businesses integrate teams. Founders shared a common
+            frustration:
+          </p>
+          <p className="font-semibold">
+            “Talented teams underperformed due to disconnection, not lack of
+            skills or tools.”
+          </p>
+          <p>
+            The solution lies in addressing the social problem - creating
+            belonging to unlock productivity.
+          </p>
+        </aside>
       </article>
     </section>
   );

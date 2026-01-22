@@ -45,6 +45,9 @@ export function MobileMenu() {
           <a href="/team-bonding" onClick={() => dispatch(closeMobileMenu())}>
             Team Bonding
           </a>
+          <a href="/about" onClick={() => dispatch(closeMobileMenu())}>
+            About
+          </a>
         </nav>
       </div>
     </>

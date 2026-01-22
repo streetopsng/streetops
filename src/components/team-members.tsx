@@ -223,7 +223,7 @@ const TeamMembers = () => {
 
   return (
     <div className="font-barlow py-8">
-      <aside className="lg:hidden ">
+      <aside className="lg:hidden overflow-hidden">
         <div className="overflow-y-hidden my-8">
           <h1 className="team-members text-center text-secondPrimary  text-[2rem] font-black underline ">
             THE SQUAD
@@ -240,7 +240,7 @@ const TeamMembers = () => {
                 variants={itemVariants}
                 initial={isEven ? "hiddenLeft" : "hiddenRight"}
                 whileInView="visible"
-                viewport={{ once: false, amount: 0.2 }}
+                viewport={{ once: true, amount: 0.2 }}
               >
                 <img
                   src={item.img}
