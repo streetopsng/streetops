@@ -11,16 +11,15 @@ const services = [
   // },
   {
     id: "01",
-    title: "Recruitment",
+    title: "Recruitment & Onboarding",
     description:
-      "Culture-fit candidates who thrive in your environment. Skills get them in. Culture keeps them. ",
+      "Seamless talent acquisition to Integration. Ready to contribute in 30 days",
     img: "/new-assets/recruit.svg",
   },
   {
     id: "02",
-    title: "Onboarding",
-    description:
-      "Transform strangers into productive teammates in 30 days. Delivered by expert vectors. Tracked by platform.",
+    title: "People Strategy & Consulting",
+    description: "Transform your people functions into a competitive advantage",
     img: "/new-assets/onboarding.svg",
   },
   {

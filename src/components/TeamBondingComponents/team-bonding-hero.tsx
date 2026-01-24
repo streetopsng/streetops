@@ -40,7 +40,7 @@ export default function TeamBondingHero() {
 
       <aside className="">
         <h1 className="text-4xl Hero hero-text md:text-6xl lg:text-7xl font-bold  text-white mb-3  leading-[1.15] ">
-          Build Teams That Actually
+          Build Teams That
           <br />
           Work Together
         </h1>

@@ -36,8 +36,8 @@ const Page = () => {
       {<TrainingTopics />}
       {/* {<TrainingCalendar />} */}
       {<Customization />}
-      {<TestimonialSection />}
-      {<FAQSection />}
+      {/* {<TestimonialSection />} */}
+      {/* {<FAQSection />} */}
       {<ChoiceSection />}
       {<TrainingCta />}
       {/* {<Services/>} */}
