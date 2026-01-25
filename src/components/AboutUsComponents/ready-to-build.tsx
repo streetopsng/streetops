@@ -1,7 +1,7 @@
 import { Button } from "@react-email/components";
 import { link } from "fs";
 import { Clock } from "lucide-react";
-import Link from "next/link";
+
 import React from "react";
 import { BsWhatsapp } from "react-icons/bs";
 const contactInfo = [
@@ -15,14 +15,14 @@ const contactInfo = [
   {
     id: 2,
     title: "Call Us",
-    link: "#",
-    value: "+234 800 STREETOPS",
+    link: "tel:+2347026782510",
+    value: "+234 702 6782 510",
     icon: "/new-assets/call-us.svg",
   },
   {
     id: 3,
     title: "Visit Us",
-    link: "#",
+    link: "",
     value: "Lagos, Nigeria",
     icon: "/new-assets/visit-us.svg",
   },
@@ -46,8 +46,10 @@ const ReadyToBuild = () => {
           <section className="flex flex-wrap justify-between lg:px-16 md:px-8 px-4   gap-y-4 ">
             {contactInfo.map((item, index) => {
               return (
-                <Link
+                <a
                   href={item.link}
+                  rel="noopener noreferrer"
+                  target="_blank"
                   key={index}
                   className="bg-white shadow-2xl md:w-[30%] w-full rounded-2xl flex flex-col items-center justify-center py-4"
                 >
@@ -56,7 +58,7 @@ const ReadyToBuild = () => {
                   </div>
                   <h1 className="font-semibold">{item.title}</h1>
                   <p className="text-sm">{item.value}</p>
-                </Link>
+                </a>
               );
             })}
           </section>
@@ -68,12 +70,16 @@ const ReadyToBuild = () => {
               </span>{" "}
               <span>We respond within 24 hours</span>
             </p>
-            <p className="flex  items-center p-2 gap-x-2 ">
+            <a
+              href="https://wa.me/2348012345678"
+              target="_blank"
+              className="flex  items-center p-2 gap-x-2 "
+            >
               <span className="bg-white p-2 rounded-full">
                 <BsWhatsapp className="text-green-600" />
               </span>{" "}
               <span>Chat on WhatsApp</span>
-            </p>
+            </a>
           </aside>
         </div>
       </div>

@@ -73,7 +73,7 @@ const page = () => {
       {<TrainingFormats />}
       {<TrainingTopics />}
       {<TrainingCalendar />} */}
-        {/* <StreetOpsApp /> */}
+        <StreetOpsApp />
         {<Services />}
         {<Customization />}
         {/* {<TestimonialSection />}

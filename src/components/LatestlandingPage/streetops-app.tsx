@@ -20,7 +20,7 @@ export default function StreetOpsApp() {
         </p>
 
         <div className="relative w-full flex flex-col justify-center items-center">
-          <img src="/new-assets/dashboard-laptop.png" alt="dashboard" />
+          <img src="/new-assets/laptop-dashboard.avif" alt="dashboard" />
 
           <Button className="bg-primary rounded-full px-8">
             Request Early Access
