@@ -82,7 +82,7 @@ const RecruitmentSolutions = () => {
           PRICING
         </span>
         <h2 className="text-2xl md:text-4xl font-bold bizmo-font text-thirdPrimary my-2 leading-tight">
-          <span className="font-serif">7</span> Recruitment Solutions For Every
+          <span className="font-serif">5</span> Recruitment Solutions For Every
           Hiring Need
         </h2>
         <p className="text-gray-500 max-w-lg mx-auto text-sm leading-relaxed">
