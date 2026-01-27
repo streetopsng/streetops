@@ -6,7 +6,7 @@ export default function RecuitmentProcess() {
       number: "01",
       title: "Discovery & Mapping",
       description:
-        "We analyze your compay culture, values, and specific role requirements to create a detailed candidate profile.",
+        "We analyze your company culture, values, and specific role requirements to create a detailed candidate profile.",
       position: "left",
     },
     {

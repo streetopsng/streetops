@@ -73,7 +73,7 @@ const DesignedForTeamSize = () => {
     <section className="bg-[#FFF9F9] py-12  font-sans lg:px-20 md:px-20 px-4 text-[#333333]">
       <img src="dash.png" alt="" className="pb-10" />
       <div className="max-w-4xl mx-auto text-center mb-10">
-        <h2 className="text-2xl md:text-4xl lg:text-6xl font-bold bizmo-font text-thirdPrimary my-2 leading-tight">
+        <h2 className="text-2xl md:text-2xl lg:text-4xl font-bold bizmo-font text-thirdPrimary my-2 leading-tight">
           Designed For Your Team Size
         </h2>
         <p className="text-gray-500 max-w-lg mx-auto text-sm leading-relaxed">
@@ -113,8 +113,8 @@ const DesignedForTeamSize = () => {
                       modeItem == "onsite"
                         ? "text-[#24D80C]"
                         : modeItem == "remote"
-                        ? "text-[#0A66C2]"
-                        : "text-[#F59E0B]"
+                          ? "text-[#0A66C2]"
+                          : "text-[#F59E0B]"
                     }`}
                     variant={"outline"}
                   >
