@@ -10,7 +10,7 @@ const recruitmentData = [
   {
     title: "Behavioural Science Assessment",
     description:
-      "Assess candidates for values alignmet, team chemistry, and productivity potential, not just technical skills.",
+      "Assess candidates for values alignment, team chemistry, and productivity potential, not just technical skills.",
     icon: "/new-assets/ai-brain.svg",
   },
   {

@@ -13,7 +13,7 @@ const features = [
   {
     title: "The services",
     description:
-      "Expert vectors facilitate onboarding, training, and team bonding. Cluture transfer, not information transfer.",
+      "Expert vectors facilitate onboarding, training, and team bonding. culture transfer, not information transfer.",
     icon: "/new-assets/vector.svg",
   },
   {

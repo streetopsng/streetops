@@ -42,7 +42,7 @@ const TeamBondingExperience = () => {
     <section className="bg-white py-12  font-sans lg:px-20 md:px-20 px-4">
       <img src="dash.png" alt="" className="pb-10" />
       <div className="max-w-4xl mx-auto text-center mb-10">
-        <h2 className="text-2xl md:text-[50px] font-bold bizmo-font text-thirdPrimary my-2 leading-tight">
+        <h2 className="text-2xl md:text-2xl lg:text-4xl font-bold bizmo-font text-thirdPrimary my-2 leading-tight">
           Every StreetOps Team Bonding Experience Includes:
         </h2>
         <p className="text-gray-500 max-w-lg mx-auto text-sm leading-relaxed">

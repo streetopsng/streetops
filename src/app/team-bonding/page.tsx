@@ -29,7 +29,7 @@ const Page = () => {
       </div>
 
       <Productivity />
-      <WaysToBuild />
+      {/* <WaysToBuild /> */}
       <DesignedForTeamSize />
       <TeamBondingExperience />
       <LetUsBuildYourTeam />

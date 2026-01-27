@@ -36,7 +36,7 @@ const Productivity = () => {
         <span className="uppercase tracking-widest bizmo-font text-[9px] font-bold bg-[#EFF6FF] text-[#2578F0] px-3 py-1 rounded-full">
           PROFESSIONAL DEVELOPMENT
         </span>
-        <h2 className="text-2xl md:text-[50px] font-bold bizmo-font text-thirdPrimary my-2 leading-tight">
+        <h2 className="text-2xl md:text-2xl lg:text-4xl font-bold bizmo-font text-thirdPrimary my-2 leading-tight">
           Why Productivity Starts With Connection
         </h2>
         <p className="text-gray-500 max-w-lg mx-auto text-sm leading-relaxed">

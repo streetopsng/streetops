@@ -66,7 +66,7 @@ export const formats = [
       },
     ],
     included: [
-      "Guided instruction",
+      "Guided instructions",
       "Practical exercises",
       "Group activities and case studies",
       "Worksheets and tools",
