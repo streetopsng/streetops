@@ -3,7 +3,7 @@ const contactInfo = [
     id: 1,
     title: "Email Us",
     link: "mailto:info@streetops.ng",
-    value: "streetopsng@gmail.com",
+    value: "info@streetops.ng",
     icon: "/new-assets/email-us.svg",
   },
   {
