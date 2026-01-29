@@ -263,7 +263,7 @@ const TeamMembers = () => {
       </aside>
       <aside className="lg:block hidden">
         <div className="overflow-y-hidden">
-          <h1 className="team-members text-center text-secondPrimary  text-[6rem] font-black ">
+          <h1 className="team-members text-center text-secondPrimary  text-[4rem] font-black ">
             THE FLEET
           </h1>
         </div>

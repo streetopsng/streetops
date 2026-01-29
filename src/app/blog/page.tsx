@@ -14,6 +14,7 @@ import Header from "@/components/Training/header";
 import { motion } from "framer-motion";
 import gsap from "gsap";
 import { ScrambleTextPlugin } from "gsap/ScrambleTextPlugin";
+import ReadyToBuild from "@/components/AboutUsComponents/ready-to-build";
 gsap.registerPlugin(ScrambleTextPlugin);
 async function fetchData() {
   const res = await fetch(`/api/blog/get-blogs`);
@@ -130,9 +131,9 @@ const page = () => {
       </div>
 
       <div className="mt-8">
-        <h1 className="text-3xl Hero md:text-5xl font-bold text-thirdPrimary Hero md:mb-6 mb-2 tracking-tight text-center ">
+        {/* <h1 className="text-3xl Hero md:text-5xl font-bold text-thirdPrimary Hero md:mb-6 mb-2 tracking-tight text-center ">
           Blogs
-        </h1>
+        </h1> */}
         {blogs.length < 1 && isLoading ? (
           <div className=" text-grayOne w-full h-[60vh] flex items-center justify-center flex-col">
             <PagePreloader />
@@ -161,7 +162,7 @@ const page = () => {
                     router.push(
                       `/blog/${item.title
                         .replace(/ /g, "-")
-                        .toLocaleLowerCase()}---${item._id}`
+                        .toLocaleLowerCase()}---${item._id}`,
                     )
                   }
                 >
@@ -187,7 +188,7 @@ const page = () => {
           </article>
         )}
       </div>
-
+      <ReadyToBuild />
       <Footer />
     </div>
   );

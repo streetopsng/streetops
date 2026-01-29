@@ -50,7 +50,7 @@ export default function HowItWorks() {
   return (
     <section
       id="how-it-works"
-      className="relative py-16 px-6 bg-[#fff8f8] overflow-hidden"
+      className="relative py-2 px-6 bg-[#fff8f8] overflow-hidden"
     >
       <div
         className="absolute left-0 top-0 bottom-0 w-24 opacity-20"

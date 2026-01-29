@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { Calendar, Headset, ArrowRight } from "lucide-react";
 
@@ -51,7 +52,12 @@ const CompactChoiceSection = () => {
             Schedule a discovery call to discuss your unique goals and create a
             tailored plan.
           </p>
-          <button className="mt-auto bg-[#6d413c] text-white text-xs px-5 py-2 rounded-full flex items-center gap-2 transition-transform active:scale-95">
+          <button
+            onClick={() => {
+              window.open("https://calendly.com/streetopsng/30min", "_blank");
+            }}
+            className="mt-auto bg-[#6d413c] cursor-pointer text-white text-xs px-5 py-2 rounded-full flex items-center gap-2 transition-transform active:scale-95"
+          >
             Book discovery call
             <ArrowRight className="w-3 h-3" />
           </button>

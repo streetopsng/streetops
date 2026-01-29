@@ -94,10 +94,10 @@ export default function TrainingTopics() {
             <p className="text-gray-500 text-xs mb-4 grow leading-normal">
               {topic.description}
             </p>
-            <button className="flex items-center text-red-400 text-sm font-bold hover:text-red-500 transition-colors group">
+            {/* <button className="flex items-center text-red-400 text-sm font-bold hover:text-red-500 transition-colors group">
               Learn more
               <ArrowRight className="ml-1.5 w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
-            </button>
+            </button> */}
           </div>
         ))}
       </div>

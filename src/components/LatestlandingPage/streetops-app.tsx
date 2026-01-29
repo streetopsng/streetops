@@ -4,7 +4,7 @@ import { Button } from "../ui/button";
 
 export default function StreetOpsApp() {
   return (
-    <section id="services" className="py-20 px-6 bg-white">
+    <section id="services" className="py-6 px-6 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-thirdPrimary Hero md:mb-6 mb-2 tracking-tight">
@@ -22,7 +22,15 @@ export default function StreetOpsApp() {
         <div className="relative w-full flex flex-col justify-center items-center">
           <img src="/new-assets/laptop-dashboard.avif" alt="dashboard" />
 
-          <Button className="bg-primary rounded-full px-8">
+          <Button
+            onClick={() => {
+              window.open(
+                "https://docs.google.com/forms/d/e/1FAIpQLSdExSqDfS3LjFwSWF7-iW3IK1d-dca-1bjmy7TcYXn0-nfY3Q/viewform",
+                "_blank",
+              );
+            }}
+            className="bg-primary rounded-full px-8 cursor-pointer hover:opacity-80"
+          >
             Request Early Access
           </Button>
         </div>

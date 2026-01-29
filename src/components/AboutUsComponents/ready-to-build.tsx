@@ -30,7 +30,7 @@ const contactInfo = [
 
 const ReadyToBuild = () => {
   return (
-    <section className="py-16  px-4">
+    <section className="py-4  px-4">
       <div className="md:w-[90%] w-full h-full  mx-auto ">
         <div
           className="relative rounded-3xl overflow-hidden h-full w-full py-12"
@@ -71,7 +71,7 @@ const ReadyToBuild = () => {
               <span>We respond within 24 hours</span>
             </p>
             <a
-              href="https://wa.me/2348012345678"
+              href="https://wa.me/2347026782510"
               target="_blank"
               className="flex  items-center p-2 gap-x-2 "
             >

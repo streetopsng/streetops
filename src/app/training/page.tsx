@@ -11,6 +11,7 @@ import ChoiceSection from "@/components/Training/choice";
 import TrainingCta from "@/components/Training/training-cta";
 import Footer from "@/components/LatestlandingPage/footer";
 import React from "react";
+import ReadyToBuild from "@/components/AboutUsComponents/ready-to-build";
 
 const Page = () => {
   return (
@@ -45,6 +46,7 @@ const Page = () => {
       {/* {<WhoWereBuilding/>} */}
       {/* {<HowItWorks/>} */}
       {/* {<CtaSection/>} */}
+      <ReadyToBuild />
       <Footer />
       {/* <SlideContent/> */}
     </div>

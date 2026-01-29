@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { Button } from "../ui/button";
 
@@ -82,7 +83,12 @@ const TeamBondingExperience = () => {
           Ready to transform your team dynamics?
         </p>
         <div className="flex justify-center">
-          <Button className="bg-thirdPrimary rounded-full lg:w-2/5 md:w2/5 w-4/5 py-2">
+          <Button
+            onClick={() => {
+              window.open("https://calendly.com/streetopsng/30min", "_blank");
+            }}
+            className="bg-thirdPrimary rounded-full lg:w-2/5 md:w2/5 w-4/5 py-2 cursor-pointer"
+          >
             Schedule a Consultation
           </Button>
         </div>

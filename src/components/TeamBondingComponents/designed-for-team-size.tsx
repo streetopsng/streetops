@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { Button } from "../ui/button";
 export type ExperienceMode = "onsite" | "remote" | "outdoor";
@@ -8,6 +9,7 @@ export interface TeamPackage {
   icon: string;
   sizeRange: string;
   desc: string;
+  teamSize: string;
   whatYouGet: string[];
   modes: ExperienceMode[];
   bestFor: string;
@@ -21,6 +23,7 @@ export const teamPackages: TeamPackage[] = [
     icon: "/new-assets/rocket.svg",
     sizeRange: "5 - 20",
     desc: "Intimate, personalized bonding",
+    teamSize: "20",
     whatYouGet: [
       "Customized icebreakers and team challenges",
       "Flexible scheduling with personal attention",
@@ -28,14 +31,14 @@ export const teamPackages: TeamPackage[] = [
       "Post-event feedback and engagement reports",
     ],
     modes: ["onsite", "remote", "outdoor"],
-    bestFor:
-      "Start-ups, small departments, or close-knit teams looking to strengthen relationships and build trust in an intimate setting.",
+    bestFor: "Start-ups, small departments, or close-knit teams ",
     cta: "Explore Package",
   },
   {
     id: 2,
     title: "Power Team",
     icon: "/new-assets/volume.svg",
+    teamSize: "20 - 40",
     sizeRange: "21 - 50",
     desc: "Structured activities with breakouts",
     whatYouGet: [
@@ -45,8 +48,7 @@ export const teamPackages: TeamPackage[] = [
       "Comprehensive analytics and team insights",
     ],
     modes: ["onsite", "remote", "outdoor"],
-    bestFor:
-      "Growing companies and mid-size teams needing structured programs that balance collaboration with healthy competition.",
+    bestFor: "Growing companies and mid-size teams ",
     cta: "Explore Package",
   },
   {
@@ -54,6 +56,7 @@ export const teamPackages: TeamPackage[] = [
     title: "Full Force",
     icon: "/new-assets/customer-service.svg",
     sizeRange: "51+",
+    teamSize: "40+",
     desc: "Large-scale event coordination",
     whatYouGet: [
       "Enterprise-level event planning and logistics",
@@ -62,8 +65,7 @@ export const teamPackages: TeamPackage[] = [
       "Advanced tech integration and live dashboards",
     ],
     modes: ["onsite", "remote", "outdoor"],
-    bestFor:
-      "Large organizations and corporations requiring comprehensive event management with seamless execution across multiple teams.",
+    bestFor: "Large organizations and corporations ",
     cta: "Explore Package",
   },
 ];
@@ -87,9 +89,18 @@ const DesignedForTeamSize = () => {
             key={index}
             className="p-4 bg-white border-lightPink/50 border rounded-3xl "
           >
-            <div className="w-12 h-12 bg-[#FD8D8C] rounded-full flex items-center justify-center mb-4 p-2 ">
-              <img src={item.icon} alt="icon" />
-            </div>
+            <aside className="w-full flex justify-between">
+              <div className="w-12 h-12 bg-[#FD8D8C] rounded-full flex items-center justify-center mb-4 p-2 ">
+                <img src={item.icon} alt="icon" />
+              </div>
+              <div className="flex flex-col items-center">
+                <span className="font-medium text-sm"> Team Size</span>
+                <span className="text-[#FD8D8C] font-bold text-lg">
+                  {item.teamSize}
+                </span>
+              </div>
+            </aside>
+
             <header className="flex flex-col gap-y-2 pb-2 border-b border-b-gray-300">
               <h1 className="font-semibold text-lg">{item.title}</h1>
               <p className="italic">{item.desc}</p>
@@ -132,8 +143,19 @@ const DesignedForTeamSize = () => {
             </section>
 
             <div className="w-full flex items-center justify-center pt-4">
-              <Button className="bg-lightPink cursor-pointer hover:bg-lightPink rounded-full w-[90%]">
-                Explore Package
+              <Button
+                onClick={() => {
+                  const phone = "2347026782510";
+                  const message = encodeURIComponent(`${item.title}`);
+
+                  window.open(
+                    `https://wa.me/${phone}?text=${message}`,
+                    "_blank",
+                  );
+                }}
+                className="bg-lightPink cursor-pointer hover:bg-lightPink rounded-full w-full"
+              >
+                Get A Quote
               </Button>
             </div>
           </div>
