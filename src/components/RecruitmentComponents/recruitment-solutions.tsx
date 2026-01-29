@@ -1,26 +1,27 @@
+"use client";
 import React from "react";
 import { CircleCheck } from "lucide-react";
 
 const recruitmentSolutionsData = [
-  {
-    id: 1,
-    title: "Fast Hire",
-    desc: "Quick turnaround for urgent positions",
-    // lucide icon suggestion: Zap
-    icon: "/new-assets/flash.svg",
-    points: [
-      "Candidate securing within 48 hours",
-      "Pre-screened shortlist of 5-8 candidates",
-      "Culture-fit assessment included",
-      "Behavioural science evaluation",
-      "30-day replacement guarantee",
-    ],
-  },
+  // {
+  //   id: 1,
+  //   title: "Fast Hire",
+  //   desc: "Quick turnaround for urgent positions",
+  //   icon: "/new-assets/flash.svg",
+  //   points: [
+  //     "Candidate securing within 48 hours",
+  //     "Pre-screened shortlist of 5-8 candidates",
+  //     "Culture-fit assessment included",
+  //     "Behavioural science evaluation",
+  //     "30-day replacement guarantee",
+  //   ],
+  // },
   {
     id: 2,
     title: "Graduate Talent Hunt",
     desc: "Fresh talent for entry-level roles",
-    // lucide icon suggestion: GraduationCap
+    price: "",
+
     icon: "/new-assets/graduate.svg",
     points: [
       "Campus recruitment campaigns",
@@ -34,7 +35,7 @@ const recruitmentSolutionsData = [
     id: 3,
     title: "Volume Recruitment",
     desc: "Scale your team efficiently",
-
+    price: "",
     icon: "/new-assets/volume.svg",
     points: [
       "Bulk hiring for 10+ positions",
@@ -48,7 +49,7 @@ const recruitmentSolutionsData = [
     id: 4,
     title: "Executive Search",
     desc: "Scale your team efficiently",
-
+    price: "₦100,000",
     icon: "/new-assets/executive.svg",
     points: [
       "Confidential headhunting services",
@@ -63,6 +64,7 @@ const recruitmentSolutionsData = [
     title: "Specialist / Technical",
     desc: "Expert talent for niche roles",
     icon: "/new-assets/technical.svg",
+    price: "₦50,000",
     points: [
       "Technical skills verification",
       "Industry-specific candidate network",
@@ -82,7 +84,7 @@ const RecruitmentSolutions = () => {
           PRICING
         </span>
         <h2 className="text-2xl md:text-4xl font-bold bizmo-font text-thirdPrimary my-2 leading-tight">
-          <span className="font-serif">5</span> Recruitment Solutions For Every
+          <span className="font-serif">4</span> Recruitment Solutions For Every
           Hiring Need
         </h2>
         <p className="text-gray-500 max-w-lg mx-auto text-sm leading-relaxed">
@@ -100,9 +102,21 @@ const RecruitmentSolutions = () => {
             className="bg-white shadow-2xl hover:border hover:border-secondPrimary  rounded-3xl p-6 flex flex-col items-start transition-transform hover:scale-[1.01] duration-300 border border-[#FAD9D9]/30 font-mont"
           >
             {/* Smaller Icon Circle */}
-            <div className="w-12 h-12 bg-secondPrimary rounded-full flex items-center justify-center mb-4 p-2">
-              <img src={item.icon} alt="icon" />
-            </div>
+            <aside className="w-full flex justify-between items-center">
+              <div className="w-12 h-12 bg-secondPrimary rounded-full flex items-center justify-center mb-4 p-2">
+                <img src={item.icon} alt="icon" />
+              </div>
+              <div className="h-12 flex flex-col justify-center items-center  mb-4 p-2">
+                {item.price && (
+                  <>
+                    <span className="text-secondPrimary">starting from</span>
+                    <article>
+                      {<span className="font-bold text-lg">{item.price}</span>}
+                    </article>
+                  </>
+                )}
+              </div>
+            </aside>
             <h1 className="font-semibold text-lg">{item.title}</h1>
             <p className="py-2 opacity-80">{item.desc}</p>
 
@@ -119,8 +133,13 @@ const RecruitmentSolutions = () => {
               })}
             </aside>
 
-            <button className="w-full py-3 text-white rounded-full bg-secondPrimary my-2">
-              Get A Quote
+            <button
+              onClick={() => {
+                window.open("https://wa.me/2347026782510", "_blank");
+              }}
+              className="w-full py-3 text-white rounded-full bg-secondPrimary my-2 cursor-pointer hover:opacity-80"
+            >
+              {item.price ? "Proceed" : "Get A Quote"}
             </button>
           </div>
         ))}

@@ -17,7 +17,7 @@ const contactInfo = [
     id: 3,
     title: "Visit Us",
     link: "",
-    value: "Lagos, Nigeria",
+    value: "Mayfair Gardens, Ibeju-lekki, Lagos, Nigeria",
     icon: "/new-assets/visit-us.svg",
   },
 ];

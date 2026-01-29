@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { Button } from "../ui/button";
 
@@ -23,8 +24,14 @@ const BuildDreamTeam = () => {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
               <Button
+                onClick={() => {
+                  window.open(
+                    "https://calendly.com/streetopsng/30min",
+                    "_blank",
+                  );
+                }}
                 variant="outline"
-                className="bg-white text-[#2d1f1f] hover:bg-white/90 rounded-full px-8 border-none text-sm"
+                className="bg-white text-[#2d1f1f] hover:bg-white/90 rounded-full px-8 border-none text-sm cursor-pointer"
               >
                 Schedule Consultation
               </Button>

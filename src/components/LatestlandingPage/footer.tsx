@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="py-12 px-6 bg-white">
+    <footer className="py-6 px-6 bg-white">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-12">
           {/* Logo and description */}
@@ -23,13 +23,13 @@ export default function Footer() {
           {/* Contact */}
           <div>
             <h4 className="font-semibold text-[#2d1f1f] mb-4 text-sm">
-              Contact us
+              Contact Us
             </h4>
             <p className="text-[#2d1f1f]/60 text-sm mb-4">
               <a href="mailto:info@streetops.ng">info@streetops.ng</a>
             </p>
             <h4 className="font-semibold text-[#2d1f1f] mb-3 text-sm">
-              Follow us
+              Follow Us
             </h4>
             <div className="flex items-center gap-2">
               {/* LinkedIn */}
@@ -117,14 +117,14 @@ export default function Footer() {
                   Blog
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link
                   href="#"
                   className="text-[#2d1f1f]/60 text-sm hover:text-[#c41e3a] transition-colors"
                 >
                   Services
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
 
@@ -136,26 +136,26 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link
-                  href="#"
+                  href="/recruitment"
                   className="text-[#2d1f1f]/60 text-sm hover:text-[#c41e3a] transition-colors"
                 >
-                  FunStreet
+                  Recruitment
                 </Link>
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="/training"
                   className="text-[#2d1f1f]/60 text-sm hover:text-[#c41e3a] transition-colors"
                 >
-                  Street Build
+                  Training
                 </Link>
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="/team-bonding"
                   className="text-[#2d1f1f]/60 text-sm hover:text-[#c41e3a] transition-colors"
                 >
-                  Ideation Corner
+                  Team Bonding
                 </Link>
               </li>
             </ul>

@@ -1,4 +1,5 @@
-import { Button } from "@/components/ui/button"
+"use client";
+import { Button } from "@/components/ui/button";
 
 export default function TrainingCta() {
   return (
@@ -19,26 +20,32 @@ export default function TrainingCta() {
             <h2 className="text-2xl md:text-3xl font-bold Hero text-white  mb-8 leading-tight">
               Ready to Transform Your
               <br />
-              Team's Productivity 
+              Team's Productivity
             </h2>
-            <p>
-                Let's explore how we can help your team reach new <br /> heights together.
+            <p className="text-white">
+              Let's explore how we can help your team reach new <br /> heights
+              together.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button className="bg-[#FA2120] hover:bg-[#a01830] text-white rounded-full px-8 text-sm">
-                Book Training
-              </Button>
               <Button
+                onClick={() => {
+                  window.open("https://wa.me/2347026782510", "_blank");
+                }}
+                className="bg-white hover:bg-[#a01830] text-green-500 font-medium rounded-full px-8 text-sm"
+              >
+                Whatsapp
+              </Button>
+              {/* <Button
                 variant="outline"
                 className="bg-white text-[#2d1f1f] hover:bg-white/90 rounded-full px-8 border-none text-sm"
               >
                 Schedule Discovery Call
-              </Button>
+              </Button> */}
             </div>
           </div>
         </div>
       </div>
       <img src="dash.png" alt="" />
     </section>
-  )
+  );
 }

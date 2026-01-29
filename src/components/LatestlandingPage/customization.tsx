@@ -35,7 +35,7 @@ export default function Customization() {
   ];
 
   return (
-    <section className="relative py-16 px-6 bg-[#1a0f0f] overflow-hidden">
+    <section className="relative py-6 px-6 bg-[#1a0f0f] overflow-hidden">
       <div
         className="absolute inset-0 opacity-5"
         style={{

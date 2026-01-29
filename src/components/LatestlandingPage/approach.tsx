@@ -32,9 +32,9 @@ export default function Approach() {
   }, []);
 
   return (
-    <section id="about" className="py-16 px-6 bg-white">
+    <section id="about" className="pt-6 px-6 bg-white">
       <div className="max-w-6xl mx-auto  overflow-hidden">
-        <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-8 mb-12">
+        <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-8 mb-8">
           <motion.div
             variants={{
               // hidden: { opacity: 0, x: -100 },

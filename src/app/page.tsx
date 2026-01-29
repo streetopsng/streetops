@@ -21,6 +21,7 @@ import Approach from "@/components/LatestlandingPage/approach";
 import Customization from "@/components/LatestlandingPage/customization";
 import { useState } from "react";
 import StreetOpsApp from "@/components/LatestlandingPage/streetops-app";
+import ReadyToBuild from "@/components/AboutUsComponents/ready-to-build";
 
 const ourStoryData = [
   {
@@ -84,6 +85,7 @@ const page = () => {
         {/* {<WhoWereBuilding/>} */}
         {<HowItWorks />}
         {/* {<CtaSection/>} */}
+        <ReadyToBuild />
         <Footer />
         {/* <SlideContent/> */}
       </div>
