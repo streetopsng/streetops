@@ -12,8 +12,7 @@ export default function Footer() {
               {/* <span className="text-[#2d1f1f] text-xl font-bold">ps</span> */}
             </Link>
             <p className="text-[#2d1f1f]/60 text-sm mb-4 leading-relaxed lg:mt-[-15] ">
-              The essential backbone that supports and strengthens your daily
-              grind.
+              Social productivity for all team
             </p>
             <p className="text-[#2d1f1f]/40 text-xs">
               © {new Date().getFullYear()} All Rights Reserved
