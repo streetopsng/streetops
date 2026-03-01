@@ -48,7 +48,7 @@ const Nav: React.FC = () => {
         </a>
         <Button
           onClick={() => dispatch(openMobileMenu())}
-          className="md:hidden bg-white text-black hover:text-primary hover:bg-gray-300"
+          className="lg:hidden bg-white text-black hover:text-primary hover:bg-gray-300"
         >
           <Menu />
         </Button>
