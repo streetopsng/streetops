@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-12">
           {/* Logo and description */}
           <div className="col-span-2 md:col-span-1">
-            <Link href="/" className="flex items-center gap-0.5 mb-4">
+            <Link href="/" className="flex  mb-4">
               <img src="red-logo.png" alt="" className=" lg:mt-[-20]" />
               {/* <span className="text-[#2d1f1f] text-xl font-bold">ps</span> */}
             </Link>
