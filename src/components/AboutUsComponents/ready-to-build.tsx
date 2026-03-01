@@ -30,7 +30,7 @@ const contactInfo = [
 
 const ReadyToBuild = () => {
   return (
-    <section className="py-4  px-4">
+    <section className="py-4  px-4 " id="ready-to-build">
       <div className="md:w-[90%] w-full h-full  mx-auto ">
         <div
           className="relative rounded-3xl overflow-hidden h-full w-full py-12"
@@ -52,12 +52,15 @@ const ReadyToBuild = () => {
                   target="_blank"
                   key={index}
                   className="bg-white shadow-2xl md:w-[30%] w-full rounded-2xl flex flex-col items-center justify-center py-4"
+                  style={{ fontFamily: "sans-serif" }}
                 >
                   <div className="w-12 h-12 bg-[#FD8D8C] rounded-full flex items-center justify-center mb-4 p-2">
                     <img src={item.icon} alt="icon" />
                   </div>
                   <h1 className="font-semibold">{item.title}</h1>
-                  <p className="text-sm">{item.value}</p>
+                  <p className="text-sm " style={{ fontFamily: "sans-serif" }}>
+                    {item.value}
+                  </p>
                 </a>
               );
             })}

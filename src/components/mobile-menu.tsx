@@ -39,12 +39,12 @@ export function MobileMenu() {
           <a href="/training" onClick={() => dispatch(closeMobileMenu())}>
             Training
           </a>
-          <a href="/recruitment" onClick={() => dispatch(closeMobileMenu())}>
+          {/* <a href="/recruitment" onClick={() => dispatch(closeMobileMenu())}>
             Recruitment
           </a>
           <a href="/team-bonding" onClick={() => dispatch(closeMobileMenu())}>
             Team Bonding
-          </a>
+          </a> */}
           <a href="/about" onClick={() => dispatch(closeMobileMenu())}>
             About
           </a>
