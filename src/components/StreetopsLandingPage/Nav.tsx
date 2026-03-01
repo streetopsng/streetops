@@ -32,14 +32,17 @@ const Nav: React.FC = () => {
         <a href="/team-bonding" className="nl">
           Team Bonding
         </a>
-        <a href="/training" className="nl">
+        {/* <a href="/training" className="nl">
           Training
         </a>
         <a href="/recruitment" className="nl">
           Recruitment
-        </a>
+        </a> */}
         <a href="/about" className="nl">
           About
+        </a>
+        <a href="#ready-to-build" className="nl">
+          Book a Demo
         </a>
       </div>
       <div className="nright">

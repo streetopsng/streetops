@@ -10,6 +10,7 @@ import WhyStreetOps from "./WhyStreetOps";
 import DemoCTA from "./DemoCTA";
 import BlogSection from "./BlogSection";
 import Footer from "./Footer";
+import ReadyToBuild from "../AboutUsComponents/ready-to-build";
 
 const StreetopsLandingPage: React.FC = () => {
   useEffect(() => {
@@ -41,7 +42,8 @@ const StreetopsLandingPage: React.FC = () => {
       <IdentityFoundation />
       <WhyStreetOps />
       {/* <DemoCTA /> */}
-      <BlogSection />
+      {/* <BlogSection /> */}
+      <ReadyToBuild />
       <Footer />
     </div>
   );
