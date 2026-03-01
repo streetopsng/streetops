@@ -58,7 +58,7 @@ const Features: React.FC = () => {
         </div>
       </div>
 
-      <div className="logos">
+      {/* <div className="logos">
         <div className="llbl">Trusted by forward-thinking organisations</div>
         <div className="lrow">
           <div className="lco">DCSL · ETR</div>
@@ -68,7 +68,7 @@ const Features: React.FC = () => {
           <div className="lco">Kobo360</div>
           <div className="lco">SystemSpecs</div>
         </div>
-      </div>
+      </div> */}
 
       <div className="wrap rv">
         <div className="pre">The reality</div>
