@@ -41,10 +41,10 @@ export function MobileMenu() {
           </a>
           {/* <a href="/recruitment" onClick={() => dispatch(closeMobileMenu())}>
             Recruitment
-          </a>
-          <a href="/team-bonding" onClick={() => dispatch(closeMobileMenu())}>
-            Team Bonding
           </a> */}
+          <a href="#ready-to-build" onClick={() => dispatch(closeMobileMenu())}>
+            Ready to Build
+          </a>
           <a href="/about" onClick={() => dispatch(closeMobileMenu())}>
             About
           </a>
