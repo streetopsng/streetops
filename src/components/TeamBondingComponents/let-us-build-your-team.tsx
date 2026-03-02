@@ -4,9 +4,9 @@ import RecruitmentForm from "../RecruitmentComponents/recruitment-form";
 const LetUsBuildYourTeam = () => {
   return (
     <section className="bg-white py-12  font-sans lg:px-20 md:px-20 px-4">
-      <img src="dash.png" alt="" className="pb-10" />
+      {/* <img src="dash.png" alt="" className="pb-10" /> */}
       <div className="max-w-4xl mx-auto text-center mb-10">
-        <span className="uppercase tracking-widest bizmo-font text-[9px] font-bold bg-[#FEEEE3] text-[#EB5819] px-2 py-0.5 rounded-full">
+        <span className="uppercase tracking-widest bizmo-font text-[9px] font-bold bg-[var(--rt)] text-[var(--r)] px-2 py-0.5 rounded-full">
           Get Started
         </span>
         <h2 className="text-2xl md:text-4xl font-bold bizmo-font text-thirdPrimary my-2 leading-tight">

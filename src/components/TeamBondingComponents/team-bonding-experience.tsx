@@ -41,7 +41,7 @@ export const teamBondingExperienceData = [
 const TeamBondingExperience = () => {
   return (
     <section className="bg-white py-12  font-sans lg:px-20 md:px-20 px-4">
-      <img src="dash.png" alt="" className="pb-10" />
+      {/* <img src="dash.png" alt="" className="pb-10" /> */}
       <div className="max-w-4xl mx-auto text-center mb-10">
         <h2 className="text-2xl md:text-2xl lg:text-4xl font-bold bizmo-font text-thirdPrimary my-2 leading-tight">
           Every StreetOps Team Bonding Experience Includes:
@@ -56,17 +56,16 @@ const TeamBondingExperience = () => {
         {teamBondingExperienceData.map((item, index) => (
           <div
             key={index}
-            className="bg-[#FFF8F7] rounded-3xl p-6 flex flex-col items-start transition-transform hover:scale-[1.01] duration-300 border border-[#FAD9D9]/30"
+            className="bg-[#fafafa] rounded-3xl p-6 flex flex-col items-start transition-transform hover:scale-[1.01] duration-300 border border-[var(--gl)]"
           >
             {/* Smaller Icon Circle */}
-            <div className="w-12 h-12 bg-[#FD8D8C] rounded-full flex items-center justify-center mb-4 p-2">
-              <img src={item.icon} alt="icon" />
+            <div className="w-12 h-12 bg-[var(--rt)] text-[var(--r)] rounded-full flex items-center justify-center mb-4 p-2">
+              <img src={item.icon} alt="icon" style={{ filter: "brightness(0) saturate(100%) invert(18%) sepia(87%) saturate(5831%) hue-rotate(355deg) brightness(97%) contrast(114%)" }} />
             </div>
 
             <h3
-              className={`${
-                item.title.length > 25 ? "text-md " : "text-lg"
-              }font-semibold text-[#433838] Hero mb-2`}
+              className={`${item.title.length > 25 ? "text-md " : "text-lg"
+                }font-semibold text-[#433838] Hero mb-2`}
             >
               {item.title}
             </h3>
@@ -87,7 +86,7 @@ const TeamBondingExperience = () => {
             onClick={() => {
               window.open("https://calendly.com/streetopsng/30min", "_blank");
             }}
-            className="bg-thirdPrimary rounded-full lg:w-2/5 md:w2/5 w-4/5 py-2 cursor-pointer"
+            className="bg-[var(--r)] hover:bg-[#c40000] text-white rounded-full lg:w-1/4 md:w-1/3 w-2/3 py-6 cursor-pointer"
           >
             Schedule a Consultation
           </Button>

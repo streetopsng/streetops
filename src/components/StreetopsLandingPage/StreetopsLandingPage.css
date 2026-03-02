@@ -714,7 +714,7 @@
 .wrap {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 88px 48px;
+    padding: 48px 48px;
 }
 
 .pre {
@@ -1196,7 +1196,7 @@
 
 .idwrap {
     background: #111;
-    padding: 100px 48px;
+    padding: 48px 48px;
     overflow: hidden;
     position: relative;
 }
@@ -1368,7 +1368,7 @@
 
 .demowrap {
     background: linear-gradient(135deg, #111 0%, #5a0000 100%);
-    padding: 104px 48px;
+    padding: 48px 48px;
     position: relative;
     overflow: hidden;
 }
@@ -1559,7 +1559,7 @@
 
 footer {
     background: #111;
-    padding: 64px 48px 38px;
+    padding: 48px 48px 38px;
 }
 
 .ftin {

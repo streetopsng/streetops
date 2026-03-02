@@ -72,8 +72,8 @@ export const teamPackages: TeamPackage[] = [
 
 const DesignedForTeamSize = () => {
   return (
-    <section className="bg-[#FFF9F9] py-12  font-sans lg:px-20 md:px-20 px-4 text-[#333333]">
-      <img src="dash.png" alt="" className="pb-10" />
+    <section className="bg-[#fafafa] py-12  font-sans lg:px-20 md:px-20 px-4 text-[#333333]">
+      {/* <img src="dash.png" alt="" className="pb-10" /> */}
       <div className="max-w-4xl mx-auto text-center mb-10">
         <h2 className="text-2xl md:text-2xl lg:text-4xl font-bold bizmo-font text-thirdPrimary my-2 leading-tight">
           Designed For Your Team Size
@@ -87,15 +87,15 @@ const DesignedForTeamSize = () => {
         {teamPackages.map((item, index) => (
           <div
             key={index}
-            className="p-4 bg-white border-lightPink/50 border rounded-3xl "
+            className="p-8 bg-white border-[var(--gl)] border rounded-3xl"
           >
             <aside className="w-full flex justify-between">
-              <div className="w-12 h-12 bg-[#FD8D8C] rounded-full flex items-center justify-center mb-4 p-2 ">
-                <img src={item.icon} alt="icon" />
+              <div className="w-12 h-12 bg-[var(--rt)] text-[var(--r)] rounded-full flex items-center justify-center mb-4 p-2 ">
+                <img src={item.icon} alt="icon" style={{ filter: "brightness(0) saturate(100%) invert(18%) sepia(87%) saturate(5831%) hue-rotate(355deg) brightness(97%) contrast(114%)" }} />
               </div>
               <div className="flex flex-col items-center">
                 <span className="font-medium text-sm"> Team Size</span>
-                <span className="text-[#FD8D8C] font-bold text-lg">
+                <span className="text-[var(--r)] font-bold text-lg">
                   {item.teamSize}
                 </span>
               </div>
@@ -120,13 +120,12 @@ const DesignedForTeamSize = () => {
                 return (
                   <Button
                     key={modeItem}
-                    className={`rounded-full border border-gray-300 shadow-xl font-semibold capitalize ${
-                      modeItem == "onsite"
-                        ? "text-[#24D80C]"
-                        : modeItem == "remote"
-                          ? "text-[#0A66C2]"
-                          : "text-[#F59E0B]"
-                    }`}
+                    className={`rounded-full border border-gray-300 shadow-xl font-semibold capitalize py-6 px-6 ${modeItem == "onsite"
+                      ? "text-[#24D80C]"
+                      : modeItem == "remote"
+                        ? "text-[#0A66C2]"
+                        : "text-[#F59E0B]"
+                      }`}
                     variant={"outline"}
                   >
                     {modeItem}
@@ -153,7 +152,7 @@ const DesignedForTeamSize = () => {
                     "_blank",
                   );
                 }}
-                className="bg-lightPink cursor-pointer hover:bg-lightPink rounded-full w-full"
+                className="bg-[var(--r)] text-white cursor-pointer hover:bg-[#c40000] rounded-full w-full py-6"
               >
                 Get A Quote
               </Button>

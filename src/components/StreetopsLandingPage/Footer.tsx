@@ -1,6 +1,11 @@
 import React from "react";
+import Link from "next/link";
 
-const Footer: React.FC = () => {
+interface FooterProps {
+    variant?: 'default' | 'team-bonding';
+}
+
+const Footer: React.FC<FooterProps> = ({ variant = 'default' }) => {
     return (
         <footer>
             <div className="ftin">
@@ -9,8 +14,9 @@ const Footer: React.FC = () => {
                         <img src="/red-logo.png" alt="StreetOps Logo" width="120" />
                     </a>
                     <p className="fdesc">
-                        The social productivity ecosystem. Behavioural technology for teams
-                        that take people seriously.
+                        {variant === 'team-bonding'
+                            ? "Social productivity for all team"
+                            : "The social productivity ecosystem. Behavioural technology for teams that take people seriously."}
                     </p>
                     <div className="fsocs">
                         <a
@@ -39,39 +45,56 @@ const Footer: React.FC = () => {
                         </a>
                     </div>
                 </div>
-                <div>
-                    <div className="fct">Solutions</div>
-                    <ul className="fl">
-                        <li>
-                            <a href="/team-bonding">Team Bonding</a>
-                        </li>
-                        <li>
-                            <a href="/training">Skill Development Training</a>
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    <div className="fct">Company</div>
-                    <ul className="fl">
-                        <li>
-                            <a href="/about">About Us</a>
-                        </li>
-                        <li>
-                            <a href="/blog">Blog</a>
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    <div className="fct">Get Started</div>
-                    <ul className="fl">
-                        <li>
-                            <a href="#ready-to-build">Book a Discovery Call</a>
-                        </li>
-                        <li>
-                            <a href="#">Get Early Access</a>
-                        </li>
-                    </ul>
-                </div>
+                {variant === 'team-bonding' ? (
+                    <>
+                        <div>
+                            <div className="fct">Company</div>
+                            <ul className="fl">
+                                <li><Link href="/about">About us</Link></li>
+                                <li><Link href="/blog">Blog</Link></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div className="fct">Services</div>
+                            <ul className="fl">
+                                <li><Link href="/recruitment">Recruitment</Link></li>
+                                <li><Link href="/training">Training</Link></li>
+                                <li><Link href="/team-bonding">Team Bonding</Link></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div className="fct">Legal</div>
+                            <ul className="fl">
+                                <li><Link href="#">Privacy Policy</Link></li>
+                                <li><Link href="#">Terms of Service</Link></li>
+                            </ul>
+                        </div>
+                    </>
+                ) : (
+                    <>
+                        <div>
+                            <div className="fct">Solutions</div>
+                            <ul className="fl">
+                                <li><a href="/team-bonding">Team Bonding</a></li>
+                                <li><a href="/training">Skill Development Training</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div className="fct">Company</div>
+                            <ul className="fl">
+                                <li><a href="/about">About Us</a></li>
+                                <li><a href="/blog">Blog</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div className="fct">Get Started</div>
+                            <ul className="fl">
+                                <li><a href="#ready-to-build">Book a Discovery Call</a></li>
+                                <li><a href="#">Get Early Access</a></li>
+                            </ul>
+                        </div>
+                    </>
+                )}
             </div>
             <div className="fbot">
                 <div className="fbc">

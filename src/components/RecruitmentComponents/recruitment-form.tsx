@@ -239,7 +239,7 @@ export default function RecruitmentForm() {
             <Button
               type="submit"
               disabled={isLoading}
-              className="px-10 rounded-full bg-secondPrimary hover:bg-[#4a0c0c] md:w-2/4 w-4/5"
+              className="px-10 py-6 rounded-full bg-[var(--r)] hover:bg-[#c40000] text-white md:w-1/3 w-1/2"
             >
               {isLoading ? (
                 <Loader2 className="animate-spin" />

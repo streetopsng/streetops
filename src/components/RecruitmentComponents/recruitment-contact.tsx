@@ -32,8 +32,8 @@ const RecruitmentContact = () => {
             target="_blank"
             className="bg-white shadow-2xl md:w-[30%] w-full rounded-2xl flex flex-col items-center justify-center py-4"
           >
-            <div className="w-12 h-12 bg-[#FD8D8C] rounded-full flex items-center justify-center mb-4 p-2">
-              <img src={item.icon} alt="icon" />
+            <div className="w-12 h-12 bg-[var(--rt)] text-[var(--r)] rounded-full flex items-center justify-center mb-4 p-2">
+              <img src={item.icon} alt="icon" style={{ filter: "brightness(0) saturate(100%) invert(18%) sepia(87%) saturate(5831%) hue-rotate(355deg) brightness(97%) contrast(114%)" }} />
             </div>
             <h1 className="font-semibold">{item.title}</h1>
             <p className="text-sm">{item.value}</p>
