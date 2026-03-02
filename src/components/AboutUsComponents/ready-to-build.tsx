@@ -23,7 +23,7 @@ const contactInfo = [
     id: 3,
     title: "Visit Us",
     link: "",
-    value: "Lagos, Nigeria",
+    value: "Mayfair Gardens, Ibeju lekki, lagos, Nigeria",
     icon: "/new-assets/visit-us.svg",
   },
 ];
@@ -31,6 +31,11 @@ const contactInfo = [
 const ReadyToBuild = () => {
   return (
     <section className="py-4  px-4 " id="ready-to-build">
+      <style>{`
+        .force-montserrat {
+          font-family: "Montserrat", sans-serif !important;
+        }
+      `}</style>
       <div className="md:w-[90%] w-full h-full  mx-auto ">
         <div
           className="relative rounded-3xl overflow-hidden h-full w-full py-12"
@@ -40,10 +45,10 @@ const ReadyToBuild = () => {
             backgroundPosition: "center",
           }}
         >
-          <h1 className="font-bold text-4xl text-white text-center my-6">
-            Ready To Build Real Teams?
+          <h1 className="font-bold text-4xl text-white text-center my-6" style={{ color: "white" }}>
+            Ready to optimize your team engagement?
           </h1>
-          <section className="flex flex-wrap justify-between lg:px-16 md:px-8 px-4   gap-y-4 ">
+          <section className="flex flex-wrap justify-center lg:px-16 md:px-8 px-4 gap-6 mt-10">
             {contactInfo.map((item, index) => {
               return (
                 <a
@@ -51,14 +56,29 @@ const ReadyToBuild = () => {
                   rel="noopener noreferrer"
                   target="_blank"
                   key={index}
-                  className="bg-white shadow-2xl md:w-[30%] w-full rounded-2xl flex flex-col items-center justify-center py-4"
-                  style={{ fontFamily: "sans-serif" }}
+                  className="w-full md:w-[30%] rounded-2xl flex flex-col items-center justify-center py-6 transition-all duration-300 hover:-translate-y-1"
+                  style={{
+                    fontFamily: "sans-serif",
+                    background: "rgba(255, 255, 255, 0.1)",
+                    backdropFilter: "blur(12px)",
+                    WebkitBackdropFilter: "blur(12px)",
+                    border: "1px solid rgba(255, 255, 255, 0.2)",
+                    boxShadow: "0 8px 32px rgba(0, 0, 0, 0.1)",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.background = "rgba(255, 255, 255, 0.15)";
+                    e.currentTarget.style.border = "1px solid rgba(255, 255, 255, 0.4)";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.background = "rgba(255, 255, 255, 0.1)";
+                    e.currentTarget.style.border = "1px solid rgba(255, 255, 255, 0.2)";
+                  }}
                 >
-                  <div className="w-12 h-12 bg-[#FD8D8C] rounded-full flex items-center justify-center mb-4 p-2">
-                    <img src={item.icon} alt="icon" />
+                  <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mb-4 p-2 shadow-inner">
+                    <img src={item.icon} alt="icon" style={{ width: '20px', height: '20px', filter: 'brightness(0) invert(1)' }} />
                   </div>
-                  <h1 className="font-semibold">{item.title}</h1>
-                  <p className="text-sm " style={{ fontFamily: "sans-serif" }}>
+                  <h1 className="font-semibold text-white" style={{ fontSize: '15px', letterSpacing: '0.02em' }}>{item.title}</h1>
+                  <p className="mt-1 force-montserrat" style={{ fontSize: '14px', color: 'rgba(255,255,255,0.85)' }}>
                     {item.value}
                   </p>
                 </a>
@@ -71,7 +91,7 @@ const ReadyToBuild = () => {
               <span className="bg-white p-1 rounded-full">
                 <Clock className="text-red-500" />
               </span>{" "}
-              <span>We respond within 24 hours</span>
+              <span>We respond within <span className="force-montserrat">12</span> hours</span>
             </p>
             <a
               href="https://wa.me/2347026782510"
