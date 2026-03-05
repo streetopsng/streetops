@@ -37,7 +37,6 @@ const page = () => {
     queryKey: ["allblogs"],
     queryFn: fetchData,
   });
-  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     console.log(data);
@@ -109,7 +108,7 @@ const page = () => {
       {/* </section> */}
       {/* </div> */}
 
-      <Nav onOpenModal={() => setIsModalOpen(true)} />
+      <Nav />
       <br />
       <br />
       <br />
