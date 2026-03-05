@@ -93,7 +93,7 @@ const Features: React.FC = () => {
             </div>
           </div>
           <div className="sc rv d3 glossy">
-            <div className="sn">2×</div>
+            <div className="sn">2x</div>
             <div className="sl">
               <strong>Higher attrition risk</strong> in teams with no structured
               engagement or onboarding programme in year one

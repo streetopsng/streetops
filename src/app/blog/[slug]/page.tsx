@@ -1,7 +1,8 @@
 "use client";
 
-import Footer from "@/components/LatestlandingPage/footer";
+// import Footer from "@/components/LatestlandingPage/footer";
 import Header from "@/components/LatestlandingPage/header";
+import Footer from "@/components/StreetopsLandingPage/Footer";
 import { Button } from "@/components/ui/button";
 import { RootStateType } from "@/store";
 import PagePreloader from "@/utils/PagePreloader";

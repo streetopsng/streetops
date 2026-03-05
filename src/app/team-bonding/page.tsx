@@ -1,4 +1,5 @@
-import Footer from "@/components/StreetopsLandingPage/Footer";
+"use client";
+// import Footer from "@/components/StreetopsLandingPage/Footer";
 import RecruitmentContact from "@/components/RecruitmentComponents/recruitment-contact";
 import DesignedForTeamSize from "@/components/TeamBondingComponents/designed-for-team-size";
 import LetUsBuildYourTeam from "@/components/TeamBondingComponents/let-us-build-your-team";
@@ -8,12 +9,14 @@ import TeamBondingHero from "@/components/TeamBondingComponents/team-bonding-her
 import WaysToBuild from "@/components/TeamBondingComponents/ways-to-build";
 import Nav from "@/components/StreetopsLandingPage/Nav";
 import "@/components/StreetopsLandingPage/StreetopsLandingPage.css";
-import React from "react";
+import React, { useState } from "react";
+import Footer from "@/components/StreetopsLandingPage/Footer";
 
 const Page = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <div className="bizmo-with-mont-numbers">
-      <div className="relative ">
+      {/* <div className="relative ">
         <>
           <div className="absolute h-full -z-1 w-full bg-linear-to-b from-[#FA2120] to-[#941413] " />
           <div
@@ -29,8 +32,12 @@ const Page = () => {
           <Nav variant="team-bonding" />
         </div>
         <TeamBondingHero />
-      </div>
+      </div> */}
 
+      <Nav onOpenModal={() => setIsModalOpen(true)} />
+      <br />
+      <br />
+      <br />
       <Productivity />
       {/* <WaysToBuild /> */}
       <DesignedForTeamSize />
@@ -40,7 +47,7 @@ const Page = () => {
       <RecruitmentContact />
 
       <div className="streetops-landing">
-        <Footer variant="team-bonding" />
+        <Footer />
       </div>
     </div>
   );

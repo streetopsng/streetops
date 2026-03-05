@@ -12,7 +12,7 @@ export default async function ProgramPage({ params }: PageProps) {
   }
 
   return (
-    <section className="space-y-8 lg:px-16 md:px-8 px-4 py-8">
+    <section className="space-y-8 lg:px-16 md:px-8 px-4 py-8 mt-16">
       {/* Header */}
       <header className="text-center">
         <h1 className="text-3xl font-bold">

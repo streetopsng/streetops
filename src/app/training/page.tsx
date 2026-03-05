@@ -1,3 +1,4 @@
+"use client";
 import Header from "@/components/Training/header";
 import Hero from "@/components/Training/hero";
 import TrainingSection from "@/components/Training/training-section";
@@ -9,14 +10,17 @@ import TestimonialSection from "@/components/Training/testimonial";
 import FAQSection from "@/components/Training/faq";
 import ChoiceSection from "@/components/Training/choice";
 import TrainingCta from "@/components/Training/training-cta";
-import Footer from "@/components/LatestlandingPage/footer";
-import React from "react";
+// import Footer from "@/components/LatestlandingPage/footer";
+import React, { useState } from "react";
 import ReadyToBuild from "@/components/AboutUsComponents/ready-to-build";
+import Nav from "@/components/StreetopsLandingPage/Nav";
+import Footer from "@/components/StreetopsLandingPage/Footer";
 
 const Page = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <div className="">
-      <div className="relative ">
+      {/* <div className="relative ">
         <>
           <div className="absolute h-full -z-1 w-full bg-linear-to-b from-[#FA2120] to-[#941413] " />
           <div
@@ -30,7 +34,10 @@ const Page = () => {
         </>
         {<Header />}
         {<Hero />}
-      </div>
+      </div> */}
+
+      <Nav onOpenModal={() => setIsModalOpen(true)} />
+
       {/* {<Approach />} */}
       {<TrainingSection />}
       {<TrainingFormats />}

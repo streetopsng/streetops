@@ -91,7 +91,14 @@ const DesignedForTeamSize = () => {
           >
             <aside className="w-full flex justify-between">
               <div className="w-12 h-12 bg-[var(--rt)] text-[var(--r)] rounded-full flex items-center justify-center mb-4 p-2 ">
-                <img src={item.icon} alt="icon" style={{ filter: "brightness(0) saturate(100%) invert(18%) sepia(87%) saturate(5831%) hue-rotate(355deg) brightness(97%) contrast(114%)" }} />
+                <img
+                  src={item.icon}
+                  alt="icon"
+                  style={{
+                    filter:
+                      "brightness(0) saturate(100%) invert(18%) sepia(87%) saturate(5831%) hue-rotate(355deg) brightness(97%) contrast(114%)",
+                  }}
+                />
               </div>
               <div className="flex flex-col items-center">
                 <span className="font-medium text-sm"> Team Size</span>
@@ -106,7 +113,7 @@ const DesignedForTeamSize = () => {
               <p className="italic">{item.desc}</p>
             </header>
             {/* what you get */}
-            <section>
+            <section className="h-64">
               <h1 className="font-semibold py-2">WHAT YOU GET</h1>
               <ul className="pl-4 list-disc flex flex-col gap-y-2">
                 {item.whatYouGet.map((subItem, index) => {
@@ -120,12 +127,13 @@ const DesignedForTeamSize = () => {
                 return (
                   <Button
                     key={modeItem}
-                    className={`rounded-full border border-gray-300 shadow-xl font-semibold capitalize py-6 px-6 ${modeItem == "onsite"
-                      ? "text-[#24D80C]"
-                      : modeItem == "remote"
-                        ? "text-[#0A66C2]"
-                        : "text-[#F59E0B]"
-                      }`}
+                    className={`rounded-full border border-gray-300 shadow-xl font-semibold capitalize py-6 px-6 ${
+                      modeItem == "onsite"
+                        ? "text-[#24D80C]"
+                        : modeItem == "remote"
+                          ? "text-[#0A66C2]"
+                          : "text-[#F59E0B]"
+                    }`}
                     variant={"outline"}
                   >
                     {modeItem}
@@ -136,7 +144,7 @@ const DesignedForTeamSize = () => {
 
             {/* best for */}
 
-            <section>
+            <section className="h-16">
               <h1 className="font-semibold py-2">BEST FOR</h1>
               <p className="text-sm">{item.bestFor}</p>
             </section>

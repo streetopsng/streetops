@@ -24,7 +24,7 @@ const features = [
 
 export default function TrainingSection() {
   return (
-    <section className="relative py-12 bg-white overflow-hidden">
+    <section className="relative pb-12 pt-32 bg-white overflow-hidden">
       {/* Reduced height of patterns */}
       <div className="absolute top-0 left-0 w-full h-16 opacity-10 pointer-events-none bg-[url('/pattern.png')] bg-repeat-x bg-contain" />
 

@@ -1,19 +1,20 @@
+"use client";
 import AboutUsHero from "@/components/AboutUsComponents/about-us-hero";
 import OurBrandStory from "@/components/AboutUsComponents/our-brand-story";
 import OurCoreMission from "@/components/AboutUsComponents/our-core-mission";
 import OurKeyApproach from "@/components/AboutUsComponents/our-key-approach";
 import OurVisionForward from "@/components/AboutUsComponents/our-vision-forward";
 import ReadyToBuild from "@/components/AboutUsComponents/ready-to-build";
-import Footer from "@/components/LatestlandingPage/footer";
+import Footer from "@/components/StreetopsLandingPage/Footer";
+// import Footer from "@/components/LatestlandingPage/footer";
+import Nav from "@/components/StreetopsLandingPage/Nav";
 import TeamMembers from "@/components/team-members";
-import Header from "@/components/Training/header";
-import React from "react";
 
 const Page = () => {
   return (
     <>
       <div className="">
-        <div className="relative ">
+        {/* <div className="relative ">
           <>
             <div className="absolute h-full -z-1 w-full bg-linear-to-b from-[#FA2120] to-[#941413] " />
             <div
@@ -27,7 +28,11 @@ const Page = () => {
           </>
           {<Header />}
           {<AboutUsHero />}
-        </div>
+        </div> */}
+        <Nav />
+        <br />
+        <br />
+        <br />
 
         {/*  */}
         <TeamMembers />

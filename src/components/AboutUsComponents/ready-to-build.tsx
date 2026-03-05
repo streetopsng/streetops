@@ -1,3 +1,4 @@
+"use client";
 import { Button } from "@react-email/components";
 import { link } from "fs";
 import { Clock } from "lucide-react";
@@ -45,7 +46,10 @@ const ReadyToBuild = () => {
             backgroundPosition: "center",
           }}
         >
-          <h1 className="font-bold text-4xl text-white text-center my-6" style={{ color: "white" }}>
+          <h1
+            className="font-bold md:text-3xl! text-lg! text-white text-center my-6"
+            style={{ color: "white" }}
+          >
             Ready to optimize your team engagement?
           </h1>
           <section className="flex flex-wrap justify-center lg:px-16 md:px-8 px-4 gap-6 mt-10">
@@ -66,19 +70,46 @@ const ReadyToBuild = () => {
                     boxShadow: "0 8px 32px rgba(0, 0, 0, 0.1)",
                   }}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.background = "rgba(255, 255, 255, 0.15)";
-                    e.currentTarget.style.border = "1px solid rgba(255, 255, 255, 0.4)";
+                    e.currentTarget.style.background =
+                      "rgba(255, 255, 255, 0.15)";
+                    e.currentTarget.style.border =
+                      "1px solid rgba(255, 255, 255, 0.4)";
                   }}
                   onMouseLeave={(e) => {
-                    e.currentTarget.style.background = "rgba(255, 255, 255, 0.1)";
-                    e.currentTarget.style.border = "1px solid rgba(255, 255, 255, 0.2)";
+                    e.currentTarget.style.background =
+                      "rgba(255, 255, 255, 0.1)";
+                    e.currentTarget.style.border =
+                      "1px solid rgba(255, 255, 255, 0.2)";
                   }}
                 >
                   <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mb-4 p-2 shadow-inner">
-                    <img src={item.icon} alt="icon" style={{ width: '20px', height: '20px', filter: 'brightness(0) invert(1)' }} />
+                    <img
+                      src={item.icon}
+                      alt="icon"
+                      style={{
+                        width: "20px",
+                        height: "20px",
+                        filter: "brightness(0) invert(1)",
+                      }}
+                    />
                   </div>
-                  <h1 className="font-semibold text-white" style={{ fontSize: '15px', letterSpacing: '0.02em' }}>{item.title}</h1>
-                  <p className="mt-1 force-montserrat" style={{ fontSize: '14px', color: 'rgba(255,255,255,0.85)' }}>
+                  <h1
+                    className="font-semibold text-white"
+                    style={{
+                      fontSize: "15px",
+                      letterSpacing: "0.02em",
+                      color: "white",
+                    }}
+                  >
+                    {item.title}
+                  </h1>
+                  <p
+                    className="mt-1 force-montserrat"
+                    style={{
+                      fontSize: "14px",
+                      color: "rgba(255,255,255,0.85)",
+                    }}
+                  >
                     {item.value}
                   </p>
                 </a>
@@ -91,7 +122,10 @@ const ReadyToBuild = () => {
               <span className="bg-white p-1 rounded-full">
                 <Clock className="text-red-500" />
               </span>{" "}
-              <span>We respond within <span className="force-montserrat">12</span> hours</span>
+              <span>
+                We respond within <span className="force-montserrat">12</span>{" "}
+                hours
+              </span>
             </p>
             <a
               href="https://wa.me/2347026782510"
