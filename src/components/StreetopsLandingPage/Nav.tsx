@@ -138,8 +138,8 @@ const Nav: React.FC<NavProps> = ({ onOpenModal, variant = "default" }) => {
         )}
       </div>
 
-      <div className="nright flex items-center gap-2">
-        {variant === "team-bonding" ? (
+      <div className="nright flex items-center ">
+        {/* {variant === "team-bonding" ? (
           <a href="/blog" className="nbtn">
             Blog
           </a>
@@ -147,14 +147,29 @@ const Nav: React.FC<NavProps> = ({ onOpenModal, variant = "default" }) => {
           <button
             className="nbtn"
             onClick={() => dispatch(openModal())}
-            style={{ whiteSpace: "nowrap", cursor: "pointer" }}
+            style={{
+              whiteSpace: "nowrap",
+              cursor: "pointer",
+              marginInline: "0px",
+            }}
           >
             Get Early Access
           </button>
-        )}
+        )} */}
+        <button
+          className="nbtn"
+          onClick={() => dispatch(openModal())}
+          style={{
+            whiteSpace: "nowrap",
+            cursor: "pointer",
+            marginInline: "0px",
+          }}
+        >
+          Get Early Access
+        </button>
         <Button
           onClick={() => dispatch(openMobileMenu())}
-          className="lg:hidden bg-white text-black hover:text-primary hover:bg-gray-300 ml-2"
+          className="lg:hidden bg-white text-black hover:text-primary hover:bg-gray-300 "
         >
           <Menu />
         </Button>
