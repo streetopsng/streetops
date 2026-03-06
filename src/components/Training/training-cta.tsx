@@ -1,5 +1,6 @@
 "use client";
 import { Button } from "@/components/ui/button";
+import { IoLogoWhatsapp } from "react-icons/io";
 
 export default function TrainingCta() {
   return (
@@ -26,14 +27,17 @@ export default function TrainingCta() {
               Let's explore how we can help your team reach new <br /> heights
               together.
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
               <Button
                 onClick={() => {
                   window.open("https://wa.me/2347026782510", "_blank");
                 }}
-                className="bg-white hover:bg-[#a01830] text-green-500 font-medium rounded-full px-8 text-sm"
+                className="bg-white hover:bg-white/80 text-green-500 font-medium rounded-md px-8 text-sm cursor-pointer"
               >
-                Whatsapp
+                <span>
+                  <IoLogoWhatsapp className="text-[#25D366]" />
+                </span>{" "}
+                <span className="font-medium">Chat on Whatsapp</span>
               </Button>
               {/* <Button
                 variant="outline"

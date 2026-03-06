@@ -12,6 +12,7 @@ import ReactQueryProvider from "@/components/ReactQueryProvider";
 import { MobileMenu } from "@/components/mobile-menu";
 import { Toaster } from "react-hot-toast";
 import FormModal from "@/components/StreetopsLandingPage/form-modal";
+import WhatsAppWidget from "@/components/StreetopsLandingPage/WhatsAppWidget";
 
 export const metadata: Metadata = {
   title: "StreetOps",
@@ -83,6 +84,7 @@ export default function RootLayout({
             <Modal />
             <MobileMenu />
             <FormModal />
+            <WhatsAppWidget />
             {children}
           </ClientProvider>
         </ReactQueryProvider>
