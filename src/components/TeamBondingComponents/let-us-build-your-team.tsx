@@ -12,12 +12,12 @@ const LetUsBuildYourTeam = () => {
         <span className="uppercase tracking-widest bizmo-font text-[9px] font-bold bg-[var(--rt)] text-[var(--r)] px-2 py-0.5 rounded-full">
           Get Started
         </span>
-        <h2 className="text-2xl md:text-4xl font-bold bizmo-font text-thirdPrimary my-2 leading-tight">
-          Let's Build Your Team
+        <h2 className="text-xl md:text-3xl font-bold bizmo-font text-thirdPrimary my-2 leading-tight">
+          Let's Curate a Great Experience
         </h2>
         <p className="text-gray-500 max-w-lg mx-auto text-sm leading-relaxed">
-          Tell us about your hiring needs and we’ll get back to you within 24
-          hours.
+          Tell us about your team and your goal for this event. Our team will
+          get back to you within 24 hours.
         </p>
       </div>
 
