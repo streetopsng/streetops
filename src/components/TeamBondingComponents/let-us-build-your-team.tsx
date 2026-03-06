@@ -3,7 +3,10 @@ import RecruitmentForm from "../RecruitmentComponents/recruitment-form";
 
 const LetUsBuildYourTeam = () => {
   return (
-    <section className="bg-white py-12  font-sans lg:px-20 md:px-20 px-4">
+    <section
+      className="bg-white py-12  font-sans lg:px-20 md:px-20 px-4"
+      id="ready-to-build"
+    >
       {/* <img src="dash.png" alt="" className="pb-10" /> */}
       <div className="max-w-4xl mx-auto text-center mb-10">
         <span className="uppercase tracking-widest bizmo-font text-[9px] font-bold bg-[var(--rt)] text-[var(--r)] px-2 py-0.5 rounded-full">
