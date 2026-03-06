@@ -1,10 +1,36 @@
-import { model, models, Schema } from "mongoose";
+import mongoose, { Schema, models, model } from "mongoose";
 
+const EarlyAccessWaitlistSchema = new Schema(
+  {
+    name: {
+      type: String,
+      required: true,
+      trim: true,
+    },
+    companyName: {
+      type: String,
+      trim: true,
+      default: "",
+    },
+    role: {
+      type: String,
+      required: true,
 
-const waitlistSchema = new Schema({
-    email:String,
-},{
-    timestamps:true
-})
+      //   enum: ["CEO/Founder", "C-Suite", "HR Manager", "Team Lead", "Others"],
+    },
+    email: {
+      type: String,
+      required: true,
+      unique: true,
+      lowercase: true,
+      trim: true,
+    },
+  },
+  {
+    timestamps: true,
+  },
+);
 
-export const Waitlist = models.Waitlists || model("Waitlists",waitlistSchema)
+export const EarlyAccessWaitlist =
+  models.EarlyAccessWaitlist ||
+  model("EarlyAccessWaitlist", EarlyAccessWaitlistSchema);

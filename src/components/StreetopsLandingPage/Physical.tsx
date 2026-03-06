@@ -18,11 +18,11 @@ const Physical: React.FC = () => {
             effective — not just fun for a day.
           </p>
         </div>
-        <div className="physgrid">
+        <div className="physgrid" id="engagement-consulting">
           <div className="pc rv d1">
             <span className="pem">🏟️</span>
             <div className="ptag">Live Consulting</div>
-            <div className="pnm">Team Engagement Consulting</div>
+            <div className="pnm">Team Engagement </div>
             <div className="pdc">
               We come in,assess your team's behavioural dynamics,and design a
               tailored engagement programme. Not sticky notes — a structured
@@ -43,12 +43,19 @@ const Physical: React.FC = () => {
                 <div className="pdot"></div>Follow-up measurement and reporting
               </div>
             </div>
-            {/* <a href="#demo" className="plk">Talk to us about consulting →</a> */}
+            <a
+              href="https://calendly.com/streetopsng/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="plk"
+            >
+              Book a Free Insight Session →
+            </a>
           </div>
           <div className="pc rv d2">
             <span className="pem">🎯</span>
             <div className="ptag">Physical Experience</div>
-            <div className="pnm">Team Bonding Sessions</div>
+            <div className="pnm">Team Bonding </div>
             <div className="pdc">
               High-energy,identity-driven experiences delivered on-site.
               Designed around who your team actually is — not generic corporate
@@ -71,7 +78,14 @@ const Physical: React.FC = () => {
                 <div className="pdot"></div>Debrief with behavioural insights
               </div>
             </div>
-            {/* <a href="#demo" className="plk">Book a bonding session →</a> */}
+            <a
+              href="https://calendly.com/streetopsng/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="plk"
+            >
+              Schedule a Discovery Call →
+            </a>
           </div>
         </div>
       </div>

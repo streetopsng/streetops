@@ -1,7 +1,13 @@
+import { dispatchType } from "@/store";
+import { openModal } from "@/store/slices/form-modal-slice";
 import React, { useState, useEffect } from "react";
+import { useDispatch } from "react-redux";
 
-const Hero: React.FC = () => {
-  // State for randomizing numbers
+interface HeroProps {
+  onOpenModal?: () => void;
+}
+
+const Hero: React.FC<HeroProps> = ({ onOpenModal }) => {
   const [stats, setStats] = useState({
     total: 82,
     trust: 88,
@@ -9,9 +15,9 @@ const Hero: React.FC = () => {
     recognition: 82,
     pulseBars: [38, 52, 46, 64, 82],
   });
+  const dispatch = useDispatch<dispatchType>();
 
   useEffect(() => {
-    // Randomize between 82 and 100 on client load
     const rand = (min: number, max: number) =>
       Math.floor(Math.random() * (max - min + 1)) + min;
 
@@ -22,7 +28,6 @@ const Hero: React.FC = () => {
       trust: rand(82, 100),
       connection: rand(82, 100),
       recognition: rand(82, 100),
-      // Randomize graph heights, ending with the total as the "current" pulse
       pulseBars: [
         rand(30, 70),
         rand(40, 80),
@@ -38,27 +43,29 @@ const Hero: React.FC = () => {
       <div className="hero">
         <div>
           <div className="hpill">
-            <span className="hpd"></span>Identity-First Behavioural Technology
+            <span className="hpd"></span>IDENTITY-FIRST ENGAGEMENT PLATFORM
           </div>
           <h1>
-            Your teams deserve a manager who can <i>actually see them.</i>
+            <i> Great leadership </i> starts with deep team behavioral insight
           </h1>
           <p className="hbody">
-            StreetOps gives managers real-time visibility into the human
-            dynamics inside their teams — so they can build culture, reduce
-            attrition, and drive performance with confidence.
+            Performance challenges usually come from unseen behavior patterns.
+            StreetOps helps you understand how your team actually work so you
+            can lead with clarity instead of guesswork.
           </p>
-          <div className="hform">
-            {/* <input
-              className="hinp"
-              type="email"
-              placeholder="Enter your work email"
-            /> */}
-            {/* <button className="hbtn">Request demo →</button> */}
+          <div className="hform" style={{ marginTop: "20px" }}>
+            <button
+              className="hbtn"
+              onClick={() => dispatch(openModal())}
+              style={{
+                padding: "16px 28px",
+                fontSize: "16px",
+                borderRadius: "12px",
+              }}
+            >
+              Get Early Access →
+            </button>
           </div>
-          {/* <p className="hnote">
-            No commitment required. <a href="#">Privacy Policy</a> applies.
-          </p> */}
         </div>
         <div className="hvis">
           <div className="hvbg"></div>

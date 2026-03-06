@@ -1,4 +1,4 @@
-import Footer from "@/components/LatestlandingPage/footer";
+// import Footer from "@/components/LatestlandingPage/footer";
 import BuildDreamTeam from "@/components/RecruitmentComponents/build-dream-team";
 import HowRecruitmentWorks from "@/components/RecruitmentComponents/how-recruitment-works";
 import LetUsBuildYourTeam from "@/components/RecruitmentComponents/let-us-build-your-team";
@@ -6,6 +6,7 @@ import RecruitmentContact from "@/components/RecruitmentComponents/recruitment-c
 import RecruitmentHero from "@/components/RecruitmentComponents/recruitment-hero";
 import RecruitmentSolutions from "@/components/RecruitmentComponents/recruitment-solutions";
 import RecuitmentProcess from "@/components/RecruitmentComponents/recuitment-process";
+import Footer from "@/components/StreetopsLandingPage/Footer";
 import Header from "@/components/Training/header";
 import React from "react";
 

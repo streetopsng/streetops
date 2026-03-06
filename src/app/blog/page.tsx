@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -8,13 +8,14 @@ import { useDispatch, useSelector } from "react-redux";
 import { dispatchType, RootStateType } from "@/store";
 import { useQuery } from "@tanstack/react-query";
 import { blogPostType, storeBlogs } from "@/store/slices/allBlogs";
-import Footer from "@/components/LatestlandingPage/footer";
+// import Footer from "@/components/LatestlandingPage/footer";
 import PagePreloader from "@/utils/PagePreloader";
-import Header from "@/components/Training/header";
-import { motion } from "framer-motion";
+
 import gsap from "gsap";
 import { ScrambleTextPlugin } from "gsap/ScrambleTextPlugin";
 import ReadyToBuild from "@/components/AboutUsComponents/ready-to-build";
+import Nav from "@/components/StreetopsLandingPage/Nav";
+import Footer from "@/components/StreetopsLandingPage/Footer";
 gsap.registerPlugin(ScrambleTextPlugin);
 async function fetchData() {
   const res = await fetch(`/api/blog/get-blogs`);
@@ -67,8 +68,8 @@ const page = () => {
  <p className={`md:text-xl text-lg lg:w-[60%] w-full `}>Stay informed and empowered with valuable articles, expert advice, and actionable tips to help you scale your operations</p> 
  </div> */}
 
-      <div className="relative ">
-        <>
+      {/* <div className="relative "> */}
+      {/* <>
           <div className="absolute h-full -z-1 w-full bg-linear-to-b from-[#FA2120] to-[#941413] " />
           <div
             className="absolute inset-0 opacity-25 -z-1"
@@ -78,13 +79,13 @@ const page = () => {
               backgroundPosition: "center top",
             }}
           />
-        </>
-        {<Header />}
-        {/* Hero */}
-        <section className="flex flex-col justify-between  min-h-[90vh]  pt-10 max-w-4xl mx-auto text-center px-6">
-          {/* Main Content Container */}
+        </> */}
+      {/* {<Header />} */}
+      {/* Hero */}
+      {/* <section className="flex flex-col justify-between  min-h-[90vh]  pt-10 max-w-4xl mx-auto text-center px-6"> */}
+      {/* Main Content Container */}
 
-          <aside>
+      {/* <aside>
             <h1 className="text-4xl Hero hero-text md:text-6xl lg:text-7xl font-bold text-white mb-5 font-serif leading-[1.15]  ">
               <span className="span-text">Explore Experts Insights</span> <br />{" "}
               and Practical <br />{" "}
@@ -102,34 +103,15 @@ const page = () => {
               Stay informed and empowered with valuable articles, expert advice,
               and actionable tips to help you scale your operations
             </motion.p>
-          </aside>
-          {/* Input Field Area */}
-          {/* <div className="flex items-center justify-center max-w-md mx-auto">
-          <div className="flex w-full bg-white/20 backdrop-blur-sm rounded-full p-1.5 border border-white/20 shadow-lg">
-            <Input
-              type="text"
-              placeholder="Enter full name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              className="bg-transparent border-none text-white text-base placeholder:text-white/70 focus-visible:ring-0 focus-visible:ring-offset-0 h-11 px-5"
-            />
-            <Button className="bg-[#2d1f1f] hover:bg-[#3d2f2f] text-white rounded-full px-7 h-11 text-sm font-medium transition-all">
-              Join waitlist
-            </Button>
-          </div>
-        </div> */}
+          </aside> */}
 
-          {/* Bottom Image */}
-          {/* <div className="flex justify-center w-full mt-16">
-            <img
-              src="/new-assets/blog.svg"
-              alt="blog"
-              className="max-w-[90%] md:max-w-[70%] h-auto object-contain select-none"
-            />
-          </div> */}
-        </section>
-      </div>
+      {/* </section> */}
+      {/* </div> */}
 
+      <Nav />
+      <br />
+      <br />
+      <br />
       <div className="mt-8">
         {/* <h1 className="text-3xl Hero md:text-5xl font-bold text-thirdPrimary Hero md:mb-6 mb-2 tracking-tight text-center ">
           Blogs

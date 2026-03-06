@@ -6,6 +6,7 @@ import alljobsReducer from "./slices/allJobsSlice";
 import blogsReducer from "./slices/allBlogs";
 import modalReducer from "./slices/modalSlice";
 import mobileMenuReducer from "./slices/opemMobileMenuSlice";
+import formModalReducer from "./slices/form-modal-slice";
 
 const store = configureStore({
   reducer: {
@@ -16,6 +17,7 @@ const store = configureStore({
     alljobsReducer: alljobsReducer,
     blogsReducer: blogsReducer,
     modalReducer: modalReducer,
+    formModalReducer: formModalReducer,
   },
 });
 

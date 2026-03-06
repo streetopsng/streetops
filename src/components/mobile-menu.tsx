@@ -35,19 +35,75 @@ export function MobileMenu() {
         </div>
 
         {/* Links */}
-        <nav className="flex flex-col gap-6 px-6 py-10 text-lg text-primary">
-          <a href="/training" onClick={() => dispatch(closeMobileMenu())}>
-            Training
+        <nav className="flex flex-col gap-4 px-6 py-10 text-lg text-primary">
+          <div className="border-b borde-black py-2">
+            <h1 className="text-black capitalize underline">services</h1>
+
+            <a
+              href="/team-bonding"
+              style={{ fontSize: "1rem", color: "red" }}
+              onClick={() => dispatch(closeMobileMenu())}
+            >
+              Team Bonding Session
+            </a>
+            <br />
+            <a
+              onClick={() => dispatch(closeMobileMenu())}
+              style={{ fontSize: "1rem", color: "red" }}
+            >
+              Engagement Consulting
+            </a>
+            <br />
+            <a
+              href="/training"
+              onClick={() => dispatch(closeMobileMenu())}
+              style={{ fontSize: "1rem", color: "red" }}
+            >
+              Skill Development Training
+            </a>
+          </div>
+
+          <div className="border-b borde-black py-2">
+            <h1 className="text-black capitalize underline">Product</h1>
+
+            <a
+              href="#"
+              style={{ fontSize: "1rem", color: "red" }}
+              onClick={() => dispatch(closeMobileMenu())}
+            >
+              <div>Team Identity System(coming soon)</div>
+            </a>
+          </div>
+
+          <a
+            href="/blog"
+            style={{ fontSize: "1rem" }}
+            onClick={() => dispatch(closeMobileMenu())}
+          >
+            Blog
           </a>
-          {/* <a href="/recruitment" onClick={() => dispatch(closeMobileMenu())}>
-            Recruitment
-          </a> */}
-          <a href="#ready-to-build" onClick={() => dispatch(closeMobileMenu())}>
+          <a
+            href="#ready-to-build"
+            className=""
+            style={{ fontSize: "1rem" }}
+            onClick={() => dispatch(closeMobileMenu())}
+          >
+            Contact Us
+          </a>
+          <a
+            href="/about"
+            style={{ fontSize: "1rem" }}
+            onClick={() => dispatch(closeMobileMenu())}
+          >
+            About
+          </a>
+
+          {/* <a href="#ready-to-build" onClick={() => dispatch(closeMobileMenu())}>
             Ready to Build
           </a>
           <a href="/about" onClick={() => dispatch(closeMobileMenu())}>
             About
-          </a>
+          </a> */}
         </nav>
       </div>
     </>

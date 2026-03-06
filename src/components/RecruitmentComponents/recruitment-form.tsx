@@ -76,8 +76,8 @@ export default function RecruitmentForm() {
       if (response.success) {
         dispatch(
           openModal(
-            "Your request was successfully sent , we'll get back to you promptly"
-          )
+            "Your request was successfully sent , we'll get back to you promptly",
+          ),
         );
         form.reset();
       } else if (response.status == 400) {
@@ -85,8 +85,8 @@ export default function RecruitmentForm() {
       } else {
         dispatch(
           openModal(
-            "sorry, currently unable to process your request at this, kinldy try again later or reach out to us via our email: streetopsng@gmail.com"
-          )
+            "sorry, currently unable to process your request at this, kinldy try again later or reach out to us via our email: streetopsng@gmail.com",
+          ),
         );
       }
 
@@ -191,19 +191,15 @@ export default function RecruitmentForm() {
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent>
-                    <SelectItem value="fast-hire">Fast Hire</SelectItem>
-                    <SelectItem value="graduate-talent">
-                      Graduate Talent Hunt
-                    </SelectItem>
-                    <SelectItem value="volume-recruitment">
-                      Volume Recruitment
-                    </SelectItem>
-                    <SelectItem value="executive-search">
+                    <SelectItem value="starter-squad">Starter Squad</SelectItem>
+                    <SelectItem value="power-team">Power Team</SelectItem>
+                    <SelectItem value="full-force">Full Force</SelectItem>
+                    {/* <SelectItem value="executive-search">
                       Executive Search
                     </SelectItem>
                     <SelectItem value="specialist-technical">
                       Specialist / Technical
-                    </SelectItem>
+                    </SelectItem> */}
                   </SelectContent>
                 </Select>
                 <FormMessage />
@@ -239,7 +235,7 @@ export default function RecruitmentForm() {
             <Button
               type="submit"
               disabled={isLoading}
-              className="px-10 rounded-full bg-secondPrimary hover:bg-[#4a0c0c] md:w-2/4 w-4/5"
+              className="px-10 py-6 rounded-full bg-[var(--r)] hover:bg-[#c40000] text-white md:w-1/3 w-1/2"
             >
               {isLoading ? (
                 <Loader2 className="animate-spin" />

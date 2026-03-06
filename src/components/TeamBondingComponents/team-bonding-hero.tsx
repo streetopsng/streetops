@@ -32,26 +32,25 @@ export default function TeamBondingHero() {
   }, []);
 
   useEffect(() => {
-    gsapCtx.current = gsap.context(() => {});
+    gsapCtx.current = gsap.context(() => { });
   }, []);
   return (
-    <section className="flex flex-col md:justify-between justify-end min-h-[90vh]  pt-10 max-w-4xl mx-auto text-center px-6  ">
-      {/* Main Content Container */}
-
-      <aside className="">
-        <h1 className="text-4xl Hero hero-text md:text-6xl lg:text-7xl font-bold  text-white mb-3  leading-[1.15] ">
+    <section className="flex flex-col md:flex-row items-center justify-between min-h-[90vh] pt-10 max-w-6xl mx-auto px-6 gap-8">
+      {/* Left Content Container */}
+      <aside className="md:w-1/2 w-full text-left">
+        <h1 className="text-4xl Hero hero-text md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-[1.15]">
           Build Teams That
           <br />
           Work Together
         </h1>
 
-        <div className="overflow-y-hidden ">
+        <div className="overflow-y-hidden">
           <motion.p
             initial={{ opacity: 0, y: 60 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 2, ease: "easeOut", delay: 1 }}
             viewport={{ once: true, amount: 0.3 }}
-            className="text-white/90 md:text-xl text-lg mb-4  mx-auto leading-relaxed  z-10"
+            className="text-white/90 md:text-xl text-lg mb-4 leading-relaxed z-10"
           >
             Team bonding designed for productivity. We create{" "}
             <span className="font-bold">
@@ -63,12 +62,12 @@ export default function TeamBondingHero() {
         </div>
       </aside>
 
-      {/* Bottom Image */}
-      <div className="flex justify-center w-full">
+      {/* Right Image */}
+      <div className="md:w-1/2 w-full flex justify-center">
         <img
           src="/new-assets/team-bonding-hero.png"
           alt="People collaboration"
-          className="md:w-[80%] w-[90%] h-75 object-contain select-none "
+          className="w-full h-auto object-contain select-none"
         />
       </div>
     </section>

@@ -115,7 +115,8 @@
   --rb: #fecaca;
 }
 
-.streetops-landing nav {
+.streetops-landing nav,
+.streetops-landing-nav {
   position: fixed;
   top: 0;
   left: 0;
@@ -129,8 +130,10 @@
   backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--gl);
 }
+
 @media (max-width: 600px) {
-  .streetops-landing nav {
+  .streetops-landing nav,
+  .streetops-landing-nav {
     padding: 0 10px;
   }
 }
@@ -295,17 +298,21 @@
 .hero {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 112px 48px 88px;
+  padding: 100px 48px 60px;
+  /* Reduced vertical padding */
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 72px;
+  gap: 60px;
+  /* Reduced gap from 72px */
   align-items: center;
-  min-height: 100vh;
+  min-height: auto;
+  /* Removed 100vh to stop it from expanding arbitrarily */
 }
 
 @media (max-width: 768px) {
   .hero {
     grid-template-columns: 1fr;
+    padding: 80px 24px 40px;
   }
 }
 
@@ -712,7 +719,7 @@
 .wrap {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 88px 48px;
+  padding: 48px 48px;
 }
 
 .pre {
@@ -1194,7 +1201,7 @@
 
 .idwrap {
   background: #111;
-  padding: 100px 48px;
+  padding: 48px 48px;
   overflow: hidden;
   position: relative;
 }
@@ -1366,7 +1373,7 @@
 
 .demowrap {
   background: linear-gradient(135deg, #111 0%, #5a0000 100%);
-  padding: 104px 48px;
+  padding: 48px 48px;
   position: relative;
   overflow: hidden;
 }
@@ -1559,7 +1566,7 @@
 
 footer {
   background: #111;
-  padding: 64px 48px 38px;
+  padding: 48px 48px 38px;
 }
 
 .ftin {

@@ -23,9 +23,11 @@
 body {
   font-family: "Montserrat", sans-serif;
 }
+
 html {
   scroll-behavior: smooth;
 }
+
 .inset-box {
   box-shadow: inset 0 0px 20px #f73620;
   /* border: 1px solid #120f0f; */
@@ -36,6 +38,7 @@ html {
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-100%);
   }
@@ -55,6 +58,7 @@ html {
 .backface-hidden {
   backface-visibility: hidden;
 }
+
 .Hero {
   font-family: "Bizmo Trial", sans-serif;
   /* font-optical-sizing: auto; */
@@ -63,6 +67,20 @@ html {
 .bizmo-font {
   font-family: "Bizmo Trial", sans-serif;
 }
+
+@font-face {
+  font-family: 'MontNumbers';
+  font-style: normal;
+  font-weight: 100 900;
+  src: local('Montserrat'), url('https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2') format('woff2');
+  unicode-range: U+0030-0039;
+}
+
+.bizmo-with-mont-numbers,
+.bizmo-with-mont-numbers * {
+  font-family: 'MontNumbers', "Bizmo Trial", sans-serif !important;
+}
+
 * {
   font-family: "Montserrat", sans-serif;
   /* color: #525151; */
@@ -87,32 +105,29 @@ transform: rotateY(180deg);
 .animated-gradient-slide-text {
   /* font-size: 3rem; */
   /* font-weight: bold; */
-  background: linear-gradient(
-    270deg,
-    #f73620,
-    #991b1b,
-    #0d0d0d,
-    #dddddd,
-    #ffffff,
-    #f73620
-  );
+  background: linear-gradient(270deg,
+      #f73620,
+      #991b1b,
+      #0d0d0d,
+      #dddddd,
+      #ffffff,
+      #f73620);
   background-size: 600% 600%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: gradientMove 8s ease infinite;
 }
+
 .animated-gradient-text {
   /* font-size: 3rem; */
   font-weight: bold;
-  background: linear-gradient(
-    270deg,
-    #f73620,
-    #991b1b,
-    #0d0d0d,
-    #dddddd,
-    #ffffff,
-    #f73620
-  );
+  background: linear-gradient(270deg,
+      #f73620,
+      #991b1b,
+      #0d0d0d,
+      #dddddd,
+      #ffffff,
+      #f73620);
   background-size: 600% 600%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -123,13 +138,16 @@ transform: rotateY(180deg);
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
 }
+
 .animated-gradient-text-two {
   background: linear-gradient(270deg, #f73620, #c9971a, #f73620);
   background-size: 200% 200%;
@@ -142,9 +160,11 @@ transform: rotateY(180deg);
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
@@ -160,6 +180,7 @@ transform: rotateY(180deg);
   0% {
     transform: translate(0px, 0px);
   }
+
   100% {
     transform: translate(40px, 40px);
   }
@@ -233,6 +254,7 @@ transform: rotateY(180deg);
     opacity: 0;
     transform: translateY(-30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -250,6 +272,7 @@ transform: rotateY(180deg);
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -264,13 +287,11 @@ transform: rotateY(180deg);
   left: 0;
   width: 100%;
   height: 200%;
-  background: repeating-linear-gradient(
-    to bottom,
-    red 0px,
-    red 2px,
-    black 2px,
-    black 6px
-  );
+  background: repeating-linear-gradient(to bottom,
+      red 0px,
+      red 2px,
+      black 2px,
+      black 6px);
   animation: moveVertical 4s linear infinite;
   opacity: 0.7;
 }
@@ -283,13 +304,11 @@ transform: rotateY(180deg);
   left: 0;
   width: 200%;
   height: 100%;
-  background: repeating-linear-gradient(
-    to right,
-    red 0px,
-    red 2px,
-    black 2px,
-    black 6px
-  );
+  background: repeating-linear-gradient(to right,
+      red 0px,
+      red 2px,
+      black 2px,
+      black 6px);
   animation: moveHorizontal 6s linear infinite;
   opacity: 0.7;
 }
@@ -298,6 +317,7 @@ transform: rotateY(180deg);
   0% {
     transform: translateY(-50%);
   }
+
   100% {
     transform: translateY(0%);
   }
@@ -307,6 +327,7 @@ transform: rotateY(180deg);
   0% {
     transform: translateX(-50%);
   }
+
   100% {
     transform: translateX(0%);
   }
@@ -327,6 +348,7 @@ transform: rotateY(180deg);
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
@@ -342,6 +364,7 @@ transform: rotateY(180deg);
   margin-top: 3rem;
   margin-bottom: 3rem;
 }
+
 .page-preloader:before,
 .page-preloader:after {
   content: "";
@@ -350,12 +373,14 @@ transform: rotateY(180deg);
   animation: pulsOut 1.8s ease-in-out infinite;
   filter: drop-shadow(0 0 1rem rgba(248, 128, 128, 0.75));
 }
+
 .page-preloader:before {
   width: 100%;
   padding-bottom: 100%;
   box-shadow: inset 0 0 0 1rem #f73620;
   animation-name: pulsIn;
 }
+
 .page-preloader:after {
   width: calc(100% - 2rem);
   padding-bottom: calc(100% - 2rem);
@@ -367,6 +392,7 @@ transform: rotateY(180deg);
     box-shadow: inset 0 0 0 1rem #f73620;
     opacity: 1;
   }
+
   50%,
   100% {
     box-shadow: inset 0 0 0 0 #f73620;
@@ -375,11 +401,13 @@ transform: rotateY(180deg);
 }
 
 @keyframes pulsOut {
+
   0%,
   50% {
     box-shadow: 0 0 0 0 #f73620;
     opacity: 0;
   }
+
   100% {
     box-shadow: 0 0 0 1rem #f73620;
     opacity: 1;
@@ -387,10 +415,12 @@ transform: rotateY(180deg);
 }
 
 @keyframes blink {
+
   0%,
   100% {
     color: white;
   }
+
   50% {
     color: black;
   }
@@ -409,12 +439,10 @@ transform: rotateY(180deg);
 }
 
 .gradient-text-one {
-  background: linear-gradient(
-    90deg,
-    rgba(251, 3, 12, 1) 0%,
-    rgba(255, 255, 255, 1) 49%,
-    rgba(67, 2, 2, 1) 72%
-  );
+  background: linear-gradient(90deg,
+      rgba(251, 3, 12, 1) 0%,
+      rgba(255, 255, 255, 1) 49%,
+      rgba(67, 2, 2, 1) 72%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -568,6 +596,7 @@ transform: rotateY(180deg);
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
@@ -594,6 +623,7 @@ transform: rotateY(180deg);
 .perspective:hover .flip-card-mobile {
   transform: rotateY(180deg);
 }
+
 .flip-card-mobile {
   position: relative;
   width: 8rem;
