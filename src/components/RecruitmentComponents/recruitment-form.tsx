@@ -76,8 +76,8 @@ export default function RecruitmentForm() {
       if (response.success) {
         dispatch(
           openModal(
-            "Your request was successfully sent , we'll get back to you promptly"
-          )
+            "Your request was successfully sent , we'll get back to you promptly",
+          ),
         );
         form.reset();
       } else if (response.status == 400) {
@@ -85,8 +85,8 @@ export default function RecruitmentForm() {
       } else {
         dispatch(
           openModal(
-            "sorry, currently unable to process your request at this, kinldy try again later or reach out to us via our email: streetopsng@gmail.com"
-          )
+            "sorry, currently unable to process your request at this, kinldy try again later or reach out to us via our email: streetopsng@gmail.com",
+          ),
         );
       }
 
@@ -191,19 +191,15 @@ export default function RecruitmentForm() {
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent>
-                    <SelectItem value="fast-hire">Fast Hire</SelectItem>
-                    <SelectItem value="graduate-talent">
-                      Graduate Talent Hunt
-                    </SelectItem>
-                    <SelectItem value="volume-recruitment">
-                      Volume Recruitment
-                    </SelectItem>
-                    <SelectItem value="executive-search">
+                    <SelectItem value="starter-squad">Starter Squad</SelectItem>
+                    <SelectItem value="power-team">Power Team</SelectItem>
+                    <SelectItem value="full-force">Full Force</SelectItem>
+                    {/* <SelectItem value="executive-search">
                       Executive Search
                     </SelectItem>
                     <SelectItem value="specialist-technical">
                       Specialist / Technical
-                    </SelectItem>
+                    </SelectItem> */}
                   </SelectContent>
                 </Select>
                 <FormMessage />
