@@ -1,0 +1,338 @@
+"use client";
+
+import { useEffect } from "react";
+import { useParams } from "next/navigation";
+import Link from "next/link";
+import Footer from "@/components/AnotherLandingPage/Components/Footer";
+
+const servicesData: Record<string, any> = {
+  diagnostic: {
+    label: "Service 01",
+    img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=1400&q=80",
+    title: "Team Diagnostic",
+    sub: "You can feel the problem. We can name it — with evidence, priority, and a plan.",
+    intro:
+      "Most organisations feel their team problems before they can name them. Missed deadlines, good people leaving, meetings where nobody says anything real. The Team Diagnostic changes that — through surveys, observation, and structured assessment, we produce a specific, evidence-based picture of what is working, what is not, and what needs to change first.",
+    offs: [
+      {
+        n: "Team Health Assessment",
+        d: "Full diagnostic across all 11 engagement and productivity dimensions.",
+      },
+      {
+        n: "Culture Baseline Report",
+        d: "Findings with dimension scores, risk interpretation, and recommended priorities.",
+      },
+      {
+        n: "Manager Blind Spot Assessment",
+        d: "Anonymous team rating of manager behaviour across key leadership dimensions.",
+      },
+      {
+        n: "Ongoing Measurement",
+        d: "Periodic re-diagnosis to track movement and prove ROI.",
+      },
+    ],
+    for: "Any organisation that can feel something is wrong but cannot name what it is. The right first step for almost every engagement.",
+    out: "A specific, evidence-based picture of what is working, what is not, and what to fix first — with evidence, priority, and a plan.",
+    rel: ["Manager Effectiveness Training", "Culture & Process Transformation"],
+  },
+  manager: {
+    label: "Service 02",
+    img: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=1400&q=80",
+    title: "Manager Effectiveness Training",
+    sub: "Managers account for 70% of team engagement variance. We close the gap.",
+    intro:
+      "Managers account for at least 70% of the variance in employee engagement. It means the single highest-leverage intervention in any organisation is the manager. We diagnose the specific leadership gap and design the intervention that addresses it.",
+    offs: [
+      {
+        n: "New Manager Foundations",
+        d: "For people recently promoted — the tools, language, and frameworks for leading people.",
+      },
+      {
+        n: "Manager Blind Spot Programme",
+        d: "For established managers who need a specific reset. Grounded in anonymous team feedback.",
+      },
+      {
+        n: "Leadership & Accountability Coaching",
+        d: "One-on-one for senior leaders struggling with the people side of leadership.",
+      },
+      {
+        n: "People Management Masterclass",
+        d: "Group training format. Built for African workplace context.",
+      },
+    ],
+    for: "Newly promoted managers. Established managers receiving negative team feedback. Senior leaders who want to sharpen their people capability.",
+    out: "Managers who lead deliberately — with the tools and frameworks to build trust, clarity, and accountability.",
+    rel: ["Team Diagnostic", "Culture & Process Transformation"],
+  },
+  talent: {
+    label: "Service 03",
+    img: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1400&q=80",
+    title: "Talent Integration Advisory",
+    sub: "Good hires leave by month four. We build the infrastructure that keeps them.",
+    intro:
+      "The month-four attrition problem is real. A new hire joins, seems engaged, and by month four they are halfway out the door — not because the role was wrong, but because the culture absorbed them badly. StreetOps prevents this.",
+    offs: [
+      {
+        n: "Pre-Hire Culture Profiling",
+        d: "Assessing candidates for culture fit before hiring decisions.",
+      },
+      {
+        n: "Onboarding System Design",
+        d: "Building the company's onboarding infrastructure from scratch. A system, not an orientation deck.",
+      },
+      {
+        n: "90-Day Integration Programme",
+        d: "Running a specific new hire's cultural integration deliberately.",
+      },
+      {
+        n: "Buddy System Design",
+        d: "Designing the peer support structure for new joiners.",
+      },
+      {
+        n: "Embedding Programme",
+        d: "Sustaining new hire integration beyond the first month.",
+      },
+    ],
+    for: "Organisations experiencing early attrition. Companies scaling quickly who need an onboarding system that doesn't rely on managers to improvise.",
+    out: "New hires who are genuinely part of the team by day 90. Reduced early attrition. Faster time to full contribution.",
+    rel: ["Team Diagnostic", "Culture & Process Transformation"],
+  },
+  culture: {
+    label: "Service 04",
+    img: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1400&q=80",
+    title: "Culture & Process Transformation",
+    sub: "Culture is not what you claim. It is what your systems consistently reinforce.",
+    intro:
+      "Most organisations have stated values that have no connection to how decisions are actually made, how people are treated, or how work actually flows. StreetOps bridges that gap — designing the formation response that builds the culture the organisation actually needs.",
+    offs: [
+      {
+        n: "Culture Design Consultation",
+        d: "Translating diagnosis findings into a specific formation plan.",
+      },
+      {
+        n: "Values Architecture",
+        d: "Defining and anchoring core values to observable team behaviour.",
+      },
+      {
+        n: "Identity System Design",
+        d: "Building the team's shared identity — the language, rituals, and symbols that make a group feel like a team.",
+      },
+      {
+        n: "Role Clarity Design",
+        d: "Designing the ownership structures that make execution reliable.",
+      },
+      {
+        n: "Working Norms Framework",
+        d: "Building the behavioural standards that make culture real day-to-day.",
+      },
+    ],
+    for: "Organisations whose culture has drifted from stated values. Companies that have grown fast and lost their identity. Founding teams who want to design culture deliberately.",
+    out: "A culture visible in systems and behaviour — not just language. Clarity structures that make execution reliable.",
+    rel: ["Team Diagnostic", "Team Engagement & Experience Design"],
+  },
+  experience: {
+    label: "Service 05",
+    img: "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=1400&q=80",
+    title: "Team Engagement & Experience Design",
+    sub: "Every experience tied to a diagnosis. Every outcome measured.",
+    intro:
+      "StreetOps designs and delivers team experiences across three categories: Team Bonding, Learning Experiences, and Team Events. Every experience is grounded in behavioural science, designed for African workplace culture, and built to produce a specific outcome — not just a good day.",
+    offs: [
+      {
+        n: "Team Bonding",
+        d: "Physical and online bonding sessions using games, challenges, rituals, and creative experiences.",
+      },
+      {
+        n: "Learning Experiences",
+        d: "Hackathons, simulations, values dilemma sessions, cross-functional challenges.",
+      },
+      {
+        n: "Team Events",
+        d: "Retreats, kickoff events, milestone celebrations, annual team resets.",
+      },
+    ],
+    for: "Organisations that want to build team connection deliberately — grounded in a diagnostic, not guesswork.",
+    out: "Experiences that close specific gaps. Stronger relationships, clearer culture, shared language.",
+    rel: ["Team Diagnostic", "Culture & Process Transformation"],
+  },
+};
+
+export default function ServiceDetailPage() {
+  const params = useParams();
+  const slug = params.slug as string;
+  const service = servicesData[slug];
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("on");
+          }
+        });
+      },
+      { threshold: 0.1 },
+    );
+
+    document.querySelectorAll(".rv").forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
+
+  if (!service) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-serif mb-4">Service not found</h1>
+          <Link href="/services" className="text-red-600">
+            Back to Services
+          </Link>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <>
+      {/* Hero */}
+      <div className="relative min-h-[400px] overflow-hidden flex items-end">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url('${service.img}')` }}
+        />
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(to right, rgba(26,15,0,0.88) 0%, rgba(26,15,0,0.55) 60%, rgba(102,0,0,0.2) 100%)",
+          }}
+        />
+        <div
+          className="absolute left-0 top-0 bottom-0 w-1"
+          style={{
+            background:
+              "linear-gradient(to bottom, transparent, #660000 30%, #E8571A 70%, transparent)",
+          }}
+        />
+        <div className="relative z-10 px-20 py-25">
+          <Link
+            href="/services"
+            className="inline-flex items-center gap-1.5 text-[11.5px] font-semibold mb-6 transition-colors hover:text-cream/75"
+            style={{ color: "rgba(255,248,238,0.35)" }}
+          >
+            ← All Services
+          </Link>
+          <div className="flex items-center gap-2.5 mb-5">
+            <div
+              className="w-5.5 h-px"
+              style={{ backgroundColor: "rgba(255,248,238,0.2)" }}
+            />
+            <span
+              className="text-[10px] font-semibold tracking-[2px] uppercase"
+              style={{ color: "rgba(255,248,238,0.35)" }}
+            >
+              {service.label}
+            </span>
+          </div>
+          <h1
+            className="font-serif text-[clamp(32px,4.5vw,56px)] font-light leading-[1.06] tracking-[-1.2px] max-w-[680px] mb-5"
+            style={{ color: "#FFF8EE" }}
+          >
+            {service.title}
+          </h1>
+          <p
+            className="text-base leading-[1.68] font-light max-w-[520px]"
+            style={{ color: "rgba(255,248,238,0.48)" }}
+          >
+            {service.sub}
+          </p>
+        </div>
+      </div>
+
+      {/* Service Details */}
+      <div className="grid grid-cols-3 gap-14 py-[72px] px-20">
+        <div className="col-span-2">
+          <p
+            className="text-[17px] leading-[1.72] font-light mb-11 pl-6 border-l-3 border-l-red-600"
+            style={{ color: "rgba(26, 15, 0, 0.65)" }}
+          >
+            {service.intro}
+          </p>
+
+          <div className="flex items-center gap-2.5 mb-[18px]">
+            <div className="w-5.5 h-px bg-red-600" />
+            <span className="text-[10px] font-bold tracking-[2.5px] uppercase text-red-600">
+              What Sits Under This Service
+            </span>
+          </div>
+
+          <div>
+            {service.offs.map((off: any, index: number) => (
+              <div
+                key={index}
+                className="py-[18px] border-b border-[rgba(26,15,0,0.08)] dark:border-[rgba(255,248,238,0.08)] flex gap-4 transition-all hover:pl-1"
+              >
+                <span className="text-red-600 font-bold flex-shrink-0 mt-px">
+                  →
+                </span>
+                <div>
+                  <div className="text-[14px] font-semibold mb-0.5 text-char dark:text-cream">
+                    {off.n}
+                  </div>
+                  <div className="text-[13px] leading-[1.58] font-light text-ink3 dark:text-[rgba(255,248,238,0.42)]">
+                    {off.d}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-12">
+            <div className="flex items-center gap-2.5 mb-3.5">
+              <div className="w-5.5 h-px bg-red-600" />
+              <span className="text-[10px] font-bold tracking-[2.5px] uppercase text-red-600">
+                Who This Is For
+              </span>
+            </div>
+            <p className="text-[15.5px] leading-[1.72] font-light text-ink3 dark:text-[rgba(255,248,238,0.42)]">
+              {service.for}
+            </p>
+          </div>
+        </div>
+
+        <div>
+          <div className="p-6 border border-[rgba(26,15,0,0.08)] dark:border-[rgba(255,248,238,0.08)] rounded-lg mb-3.5 bg-[#FFF2E0] dark:bg-[#241800]">
+            <div className="text-[10px] font-bold tracking-[2px] uppercase mb-3 text-red-600">
+              What Changes
+            </div>
+            <p className="text-[13px] leading-[1.65] font-light text-ink3 dark:text-[rgba(255,248,238,0.42)]">
+              {service.out}
+            </p>
+          </div>
+
+          <div className="p-6 border border-[rgba(26,15,0,0.08)] dark:border-[rgba(255,248,238,0.08)] rounded-lg mb-3.5 bg-[#FFF2E0] dark:bg-[#241800]">
+            <div className="text-[10px] font-bold tracking-[2px] uppercase mb-3 text-red-600">
+              Related Services
+            </div>
+            {service.rel.map((r: string, index: number) => (
+              <div
+                key={index}
+                className="py-2 border-b border-[rgba(26,15,0,0.08)] dark:border-[rgba(255,248,238,0.08)] text-xs font-medium text-red-600 cursor-pointer transition-all hover:gap-2.5 flex items-center gap-1.5"
+              >
+                → {r}
+              </div>
+            ))}
+          </div>
+
+          <Link
+            href="/contact"
+            className="block w-full py-3 text-center text-[13px] font-semibold rounded transition-all bg-red-600 text-white"
+          >
+            Work With Us →
+          </Link>
+        </div>
+      </div>
+
+      <Footer />
+    </>
+  );
+}
