@@ -110,7 +110,7 @@ const Navbar = () => {
                 </button>
                 {showDropdown === item.name && (
                   <div
-                    className="absolute top-full left-0 mt-2 min-w-[230px] shadow-lg z-300 border rounded"
+                    className="absolute top-full left-0  min-w-[230px] shadow-lg z-300 border rounded"
                     style={{
                       backgroundColor: "#FFFFFF",
                       borderColor: "rgba(26, 15, 0, 0.08)",
