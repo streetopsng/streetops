@@ -69,16 +69,19 @@ html {
 }
 
 @font-face {
-  font-family: 'MontNumbers';
+  font-family: "MontNumbers";
   font-style: normal;
   font-weight: 100 900;
-  src: local('Montserrat'), url('https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2') format('woff2');
+  src:
+    local("Montserrat"),
+    url("https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2")
+      format("woff2");
   unicode-range: U+0030-0039;
 }
 
 .bizmo-with-mont-numbers,
 .bizmo-with-mont-numbers * {
-  font-family: 'MontNumbers', "Bizmo Trial", sans-serif !important;
+  font-family: "MontNumbers", "Bizmo Trial", sans-serif !important;
 }
 
 * {
@@ -105,13 +108,15 @@ transform: rotateY(180deg);
 .animated-gradient-slide-text {
   /* font-size: 3rem; */
   /* font-weight: bold; */
-  background: linear-gradient(270deg,
-      #f73620,
-      #991b1b,
-      #0d0d0d,
-      #dddddd,
-      #ffffff,
-      #f73620);
+  background: linear-gradient(
+    270deg,
+    #f73620,
+    #991b1b,
+    #0d0d0d,
+    #dddddd,
+    #ffffff,
+    #f73620
+  );
   background-size: 600% 600%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -121,13 +126,15 @@ transform: rotateY(180deg);
 .animated-gradient-text {
   /* font-size: 3rem; */
   font-weight: bold;
-  background: linear-gradient(270deg,
-      #f73620,
-      #991b1b,
-      #0d0d0d,
-      #dddddd,
-      #ffffff,
-      #f73620);
+  background: linear-gradient(
+    270deg,
+    #f73620,
+    #991b1b,
+    #0d0d0d,
+    #dddddd,
+    #ffffff,
+    #f73620
+  );
   background-size: 600% 600%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -287,11 +294,13 @@ transform: rotateY(180deg);
   left: 0;
   width: 100%;
   height: 200%;
-  background: repeating-linear-gradient(to bottom,
-      red 0px,
-      red 2px,
-      black 2px,
-      black 6px);
+  background: repeating-linear-gradient(
+    to bottom,
+    red 0px,
+    red 2px,
+    black 2px,
+    black 6px
+  );
   animation: moveVertical 4s linear infinite;
   opacity: 0.7;
 }
@@ -304,11 +313,13 @@ transform: rotateY(180deg);
   left: 0;
   width: 200%;
   height: 100%;
-  background: repeating-linear-gradient(to right,
-      red 0px,
-      red 2px,
-      black 2px,
-      black 6px);
+  background: repeating-linear-gradient(
+    to right,
+    red 0px,
+    red 2px,
+    black 2px,
+    black 6px
+  );
   animation: moveHorizontal 6s linear infinite;
   opacity: 0.7;
 }
@@ -401,7 +412,6 @@ transform: rotateY(180deg);
 }
 
 @keyframes pulsOut {
-
   0%,
   50% {
     box-shadow: 0 0 0 0 #f73620;
@@ -415,7 +425,6 @@ transform: rotateY(180deg);
 }
 
 @keyframes blink {
-
   0%,
   100% {
     color: white;
@@ -439,10 +448,12 @@ transform: rotateY(180deg);
 }
 
 .gradient-text-one {
-  background: linear-gradient(90deg,
-      rgba(251, 3, 12, 1) 0%,
-      rgba(255, 255, 255, 1) 49%,
-      rgba(67, 2, 2, 1) 72%);
+  background: linear-gradient(
+    90deg,
+    rgba(251, 3, 12, 1) 0%,
+    rgba(255, 255, 255, 1) 49%,
+    rgba(67, 2, 2, 1) 72%
+  );
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -641,4 +652,96 @@ transform: rotateY(180deg);
 
 .flip-face.back {
   transform: rotateY(180deg);
+}
+
+/* Another */
+
+@keyframes hprog {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes mq {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes shbar {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.animate-hprog {
+  animation: hprog 5.5s linear;
+}
+
+.animate-fadeUp {
+  animation: fadeUp 0.7s ease forwards;
+}
+
+.animate-marquee {
+  animation: mq 28s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+.shbar-animate::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(245, 184, 0, 0.5);
+  animation: shbar 2.5s ease-in-out infinite;
+}
+
+.rv {
+  opacity: 0;
+  transform: translateY(22px);
+  transition:
+    opacity 0.65s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.65s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.rv.on {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.rv1 {
+  transition-delay: 0.08s;
+}
+
+.rv2 {
+  transition-delay: 0.16s;
+}
+
+.rv3 {
+  transition-delay: 0.24s;
 }
