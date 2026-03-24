@@ -87,7 +87,7 @@ export default function RootLayout({
             <Modal />
             <MobileMenu />
             <FormModal />
-            <WhatsAppWidget />
+            {/* <WhatsAppWidget /> */}
             <ThemeProvider>
               <Navbar />
               <main className="pt-15">{children}</main>
