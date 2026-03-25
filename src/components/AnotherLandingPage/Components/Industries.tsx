@@ -1,3 +1,4 @@
+// Industries.tsx
 "use client";
 
 import { useRef, useState } from "react";
@@ -45,20 +46,23 @@ const Industries = () => {
 
   return (
     <div
-      className="py-[72px] overflow-hidden"
+      className="py-12 sm:py-16 md:py-[72px] overflow-hidden"
       style={{ backgroundColor: "#FFFFFF" }}
     >
-      <div className="px-20 mb-9 rv">
-        <div className="flex items-center gap-2.5 mb-[18px]">
-          <div className="w-5.5 h-px" style={{ backgroundColor: "#660000" }} />
+      <div className="px-4 sm:px-6 md:px-10 lg:px-20 mb-6 sm:mb-7 md:mb-9 rv">
+        <div className="flex items-center gap-2.5 mb-3 sm:mb-4 md:mb-[18px]">
+          <div
+            className="w-5 h-px sm:w-5.5"
+            style={{ backgroundColor: "#660000" }}
+          />
           <span
-            className="text-[10px] font-bold tracking-[2.5px] uppercase"
+            className="text-[9px] sm:text-[10px] font-bold tracking-[2px] sm:tracking-[2.5px] uppercase"
             style={{ color: "#660000" }}
           >
             Industries We Serve
           </span>
         </div>
-        <h2 className="font-serif text-[clamp(28px,3.8vw,46px)] font-light leading-[1.1] tracking-[-0.7px]">
+        <h2 className="font-serif text-[clamp(24px,6vw,28px)] sm:text-[clamp(28px,5vw,38px)] md:text-[clamp(28px,3.8vw,46px)] font-light leading-[1.2] sm:leading-[1.1] tracking-[-0.5px] sm:tracking-[-0.7px]">
           Built for here.
           <br />
           <em className="not-italic" style={{ color: "#C4512A" }}>
@@ -68,20 +72,20 @@ const Industries = () => {
       </div>
       <div className="relative overflow-hidden">
         <div
-          className="absolute left-0 top-0 bottom-0 w-20 z-10 pointer-events-none"
+          className="absolute left-0 top-0 bottom-0 w-12 sm:w-16 md:w-20 z-10 pointer-events-none"
           style={{
             background: "linear-gradient(to right, #FFFFFF, transparent)",
           }}
         />
         <div
-          className="absolute right-0 top-0 bottom-0 w-20 z-10 pointer-events-none"
+          className="absolute right-0 top-0 bottom-0 w-12 sm:w-16 md:w-20 z-10 pointer-events-none"
           style={{
             background: "linear-gradient(to left, #FFFFFF, transparent)",
           }}
         />
         <div
           ref={scrollRef}
-          className="flex gap-2.5 px-20 overflow-x-auto scroll-smooth cursor-grab active:cursor-grabbing [&::-webkit-scrollbar]:hidden"
+          className="flex gap-2 sm:gap-2.5 px-4 sm:px-6 md:px-10 lg:px-20 overflow-x-auto scroll-smooth cursor-grab active:cursor-grabbing [&::-webkit-scrollbar]:hidden"
           onMouseDown={handleMouseDown}
           onMouseLeave={handleMouseLeave}
           onMouseUp={handleMouseUp}
@@ -95,7 +99,7 @@ const Industries = () => {
           {industries.map((industry) => (
             <div
               key={industry.name}
-              className="flex-shrink-0 w-[175px] p-[30px_20px] text-center border rounded transition-all cursor-pointer hover:-translate-y-0.5 hover:shadow-lg scroll-snap-start"
+              className="flex-shrink-0 w-[150px] sm:w-[165px] md:w-[175px] p-[20px_15px] sm:p-[25px_18px] md:p-[30px_20px] text-center border rounded transition-all cursor-pointer hover:-translate-y-0.5 hover:shadow-lg scroll-snap-start"
               style={{
                 backgroundColor: "#FFF2E0",
                 borderColor: "rgba(26, 15, 0, 0.08)",
@@ -118,9 +122,11 @@ const Industries = () => {
                 if (text) text.style.color = "rgba(26, 15, 0, 0.65)";
               }}
             >
-              <span className="text-2xl mb-3 block">{industry.icon}</span>
+              <span className="text-xl sm:text-2xl mb-2 sm:mb-3 block">
+                {industry.icon}
+              </span>
               <span
-                className="industry-name text-xs font-semibold transition-colors"
+                className="industry-name text-[11px] sm:text-xs font-semibold transition-colors"
                 style={{ color: "rgba(26, 15, 0, 0.65)" }}
               >
                 {industry.name}

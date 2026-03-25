@@ -50,7 +50,7 @@ export default function CasesPage() {
   return (
     <>
       {/* Hero */}
-      <div className="relative min-h-[360px] overflow-hidden flex items-end">
+      <div className="relative min-h-[320px] sm:min-h-[340px] md:min-h-[360px] overflow-hidden flex items-end">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
@@ -72,21 +72,21 @@ export default function CasesPage() {
               "linear-gradient(to bottom, transparent, #660000 30%, #E8571A 70%, transparent)",
           }}
         />
-        <div className="relative z-10 px-20 py-25">
-          <div className="flex items-center gap-2.5 mb-5">
+        <div className="relative z-10 px-4 sm:px-6 md:px-10 lg:px-20 py-16 sm:py-20 md:py-25">
+          <div className="flex items-center gap-2.5 mb-4 sm:mb-5">
             <div
-              className="w-5.5 h-px"
+              className="w-4 sm:w-5.5 h-px"
               style={{ backgroundColor: "rgba(255,248,238,0.2)" }}
             />
             <span
-              className="text-[10px] font-semibold tracking-[2px] uppercase"
+              className="text-[8px] sm:text-[9px] md:text-[10px] font-semibold tracking-[1.5px] sm:tracking-[2px] uppercase"
               style={{ color: "rgba(255,248,238,0.35)" }}
             >
               Case Studies
             </span>
           </div>
           <h1
-            className="font-serif text-[clamp(32px,4.5vw,56px)] font-light leading-[1.06] tracking-[-1.2px] max-w-[680px] mb-5"
+            className="font-serif text-[clamp(28px,8vw,32px)] sm:text-[clamp(32px,6vw,42px)] md:text-[clamp(32px,4.5vw,56px)] font-light leading-[1.2] sm:leading-[1.1] md:leading-[1.06] tracking-[-0.8px] sm:tracking-[-1px] md:tracking-[-1.2px] max-w-full sm:max-w-[90%] md:max-w-[680px] mb-4 sm:mb-5"
             style={{ color: "#FFF8EE" }}
           >
             Results, not promises.
@@ -99,7 +99,7 @@ export default function CasesPage() {
             </em>
           </h1>
           <p
-            className="text-base leading-[1.68] font-light max-w-[520px]"
+            className="text-[13px] sm:text-[14px] md:text-base leading-[1.5] sm:leading-[1.6] md:leading-[1.68] font-light max-w-full sm:max-w-[90%] md:max-w-[520px]"
             style={{ color: "rgba(255,248,238,0.48)" }}
           >
             How StreetOps diagnoses accurately and intervenes deliberately. PDFs
@@ -109,30 +109,32 @@ export default function CasesPage() {
       </div>
 
       {/* Case Studies Grid */}
-      <div className="py-[88px] px-20 rv">
-        <div className="grid grid-cols-3 gap-4 items-start">
+      <div className="py-12 sm:py-16 md:py-20 lg:py-[88px] px-4 sm:px-6 md:px-10 lg:px-20 rv">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-4 items-start">
           {caseStudies.map((study, index) => (
             <div
               key={index}
-              className={`p-8 border border-[rgba(26,15,0,0.08)] dark:border-[rgba(255,248,238,0.08)] rounded-lg bg-white dark:bg-[#1C1200] ${index === 1 ? "mt-7" : ""}`}
+              className={`p-5 sm:p-6 md:p-8 border border-[rgba(26,15,0,0.08)] dark:border-[rgba(255,248,238,0.08)] rounded-lg bg-white dark:bg-[#1C1200] ${
+                index === 1 ? "md:mt-7" : ""
+              }`}
             >
-              <div className="text-[9.5px] font-bold tracking-[2px] uppercase mb-3 text-red-600">
+              <div className="text-[8px] sm:text-[9px] md:text-[9.5px] font-bold tracking-[1.5px] sm:tracking-[2px] uppercase mb-2 sm:mb-3 text-red-600">
                 {study.category}
               </div>
-              <div className="h-[160px] rounded mb-[18px] overflow-hidden bg-[#FFF2E0] dark:bg-[#241800]">
+              <div className="h-[140px] sm:h-[150px] md:h-[160px] rounded mb-4 sm:mb-[18px] overflow-hidden bg-[#FFF2E0] dark:bg-[#241800]">
                 <img
                   src={study.image}
                   alt=""
                   className="w-full h-full object-cover"
                 />
               </div>
-              <h4 className="font-serif text-[19px] font-normal mb-2.5 leading-[1.3] text-char dark:text-cream">
+              <h4 className="font-serif text-[17px] sm:text-[18px] md:text-[19px] font-normal mb-2 sm:mb-2.5 leading-[1.3] text-char dark:text-cream">
                 {study.title}
               </h4>
-              <p className="text-[13.5px] leading-[1.65] font-light mb-[18px] text-ink3 dark:text-[rgba(255,248,238,0.42)]">
+              <p className="text-[12.5px] sm:text-[13px] md:text-[13.5px] leading-[1.5] sm:leading-[1.6] md:leading-[1.65] font-light mb-4 sm:mb-[18px] text-ink3 dark:text-[rgba(255,248,238,0.42)]">
                 {study.description}
               </p>
-              <button className="inline-flex items-center gap-1.5 text-[12.5px] font-semibold transition-all hover:gap-2.5 text-red-600">
+              <button className="inline-flex items-center gap-1.5 text-[11px] sm:text-[12px] md:text-[12.5px] font-semibold transition-all hover:gap-2.5 text-red-600">
                 Download Full Case Study →
               </button>
             </div>

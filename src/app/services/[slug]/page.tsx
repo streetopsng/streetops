@@ -181,8 +181,10 @@ export default function ServiceDetailPage() {
   if (!service) {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-serif mb-4">Service not found</h1>
+        <div className="text-center px-4">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-serif mb-4">
+            Service not found
+          </h1>
           <Link href="/services" className="text-red-600">
             Back to Services
           </Link>
@@ -194,7 +196,7 @@ export default function ServiceDetailPage() {
   return (
     <>
       {/* Hero */}
-      <div className="relative min-h-[400px] overflow-hidden flex items-end">
+      <div className="relative min-h-[350px] sm:min-h-[380px] md:min-h-[400px] overflow-hidden flex items-end">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url('${service.img}')` }}
@@ -213,34 +215,34 @@ export default function ServiceDetailPage() {
               "linear-gradient(to bottom, transparent, #660000 30%, #E8571A 70%, transparent)",
           }}
         />
-        <div className="relative z-10 px-20 py-25">
+        <div className="relative z-10 px-4 sm:px-6 md:px-10 lg:px-20 py-16 sm:py-20 md:py-25">
           <Link
             href="/services"
-            className="inline-flex items-center gap-1.5 text-[11.5px] font-semibold mb-6 transition-colors hover:text-cream/75"
+            className="inline-flex items-center gap-1.5 text-[10px] sm:text-[11px] md:text-[11.5px] font-semibold mb-4 sm:mb-5 md:mb-6 transition-colors hover:text-cream/75"
             style={{ color: "rgba(255,248,238,0.35)" }}
           >
             ← All Services
           </Link>
-          <div className="flex items-center gap-2.5 mb-5">
+          <div className="flex items-center gap-2.5 mb-4 sm:mb-5">
             <div
-              className="w-5.5 h-px"
+              className="w-4 sm:w-5.5 h-px"
               style={{ backgroundColor: "rgba(255,248,238,0.2)" }}
             />
             <span
-              className="text-[10px] font-semibold tracking-[2px] uppercase"
+              className="text-[8px] sm:text-[9px] md:text-[10px] font-semibold tracking-[1.5px] sm:tracking-[2px] uppercase"
               style={{ color: "rgba(255,248,238,0.35)" }}
             >
               {service.label}
             </span>
           </div>
           <h1
-            className="font-serif text-[clamp(32px,4.5vw,56px)] font-light leading-[1.06] tracking-[-1.2px] max-w-[680px] mb-5"
+            className="font-serif text-[clamp(28px,8vw,32px)] sm:text-[clamp(32px,6vw,42px)] md:text-[clamp(32px,4.5vw,56px)] font-light leading-[1.2] sm:leading-[1.1] md:leading-[1.06] tracking-[-0.8px] sm:tracking-[-1px] md:tracking-[-1.2px] max-w-full sm:max-w-[90%] md:max-w-[680px] mb-4 sm:mb-5"
             style={{ color: "#FFF8EE" }}
           >
             {service.title}
           </h1>
           <p
-            className="text-base leading-[1.68] font-light max-w-[520px]"
+            className="text-[13px] sm:text-[14px] md:text-base leading-[1.5] sm:leading-[1.6] md:leading-[1.68] font-light max-w-full sm:max-w-[90%] md:max-w-[520px]"
             style={{ color: "rgba(255,248,238,0.48)" }}
           >
             {service.sub}
@@ -249,18 +251,18 @@ export default function ServiceDetailPage() {
       </div>
 
       {/* Service Details */}
-      <div className="grid grid-cols-3 gap-14 py-[72px] px-20">
-        <div className="col-span-2">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 sm:gap-10 md:gap-14 py-12 sm:py-16 md:py-[72px] px-4 sm:px-6 md:px-10 lg:px-20">
+        <div className="lg:col-span-2">
           <p
-            className="text-[17px] leading-[1.72] font-light mb-11 pl-6 border-l-3 border-l-red-600"
+            className="text-[15px] sm:text-[16px] md:text-[17px] leading-[1.6] sm:leading-[1.7] md:leading-[1.72] font-light mb-8 sm:mb-10 md:mb-11 pl-4 sm:pl-5 md:pl-6 border-l-2 sm:border-l-3 border-l-red-600"
             style={{ color: "rgba(26, 15, 0, 0.65)" }}
           >
             {service.intro}
           </p>
 
-          <div className="flex items-center gap-2.5 mb-[18px]">
-            <div className="w-5.5 h-px bg-red-600" />
-            <span className="text-[10px] font-bold tracking-[2.5px] uppercase text-red-600">
+          <div className="flex items-center gap-2.5 mb-4 sm:mb-[18px]">
+            <div className="w-5 h-px sm:w-5.5 bg-red-600" />
+            <span className="text-[9px] sm:text-[10px] font-bold tracking-[2px] sm:tracking-[2.5px] uppercase text-red-600">
               What Sits Under This Service
             </span>
           </div>
@@ -269,16 +271,16 @@ export default function ServiceDetailPage() {
             {service.offs.map((off: any, index: number) => (
               <div
                 key={index}
-                className="py-[18px] border-b border-[rgba(26,15,0,0.08)] dark:border-[rgba(255,248,238,0.08)] flex gap-4 transition-all hover:pl-1"
+                className="py-3 sm:py-4 md:py-[18px] border-b border-[rgba(26,15,0,0.08)] dark:border-[rgba(255,248,238,0.08)] flex gap-3 sm:gap-4 transition-all hover:pl-1"
               >
                 <span className="text-red-600 font-bold flex-shrink-0 mt-px">
                   →
                 </span>
                 <div>
-                  <div className="text-[14px] font-semibold mb-0.5 text-char dark:text-cream">
+                  <div className="text-[13px] sm:text-[13.5px] md:text-[14px] font-semibold mb-0.5 text-char dark:text-cream">
                     {off.n}
                   </div>
-                  <div className="text-[13px] leading-[1.58] font-light text-ink3 dark:text-[rgba(255,248,238,0.42)]">
+                  <div className="text-[12px] sm:text-[12.5px] md:text-[13px] leading-[1.5] sm:leading-[1.55] md:leading-[1.58] font-light text-ink3 dark:text-[rgba(255,248,238,0.42)]">
                     {off.d}
                   </div>
                 </div>
@@ -286,37 +288,37 @@ export default function ServiceDetailPage() {
             ))}
           </div>
 
-          <div className="mt-12">
-            <div className="flex items-center gap-2.5 mb-3.5">
-              <div className="w-5.5 h-px bg-red-600" />
-              <span className="text-[10px] font-bold tracking-[2.5px] uppercase text-red-600">
+          <div className="mt-8 sm:mt-10 md:mt-12">
+            <div className="flex items-center gap-2.5 mb-3 sm:mb-3.5">
+              <div className="w-5 h-px sm:w-5.5 bg-red-600" />
+              <span className="text-[9px] sm:text-[10px] font-bold tracking-[2px] sm:tracking-[2.5px] uppercase text-red-600">
                 Who This Is For
               </span>
             </div>
-            <p className="text-[15.5px] leading-[1.72] font-light text-ink3 dark:text-[rgba(255,248,238,0.42)]">
+            <p className="text-[14px] sm:text-[14.5px] md:text-[15.5px] leading-[1.6] sm:leading-[1.7] md:leading-[1.72] font-light text-ink3 dark:text-[rgba(255,248,238,0.42)]">
               {service.for}
             </p>
           </div>
         </div>
 
         <div>
-          <div className="p-6 border border-[rgba(26,15,0,0.08)] dark:border-[rgba(255,248,238,0.08)] rounded-lg mb-3.5 bg-[#FFF2E0] dark:bg-[#241800]">
-            <div className="text-[10px] font-bold tracking-[2px] uppercase mb-3 text-red-600">
+          <div className="p-4 sm:p-5 md:p-6 border border-[rgba(26,15,0,0.08)] dark:border-[rgba(255,248,238,0.08)] rounded-lg mb-3.5 bg-[#FFF2E0] dark:bg-[#241800]">
+            <div className="text-[9px] sm:text-[10px] font-bold tracking-[1.5px] sm:tracking-[2px] uppercase mb-2 sm:mb-3 text-red-600">
               What Changes
             </div>
-            <p className="text-[13px] leading-[1.65] font-light text-ink3 dark:text-[rgba(255,248,238,0.42)]">
+            <p className="text-[12px] sm:text-[12.5px] md:text-[13px] leading-[1.5] sm:leading-[1.6] md:leading-[1.65] font-light text-ink3 dark:text-[rgba(255,248,238,0.42)]">
               {service.out}
             </p>
           </div>
 
-          <div className="p-6 border border-[rgba(26,15,0,0.08)] dark:border-[rgba(255,248,238,0.08)] rounded-lg mb-3.5 bg-[#FFF2E0] dark:bg-[#241800]">
-            <div className="text-[10px] font-bold tracking-[2px] uppercase mb-3 text-red-600">
+          <div className="p-4 sm:p-5 md:p-6 border border-[rgba(26,15,0,0.08)] dark:border-[rgba(255,248,238,0.08)] rounded-lg mb-3.5 bg-[#FFF2E0] dark:bg-[#241800]">
+            <div className="text-[9px] sm:text-[10px] font-bold tracking-[1.5px] sm:tracking-[2px] uppercase mb-2 sm:mb-3 text-red-600">
               Related Services
             </div>
             {service.rel.map((r: string, index: number) => (
               <div
                 key={index}
-                className="py-2 border-b border-[rgba(26,15,0,0.08)] dark:border-[rgba(255,248,238,0.08)] text-xs font-medium text-red-600 cursor-pointer transition-all hover:gap-2.5 flex items-center gap-1.5"
+                className="py-1.5 sm:py-2 border-b border-[rgba(26,15,0,0.08)] dark:border-[rgba(255,248,238,0.08)] text-[11px] sm:text-xs font-medium text-red-600 cursor-pointer transition-all hover:gap-2.5 flex items-center gap-1.5"
               >
                 → {r}
               </div>
@@ -325,7 +327,7 @@ export default function ServiceDetailPage() {
 
           <Link
             href="/contact"
-            className="block w-full py-3 text-center text-[13px] font-semibold rounded transition-all bg-red-600 text-white"
+            className="block w-full py-2.5 sm:py-3 text-center text-[12px] sm:text-[13px] font-semibold rounded transition-all bg-red-600 text-white"
           >
             Work With Us →
           </Link>

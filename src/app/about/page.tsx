@@ -76,7 +76,7 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero */}
-      <div className="relative min-h-[480px] overflow-hidden flex items-end">
+      <div className="relative min-h-[400px] sm:min-h-[440px] md:min-h-[480px] overflow-hidden flex items-end">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
@@ -98,21 +98,21 @@ export default function AboutPage() {
               "linear-gradient(to bottom, transparent, #660000 30%, #E8571A 70%, transparent)",
           }}
         />
-        <div className="relative z-10 px-20 py-25">
-          <div className="flex items-center gap-2.5 mb-5">
+        <div className="relative z-10 px-4 sm:px-6 md:px-10 lg:px-20 py-16 sm:py-20 md:py-25">
+          <div className="flex items-center gap-2.5 mb-4 sm:mb-5">
             <div
-              className="w-5.5 h-px"
+              className="w-4 sm:w-5.5 h-px"
               style={{ backgroundColor: "rgba(255,248,238,0.2)" }}
             />
             <span
-              className="text-[10px] font-semibold tracking-[2px] uppercase"
+              className="text-[8px] sm:text-[9px] md:text-[10px] font-semibold tracking-[1.5px] sm:tracking-[2px] uppercase"
               style={{ color: "rgba(255,248,238,0.35)" }}
             >
               About StreetOps
             </span>
           </div>
           <h1
-            className="font-serif text-[clamp(32px,4.5vw,56px)] font-light leading-[1.06] tracking-[-1.2px] max-w-[680px] mb-5"
+            className="font-serif text-[clamp(28px,8vw,32px)] sm:text-[clamp(32px,6vw,42px)] md:text-[clamp(32px,4.5vw,56px)] font-light leading-[1.2] sm:leading-[1.1] md:leading-[1.06] tracking-[-0.8px] sm:tracking-[-1px] md:tracking-[-1.2px] max-w-full sm:max-w-[90%] md:max-w-[680px] mb-4 sm:mb-5"
             style={{ color: "#FFF8EE" }}
           >
             We were built for here.
@@ -125,7 +125,7 @@ export default function AboutPage() {
             </em>
           </h1>
           <p
-            className="text-base leading-[1.68] font-light max-w-[520px]"
+            className="text-[13px] sm:text-[14px] md:text-base leading-[1.5] sm:leading-[1.6] md:leading-[1.68] font-light max-w-full sm:max-w-[90%] md:max-w-[520px]"
             style={{ color: "rgba(255,248,238,0.48)" }}
           >
             Africa's team performance company. Built on behavioural science.
@@ -136,29 +136,29 @@ export default function AboutPage() {
       </div>
 
       {/* Story Section */}
-      <div className="py-[88px] px-20">
-        <div className="grid grid-cols-2 gap-20 items-start">
+      <div className="py-12 sm:py-16 md:py-20 lg:py-[88px] px-4 sm:px-6 md:px-10 lg:px-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 md:gap-16 lg:gap-20 items-start">
           <div className="rv">
-            <div className="flex items-center gap-2.5 mb-[18px]">
+            <div className="flex items-center gap-2.5 mb-3 sm:mb-4 md:mb-[18px]">
               <div
-                className="w-5.5 h-px"
+                className="w-5 h-px sm:w-5.5"
                 style={{ backgroundColor: "#660000" }}
               />
               <span
-                className="text-[10px] font-bold tracking-[2.5px] uppercase"
+                className="text-[9px] sm:text-[10px] font-bold tracking-[2px] sm:tracking-[2.5px] uppercase"
                 style={{ color: "#660000" }}
               >
                 The Story
               </span>
             </div>
-            <h2 className="font-serif text-[clamp(28px,3.8vw,46px)] font-light leading-[1.1] tracking-[-0.7px] mb-[18px]">
+            <h2 className="font-serif text-[clamp(24px,6vw,28px)] sm:text-[clamp(28px,5vw,38px)] md:text-[clamp(28px,3.8vw,46px)] font-light leading-[1.2] sm:leading-[1.1] tracking-[-0.5px] sm:tracking-[-0.7px] mb-4 sm:mb-[18px]">
               Why StreetOps{" "}
               <em className="not-italic" style={{ color: "#C4512A" }}>
                 exists.
               </em>
             </h2>
             <p
-              className="text-[15.5px] leading-[1.72] font-light mb-[18px]"
+              className="text-[14px] sm:text-[15px] md:text-[15.5px] leading-[1.6] sm:leading-[1.7] md:leading-[1.72] font-light mb-3 sm:mb-4 md:mb-[18px]"
               style={{ color: "rgba(26, 15, 0, 0.45)" }}
             >
               Most people and team tools were built for somewhere else —
@@ -166,7 +166,7 @@ export default function AboutPage() {
               if the people here work the same way. They do not.
             </p>
             <p
-              className="text-[15.5px] leading-[1.72] font-light mb-[18px]"
+              className="text-[14px] sm:text-[15px] md:text-[15.5px] leading-[1.6] sm:leading-[1.7] md:leading-[1.72] font-light mb-3 sm:mb-4 md:mb-[18px]"
               style={{ color: "rgba(26, 15, 0, 0.45)" }}
             >
               For the Lagos startup that works hard but never quite gels. For
@@ -175,7 +175,7 @@ export default function AboutPage() {
               and now has no tools for the people side of it.
             </p>
             <p
-              className="text-[15.5px] leading-[1.72] font-light"
+              className="text-[14px] sm:text-[15px] md:text-[15.5px] leading-[1.6] sm:leading-[1.7] md:leading-[1.72] font-light"
               style={{ color: "rgba(26, 15, 0, 0.45)" }}
             >
               StreetOps was built for all of them.
@@ -183,17 +183,17 @@ export default function AboutPage() {
           </div>
           <div className="rv rv2">
             <div
-              className="mb-3.5 p-11 rounded"
+              className="mb-3.5 p-6 sm:p-8 md:p-11 rounded"
               style={{ backgroundColor: "#660000" }}
             >
               <div
-                className="text-[9.5px] font-bold tracking-[2.5px] uppercase mb-3"
+                className="text-[8px] sm:text-[9px] md:text-[9.5px] font-bold tracking-[2px] sm:tracking-[2.5px] uppercase mb-2 sm:mb-3"
                 style={{ color: "rgba(255,248,238,0.35)" }}
               >
                 The North Star Concept
               </div>
               <p
-                className="font-serif text-[20px] font-light leading-[1.45] italic tracking-[-0.2px]"
+                className="font-serif text-[16px] sm:text-[18px] md:text-[20px] font-light leading-[1.4] sm:leading-[1.45] italic tracking-[-0.2px]"
                 style={{ color: "#FFFFFF" }}
               >
                 "How a team relates to one another directly determines how well
@@ -202,20 +202,20 @@ export default function AboutPage() {
               </p>
             </div>
             <div
-              className="p-7 border border-t-0 rounded-b"
+              className="p-5 sm:p-6 md:p-7 border border-t-0 rounded-b"
               style={{
                 backgroundColor: "#FFFFFF",
                 borderColor: "rgba(26, 15, 0, 0.08)",
               }}
             >
               <div
-                className="text-[10px] font-bold tracking-[2px] uppercase mb-1.5"
+                className="text-[9px] sm:text-[10px] font-bold tracking-[1.5px] sm:tracking-[2px] uppercase mb-1.5"
                 style={{ color: "#660000" }}
               >
                 Social Productivity
               </div>
               <p
-                className="text-[15.5px] leading-[1.72] font-light max-w-full"
+                className="text-[14px] sm:text-[15px] md:text-[15.5px] leading-[1.6] sm:leading-[1.7] md:leading-[1.72] font-light max-w-full"
                 style={{ color: "rgba(26, 15, 0, 0.45)" }}
               >
                 The quality of relationships, communication, belonging, and
@@ -228,29 +228,32 @@ export default function AboutPage() {
       </div>
 
       <div
-        className="h-px mx-20"
+        className="h-px mx-4 sm:mx-6 md:mx-10 lg:mx-20"
         style={{ backgroundColor: "rgba(26, 15, 0, 0.08)" }}
       />
 
       {/* Beliefs Section */}
-      <div className="py-[88px] px-20 rv">
-        <div className="flex items-center gap-2.5 mb-[18px]">
-          <div className="w-5.5 h-px" style={{ backgroundColor: "#660000" }} />
+      <div className="py-12 sm:py-16 md:py-20 lg:py-[88px] px-4 sm:px-6 md:px-10 lg:px-20 rv">
+        <div className="flex items-center gap-2.5 mb-4 sm:mb-[18px]">
+          <div
+            className="w-5 h-px sm:w-5.5"
+            style={{ backgroundColor: "#660000" }}
+          />
           <span
-            className="text-[10px] font-bold tracking-[2.5px] uppercase"
+            className="text-[9px] sm:text-[10px] font-bold tracking-[2px] sm:tracking-[2.5px] uppercase"
             style={{ color: "#660000" }}
           >
             What We Believe
           </span>
         </div>
-        <h2 className="font-serif text-[clamp(28px,3.8vw,46px)] font-light leading-[1.1] tracking-[-0.7px] mb-[18px]">
+        <h2 className="font-serif text-[clamp(24px,6vw,28px)] sm:text-[clamp(28px,5vw,38px)] md:text-[clamp(28px,3.8vw,46px)] font-light leading-[1.2] sm:leading-[1.1] tracking-[-0.5px] sm:tracking-[-0.7px] mb-4 sm:mb-[18px]">
           The convictions behind
           <br />
           <em className="not-italic" style={{ color: "#C4512A" }}>
             every engagement.
           </em>
         </h2>
-        <div className="grid grid-cols-2 gap-0 mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-0 mt-8 sm:mt-10 md:mt-12">
           {[
             "A team that knows who they are, understands their roles, feels seen, and communicates well will always outperform a team that does not.",
             "Engagement without performance is still a problem. We diagnose both.",
@@ -261,10 +264,10 @@ export default function AboutPage() {
           ].map((belief, index) => (
             <div
               key={index}
-              className={`py-5.5 px-0 ${index % 2 === 0 ? "pr-10 border-r" : "pl-10"} border-b`}
+              className={`py-4 sm:py-5 md:py-5.5 px-0 ${index % 2 === 0 ? "md:pr-10 md:border-r" : "md:pl-10"} border-b ${index % 2 === 0 && index !== 0 ? "border-t-0" : ""}`}
               style={{ borderColor: "rgba(26, 15, 0, 0.08)" }}
             >
-              <div className="flex gap-3.5">
+              <div className="flex gap-3 sm:gap-3.5">
                 <span
                   className="font-bold flex-shrink-0 mt-px"
                   style={{ color: "#660000" }}
@@ -272,7 +275,7 @@ export default function AboutPage() {
                   →
                 </span>
                 <span
-                  className="text-[14.5px] leading-[1.65] font-light"
+                  className="text-[13px] sm:text-[14px] md:text-[14.5px] leading-[1.5] sm:leading-[1.6] md:leading-[1.65] font-light"
                   style={{ color: "rgba(26, 15, 0, 0.65)" }}
                 >
                   {belief}
@@ -284,29 +287,32 @@ export default function AboutPage() {
       </div>
 
       <div
-        className="h-px mx-20"
+        className="h-px mx-4 sm:mx-6 md:mx-10 lg:mx-20"
         style={{ backgroundColor: "rgba(26, 15, 0, 0.08)" }}
       />
 
       {/* Values Section */}
-      <div className="py-[88px] px-20 rv">
-        <div className="flex items-center gap-2.5 mb-[18px]">
-          <div className="w-5.5 h-px" style={{ backgroundColor: "#660000" }} />
+      <div className="py-12 sm:py-16 md:py-20 lg:py-[88px] px-4 sm:px-6 md:px-10 lg:px-20 rv">
+        <div className="flex items-center gap-2.5 mb-4 sm:mb-[18px]">
+          <div
+            className="w-5 h-px sm:w-5.5"
+            style={{ backgroundColor: "#660000" }}
+          />
           <span
-            className="text-[10px] font-bold tracking-[2.5px] uppercase"
+            className="text-[9px] sm:text-[10px] font-bold tracking-[2px] sm:tracking-[2.5px] uppercase"
             style={{ color: "#660000" }}
           >
             The STREET Values
           </span>
         </div>
-        <h2 className="font-serif text-[clamp(28px,3.8vw,46px)] font-light leading-[1.1] tracking-[-0.7px] mb-[18px]">
+        <h2 className="font-serif text-[clamp(24px,6vw,28px)] sm:text-[clamp(28px,5vw,38px)] md:text-[clamp(28px,3.8vw,46px)] font-light leading-[1.2] sm:leading-[1.1] tracking-[-0.5px] sm:tracking-[-0.7px] mb-4 sm:mb-[18px]">
           Not aspirations on a poster.
           <br />
           <em className="not-italic" style={{ color: "#C4512A" }}>
             Behaviours we demonstrate.
           </em>
         </h2>
-        <div className="grid grid-cols-3 gap-2.5 mt-11">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5 mt-8 sm:mt-10 md:mt-11">
           {[
             {
               letter: "S",
@@ -341,26 +347,26 @@ export default function AboutPage() {
           ].map((value, index) => (
             <div
               key={index}
-              className="p-[30px_26px] border rounded transition-all hover:border-red"
+              className="p-5 sm:p-6 md:p-[30px_26px] border rounded transition-all hover:border-red"
               style={{
                 backgroundColor: "#FFFFFF",
                 borderColor: "rgba(26, 15, 0, 0.08)",
               }}
             >
               <div
-                className="font-serif text-[44px] font-[200] leading-none mb-2.5"
+                className="font-serif text-[32px] sm:text-[38px] md:text-[44px] font-[200] leading-none mb-2 sm:mb-2.5"
                 style={{ color: "rgba(196,81,42,0.2)" }}
               >
                 {value.letter}
               </div>
               <div
-                className="text-[13.5px] font-semibold mb-1.5"
+                className="text-[12px] sm:text-[13px] md:text-[13.5px] font-semibold mb-1 sm:mb-1.5"
                 style={{ color: "#1A0F00" }}
               >
                 {value.name}
               </div>
               <div
-                className="text-[13px] leading-[1.6] font-light"
+                className="text-[12px] sm:text-[12.5px] md:text-[13px] leading-[1.5] sm:leading-[1.6] font-light"
                 style={{ color: "rgba(26, 15, 0, 0.45)" }}
               >
                 {value.desc}
@@ -371,29 +377,32 @@ export default function AboutPage() {
       </div>
 
       <div
-        className="h-px mx-20"
+        className="h-px mx-4 sm:mx-6 md:mx-10 lg:mx-20"
         style={{ backgroundColor: "rgba(26, 15, 0, 0.08)" }}
       />
 
       {/* Team Section */}
-      <div className="py-[88px] px-20 rv">
-        <div className="flex items-center gap-2.5 mb-[18px]">
-          <div className="w-5.5 h-px" style={{ backgroundColor: "#660000" }} />
+      <div className="py-12 sm:py-16 md:py-20 lg:py-[88px] px-4 sm:px-6 md:px-10 lg:px-20 rv">
+        <div className="flex items-center gap-2.5 mb-4 sm:mb-[18px]">
+          <div
+            className="w-5 h-px sm:w-5.5"
+            style={{ backgroundColor: "#660000" }}
+          />
           <span
-            className="text-[10px] font-bold tracking-[2.5px] uppercase"
+            className="text-[9px] sm:text-[10px] font-bold tracking-[2px] sm:tracking-[2.5px] uppercase"
             style={{ color: "#660000" }}
           >
             The Team
           </span>
         </div>
-        <h2 className="font-serif text-[clamp(28px,3.8vw,46px)] font-light leading-[1.1] tracking-[-0.7px] mb-[18px]">
+        <h2 className="font-serif text-[clamp(24px,6vw,28px)] sm:text-[clamp(28px,5vw,38px)] md:text-[clamp(28px,3.8vw,46px)] font-light leading-[1.2] sm:leading-[1.1] tracking-[-0.5px] sm:tracking-[-0.7px] mb-4 sm:mb-[18px]">
           The people behind
           <br />
           <em className="not-italic" style={{ color: "#C4512A" }}>
             the methodology.
           </em>
         </h2>
-        <div className="grid grid-cols-4 gap-4 mt-11">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-4 mt-8 sm:mt-10 md:mt-11">
           {[
             {
               name: "[Name]",
@@ -422,7 +431,7 @@ export default function AboutPage() {
           ].map((member, index) => (
             <div key={index} className="cursor-pointer">
               <div
-                className="h-[280px] rounded mb-3 overflow-hidden border transition-all hover:border-red"
+                className="h-[300px] sm:h-[350px] md:h-[280px] rounded mb-3 overflow-hidden border transition-all hover:border-red"
                 style={{
                   backgroundColor: "#FFF2E0",
                   borderColor: "rgba(26, 15, 0, 0.08)",
@@ -435,12 +444,15 @@ export default function AboutPage() {
                 />
               </div>
               <div
-                className="text-[14px] font-semibold mb-0.5"
+                className="text-[13px] sm:text-[14px] font-semibold mb-0.5"
                 style={{ color: "#1A0F00" }}
               >
                 {member.name}
               </div>
-              <div className="text-xs font-medium" style={{ color: "#660000" }}>
+              <div
+                className="text-[11px] sm:text-xs font-medium"
+                style={{ color: "#660000" }}
+              >
                 {member.role}
               </div>
             </div>
@@ -450,7 +462,7 @@ export default function AboutPage() {
 
       {/* CTA */}
       <div
-        className="py-25 px-20 text-center relative overflow-hidden"
+        className="py-16 sm:py-20 md:py-25 px-4 sm:px-6 md:px-10 lg:px-20 text-center relative overflow-hidden"
         style={{ backgroundColor: "#1A0F00" }}
       >
         <div
@@ -461,14 +473,14 @@ export default function AboutPage() {
           }}
         />
         <h2
-          className="font-serif text-[clamp(28px,4.5vw,52px)] font-[200] leading-[1.12] mb-[18px] tracking-[-1px] relative z-10"
+          className="font-serif text-[clamp(24px,6vw,28px)] sm:text-[clamp(28px,5vw,38px)] md:text-[clamp(28px,4.5vw,52px)] font-[200] leading-[1.2] sm:leading-[1.12] mb-4 sm:mb-[18px] tracking-[-0.5px] sm:tracking-[-1px] relative z-10"
           style={{ color: "#FFF8EE" }}
         >
           Ready to see how we work?
         </h2>
         <Link
           href="/services"
-          className="inline-block px-8.5 py-3.5 text-[14.5px] font-semibold rounded transition-all relative z-10"
+          className="inline-block px-6 sm:px-7 md:px-8.5 py-2.5 sm:py-3 md:py-3.5 text-[13px] sm:text-[14px] md:text-[14.5px] font-semibold rounded transition-all relative z-10"
           style={{ backgroundColor: "#660000", color: "#FFFFFF" }}
         >
           Explore Services →

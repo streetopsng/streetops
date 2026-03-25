@@ -1,3 +1,4 @@
+// LatestInsights.tsx
 import Link from "next/link";
 
 const insights = [
@@ -44,20 +45,23 @@ const insights = [
 const LatestInsights = () => {
   return (
     <div
-      className="py-[88px] overflow-hidden"
+      className="py-12 sm:py-16 md:py-20 lg:py-[88px] overflow-hidden"
       style={{ backgroundColor: "#FFF2E0" }}
     >
-      <div className="px-20 mb-10 rv">
-        <div className="flex items-center gap-2.5 mb-[18px]">
-          <div className="w-5.5 h-px" style={{ backgroundColor: "#660000" }} />
+      <div className="px-4 sm:px-6 md:px-10 lg:px-20 mb-6 sm:mb-8 md:mb-10 rv">
+        <div className="flex items-center gap-2.5 mb-3 sm:mb-4 md:mb-[18px]">
+          <div
+            className="w-5 h-px sm:w-5.5"
+            style={{ backgroundColor: "#660000" }}
+          />
           <span
-            className="text-[10px] font-bold tracking-[2.5px] uppercase"
+            className="text-[9px] sm:text-[10px] font-bold tracking-[2px] sm:tracking-[2.5px] uppercase"
             style={{ color: "#660000" }}
           >
             Latest from StreetOps
           </span>
         </div>
-        <h2 className="font-serif text-[clamp(28px,3.8vw,46px)] font-light leading-[1.1] tracking-[-0.7px]">
+        <h2 className="font-serif text-[clamp(24px,6vw,28px)] sm:text-[clamp(28px,5vw,38px)] md:text-[clamp(28px,3.8vw,46px)] font-light leading-[1.2] sm:leading-[1.1] tracking-[-0.5px] sm:tracking-[-0.7px]">
           Thinking out loud
           <br />
           on{" "}
@@ -67,7 +71,7 @@ const LatestInsights = () => {
         </h2>
       </div>
       <div
-        className="flex gap-3.5 px-20 overflow-x-auto [&::-webkit-scrollbar]:hidden"
+        className="flex gap-3 sm:gap-3.5 px-4 sm:px-6 md:px-10 lg:px-20 overflow-x-auto [&::-webkit-scrollbar]:hidden"
         style={{
           scrollSnapType: "x mandatory",
           msOverflowStyle: "none",
@@ -78,7 +82,7 @@ const LatestInsights = () => {
           <Link
             key={index}
             href={insight.href}
-            className="flex-shrink-0 w-[300px] border rounded overflow-hidden cursor-pointer transition-all hover:-translate-y-0.5 hover:shadow-md scroll-snap-start"
+            className="flex-shrink-0 w-[260px] sm:w-[280px] md:w-[300px] border rounded overflow-hidden cursor-pointer transition-all hover:-translate-y-0.5 hover:shadow-md scroll-snap-start"
             style={{
               backgroundColor: "#FFFFFF",
               borderColor: "rgba(26, 15, 0, 0.08)",
@@ -86,7 +90,7 @@ const LatestInsights = () => {
             }}
           >
             <div
-              className="h-[180px] overflow-hidden relative"
+              className="h-[150px] sm:h-[165px] md:h-[180px] overflow-hidden relative"
               style={{ backgroundColor: "#FFF2E0" }}
             >
               <img
@@ -95,15 +99,15 @@ const LatestInsights = () => {
                 className="w-full h-full object-cover transition-transform duration-400 group-hover:scale-105"
               />
             </div>
-            <div className="p-5.5">
+            <div className="p-4 sm:p-5 md:p-5.5">
               <div
-                className="text-[9.5px] font-bold tracking-[2px] uppercase mb-2"
+                className="text-[8px] sm:text-[9px] md:text-[9.5px] font-bold tracking-[1.5px] sm:tracking-[2px] uppercase mb-1.5 sm:mb-2"
                 style={{ color: "#C4512A" }}
               >
                 {insight.category}
               </div>
               <h4
-                className="font-serif text-base font-normal leading-[1.35] tracking-[-0.1px]"
+                className="font-serif text-[14px] sm:text-[15px] md:text-base font-normal leading-[1.3] sm:leading-[1.35] tracking-[-0.1px]"
                 style={{ color: "#1A0F00" }}
               >
                 {insight.title}

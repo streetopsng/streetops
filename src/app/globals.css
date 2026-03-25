@@ -842,3 +842,112 @@ transform: rotateY(180deg);
 .rv3 {
   transition-delay: 0.24s;
 }
+
+/* with animation */
+
+/* app/globals.css */
+@import "tailwindcss";
+
+@keyframes hprog {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes mq {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes shbar {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.animate-hprog {
+  animation: hprog 5.5s linear;
+}
+
+.animate-fadeUp {
+  animation: fadeUp 0.7s ease forwards;
+}
+
+.animate-marquee {
+  animation: mq 28s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+.sbar-animate {
+  position: relative;
+  overflow: hidden;
+}
+
+.sbar-animate::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(245, 184, 0, 0.5);
+  animation: shbar 2.5s ease-in-out infinite;
+}
+
+.rv {
+  opacity: 0;
+  transform: translateY(22px);
+  transition:
+    opacity 0.65s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.65s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.rv.on {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.rv1 {
+  transition-delay: 0.08s;
+}
+.rv2 {
+  transition-delay: 0.16s;
+}
+.rv3 {
+  transition-delay: 0.24s;
+}
+
+/* Responsive Utilities */
+/* @layer utilities {
+  .container-padding {
+    @apply px-4 sm:px-6 md:px-10 lg:px-20;
+  }
+  
+  .section-padding {
+    @apply py-12 sm:py-16 md:py-20 lg:py-[88px] container-padding;
+  }
+} */

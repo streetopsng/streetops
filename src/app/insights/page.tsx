@@ -115,7 +115,7 @@ export default function InsightsPage() {
   return (
     <>
       {/* Hero */}
-      <div className="relative min-h-[380px] overflow-hidden flex items-end">
+      <div className="relative min-h-[340px] sm:min-h-[360px] md:min-h-[380px] overflow-hidden flex items-end">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
@@ -137,21 +137,21 @@ export default function InsightsPage() {
               "linear-gradient(to bottom, transparent, #660000 30%, #E8571A 70%, transparent)",
           }}
         />
-        <div className="relative z-10 px-20 py-25">
-          <div className="flex items-center gap-2.5 mb-5">
+        <div className="relative z-10 px-4 sm:px-6 md:px-10 lg:px-20 py-16 sm:py-20 md:py-25">
+          <div className="flex items-center gap-2.5 mb-4 sm:mb-5">
             <div
-              className="w-5.5 h-px"
+              className="w-4 sm:w-5.5 h-px"
               style={{ backgroundColor: "rgba(255,248,238,0.2)" }}
             />
             <span
-              className="text-[10px] font-semibold tracking-[2px] uppercase"
+              className="text-[8px] sm:text-[9px] md:text-[10px] font-semibold tracking-[1.5px] sm:tracking-[2px] uppercase"
               style={{ color: "rgba(255,248,238,0.35)" }}
             >
               Resources · Insights
             </span>
           </div>
           <h1
-            className="font-serif text-[clamp(32px,4.5vw,56px)] font-light leading-[1.06] tracking-[-1.2px] max-w-[680px] mb-5"
+            className="font-serif text-[clamp(28px,8vw,32px)] sm:text-[clamp(32px,6vw,42px)] md:text-[clamp(32px,4.5vw,56px)] font-light leading-[1.2] sm:leading-[1.1] md:leading-[1.06] tracking-[-0.8px] sm:tracking-[-1px] md:tracking-[-1.2px] max-w-full sm:max-w-[90%] md:max-w-[680px] mb-4 sm:mb-5"
             style={{ color: "#FFF8EE" }}
           >
             Original thinking on
@@ -164,7 +164,7 @@ export default function InsightsPage() {
             </em>
           </h1>
           <p
-            className="text-base leading-[1.68] font-light max-w-[520px]"
+            className="text-[13px] sm:text-[14px] md:text-base leading-[1.5] sm:leading-[1.6] md:leading-[1.68] font-light max-w-full sm:max-w-[90%] md:max-w-[520px]"
             style={{ color: "rgba(255,248,238,0.48)" }}
           >
             Not generic HR content. Perspectives grounded in real engagements
@@ -174,38 +174,40 @@ export default function InsightsPage() {
       </div>
 
       {/* Insights Grid */}
-      <div className="py-[88px] px-20">
-        {/* Filters */}
-        <div className="flex gap-0.5 flex-wrap border-b border-[rgba(26,15,0,0.08)] dark:border-[rgba(255,248,238,0.08)] mb-10">
-          {filters.map((filter) => (
-            <button
-              key={filter.id}
-              onClick={() => setActiveFilter(filter.id)}
-              className={`px-5.5 py-2.5 text-xs font-medium border-b-2 transition-all ${
-                activeFilter === filter.id
-                  ? "text-red-600 border-red-600"
-                  : "text-ink4 dark:text-[rgba(255,248,238,0.28)] border-transparent hover:text-red-600"
-              }`}
-            >
-              {filter.label}
-            </button>
-          ))}
+      <div className="py-12 sm:py-16 md:py-20 lg:py-[88px] px-4 sm:px-6 md:px-10 lg:px-20">
+        {/* Filters - Horizontal scroll on mobile */}
+        <div className="overflow-x-auto pb-2 mb-6 sm:mb-8 md:mb-10">
+          <div className="flex gap-0.5 flex-nowrap sm:flex-wrap border-b border-[rgba(26,15,0,0.08)] dark:border-[rgba(255,248,238,0.08)] min-w-max sm:min-w-0">
+            {filters.map((filter) => (
+              <button
+                key={filter.id}
+                onClick={() => setActiveFilter(filter.id)}
+                className={`px-3 sm:px-4 md:px-5.5 py-1.5 sm:py-2 md:py-2.5 text-[11px] sm:text-xs font-medium border-b-2 transition-all whitespace-nowrap ${
+                  activeFilter === filter.id
+                    ? "text-red-600 border-red-600"
+                    : "text-ink4 dark:text-[rgba(255,248,238,0.28)] border-transparent hover:text-red-600"
+                }`}
+              >
+                {filter.label}
+              </button>
+            ))}
+          </div>
         </div>
 
         {/* Insights Grid */}
-        <div className="flex flex-wrap gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {filteredInsights.map((insight) => (
             <Link
               key={insight.id}
               href={insight.href}
-              className="w-[calc(33% - 12px)] min-w-[240px] border rounded overflow-hidden cursor-pointer transition-all hover:-translate-y-0.5 hover:shadow-md"
+              className="border rounded overflow-hidden cursor-pointer transition-all hover:-translate-y-0.5 hover:shadow-md"
               style={{
                 backgroundColor: "#FFFFFF",
                 borderColor: "rgba(26, 15, 0, 0.08)",
               }}
             >
               <div
-                className="h-[180px] overflow-hidden relative"
+                className="h-[160px] sm:h-[170px] md:h-[180px] overflow-hidden relative"
                 style={{ backgroundColor: "#FFF2E0" }}
               >
                 <img
@@ -214,11 +216,11 @@ export default function InsightsPage() {
                   className="w-full h-full object-cover transition-transform duration-400 group-hover:scale-105"
                 />
               </div>
-              <div className="p-5.5">
-                <div className="text-[9.5px] font-bold tracking-[2px] uppercase mb-2 text-terra">
+              <div className="p-4 sm:p-5 md:p-5.5">
+                <div className="text-[8px] sm:text-[9px] md:text-[9.5px] font-bold tracking-[1.5px] sm:tracking-[2px] uppercase mb-1.5 sm:mb-2 text-terra">
                   {insight.category}
                 </div>
-                <h4 className="font-serif text-base font-normal leading-[1.35] tracking-[-0.1px] text-char">
+                <h4 className="font-serif text-[14px] sm:text-[15px] md:text-base font-normal leading-[1.3] sm:leading-[1.35] tracking-[-0.1px] text-char">
                   {insight.title}
                 </h4>
               </div>
