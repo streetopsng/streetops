@@ -185,7 +185,7 @@ export default function ServiceDetailPage() {
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-serif mb-4">
             Service not found
           </h1>
-          <Link href="/services" className="text-red-600">
+          <Link href="/services" className="text-burgundy">
             Back to Services
           </Link>
         </div>
@@ -254,15 +254,15 @@ export default function ServiceDetailPage() {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 sm:gap-10 md:gap-14 py-12 sm:py-16 md:py-[72px] px-4 sm:px-6 md:px-10 lg:px-20">
         <div className="lg:col-span-2">
           <p
-            className="text-[15px] sm:text-[16px] md:text-[17px] leading-[1.6] sm:leading-[1.7] md:leading-[1.72] font-light mb-8 sm:mb-10 md:mb-11 pl-4 sm:pl-5 md:pl-6 border-l-2 sm:border-l-3 border-l-red-600"
+            className="text-[15px] sm:text-[16px] md:text-[17px] leading-[1.6] sm:leading-[1.7] md:leading-[1.72] font-light mb-8 sm:mb-10 md:mb-11 pl-4 sm:pl-5 md:pl-6 "
             style={{ color: "rgba(26, 15, 0, 0.65)" }}
           >
             {service.intro}
           </p>
 
           <div className="flex items-center gap-2.5 mb-4 sm:mb-[18px]">
-            <div className="w-5 h-px sm:w-5.5 bg-red-600" />
-            <span className="text-[9px] sm:text-[10px] font-bold tracking-[2px] sm:tracking-[2.5px] uppercase text-red-600">
+            <div className="w-5 h-px sm:w-5.5 bg-burgundy" />
+            <span className="text-[9px] sm:text-[10px] font-bold tracking-[2px] sm:tracking-[2.5px] uppercase text-burgundy">
               WHAT YOU GET
             </span>
           </div>
@@ -273,7 +273,7 @@ export default function ServiceDetailPage() {
                 key={index}
                 className="py-3 sm:py-4 md:py-[18px] border-b border-[rgba(26,15,0,0.08)] dark:border-[rgba(255,248,238,0.08)] flex gap-3 sm:gap-4 transition-all hover:pl-1"
               >
-                <span className="text-red-600 font-bold flex-shrink-0 mt-px">
+                <span className="text-burgundy font-bold flex-shrink-0 mt-px">
                   →
                 </span>
                 <div>
@@ -290,8 +290,8 @@ export default function ServiceDetailPage() {
 
           <div className="mt-8 sm:mt-10 md:mt-12">
             <div className="flex items-center gap-2.5 mb-3 sm:mb-3.5">
-              <div className="w-5 h-px sm:w-5.5 bg-red-600" />
-              <span className="text-[9px] sm:text-[10px] font-bold tracking-[2px] sm:tracking-[2.5px] uppercase text-red-600">
+              <div className="w-5 h-px sm:w-5.5 bg-burgundy" />
+              <span className="text-[9px] sm:text-[10px] font-bold tracking-[2px] sm:tracking-[2.5px] uppercase text-burgundy">
                 Who This Is For
               </span>
             </div>
@@ -303,7 +303,7 @@ export default function ServiceDetailPage() {
 
         <div>
           <div className="p-4 sm:p-5 md:p-6 border border-[rgba(26,15,0,0.08)] dark:border-[rgba(255,248,238,0.08)] rounded-lg mb-3.5 bg-[#FFF2E0] dark:bg-[#241800]">
-            <div className="text-[9px] sm:text-[10px] font-bold tracking-[1.5px] sm:tracking-[2px] uppercase mb-2 sm:mb-3 text-red-600">
+            <div className="text-[9px] sm:text-[10px] font-bold tracking-[1.5px] sm:tracking-[2px] uppercase mb-2 sm:mb-3 text-burgundy">
               What Changes
             </div>
             <p className="text-[12px] sm:text-[12.5px] md:text-[13px] leading-[1.5] sm:leading-[1.6] md:leading-[1.65] font-light text-ink3 dark:text-[rgba(255,248,238,0.42)]">
@@ -312,13 +312,13 @@ export default function ServiceDetailPage() {
           </div>
 
           <div className="p-4 sm:p-5 md:p-6 border border-[rgba(26,15,0,0.08)] dark:border-[rgba(255,248,238,0.08)] rounded-lg mb-3.5 bg-[#FFF2E0] dark:bg-[#241800]">
-            <div className="text-[9px] sm:text-[10px] font-bold tracking-[1.5px] sm:tracking-[2px] uppercase mb-2 sm:mb-3 text-red-600">
+            <div className="text-[9px] sm:text-[10px] font-bold tracking-[1.5px] sm:tracking-[2px] uppercase mb-2 sm:mb-3 text-burgundy">
               Related Services
             </div>
             {service.rel.map((r: string, index: number) => (
               <div
                 key={index}
-                className="py-1.5 sm:py-2 border-b border-[rgba(26,15,0,0.08)] dark:border-[rgba(255,248,238,0.08)] text-[11px] sm:text-xs font-medium text-red-600 cursor-pointer transition-all hover:gap-2.5 flex items-center gap-1.5"
+                className="py-1.5 sm:py-2 border-b border-[rgba(26,15,0,0.08)] dark:border-[rgba(255,248,238,0.08)] text-[11px] sm:text-xs font-medium text-burgundy cursor-pointer transition-all hover:gap-2.5 flex items-center gap-1.5"
               >
                 → {r}
               </div>
@@ -327,7 +327,7 @@ export default function ServiceDetailPage() {
 
           <Link
             href="/contact"
-            className="block w-full py-2.5 sm:py-3 text-center text-[12px] sm:text-[13px] font-semibold rounded transition-all bg-red-600 text-white"
+            className="block w-full py-2.5 sm:py-3 text-center text-[12px] sm:text-[13px] font-semibold rounded transition-all bg-burgundy text-white"
           >
             Work With Us →
           </Link>

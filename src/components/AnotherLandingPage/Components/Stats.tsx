@@ -32,7 +32,7 @@ const Stats = () => {
         </em>
       </h2>
       <div
-        className="grid grid-cols-2 sm:grid-cols-4 gap-0 border rounded overflow-hidden mt-8 sm:mt-10 md:mt-13"
+        className="grid grid-cols-2 lg:grid-cols-4 gap-0 border rounded overflow-hidden mt-8 sm:mt-10 md:mt-13"
         style={{ borderColor: "rgba(26, 15, 0, 0.08)" }}
       >
         {stats.map((stat, index) => (
