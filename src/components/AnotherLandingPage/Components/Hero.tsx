@@ -6,42 +6,42 @@ import Link from "next/link";
 const slides = [
   {
     image:
-      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=1600&q=80",
-    eyebrow: "Social Productivity · Africa-First",
-    title: "Most team tools were built\nfor somewhere else.",
+      "https://res.cloudinary.com/deylyllwd/image/upload/v1774479682/first-image_zfecof.png",
+    eyebrow: "Social Productivity and Social Health Index ",
+    title: "Performance is social.",
     description:
-      "StreetOps was designed for African workplaces — relational, high-context, and built on the manager as the primary multiplier of team performance.",
-    cta1: { text: "See How We Work →", href: "/services" },
+      "How a team relates to one another is how well they produce together. We call this Social Productivity. We measure it through the Social Health Index.",
+    cta1: { text: "Start With a Diagnosis →", href: "#" },
     cta2: { text: "Our Story", href: "/about" },
   },
   {
     image:
-      "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1600&q=80",
-    eyebrow: "Team Diagnostic",
-    title: "You know something is wrong.\nYou can't name it yet.",
+      "https://res.cloudinary.com/deylyllwd/image/upload/v1774479683/second-image_javp8k.png",
+    eyebrow: "Africa-First Context",
+    title: "Built for here.",
     description:
-      "We diagnose exactly what is broken — across relationships, clarity, culture, and performance — before we recommend a single intervention.",
-    cta1: { text: "Start With a Diagnosis →", href: "/services/diagnostic" },
+      "African teams are relational, high-context, and communal. StreetOps was built around that. Not adapted to it.",
+    cta1: { text: "How We Work →", href: "#" },
     cta2: { text: "Talk to Us", href: "/contact" },
   },
   {
     image:
-      "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1600&q=80",
-    eyebrow: "Experience Design & Delivery",
-    title: "Team performance is not an event.\nIt is something you build.",
+      "https://res.cloudinary.com/deylyllwd/image/upload/v1774479681/third-image_ydd15b.png",
+    eyebrow: "Training and Development",
+    title: "Programmes built for your team.",
     description:
-      "Every experience tied to a diagnosis and measured against a specific outcome. Not generic team days. Not one-size-fits-all activations.",
-    cta1: { text: "See What We Build →", href: "/services/experience" },
+      "We design and deliver training that fits what your team actually needs. Practical, grounded, and built to stick.",
+    cta1: { text: "Explore Training →", href: "#" },
     cta2: { text: "Talk to Us", href: "/contact" },
   },
   {
     image:
-      "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1600&q=80",
-    eyebrow: "Training & Development",
-    title: "Your people are not the problem.\nThe system usually is.",
+      "https://res.cloudinary.com/deylyllwd/image/upload/v1774479719/fourth-image_zjqtnd.png",
+    eyebrow: "Research and Industry Reports",
+    title: "We study African teams.",
     description:
-      "Targeted programmes built on behavioural science — designed for the roles, environments, and challenges that actually exist here.",
-    cta1: { text: "Explore Our Training →", href: "/services/manager" },
+      "Our research programme looks at how African teams bond, perform, and break down. We publish what we find.",
+    cta1: { text: "See Our Research →", href: "#" },
     cta2: { text: "Talk to Us", href: "/contact" },
   },
 ];

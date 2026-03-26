@@ -12,22 +12,22 @@ const servicesData: Record<string, any> = {
     title: "Team Diagnostic",
     sub: "You can feel the problem. We can name it — with evidence, priority, and a plan.",
     intro:
-      "Most organisations feel their team problems before they can name them. Missed deadlines, good people leaving, meetings where nobody says anything real. The Team Diagnostic changes that — through surveys, observation, and structured assessment, we produce a specific, evidence-based picture of what is working, what is not, and what needs to change first.",
+      "Most organisations know something is off before they can describe it. Engagement drops, collaboration becomes difficult, a team that worked well together stops working well. We assess across all dimensions of the Social Health Index and deliver a clear picture of what is happening, why it matters, and what to do next.",
     offs: [
       {
-        n: "Team Health Assessment",
+        n: "A full Social Health Index assessment. ",
         d: "Full diagnostic across all 11 engagement and productivity dimensions.",
       },
       {
-        n: "Culture Baseline Report",
+        n: "A written findings report with evidence and priority order. ",
         d: "Findings with dimension scores, risk interpretation, and recommended priorities.",
       },
       {
-        n: "Manager Blind Spot Assessment",
+        n: "A debrief with your leadership team. ",
         d: "Anonymous team rating of manager behaviour across key leadership dimensions.",
       },
       {
-        n: "Ongoing Measurement",
+        n: "A recommended path forward tied to the findings.",
         d: "Periodic re-diagnosis to track movement and prove ROI.",
       },
     ],
@@ -41,24 +41,24 @@ const servicesData: Record<string, any> = {
     title: "Manager Effectiveness Training",
     sub: "Managers account for 70% of team engagement variance. We close the gap.",
     intro:
-      "Managers account for at least 70% of the variance in employee engagement. It means the single highest-leverage intervention in any organisation is the manager. We diagnose the specific leadership gap and design the intervention that addresses it.",
+      "We design and deliver training programmes that fit what your specific team needs. The content is practical. The delivery is human. The goal is change that lasts beyond the training room. Programmes cover team health, manager effectiveness, communication, and culture. We build custom learning journeys where standard programmes are not enough.",
     offs: [
       {
-        n: "New Manager Foundations",
+        n: "A training programme designed around your team's specific needs. ",
         d: "For people recently promoted — the tools, language, and frameworks for leading people.",
       },
       {
-        n: "Manager Blind Spot Programme",
+        n: "Manager effectiveness programmes for new and developing managers.",
         d: "For established managers who need a specific reset. Grounded in anonymous team feedback.",
       },
       {
-        n: "Leadership & Accountability Coaching",
+        n: "Measurement of outcomes before and after.",
         d: "One-on-one for senior leaders struggling with the people side of leadership.",
       },
-      {
-        n: "People Management Masterclass",
-        d: "Group training format. Built for African workplace context.",
-      },
+      // {
+      //   n: "People Management Masterclass",
+      //   d: "Group training format. Built for African workplace context.",
+      // },
     ],
     for: "Newly promoted managers. Established managers receiving negative team feedback. Senior leaders who want to sharpen their people capability.",
     out: "Managers who lead deliberately — with the tools and frameworks to build trust, clarity, and accountability.",
@@ -70,28 +70,28 @@ const servicesData: Record<string, any> = {
     title: "Talent Integration Advisory",
     sub: "Good hires leave by month four. We build the infrastructure that keeps them.",
     intro:
-      "The month-four attrition problem is real. A new hire joins, seems engaged, and by month four they are halfway out the door — not because the role was wrong, but because the culture absorbed them badly. StreetOps prevents this.",
+      "We implement the processes, the touchpoints, the manager relationships, and the culture signals that help a new hire integrate and contribute.",
     offs: [
       {
-        n: "Pre-Hire Culture Profiling",
+        n: "An audit of your current onboarding process. ",
         d: "Assessing candidates for culture fit before hiring decisions.",
       },
       {
-        n: "Onboarding System Design",
+        n: "A redesigned integration infrastructure built for your culture and roles. ",
         d: "Building the company's onboarding infrastructure from scratch. A system, not an orientation deck.",
       },
       {
-        n: "90-Day Integration Programme",
+        n: "Manager guidance on leading new hires through their first ninety days.",
         d: "Running a specific new hire's cultural integration deliberately.",
       },
-      {
-        n: "Buddy System Design",
-        d: "Designing the peer support structure for new joiners.",
-      },
-      {
-        n: "Embedding Programme",
-        d: "Sustaining new hire integration beyond the first month.",
-      },
+      // {
+      //   n: "Buddy System Design",
+      //   d: "Designing the peer support structure for new joiners.",
+      // },
+      // {
+      //   n: "Embedding Programme",
+      //   d: "Sustaining new hire integration beyond the first month.",
+      // },
     ],
     for: "Organisations experiencing early attrition. Companies scaling quickly who need an onboarding system that doesn't rely on managers to improvise.",
     out: "New hires who are genuinely part of the team by day 90. Reduced early attrition. Faster time to full contribution.",
@@ -263,7 +263,7 @@ export default function ServiceDetailPage() {
           <div className="flex items-center gap-2.5 mb-4 sm:mb-[18px]">
             <div className="w-5 h-px sm:w-5.5 bg-red-600" />
             <span className="text-[9px] sm:text-[10px] font-bold tracking-[2px] sm:tracking-[2.5px] uppercase text-red-600">
-              What Sits Under This Service
+              WHAT YOU GET
             </span>
           </div>
 
@@ -280,9 +280,9 @@ export default function ServiceDetailPage() {
                   <div className="text-[13px] sm:text-[13.5px] md:text-[14px] font-semibold mb-0.5 text-char dark:text-cream">
                     {off.n}
                   </div>
-                  <div className="text-[12px] sm:text-[12.5px] md:text-[13px] leading-[1.5] sm:leading-[1.55] md:leading-[1.58] font-light text-ink3 dark:text-[rgba(255,248,238,0.42)]">
+                  {/* <div className="text-[12px] sm:text-[12.5px] md:text-[13px] leading-[1.5] sm:leading-[1.55] md:leading-[1.58] font-light text-ink3 dark:text-[rgba(255,248,238,0.42)]">
                     {off.d}
-                  </div>
+                  </div> */}
                 </div>
               </div>
             ))}

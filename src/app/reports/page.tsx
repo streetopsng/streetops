@@ -87,7 +87,7 @@ export default function ReportsPage() {
         {/* Main Report Card */}
         <div className="border border-[rgba(26,15,0,0.08)] dark:border-[rgba(255,248,238,0.08)] p-5 sm:p-6 md:p-8 lg:p-10 rounded-lg flex flex-col lg:flex-row gap-6 sm:gap-8 md:gap-9 items-center mb-3.5 bg-white dark:bg-[#1C1200]">
           <div className="flex-1">
-            <div className="text-[8px] sm:text-[9px] md:text-[9.5px] font-bold tracking-[1.5px] sm:tracking-[2px] uppercase mb-2 sm:mb-2.5 text-red-600">
+            <div className="text-[8px] sm:text-[9px] md:text-[9.5px] font-bold tracking-[1.5px] sm:tracking-[2px] uppercase mb-2 sm:mb-2.5 text-burgundy">
               Flagship Report · Coming 2026
             </div>
             <h3 className="font-serif text-[18px] sm:text-[20px] md:text-[22px] font-normal mb-2 sm:mb-2.5 tracking-[-0.2px] leading-[1.3] sm:leading-[1.2] text-char dark:text-cream">
@@ -100,13 +100,13 @@ export default function ReportsPage() {
             </p>
             <Link
               href="/ask"
-              className="inline-flex items-center gap-1.5 text-[11px] sm:text-[12px] md:text-[12.5px] font-semibold transition-all hover:gap-2.5 text-red-600"
+              className="inline-flex items-center gap-1.5 text-[11px] sm:text-[12px] md:text-[12.5px] font-semibold transition-all hover:gap-2.5 text-burgundy"
             >
               Contribute to the Survey →
             </Link>
           </div>
           <div className="w-full sm:w-[280px] flex-shrink-0 p-4 sm:p-5 md:p-5.5 text-center border border-[rgba(26,15,0,0.08)] dark:border-[rgba(255,248,238,0.08)] rounded-lg bg-[#FFF2E0] dark:bg-[#241800]">
-            <div className="text-[9px] sm:text-[10px] font-bold tracking-[1.5px] uppercase mb-1.5 text-red-600">
+            <div className="text-[9px] sm:text-[10px] font-bold tracking-[1.5px] uppercase mb-1.5 text-burgundy">
               Coming 2026
             </div>
             <p className="text-[11px] sm:text-xs mb-2 sm:mb-2.5 text-ink3 dark:text-[rgba(255,248,238,0.42)]">
@@ -115,9 +115,9 @@ export default function ReportsPage() {
             <input
               type="email"
               placeholder="your@email.com"
-              className="w-full px-3 sm:px-3.5 py-2 sm:py-2.5 border border-[rgba(26,15,0,0.08)] dark:border-[rgba(255,248,238,0.08)] bg-white dark:bg-[#1C1200] text-[12px] sm:text-[13px] text-char dark:text-cream rounded outline-none focus:border-red-600 mb-2 sm:mb-2.5"
+              className="w-full px-3 sm:px-3.5 py-2 sm:py-2.5 border border-[rgba(26,15,0,0.08)] dark:border-[rgba(255,248,238,0.08)] bg-white dark:bg-[#1C1200] text-[12px] sm:text-[13px] text-char dark:text-cream rounded outline-none focus:border-burgundy mb-2 sm:mb-2.5"
             />
-            <button className="w-full py-2 sm:py-2.5 text-[12px] sm:text-[13px] font-semibold rounded transition-all bg-red-600 text-white">
+            <button className="w-full py-2 sm:py-2.5 text-[12px] sm:text-[13px] font-semibold rounded transition-all bg-burgundy text-white">
               Notify Me
             </button>
           </div>
@@ -132,7 +132,7 @@ export default function ReportsPage() {
             Each Street Ask survey feeds a future report.
             <Link
               href="/ask"
-              className="inline-flex items-center gap-1.5 text-[11px] sm:text-[12px] md:text-[12.5px] font-semibold transition-all hover:gap-2.5 text-red-600 ml-1"
+              className="inline-flex items-center gap-1.5 text-[11px] sm:text-[12px] md:text-[12.5px] font-semibold transition-all hover:gap-2.5 text-burgundy ml-1"
             >
               Participate →
             </Link>

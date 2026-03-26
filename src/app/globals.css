@@ -223,6 +223,10 @@ transform: rotateY(180deg);
   --color-bgcolor: #f8f8f8;
   --color-bgcolorTwo: #dce0e6;
 
+  /* another design styles */
+
+  --color-burnt-brown: #1a0f0073;
+
   /* breakpoint */
   --breakpoint-xxs: 330px;
   --breakpoint-xs: 370px;
@@ -512,6 +516,11 @@ transform: rotateY(180deg);
   --color-bgcolor: #f8f8f8;
   --color-bgcolorTwo: #dce0e6;
   --color-lightPink: #fd8d8c;
+
+  /* Another Landing Page  */
+
+  --color-burnt-brown: #1a0f0073;
+  --color-burgundy: #660000;
 
   /* break points */
   --breakpoint-xxs: 330px;

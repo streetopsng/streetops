@@ -61,7 +61,7 @@ const PaigeSection = () => {
         style={{ backgroundColor: "#1A0F00" }}
       >
         <img
-          src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&q=80"
+          src="https://res.cloudinary.com/deylyllwd/image/upload/v1774479683/second-image_javp8k.png"
           alt="Technology dashboard"
           className="absolute inset-0 w-full h-full object-cover opacity-80"
         />

@@ -92,7 +92,7 @@ export default function VectorPage() {
 
       {/* Program Details */}
       <div className="py-12 sm:py-16 md:py-20 lg:py-[88px] px-4 sm:px-6 md:px-10 lg:px-20">
-        <div className="bg-char dark:bg-[#0A0600] border border-[rgba(255,248,238,0.07)] border-l-4 border-l-red-600 p-6 sm:p-8 md:p-10 lg:p-13 rounded-lg flex flex-col lg:flex-row gap-8 sm:gap-10 md:gap-13 items-center rv">
+        <div className="bg-char dark:bg-[#0A0600] border border-[rgba(255,248,238,0.07)]  p-6 sm:p-8 md:p-10 lg:p-13 rounded-lg flex flex-col lg:flex-row gap-8 sm:gap-10 md:gap-13 items-center rv">
           <div className="flex-1">
             <div className="flex items-center gap-2.5 mb-4 sm:mb-[18px]">
               <div
@@ -116,7 +116,7 @@ export default function VectorPage() {
             </p>
             <Link
               href="/contact"
-              className="inline-block px-5 sm:px-6 py-2 sm:py-2.5 md:py-3 text-[12px] sm:text-[12.5px] md:text-[13px] font-semibold rounded transition-all bg-red-600 text-white"
+              className="inline-block px-5 sm:px-6 py-2 sm:py-2.5 md:py-3 text-[12px] sm:text-[12.5px] md:text-[13px] font-semibold rounded transition-all bg-burgundy text-white"
             >
               Apply for Next Cohort →
             </Link>
@@ -150,8 +150,8 @@ export default function VectorPage() {
       {/* Outcomes */}
       <div className="py-12 sm:py-16 md:py-20 lg:py-[88px] px-4 sm:px-6 md:px-10 lg:px-20 bg-[#FFF2E0] dark:bg-[#241800]">
         <div className="flex items-center gap-2.5 mb-4 sm:mb-[18px] rv">
-          <div className="w-5 h-px sm:w-5.5 bg-red-600" />
-          <span className="text-[9px] sm:text-[10px] font-bold tracking-[2px] sm:tracking-[2.5px] uppercase text-red-600">
+          <div className="w-5 h-px sm:w-5.5 bg-burgundy" />
+          <span className="text-[9px] sm:text-[10px] font-bold tracking-[2px] sm:tracking-[2.5px] uppercase text-burgundy">
             What You Leave With
           </span>
         </div>
@@ -185,7 +185,7 @@ export default function VectorPage() {
           ].map((item, index) => (
             <div
               key={index}
-              className="p-5 sm:p-6 md:p-7 border border-[rgba(26,15,0,0.08)] dark:border-[rgba(255,248,238,0.08)] rounded-lg transition-all hover:border-red-600 bg-white dark:bg-[#1C1200]"
+              className="p-5 sm:p-6 md:p-7 border border-[rgba(26,15,0,0.08)] dark:border-[rgba(255,248,238,0.08)] rounded-lg transition-all hover:border-burgundy bg-white dark:bg-[#1C1200]"
             >
               <span className="text-xl sm:text-2xl mb-2 sm:mb-3 block">
                 {item.icon}
@@ -215,7 +215,7 @@ export default function VectorPage() {
         </h2>
         <Link
           href="/contact"
-          className="inline-block px-6 sm:px-7 md:px-8.5 py-2.5 sm:py-3 md:py-3.5 text-[13px] sm:text-[14px] md:text-[14.5px] font-semibold rounded transition-all relative z-10 bg-red-600 text-white"
+          className="inline-block px-6 sm:px-7 md:px-8.5 py-2.5 sm:py-3 md:py-3.5 text-[13px] sm:text-[14px] md:text-[14.5px] font-semibold rounded transition-all relative z-10 bg-burgundy text-white"
         >
           Apply for Next Cohort →
         </Link>

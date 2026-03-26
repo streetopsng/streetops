@@ -118,7 +118,7 @@ export default function CasesPage() {
                 index === 1 ? "md:mt-7" : ""
               }`}
             >
-              <div className="text-[8px] sm:text-[9px] md:text-[9.5px] font-bold tracking-[1.5px] sm:tracking-[2px] uppercase mb-2 sm:mb-3 text-red-600">
+              <div className="text-[8px] sm:text-[9px] md:text-[9.5px] font-bold tracking-[1.5px] sm:tracking-[2px] uppercase mb-2 sm:mb-3 text-burgundy">
                 {study.category}
               </div>
               <div className="h-[140px] sm:h-[150px] md:h-[160px] rounded mb-4 sm:mb-[18px] overflow-hidden bg-[#FFF2E0] dark:bg-[#241800]">
@@ -134,7 +134,7 @@ export default function CasesPage() {
               <p className="text-[12.5px] sm:text-[13px] md:text-[13.5px] leading-[1.5] sm:leading-[1.6] md:leading-[1.65] font-light mb-4 sm:mb-[18px] text-ink3 dark:text-[rgba(255,248,238,0.42)]">
                 {study.description}
               </p>
-              <button className="inline-flex items-center gap-1.5 text-[11px] sm:text-[12px] md:text-[12.5px] font-semibold transition-all hover:gap-2.5 text-red-600">
+              <button className="inline-flex items-center gap-1.5 text-[11px] sm:text-[12px] md:text-[12.5px] font-semibold transition-all hover:gap-2.5 text-burgundy">
                 Download Full Case Study →
               </button>
             </div>

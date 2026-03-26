@@ -7,16 +7,16 @@ const services = [
     number: "01",
     title: "Team Diagnostic",
     description:
-      "You can feel the problem. We name it — with evidence, priority, and a plan.",
+      "You can feel that something is off. We name it with evidence and a clear path forward.",
     tags: ["Assessment", "Culture Baseline", "Blind Spots"],
     featured: true,
   },
   {
     id: "manager",
     number: "02",
-    title: "Manager Effectiveness Training",
+    title: "Training and Development",
     description:
-      "Managers account for 70% of engagement variance. We close the gap.",
+      "Programmes designed around what your team needs to learn. Practical, human, and built to last beyond the training room.",
     tags: ["New Managers", "Coaching"],
     featured: false,
   },
@@ -25,25 +25,34 @@ const services = [
     number: "03",
     title: "Talent Integration Advisory",
     description:
-      "Good hires leave by month four. We build the infrastructure that keeps them.",
+      "We build the infrastructure that helps good hires settle, contribute, and stay.",
     tags: ["Onboarding", "Integration"],
     featured: false,
   },
   {
     id: "culture",
     number: "04",
-    title: "Culture & Process Transformation",
+    title: "Culture and Process Transformation",
     description:
-      "Culture is not what you claim. It is what your systems reinforce.",
+      "Culture is what your systems reinforce every day. We work on the values and the systems together.",
     tags: ["Values", "Identity"],
     featured: false,
   },
   {
     id: "experience",
     number: "05",
-    title: "Team Engagement & Experience Design",
+    title: "Group Engagement and Experience Design",
     description:
-      "Every experience tied to a diagnosis. Every outcome measured.",
+      "Experiences designed with a purpose. Team bonding, away days, and group events built around a specific outcome.",
+    tags: ["Bonding", "Events"],
+    featured: false,
+  },
+  {
+    id: "research",
+    number: "06",
+    title: "Research and Industry Reports",
+    description:
+      "We study how African teams work and publish what we find. Available as a standalone service for organisations that want their own data.",
     tags: ["Bonding", "Events"],
     featured: false,
   },
@@ -90,40 +99,37 @@ const ServicesSection = () => {
           </Link>
         </div>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 auto-rows-auto gap-3 rv rv1">
+      {/* grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 auto-rows-auto  */}
+      <div className="flex flex-wrap gap-2 rv rv1 justify-between">
         {services.map((service) => (
           <Link
             key={service.id}
             href={`/services/${service.id}`}
-            className={`p-5 sm:p-6 md:p-8 border rounded transition-all cursor-pointer hover:-translate-y-0.5 hover:shadow-md flex flex-col ${
-              service.featured ? "sm:row-span-2" : ""
-            }`}
+            className={`p-5 sm:p-6 md:p-8 border lg:w-[48%] rounded transition-all cursor-pointer hover:-translate-y-0.5 hover:shadow-md flex flex-col ${""}`}
             style={{
-              backgroundColor: service.featured ? "#660000" : "#FFFFFF",
+              backgroundColor: "#FFFFFF",
               borderColor: "rgba(26, 15, 0, 0.08)",
             }}
           >
             <span
               className="text-[8px] sm:text-[9px] md:text-[9.5px] font-bold tracking-[2px] sm:tracking-[2.5px] uppercase mb-3 sm:mb-4"
               style={{
-                color: service.featured
-                  ? "rgba(255,248,238,0.45)"
-                  : "rgba(26, 15, 0, 0.28)",
+                color: "rgba(26, 15, 0, 0.28)",
               }}
             >
               {service.number}
             </span>
             <h3
-              className={`font-serif text-[16px] sm:text-[17px] md:text-[18px] font-normal mb-2 sm:mb-2.5 tracking-[-0.1px] leading-[1.3] sm:leading-[1.2] ${service.featured ? "text-white" : ""}`}
+              className={`font-serif text-[16px] sm:text-[17px] md:text-[18px] font-normal mb-2 sm:mb-2.5 tracking-[-0.1px] leading-[1.3] sm:leading-[1.2] `}
             >
               {service.title}
             </h3>
             <p
-              className={`text-[12px] sm:text-[12.5px] md:text-[13px] leading-[1.5] sm:leading-[1.6] md:leading-[1.62] font-light flex-1 mb-3 sm:mb-4 ${service.featured ? "text-white/60" : "text-[rgba(26,15,0,0.45)]"}`}
+              className={`text-[12px] sm:text-[12.5px] md:text-[13px] leading-[1.5] sm:leading-[1.6] md:leading-[1.62] font-light flex-1 mb-3 sm:mb-4 ${"text-burnt-brown"}`}
             >
               {service.description}
             </p>
-            <div className="flex flex-wrap gap-1 sm:gap-1.5 mt-auto">
+            {/* <div className="flex flex-wrap gap-1 sm:gap-1.5 mt-auto">
               {service.tags.slice(0, 2).map((tag) => (
                 <span
                   key={tag}
@@ -143,8 +149,8 @@ const ServicesSection = () => {
                   {tag}
                 </span>
               ))}
-            </div>
-            {service.featured && (
+            </div> */}
+            {/* {service.featured && (
               <div className="mt-4 sm:mt-5 md:mt-6 pt-4 sm:pt-5 md:pt-6">
                 <span
                   className="inline-flex items-center gap-1.5 text-[11px] sm:text-[12px] md:text-[12.5px] font-semibold transition-all hover:gap-2.5"
@@ -153,7 +159,7 @@ const ServicesSection = () => {
                   Learn More →
                 </span>
               </div>
-            )}
+            )} */}
           </Link>
         ))}
       </div>

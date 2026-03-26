@@ -4,14 +4,54 @@
 import { useRef, useState } from "react";
 
 const industries = [
-  { icon: "🏢", name: "Real Estate" },
-  { icon: "💳", name: "Fintech" },
-  { icon: "🏦", name: "Financial Services" },
-  { icon: "🌍", name: "NGOs & Non-profits" },
-  { icon: "🏛️", name: "Government" },
-  { icon: "🛒", name: "FMCG" },
-  { icon: "📦", name: "Logistics" },
-  { icon: "🏥", name: "Healthcare" },
+  {
+    icon: "🏢",
+    name: "Real Estate",
+    imagelink:
+      "https://res.cloudinary.com/deylyllwd/image/upload/v1774484965/home_elvzve.png",
+  },
+  {
+    icon: "💳",
+    name: "Fintech",
+    imagelink:
+      "https://res.cloudinary.com/deylyllwd/image/upload/v1774485462/wallet_rlxdf1.png",
+  },
+  {
+    icon: "🏦",
+    name: "Financial Services",
+    imagelink:
+      "https://res.cloudinary.com/deylyllwd/image/upload/v1774484965/home_elvzve.png",
+  },
+  {
+    icon: "🌍",
+    name: "NGOs & Non-profits",
+    imagelink:
+      "https://res.cloudinary.com/deylyllwd/image/upload/v1774485462/world_kmugta.png",
+  },
+  {
+    icon: "🏛️",
+    name: "Government",
+    imagelink:
+      "https://res.cloudinary.com/deylyllwd/image/upload/v1774485463/gov_umbb0z.png",
+  },
+  {
+    icon: "🛒",
+    name: "FMCG",
+    imagelink:
+      "https://res.cloudinary.com/deylyllwd/image/upload/v1774485462/cart_yapgza.png",
+  },
+  {
+    icon: "📦",
+    name: "Logistics",
+    imagelink:
+      "https://res.cloudinary.com/deylyllwd/image/upload/v1774485461/Box_khkldd.png",
+  },
+  {
+    icon: "🏥",
+    name: "Healthcare",
+    imagelink:
+      "https://res.cloudinary.com/deylyllwd/image/upload/v1774485461/building_uyhpqh.png",
+  },
 ];
 
 const Industries = () => {
@@ -122,9 +162,20 @@ const Industries = () => {
                 if (text) text.style.color = "rgba(26, 15, 0, 0.65)";
               }}
             >
-              <span className="text-xl sm:text-2xl mb-2 sm:mb-3 block">
-                {industry.icon}
-              </span>
+              {/* {industry.name == "Financial Services" && (
+                <span className="text-xl sm:text-2xl mb-2 sm:mb-3 block">
+                  {industry.icon}
+                </span>
+              )} */}
+              {
+                <div className="flex items-center justify-center">
+                  <img
+                    className="h-7 w-7 block"
+                    src={industry.imagelink}
+                    alt={industry.imagelink}
+                  />
+                </div>
+              }
               <span
                 className="industry-name text-[11px] sm:text-xs font-semibold transition-colors"
                 style={{ color: "rgba(26, 15, 0, 0.65)" }}

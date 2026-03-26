@@ -85,8 +85,8 @@ export default function ProgramsPage() {
       {/* Programs */}
       <div className="py-12 sm:py-16 md:py-20 lg:py-[88px] px-4 sm:px-6 md:px-10 lg:px-20 rv">
         <div className="flex items-center gap-2.5 mb-4 sm:mb-[18px]">
-          <div className="w-5 h-px sm:w-5.5 bg-red-600" />
-          <span className="text-[9px] sm:text-[10px] font-bold tracking-[2px] sm:tracking-[2.5px] uppercase text-red-600">
+          <div className="w-5 h-px sm:w-5.5 bg-burgundy" />
+          <span className="text-[9px] sm:text-[10px] font-bold tracking-[2px] sm:tracking-[2.5px] uppercase text-burgundy">
             Current Programs
           </span>
         </div>
@@ -99,15 +99,15 @@ export default function ProgramsPage() {
         <div className="max-w-full sm:max-w-[90%] md:max-w-[580px] mt-8 sm:mt-10 md:mt-10">
           <Link
             href="/programs/vector"
-            className="block p-5 sm:p-6 md:p-8 border rounded transition-all cursor-pointer hover:-translate-y-0.5 hover:shadow-md bg-red-600"
+            className="block p-5 sm:p-6 md:p-8 border rounded transition-all cursor-pointer hover:-translate-y-0.5 hover:shadow-md bg-burgundy"
           >
-            <span className="text-[8px] sm:text-[9px] md:text-[9.5px] font-bold tracking-[2px] sm:tracking-[2.5px] uppercase mb-3 sm:mb-4 block text-cream/45">
+            <span className="text-[8px] sm:text-[9px] md:text-[9.5px] font-bold tracking-[2px] sm:tracking-[2.5px] uppercase mb-3 sm:mb-4 block  text-white/80">
               Program 01
             </span>
             <h3 className="font-serif text-[16px] sm:text-[17px] md:text-[18px] font-normal mb-2 sm:mb-2.5 tracking-[-0.1px] leading-[1.3] sm:leading-[1.2] text-white">
               Vector Training Program
             </h3>
-            <p className="text-[12px] sm:text-[12.5px] md:text-[13px] leading-[1.5] sm:leading-[1.6] md:leading-[1.62] font-light mb-3 sm:mb-4 text-white/60">
+            <p className="text-[12px] sm:text-[12.5px] md:text-[13px] leading-[1.5] sm:leading-[1.6] md:leading-[1.62] font-light mb-3 sm:mb-4 text-white/80">
               Build your team's identity before it builds itself badly. The
               programme StreetOps used to build its own culture.
             </p>
@@ -116,7 +116,7 @@ export default function ProgramsPage() {
                 (tag) => (
                   <span
                     key={tag}
-                    className="text-[8px] sm:text-[9px] md:text-[10px] font-medium px-1.5 sm:px-2 py-0.5 rounded-full border border-white/20 text-cream/80 bg-white/10"
+                    className="text-[8px] sm:text-[9px] md:text-[10px] font-medium px-1.5 sm:px-2 py-0.5 rounded-full border border-white/20 text-cream/80 bg-white/50"
                   >
                     {tag}
                   </span>
@@ -124,7 +124,7 @@ export default function ProgramsPage() {
               )}
             </div>
             <div className="mt-4 sm:mt-5 pt-4 sm:pt-5">
-              <span className="inline-flex items-center gap-1.5 text-[11px] sm:text-[12px] md:text-[12.5px] font-semibold transition-all hover:gap-2.5 text-cream/65">
+              <span className="inline-flex items-center gap-1.5 text-[11px] sm:text-[12px] md:text-[12.5px] font-semibold transition-all hover:gap-2.5 text-cream/65 text-white/80">
                 Learn More →
               </span>
             </div>
@@ -156,7 +156,7 @@ export default function ProgramsPage() {
         </h2>
         <Link
           href="/contact"
-          className="inline-block px-6 sm:px-7 md:px-8.5 py-2.5 sm:py-3 md:py-3.5 text-[13px] sm:text-[14px] md:text-[14.5px] font-semibold rounded transition-all relative z-10 bg-red-600 text-white"
+          className="inline-block px-6 sm:px-7 md:px-8.5 py-2.5 sm:py-3 md:py-3.5 text-[13px] sm:text-[14px] md:text-[14.5px] font-semibold rounded transition-all relative z-10 bg-burgundy text-white"
         >
           Register Interest →
         </Link>

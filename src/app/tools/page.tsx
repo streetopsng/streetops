@@ -109,7 +109,7 @@ export default function ToolsPage() {
 
       {/* Tools Grid */}
       <div className="py-12 sm:py-16 md:py-20 lg:py-[88px] px-4 sm:px-6 md:px-10 lg:px-20 rv">
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
           {tools.map((tool) => (
             <div
               key={tool.number}
@@ -124,7 +124,7 @@ export default function ToolsPage() {
               <p className="text-[12px] sm:text-[12.5px] md:text-[13px] leading-[1.5] sm:leading-[1.6] md:leading-[1.62] font-light mb-4 sm:mb-5 md:mb-6 text-ink3 dark:text-[rgba(255,248,238,0.42)] flex-1">
                 {tool.description}
               </p>
-              <button className="self-start px-4 sm:px-5 py-1.5 sm:py-2 text-[11px] sm:text-[12px] md:text-[12.5px] font-semibold rounded transition-all bg-red-600 text-white">
+              <button className="self-start px-4 sm:px-5 py-1.5 sm:py-2 text-[11px] sm:text-[12px] md:text-[12.5px] font-semibold rounded transition-all bg-burgundy text-white">
                 Download Free →
               </button>
             </div>

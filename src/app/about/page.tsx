@@ -382,7 +382,7 @@ export default function AboutPage() {
       />
 
       {/* Team Section */}
-      <div className="py-12 sm:py-16 md:py-20 lg:py-[88px] px-4 sm:px-6 md:px-10 lg:px-20 rv">
+      {/* <div className="py-12 sm:py-16 md:py-20 lg:py-[88px] px-4 sm:px-6 md:px-10 lg:px-20 rv">
         <div className="flex items-center gap-2.5 mb-4 sm:mb-[18px]">
           <div
             className="w-5 h-px sm:w-5.5"
@@ -458,7 +458,7 @@ export default function AboutPage() {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
 
       {/* CTA */}
       <div
