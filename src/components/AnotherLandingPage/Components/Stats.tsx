@@ -38,7 +38,7 @@ const Stats = () => {
         {stats.map((stat, index) => (
           <div
             key={index}
-            className="py-8 sm:py-10 md:py-12 px-4 sm:px-6 md:px-9 text-center border-r last:border-r-0 border-b sm:border-b-0 transition-all hover:bg-red-50 dark:hover:bg-red-900/10"
+            className="py-8 sm:py-10 md:py-12 px-4 sm:px-6 md:px-9 text-center border-r  last:border-r-0 border-b sm:border-b-0 transition-all hover:bg-red-50 dark:hover:bg-red-900/10"
             style={{
               borderRightColor: "rgba(26, 15, 0, 0.08)",
               borderBottomColor: "rgba(26, 15, 0, 0.08)",
