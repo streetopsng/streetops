@@ -17,7 +17,7 @@ export async function generateMetadata(params: Props) {
       description:
         "You cannot fix what you have not measured. StreetOps' Team Diagnostic identifies exactly where your employee engagement is breaking down. Book a session.",
     };
-  } else if (slug == "manager") {
+  } else if (slug == "training") {
     return {
       title: "Manager Training in Nigeria | StreetOps",
       description:

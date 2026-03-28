@@ -27,7 +27,7 @@ const Navbar = () => {
       dropdown: [
         { name: "All Services", href: "/services" },
         { name: "Team Diagnostic", href: "/services/diagnostic" },
-        { name: "Manager Effectiveness Training", href: "/services/manager" },
+        { name: "Training and Development", href: "/services/training" },
         { name: "Talent Integration Advisory", href: "/services/talent" },
         { name: "Culture & Process Transformation", href: "/services/culture" },
         {
