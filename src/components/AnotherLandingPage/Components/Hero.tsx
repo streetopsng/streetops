@@ -163,7 +163,7 @@ const AnotherHero = () => {
       </div>
 
       {/* Stats - Hidden on mobile, visible on tablet+ */}
-      <div className="hidden md:flex relative z-30 px-4 sm:px-6 md:px-10 lg:px-20 gap-0">
+      {/* <div className="hidden md:flex relative z-30 px-4 sm:px-6 md:px-10 lg:px-20 gap-0">
         {[
           { number: "40", suffix: "+", label: "Organisations served" },
           { number: "6", suffix: "+", label: "Industries covered" },
@@ -194,7 +194,7 @@ const AnotherHero = () => {
             </div>
           </div>
         ))}
-      </div>
+      </div> */}
 
       {/* Bottom Controls */}
       <div

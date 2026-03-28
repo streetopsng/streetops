@@ -76,7 +76,7 @@ const ServicesSection = () => {
             </span>
           </div>
           <h2 className="font-serif text-[clamp(24px,6vw,28px)] sm:text-[clamp(28px,5vw,38px)] md:text-[clamp(28px,3.8vw,46px)] font-light leading-[1.2] sm:leading-[1.1] tracking-[-0.5px] sm:tracking-[-0.7px]">
-            Five services.
+            Six services.
             <br />
             <em className="not-italic" style={{ color: "#C4512A" }}>
               One methodology.

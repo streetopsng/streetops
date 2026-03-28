@@ -85,19 +85,21 @@ const Navbar = () => {
           onClick={closeMobileMenu}
         >
           <div
-            className="w-7 h-7 flex items-center justify-center rounded-[2px] flex-shrink-0"
-            style={{ backgroundColor: "#660000" }}
+            className="w-25 h-auto flex items-center justify-center rounded-[2px] flex-shrink-0"
+            style={{ backgroundColor: "" }}
           >
-            <span className="text-white font-serif font-bold text-[10px]">
+            {/* <span className="text-white font-serif font-bold text-[10px]">
               SO
-            </span>
+            </span> */}
+            {/* <img src="/icon.png" alt="logo" /> */}
+            <img src="/red-logo.png" alt="logo" />
           </div>
-          <span
+          {/* <span
             className="font-serif font-semibold text-base tracking-tight hidden sm:inline"
             style={{ color: "#1A0F00" }}
           >
             StreetOps
-          </span>
+          </span> */}
         </Link>
 
         {/* Desktop Menu - hidden on mobile */}

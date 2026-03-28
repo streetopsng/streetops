@@ -31,7 +31,7 @@ const servicesData: Record<string, any> = {
         d: "Periodic re-diagnosis to track movement and prove ROI.",
       },
     ],
-    for: "Any organisation that can feel something is wrong but cannot name what it is. The right first step for almost every engagement.",
+    for: "Leaders who can feel a problem but cannot name it, organisations ahead of a major change, and teams coming out of a difficult period.",
     out: "A specific, evidence-based picture of what is working, what is not, and what to fix first — with evidence, priority, and a plan.",
     rel: ["Manager Effectiveness Training", "Culture & Process Transformation"],
   },

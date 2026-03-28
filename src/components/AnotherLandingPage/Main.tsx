@@ -52,7 +52,7 @@ export default function Main() {
       <AnotherHero />
       <Marquee />
       <ProblemSection />
-      <WhatWeDo />
+      {/* <WhatWeDo /> */}
       <Methodology />
       <ServicesSection />
       <Industries />
