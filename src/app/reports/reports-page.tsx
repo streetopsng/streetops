@@ -98,12 +98,12 @@ export default function ReportsPage() {
               built from Street Ask data and real worker voices across
               industries.
             </p>
-            <Link
+            {/* <Link
               href="/ask"
               className="inline-flex items-center gap-1.5 text-[11px] sm:text-[12px] md:text-[12.5px] font-semibold transition-all hover:gap-2.5 text-burgundy"
             >
               Contribute to the Survey →
-            </Link>
+            </Link> */}
           </div>
           <div className="w-full sm:w-[280px] flex-shrink-0 p-4 sm:p-5 md:p-5.5 text-center border border-[rgba(26,15,0,0.08)] dark:border-[rgba(255,248,238,0.08)] rounded-lg bg-[#FFF2E0] dark:bg-[#241800]">
             <div className="text-[9px] sm:text-[10px] font-bold tracking-[1.5px] uppercase mb-1.5 text-burgundy">
@@ -130,12 +130,12 @@ export default function ReportsPage() {
           </div>
           <p className="text-[12px] sm:text-[13px] md:text-[13.5px] text-ink4 dark:text-[rgba(255,248,238,0.22)] font-light">
             Each Street Ask survey feeds a future report.
-            <Link
+            {/* <Link
               href="/ask"
               className="inline-flex items-center gap-1.5 text-[11px] sm:text-[12px] md:text-[12.5px] font-semibold transition-all hover:gap-2.5 text-burgundy ml-1"
             >
               Participate →
-            </Link>
+            </Link> */}
           </p>
         </div>
       </div>
