@@ -116,7 +116,7 @@ export default function ToolsPage() {
               className="p-5 sm:p-6 md:p-8 border border-[rgba(26,15,0,0.08)] dark:border-[rgba(255,248,238,0.08)] rounded-lg flex flex-col bg-white dark:bg-[#1C1200]"
             >
               <span className="text-[8px] sm:text-[9px] md:text-[9.5px] font-bold tracking-[2px] sm:tracking-[2.5px] uppercase mb-3 sm:mb-4 text-ink4 dark:text-[rgba(255,248,238,0.28)]">
-                Tool {tool.number}
+                Tool
               </span>
               <h3 className="font-serif text-[16px] sm:text-[17px] md:text-[18px] font-normal mb-2 sm:mb-2.5 tracking-[-0.1px] leading-[1.3] sm:leading-[1.2] text-char dark:text-cream">
                 {tool.title}

@@ -59,7 +59,7 @@ const Navbar = () => {
         { name: "Insights", href: "/insights" },
         { name: "Research & Reports", href: "/reports" },
         { name: "Tools & Frameworks", href: "/tools" },
-        { name: "Case Studies", href: "/cases" },
+        { name: "Case Studies", href: "#" },
       ],
     },
     { name: "Street Ask", href: "/ask" },
@@ -153,7 +153,12 @@ const Navbar = () => {
                                 "rgba(26, 15, 0, 0.65)";
                             }}
                           >
-                            {dropItem.name}
+                            {dropItem.name}{" "}
+                            {dropItem.href === "/cases" && (
+                              <span className="text-orange-500">
+                                (Coming Soon)
+                              </span>
+                            )}
                           </Link>
                         ))}
                       </div>

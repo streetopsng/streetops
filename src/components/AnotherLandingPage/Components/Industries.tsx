@@ -16,12 +16,12 @@ const industries = [
     imagelink:
       "https://res.cloudinary.com/deylyllwd/image/upload/v1774485462/wallet_rlxdf1.png",
   },
-  {
-    icon: "🏦",
-    name: "Financial Services",
-    imagelink:
-      "https://res.cloudinary.com/deylyllwd/image/upload/v1774484965/home_elvzve.png",
-  },
+  // {
+  //   icon: "🏦",
+  //   name: "Financial Services",
+  //   imagelink:
+  //     "https://res.cloudinary.com/deylyllwd/image/upload/v1774484965/home_elvzve.png",
+  // },
   {
     icon: "🌍",
     name: "NGOs & Non-profits",

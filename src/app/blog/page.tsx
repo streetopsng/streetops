@@ -59,55 +59,6 @@ const page = () => {
   const router = useRouter();
   return (
     <div className="overflow-x-hidden">
-      {/* <TempHeader/> */}
-
-      {/* <SlideContent/> */}
-      {/* <div className="w-full lg:h-[80vh] h-[50vh] relative flex flex-col justify-center items-center px-8 text-center">
-
- <h1 className={`lg:text-5xl md:text-3xl text-2xl font-semibold animated-gradient-slide-text lg:w-[60%] w-full`}>Explore Experts Insights and Practical Tips on StreetOps</h1>  
- <p className={`md:text-xl text-lg lg:w-[60%] w-full `}>Stay informed and empowered with valuable articles, expert advice, and actionable tips to help you scale your operations</p> 
- </div> */}
-
-      {/* <div className="relative "> */}
-      {/* <>
-          <div className="absolute h-full -z-1 w-full bg-linear-to-b from-[#FA2120] to-[#941413] " />
-          <div
-            className="absolute inset-0 opacity-25 -z-1"
-            style={{
-              backgroundImage: `url('/bric.png')`,
-              backgroundSize: "cover",
-              backgroundPosition: "center top",
-            }}
-          />
-        </> */}
-      {/* {<Header />} */}
-      {/* Hero */}
-      {/* <section className="flex flex-col justify-between  min-h-[90vh]  pt-10 max-w-4xl mx-auto text-center px-6"> */}
-      {/* Main Content Container */}
-
-      {/* <aside>
-            <h1 className="text-4xl Hero hero-text md:text-6xl lg:text-7xl font-bold text-white mb-5 font-serif leading-[1.15]  ">
-              <span className="span-text">Explore Experts Insights</span> <br />{" "}
-              and Practical <br />{" "}
-              <span className="span-text-2">Tips on StreetOps</span>
-            </h1>
-
-            <motion.p
-              initial={{ opacity: 0, y: 60 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 2, ease: "easeOut", delay: 1 }}
-              viewport={{ once: true, amount: 0.3 }}
-              className="text-white/90 text-lg mb-8 max-w-xl mx-auto leading-relaxed  z-10"
-              // className="text-white/90 text-lg mb-8 max-w-xl mx-auto leading-relaxed"
-            >
-              Stay informed and empowered with valuable articles, expert advice,
-              and actionable tips to help you scale your operations
-            </motion.p>
-          </aside> */}
-
-      {/* </section> */}
-      {/* </div> */}
-
       <Nav />
       <br />
       <br />
@@ -153,7 +104,7 @@ const page = () => {
                       src={item.imageUrl}
                       alt={item.date}
                       fill
-                      className="absolute w-full h-full rounded-lg object-fit hover:scale-[1.01] transition-transform duration-500"
+                      className="w-full h-full object-cover transition-transform duration-400 group-hover:scale-105"
                     />
                   </div>
                   <div>

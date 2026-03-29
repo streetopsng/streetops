@@ -2,11 +2,13 @@
 "use client";
 
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const Footer = () => {
   const handleServiceClick = (serviceId: string) => {
     window.location.href = `/services/${serviceId}`;
   };
+  const router = useRouter();
 
   return (
     <footer
@@ -20,10 +22,14 @@ const Footer = () => {
         {/* Brand Column */}
         <div className="sm:col-span-2 lg:col-span-1">
           <div
-            className="font-serif text-[18px] sm:text-[19px] font-semibold mb-2 sm:mb-2.5 tracking-[-0.2px]"
-            style={{ color: "#FFF8EE" }}
+            className="w-45 h-auto flex items-center justify-center rounded-[2px] flex-shrink-0"
+            style={{ backgroundColor: "" }}
           >
-            StreetOps
+            {/* <span className="text-white font-serif font-bold text-[10px]">
+              SO
+            </span> */}
+            {/* <img src="/icon.png" alt="logo" /> */}
+            <img src="/red-logo.png" alt="logo" />
           </div>
           <p
             className="text-[11px] sm:text-xs leading-[1.6] sm:leading-[1.72] font-light mb-4 sm:mb-5.5 max-w-sm"
@@ -34,18 +40,27 @@ const Footer = () => {
             they produce together.
           </p>
           <div className="flex gap-1.5">
-            {["in", "𝕏", "ig", "tk"].map((social, index) => (
-              <button
+            {[
+              {
+                value: "in",
+                link: "https://www.linkedin.com/company/streetopsng",
+              },
+              { value: "𝕏", link: "https://x.com/StreetOpsng" },
+              { value: "ig", link: "https://www.instagram.com/street_opsng/" },
+              { value: "tk", link: "https://www.tiktok.com/@streetops.ng" },
+            ].map((social, index) => (
+              <Link
                 key={index}
-                className="w-7 sm:w-[30px] h-7 sm:h-[30px] border rounded flex items-center justify-center text-[8px] sm:text-[9.5px] font-bold transition-all hover:-translate-y-0.5"
+                className="w-7 sm:w-[30px] h-7 text-primary sm:h-[30px] border rounded flex items-center justify-center text-[8px] sm:text-[9.5px] font-bold transition-all hover:-translate-y-0.5"
+                target="_blank"
+                href={social.link}
                 style={{
                   backgroundColor: "rgba(255,248,238,0.05)",
                   borderColor: "rgba(255,248,238,0.08)",
-                  color: "rgba(255,248,238,0.35)",
                 }}
               >
-                {social}
-              </button>
+                {social.value}
+              </Link>
             ))}
           </div>
         </div>
