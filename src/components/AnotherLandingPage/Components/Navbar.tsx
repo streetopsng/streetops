@@ -154,7 +154,7 @@ const Navbar = () => {
                             }}
                           >
                             {dropItem.name}{" "}
-                            {dropItem.href === "/cases" && (
+                            {dropItem.name === "Case Studies" && (
                               <span className="text-orange-500">
                                 (Coming Soon)
                               </span>
