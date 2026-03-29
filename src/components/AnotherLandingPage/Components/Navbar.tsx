@@ -302,7 +302,10 @@ const Navbar = () => {
                           color: "rgba(26, 15, 0, 0.65)",
                         }}
                       >
-                        {dropItem.name}
+                        <span>{dropItem.name}</span>{" "}
+                        {dropItem.name === "Case Studies" && (
+                          <span className="text-orange-500">(Coming Soon)</span>
+                        )}
                       </Link>
                     ))}
                   </div>
