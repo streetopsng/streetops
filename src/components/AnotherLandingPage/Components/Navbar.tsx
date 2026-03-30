@@ -62,7 +62,7 @@ const Navbar = () => {
         { name: "Case Studies", href: "#" },
       ],
     },
-    { name: "Street Ask", href: "/ask" },
+    // { name: "Street Ask", href: "/ask" },
   ];
 
   const closeMobileMenu = () => {

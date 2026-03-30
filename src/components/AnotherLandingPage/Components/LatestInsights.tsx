@@ -76,7 +76,7 @@ const LatestInsights = () => {
     return store.blogsReducer;
   });
   const dispatch = useDispatch<dispatchType>();
-  const { data, isLoading, error } = useQuery({
+  const { data, isLoading, isError } = useQuery({
     queryKey: ["allblogs"],
     queryFn: fetchData,
   });
@@ -143,6 +143,12 @@ const LatestInsights = () => {
         </div>
       ) : (
         ""
+      )}
+      {/* when error occurs */}
+      {isError && (
+        <div>
+          <p>sorry, unable to load blog</p>
+        </div>
       )}
 
       {blogs.length > 0 && (

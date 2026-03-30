@@ -3,6 +3,13 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Footer from "@/components/AnotherLandingPage/Components/Footer";
+import { useDispatch, useSelector } from "react-redux";
+import { dispatchType, RootStateType } from "@/store";
+import { useQuery } from "@tanstack/react-query";
+import { storeBlogs } from "@/store/slices/allBlogs";
+import { useRouter } from "next/navigation";
+import PagePreloader from "@/utils/PagePreloader";
+import gsap from "gsap";
 
 interface Insight {
   id: number;
@@ -76,15 +83,66 @@ const insights: Insight[] = [
 
 const filters = [
   { id: "all", label: "All", value: "all" },
-  { id: "beh", label: "Behavioural Science", value: "beh" },
-  { id: "perf", label: "Team Performance", value: "perf" },
-  { id: "afr", label: "African Workplace", value: "afr" },
-  { id: "lead", label: "Leadership", value: "lead" },
+  // { id: "beh", label: "Behavioural Science", value: "beh" },
+  // { id: "perf", label: "Team Performance", value: "perf" },
+  // { id: "afr", label: "African Workplace", value: "afr" },
+  // { id: "lead", label: "Leadership", value: "lead" },
 ];
 
+type contentType = {
+  content: string;
+  createdAt: string;
+  date: string;
+  imageUrl: string;
+  title: string;
+  updatedAt: string;
+  __v: number;
+  _id: string;
+};
+
+async function fetchData() {
+  const res = await fetch(`/api/blog/get-blogs`);
+  if (!res.ok) {
+    return {
+      message: "something went wrong",
+      success: false,
+    };
+  }
+  const response = await res.json();
+  return response;
+}
 export default function InsightsPage() {
   const [activeFilter, setActiveFilter] = useState("all");
   const [filteredInsights, setFilteredInsights] = useState(insights);
+
+  const blogs = useSelector((store: RootStateType) => {
+    return store.blogsReducer;
+  });
+  const dispatch = useDispatch<dispatchType>();
+  const { data, isLoading, isError } = useQuery({
+    queryKey: ["allblogs"],
+    queryFn: fetchData,
+  });
+
+  useEffect(() => {
+    console.log(data);
+    if (data?.success) {
+      dispatch(storeBlogs(data.data));
+      localStorage.setItem("blogs", JSON.stringify(data.data));
+    }
+  }, [isLoading]);
+
+  useEffect(() => {
+    gsap.to(".span-text", {
+      duration: 2,
+      scrambleText: "Explore Experts Insights",
+    });
+    gsap.to(".span-text-2", {
+      duration: 2,
+      scrambleText: "Tips on StreetOps",
+    });
+  }, []);
+  const router = useRouter();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -177,7 +235,7 @@ export default function InsightsPage() {
       <div className="py-12 sm:py-16 md:py-20 lg:py-[88px] px-4 sm:px-6 md:px-10 lg:px-20">
         {/* Filters - Horizontal scroll on mobile */}
         <div className="overflow-x-auto pb-2 mb-6 sm:mb-8 md:mb-10">
-          <div className="flex gap-0.5 flex-nowrap sm:flex-wrap border-b border-[rgba(26,15,0,0.08)] dark:border-[rgba(255,248,238,0.08)] min-w-max sm:min-w-0">
+          <div className="flex gap-0.5 flex-nowrap sm:flex-wrap  border-[rgba(26,15,0,0.08)] dark:border-[rgba(255,248,238,0.08)] min-w-max sm:min-w-0">
             {filters.map((filter) => (
               <button
                 key={filter.id}
@@ -194,39 +252,64 @@ export default function InsightsPage() {
           </div>
         </div>
 
+        {/* handle loading state */}
+        {blogs.length < 1 && isLoading ? (
+          <div className=" text-grayOne w-full h-[60vh] flex items-center justify-center flex-col">
+            <PagePreloader />
+            <h1 className="italic my-2 ">Loading Available Blogs...</h1>
+          </div>
+        ) : blogs.length < 1 ? (
+          <div className="py-4">
+            <h1 className="text-center text-primary text-lg">
+              no blog available at the moment
+            </h1>
+          </div>
+        ) : (
+          ""
+        )}
+
+        {isError && (
+          <div>
+            <p>sorry, unable to load blog</p>
+          </div>
+        )}
         {/* Insights Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {filteredInsights.map((insight) => (
-            <Link
-              key={insight.id}
-              href={insight.href}
-              className="border rounded overflow-hidden cursor-pointer transition-all hover:-translate-y-0.5 hover:shadow-md"
-              style={{
-                backgroundColor: "#FFFFFF",
-                borderColor: "rgba(26, 15, 0, 0.08)",
-              }}
-            >
-              <div
-                className="h-[160px] sm:h-[170px] md:h-[180px] overflow-hidden relative"
-                style={{ backgroundColor: "#FFF2E0" }}
+        {blogs.length > 0 && (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {blogs.map((insight) => (
+              <Link
+                key={insight._id}
+                href={`/blog/${insight.title
+                  .replace(/ /g, "-")
+                  .toLocaleLowerCase()}---${insight._id}`}
+                className="border rounded overflow-hidden cursor-pointer transition-all hover:-translate-y-0.5 hover:shadow-md"
+                style={{
+                  backgroundColor: "#FFFFFF",
+                  borderColor: "rgba(26, 15, 0, 0.08)",
+                }}
               >
-                <img
-                  src={insight.image}
-                  alt=""
-                  className="w-full h-full object-cover transition-transform duration-400 group-hover:scale-105"
-                />
-              </div>
-              <div className="p-4 sm:p-5 md:p-5.5">
-                <div className="text-[8px] sm:text-[9px] md:text-[9.5px] font-bold tracking-[1.5px] sm:tracking-[2px] uppercase mb-1.5 sm:mb-2 text-terra">
-                  {insight.category}
+                <div
+                  className="h-[160px] sm:h-[170px] md:h-[180px] overflow-hidden relative"
+                  style={{ backgroundColor: "#FFF2E0" }}
+                >
+                  <img
+                    src={insight.imageUrl}
+                    alt=""
+                    className="w-full h-full object-cover transition-transform duration-400 group-hover:scale-105"
+                  />
                 </div>
-                <h4 className="font-serif text-[14px] sm:text-[15px] md:text-base font-normal leading-[1.3] sm:leading-[1.35] tracking-[-0.1px] text-char">
-                  {insight.title}
-                </h4>
-              </div>
-            </Link>
-          ))}
-        </div>
+                <div className="p-4 sm:p-5 md:p-5.5">
+                  <div className="text-[8px] sm:text-[9px] md:text-[9.5px] font-bold tracking-[1.5px] sm:tracking-[2px] uppercase mb-1.5 sm:mb-2 text-terra">
+                    {insight.date}
+                  </div>
+                  <h4 className="font-serif text-[14px] sm:text-[15px] md:text-base font-normal leading-[1.3] sm:leading-[1.35] tracking-[-0.1px] text-char">
+                    {insight.title}
+                  </h4>
+                </div>
+              </Link>
+            ))}
+          </div>
+        )}
       </div>
 
       <Footer />
