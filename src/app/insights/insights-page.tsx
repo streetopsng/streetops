@@ -275,7 +275,7 @@ export default function InsightsPage() {
         )}
         {/* Insights Grid */}
         {blogs.length > 0 && (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 mdsm:grid-cols-2 lg:grid-cols-3 gap-4">
             {blogs.map((insight) => (
               <Link
                 key={insight._id}
