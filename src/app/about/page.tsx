@@ -1,50 +1,11 @@
-"use client";
-import AboutUsHero from "@/components/AboutUsComponents/about-us-hero";
-import OurBrandStory from "@/components/AboutUsComponents/our-brand-story";
-import OurCoreMission from "@/components/AboutUsComponents/our-core-mission";
-import OurKeyApproach from "@/components/AboutUsComponents/our-key-approach";
-import OurVisionForward from "@/components/AboutUsComponents/our-vision-forward";
-import ReadyToBuild from "@/components/AboutUsComponents/ready-to-build";
-import Footer from "@/components/StreetopsLandingPage/Footer";
-// import Footer from "@/components/LatestlandingPage/footer";
-import Nav from "@/components/StreetopsLandingPage/Nav";
-import TeamMembers from "@/components/team-members";
+import AboutPage from "./about-page";
+export const metadata = {
+  title: "Workplace Culture Consultants in Nigeria | StreetOps",
+  description: `StreetOps is Nigeria's workplace culture consultancy. We go inside organisations, find what is broken, and build teams that actually work. This is our story`,
+};
 
 const Page = () => {
-  return (
-    <>
-      <div className="">
-        {/* <div className="relative ">
-          <>
-            <div className="absolute h-full -z-1 w-full bg-linear-to-b from-[#FA2120] to-[#941413] " />
-            <div
-              className="absolute inset-0 opacity-25 -z-1"
-              style={{
-                backgroundImage: `url('/bric.png')`,
-                backgroundSize: "cover",
-                backgroundPosition: "center top",
-              }}
-            />
-          </>
-          {<Header />}
-          {<AboutUsHero />}
-        </div> */}
-        <Nav />
-        <br />
-        <br />
-        <br />
-
-        {/*  */}
-        <TeamMembers />
-        <OurBrandStory />
-        <OurCoreMission />
-        <OurKeyApproach />
-        <OurVisionForward />
-        <ReadyToBuild />
-        <Footer />
-      </div>
-    </>
-  );
+  return <AboutPage />;
 };
 
 export default Page;

@@ -13,6 +13,9 @@ import { MobileMenu } from "@/components/mobile-menu";
 import { Toaster } from "react-hot-toast";
 import FormModal from "@/components/StreetopsLandingPage/form-modal";
 import WhatsAppWidget from "@/components/StreetopsLandingPage/WhatsAppWidget";
+import { ThemeProvider } from "@/components/AnotherLandingPage/Components/ThemeProvider";
+import Navbar from "@/components/AnotherLandingPage/Components/Navbar";
+import ScrollToTop from "@/components/AnotherLandingPage/Components/ScrollToTop";
 
 export const metadata: Metadata = {
   title: "StreetOps",
@@ -84,11 +87,61 @@ export default function RootLayout({
             <Modal />
             <MobileMenu />
             <FormModal />
-            <WhatsAppWidget />
-            {children}
+            {/* <WhatsAppWidget /> */}
+            <ThemeProvider>
+              <Navbar />
+              <main className="pt-15">{children}</main>
+              <ScrollToTop />
+            </ThemeProvider>
           </ClientProvider>
         </ReactQueryProvider>
       </body>
     </html>
   );
 }
+
+// app/layout.tsx
+// import type { Metadata } from "next";
+// import { Fraunces, DM_Sans } from "next/font/google";
+// import "./globals.css";
+
+// const fraunces = Fraunces({
+//   subsets: ["latin"],
+//   variable: "--font-fraunces",
+// });
+
+// const dmSans = DM_Sans({
+//   subsets: ["latin"],
+//   variable: "--font-dm-sans",
+// });
+
+// export const metadata: Metadata = {
+//   title: "StreetOps — Social Productivity for African Teams",
+//   description:
+//     "Africa's team performance company. Built on behavioural science. Designed for the relational, high-context workplaces that actually exist here.",
+// };
+
+// export default function RootLayout({
+//   children,
+// }: {
+//   children: React.ReactNode;
+// }) {
+//   return (
+//     <html
+//       lang="en"
+//       className={`${fraunces.variable} ${dmSans.variable}`}
+//       suppressHydrationWarning
+//     >
+//       <body
+//         className="font-sans antialiased"
+//         style={{ backgroundColor: "#FFF8EE", color: "#1A0F00" }}
+//       >
+//         <ThemeProvider>
+//           <Navbar />
+//           <main className="pt-[60px]">{children}</main>
+//           <ScrollToTop />
+//         </ThemeProvider>
+//       </body>
+//     </html>
+//   );
+// }
