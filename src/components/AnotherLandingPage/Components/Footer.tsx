@@ -1,8 +1,11 @@
-// Footer.tsx
 "use client";
 
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { FaInstagram } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { RiTiktokLine } from "react-icons/ri";
+import { CiLinkedin } from "react-icons/ci";
 
 const Footer = () => {
   const handleServiceClick = (serviceId: string) => {
@@ -44,14 +47,27 @@ const Footer = () => {
               {
                 value: "in",
                 link: "https://www.linkedin.com/company/streetopsng",
+                icon: <CiLinkedin size={12} />,
               },
-              { value: "𝕏", link: "https://x.com/StreetOpsng" },
-              { value: "ig", link: "https://www.instagram.com/street_opsng/" },
-              { value: "tk", link: "https://www.tiktok.com/@streetops.ng" },
+              {
+                value: "𝕏",
+                link: "https://x.com/StreetOpsng",
+                icon: <FaXTwitter size={12} />,
+              },
+              {
+                value: "ig",
+                link: "https://www.instagram.com/street_opsng/",
+                icon: <FaInstagram size={12} />,
+              },
+              {
+                value: "tk",
+                link: "https://www.tiktok.com/@streetops.ng",
+                icon: <RiTiktokLine size={12} />,
+              },
             ].map((social, index) => (
               <Link
                 key={index}
-                className="w-7 sm:w-[30px] h-7 text-primary sm:h-[30px] border rounded flex items-center justify-center text-[8px] sm:text-[9.5px] font-bold transition-all hover:-translate-y-0.5"
+                className="w-10 sm:w-[30px] h-10 text-primary sm:h-[30px] border rounded flex items-center justify-center text-[8px] sm:text-[9.5px] font-bold transition-all hover:-translate-y-0.5"
                 target="_blank"
                 href={social.link}
                 style={{
@@ -59,7 +75,8 @@ const Footer = () => {
                   borderColor: "rgba(255,248,238,0.08)",
                 }}
               >
-                {social.value}
+                <span>{social.icon}</span>
+                {/* {social.value} */}
               </Link>
             ))}
           </div>

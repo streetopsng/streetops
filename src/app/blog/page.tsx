@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -15,7 +15,7 @@ import gsap from "gsap";
 import { ScrambleTextPlugin } from "gsap/ScrambleTextPlugin";
 import ReadyToBuild from "@/components/AboutUsComponents/ready-to-build";
 import Nav from "@/components/StreetopsLandingPage/Nav";
-import Footer from "@/components/StreetopsLandingPage/Footer";
+import Footer from "@/components/AnotherLandingPage/Components/Footer";
 gsap.registerPlugin(ScrambleTextPlugin);
 async function fetchData() {
   const res = await fetch(`/api/blog/get-blogs`);
