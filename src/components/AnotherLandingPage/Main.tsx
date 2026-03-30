@@ -58,7 +58,7 @@ export default function Main() {
       <Industries />
       <PaigeSection />
       {/* <Stats /> */}
-      <Testimonials />
+      {/* <Testimonials /> */}
       <LatestInsights />
       <FooterCTA />
       <Footer />
