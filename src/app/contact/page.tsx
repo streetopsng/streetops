@@ -1,10 +1,62 @@
 "use client";
 
-import { useEffect } from "react";
-import Link from "next/link";
+import { useEffect, useState } from "react";
+
 import Footer from "@/components/AnotherLandingPage/Components/Footer";
+import { useDispatch, useSelector } from "react-redux";
+import { dispatchType, RootStateType } from "@/store";
+import { closeModal } from "@/store/slices/form-modal-slice";
+import toast from "react-hot-toast";
 
 export default function ContactPage() {
+  const [isLoading, setIsLoading] = useState(false);
+  //   const [isModalOpen, setIsModalOpen] = useState(false);
+  const dispatch = useDispatch<dispatchType>();
+  const { isOpen } = useSelector((items: RootStateType) => {
+    return items.formModalReducer;
+  });
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    const formData = new FormData(e.currentTarget);
+
+    const data = {
+      name: formData.get("name"),
+      companyName: formData.get("companyName"),
+      role: formData.get("role"),
+      email: formData.get("email"),
+    };
+    if (!data.companyName || !data.email || !data.name || !data.role) {
+      alert("please fill all the fields");
+      return;
+    }
+    setIsLoading(true);
+    try {
+      const res = await fetch("/api/waitlist", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await res.json();
+
+      setIsLoading(false);
+      if (res.ok) {
+        toast.success("Joined successfully!");
+        dispatch(closeModal());
+      } else {
+        toast.error(result.message || "unable to process request");
+      }
+    } catch (error) {
+      toast.error("something went wrong");
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -146,21 +198,23 @@ export default function ContactPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-3.5 mb-3 sm:mb-3.5">
               <div>
                 <label className="text-[10px] sm:text-[10.5px] font-bold uppercase tracking-[1.5px] mb-1 sm:mb-1.5 block text-char dark:text-cream">
-                  First Name
+                  Full Name
                 </label>
                 <input
                   type="text"
-                  placeholder="Your first name"
+                  name="full-name"
+                  placeholder="Full Name"
                   className="w-full px-3 sm:px-3.5 py-2.5 sm:py-3 border border-[rgba(26,15,0,0.08)] dark:border-[rgba(255,248,238,0.08)] bg-white dark:bg-[#1C1200] text-[13px] sm:text-[13.5px] text-char dark:text-cream rounded outline-none focus:border-red-600"
                 />
               </div>
               <div>
                 <label className="text-[10px] sm:text-[10.5px] font-bold uppercase tracking-[1.5px] mb-1 sm:mb-1.5 block text-char dark:text-cream">
-                  Last Name
+                  Email
                 </label>
                 <input
-                  type="text"
-                  placeholder="Your last name"
+                  type="email"
+                  name="email"
+                  placeholder="Email"
                   className="w-full px-3 sm:px-3.5 py-2.5 sm:py-3 border border-[rgba(26,15,0,0.08)] dark:border-[rgba(255,248,238,0.08)] bg-white dark:bg-[#1C1200] text-[13px] sm:text-[13.5px] text-char dark:text-cream rounded outline-none focus:border-red-600"
                 />
               </div>
@@ -168,26 +222,28 @@ export default function ContactPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-3.5 mb-3 sm:mb-3.5">
               <div>
                 <label className="text-[10px] sm:text-[10.5px] font-bold uppercase tracking-[1.5px] mb-1 sm:mb-1.5 block text-char dark:text-cream">
-                  Email
+                  Company Name
                 </label>
                 <input
-                  type="email"
-                  placeholder="your@email.com"
+                  type="text"
+                  name="email"
+                  placeholder="Company Name"
                   className="w-full px-3 sm:px-3.5 py-2.5 sm:py-3 border border-[rgba(26,15,0,0.08)] dark:border-[rgba(255,248,238,0.08)] bg-white dark:bg-[#1C1200] text-[13px] sm:text-[13.5px] text-char dark:text-cream rounded outline-none focus:border-red-600"
                 />
               </div>
               <div>
                 <label className="text-[10px] sm:text-[10.5px] font-bold uppercase tracking-[1.5px] mb-1 sm:mb-1.5 block text-char dark:text-cream">
-                  Company
+                  Role
                 </label>
                 <input
                   type="text"
-                  placeholder="Company name"
+                  name="company-name"
+                  placeholder="Company Name"
                   className="w-full px-3 sm:px-3.5 py-2.5 sm:py-3 border border-[rgba(26,15,0,0.08)] dark:border-[rgba(255,248,238,0.08)] bg-white dark:bg-[#1C1200] text-[13px] sm:text-[13.5px] text-char dark:text-cream rounded outline-none focus:border-red-600"
                 />
               </div>
             </div>
-            <div className="mb-3 sm:mb-3.5">
+            {/* <div className="mb-3 sm:mb-3.5">
               <label className="text-[10px] sm:text-[10.5px] font-bold uppercase tracking-[1.5px] mb-1 sm:mb-1.5 block text-char dark:text-cream">
                 What are you dealing with?
               </label>
@@ -196,7 +252,7 @@ export default function ContactPage() {
                 placeholder="Tell us about your team situation. The more specific, the better."
                 className="w-full px-3 sm:px-3.5 py-2.5 sm:py-3 border border-[rgba(26,15,0,0.08)] dark:border-[rgba(255,248,238,0.08)] bg-white dark:bg-[#1C1200] text-[13px] sm:text-[13.5px] text-char dark:text-cream rounded outline-none focus:border-red-600 resize-vertical"
               />
-            </div>
+            </div> */}
             <button className="px-6 sm:px-7 md:px-9 py-2.5 sm:py-3 md:py-3.5 text-[13px] sm:text-[14px] md:text-[14.5px] font-semibold rounded transition-all bg-red-600 text-white">
               Send Message →
             </button>
