@@ -11,7 +11,7 @@ export const metadata = {
     siteName: "StreetOps",
     images: [
       {
-        url: "https://www.streetops.ng/social-icon.png",
+        url: "https://www.streetops.ng/social-icon-cropped.png",
         width: 1200,
         height: 630,
       },
