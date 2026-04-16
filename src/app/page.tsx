@@ -1,9 +1,8 @@
 import Main from "@/components/AnotherLandingPage/Main";
 
 export const metadata = {
-  title: "StreetOps - Team performance Company in Nigeria",
-  description: `StreetOps helps Nigerian organisations build teams that perform — through diagnostics, culture design, training, and technology. Ready to fix your team?
-Primary Keyword: employee engagement company Nigeria`,
+  title: "Behavioural Research and Management Consulting company",
+  description: `StreetOps is a pan-African behavioral research and management consulting company that helps institutions optimize workforce performance for business growth.`,
 };
 
 const page = () => {
