@@ -75,7 +75,7 @@ const page = () => {
         ) : blogs.length < 1 ? (
           <div className="py-4">
             <h1 className="text-center text-primary text-lg">
-              no blog available at the moment
+              blogs not available
             </h1>
           </div>
         ) : (
