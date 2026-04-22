@@ -18,7 +18,7 @@ export default function ContactPage() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
+    const form = e.currentTarget;
     const formData = new FormData(e.currentTarget);
 
     const data = {
@@ -27,10 +27,13 @@ export default function ContactPage() {
       role: formData.get("role"),
       email: formData.get("email"),
     };
+    console.log(data);
     if (!data.companyName || !data.email || !data.name || !data.role) {
       alert("please fill all the fields");
       return;
     }
+
+    // return;
     setIsLoading(true);
     try {
       const res = await fetch("/api/waitlist", {
@@ -54,6 +57,7 @@ export default function ContactPage() {
       toast.error("something went wrong");
     } finally {
       setIsLoading(false);
+      form.reset();
     }
   };
 
@@ -188,7 +192,7 @@ export default function ContactPage() {
 
         {/* Contact Form */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-16 lg:gap-20 mt-12 sm:mt-16 md:mt-[72px] items-start rv rv2">
-          <div>
+          <form onSubmit={handleSubmit}>
             <div className="flex items-center gap-2.5 mb-4 sm:mb-5 md:mb-6">
               <div className="w-5 h-px sm:w-5.5 bg-red-600" />
               <span className="text-[9px] sm:text-[10px] font-bold tracking-[2px] sm:tracking-[2.5px] uppercase text-red-600">
@@ -202,7 +206,7 @@ export default function ContactPage() {
                 </label>
                 <input
                   type="text"
-                  name="full-name"
+                  name="name"
                   placeholder="Full Name"
                   className="w-full px-3 sm:px-3.5 py-2.5 sm:py-3 border border-[rgba(26,15,0,0.08)] dark:border-[rgba(255,248,238,0.08)] bg-white dark:bg-[#1C1200] text-[13px] sm:text-[13.5px] text-char dark:text-cream rounded outline-none focus:border-red-600"
                 />
@@ -226,7 +230,7 @@ export default function ContactPage() {
                 </label>
                 <input
                   type="text"
-                  name="email"
+                  name="companyName"
                   placeholder="Company Name"
                   className="w-full px-3 sm:px-3.5 py-2.5 sm:py-3 border border-[rgba(26,15,0,0.08)] dark:border-[rgba(255,248,238,0.08)] bg-white dark:bg-[#1C1200] text-[13px] sm:text-[13.5px] text-char dark:text-cream rounded outline-none focus:border-red-600"
                 />
@@ -237,7 +241,7 @@ export default function ContactPage() {
                 </label>
                 <input
                   type="text"
-                  name="company-name"
+                  name="role"
                   placeholder="Company Name"
                   className="w-full px-3 sm:px-3.5 py-2.5 sm:py-3 border border-[rgba(26,15,0,0.08)] dark:border-[rgba(255,248,238,0.08)] bg-white dark:bg-[#1C1200] text-[13px] sm:text-[13.5px] text-char dark:text-cream rounded outline-none focus:border-red-600"
                 />
@@ -253,13 +257,13 @@ export default function ContactPage() {
                 className="w-full px-3 sm:px-3.5 py-2.5 sm:py-3 border border-[rgba(26,15,0,0.08)] dark:border-[rgba(255,248,238,0.08)] bg-white dark:bg-[#1C1200] text-[13px] sm:text-[13.5px] text-char dark:text-cream rounded outline-none focus:border-red-600 resize-vertical"
               />
             </div> */}
-            <button className="px-6 sm:px-7 md:px-9 py-2.5 sm:py-3 md:py-3.5 text-[13px] sm:text-[14px] md:text-[14.5px] font-semibold rounded transition-all bg-red-600 text-white">
-              Send Message →
+            <button className="px-6 sm:px-7 md:px-9 py-2.5 sm:py-3 md:py-3.5 text-[13px] sm:text-[14px] md:text-[14.5px] font-semibold rounded transition-all bg-red-600 text-white cursor-pointer">
+              {isLoading ? "Submitting" : "Submit"}
             </button>
             <p className="text-[11px] sm:text-xs mt-3 sm:mt-3.5 text-ink4 dark:text-[rgba(255,248,238,0.22)]">
               We respond within 48 hours · Lagos, Nigeria · info@streetops.ng
             </p>
-          </div>
+          </form>
 
           <div>
             <div className="h-[250px] sm:h-[300px] md:h-[360px] rounded overflow-hidden mb-4 sm:mb-5 md:mb-6">

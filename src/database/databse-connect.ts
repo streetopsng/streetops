@@ -1,7 +1,5 @@
 // import mongoose from "mongoose"
 
-
-
 // export const connectDatabase = async()=>{
 // const connectionString = process.env.MONGO_URL
 //     if (!connectionString) {
@@ -11,33 +9,27 @@
 //    const res =  await mongoose.connect(process.env.MONGO_URL as string,{
 //     dbName:"paige_db"
 //    })
-        
+
 // console.log("db connected successfully");
 // return {success:true}
 
 //    } catch (error) {
 //     console.log("something went wrong,could not connect");
-//     // throw new Error("something went wrong,could not connec")  
+//     // throw new Error("something went wrong,could not connec")
 //     return {success:false}
 //    }
 
-
 // }
-
-
-
-
 
 // TEST THIS OUT
 
-
 // lib/connectDatabase.ts
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
 
 const MONGODB_URI = process.env.MONGO_URL as string;
 
 if (!MONGODB_URI) {
-  throw new Error('MONGO_URL is not defined in environment variables');
+  throw new Error("MONGO_URL is not defined in environment variables");
 }
 
 // Global cache to persist connection across hot reloads
@@ -57,18 +49,18 @@ export async function connectDatabase(): Promise<{ success: boolean }> {
 
   if (!cached.promise) {
     cached.promise = mongoose.connect(MONGODB_URI, {
-      dbName: 'blogs_db',
+      dbName: "blogs_db",
       bufferCommands: false,
     });
   }
 
   try {
     cached.conn = await cached.promise;
-    console.log('✅ MongoDB connected successfully');
+    console.log("✅ MongoDB connected successfully");
     return { success: true };
   } catch (err) {
     cached.promise = null; // Clear promise so we can retry next time
-    console.error(' MongoDB connection failed:', err);
+    console.error(" MongoDB connection failed:", err);
     return { success: false };
   }
 }

@@ -35,7 +35,7 @@ const servicesData: Record<string, any> = {
     out: "A specific, evidence-based picture of what is working, what is not, and what to fix first — with evidence, priority, and a plan.",
     rel: ["Manager Effectiveness Training", "Culture & Process Transformation"],
   },
-  training: {
+  manager: {
     label: "Service 02",
     img: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=1400&q=80",
     title: "Manager Effectiveness Training",

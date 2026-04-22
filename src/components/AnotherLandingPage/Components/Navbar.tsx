@@ -58,7 +58,7 @@ const Navbar = () => {
       dropdown: [
         { name: "Insights", href: "/insights" },
         { name: "Research & Reports", href: "/reports" },
-        { name: "Tools & Frameworks", href: "/tools" },
+        // { name: "Tools & Frameworks", href: "/tools" },
         { name: "Case Studies", href: "#" },
       ],
     },
