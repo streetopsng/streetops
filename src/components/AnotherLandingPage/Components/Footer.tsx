@@ -32,7 +32,9 @@ const Footer = () => {
               SO
             </span> */}
             {/* <img src="/icon.png" alt="logo" /> */}
-            <img src="/red-logo.png" alt="logo" />
+            <Link href={"/"}>
+              <img src="/red-logo.png" alt="logo" />
+            </Link>
           </div>
           <p
             className="text-[11px] sm:text-xs leading-[1.6] sm:leading-[1.72] font-light mb-4 sm:mb-5.5 max-w-sm"

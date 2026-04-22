@@ -1,5 +1,5 @@
 const Marquee = () => {
-  const items = Array(16).fill("Trusted Client");
+  const items = Array(16).fill("StreetOps");
 
   return (
     <div

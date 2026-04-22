@@ -11,7 +11,7 @@ const slides = [
     title: "Performance is social.",
     description:
       "How a team relates to one another is how well they produce together. We call this Social Productivity. We measure it through the Social Health Index.",
-    cta1: { text: "Start With a Diagnosis →", href: "#" },
+    cta1: { text: "Start With a Diagnosis →", href: "/services/diagnostic" },
     cta2: { text: "Our Story", href: "/about" },
   },
   {
@@ -31,7 +31,7 @@ const slides = [
     title: "Programmes built for your team.",
     description:
       "We design and deliver training that fits what your team actually needs. Practical, grounded, and built to stick.",
-    cta1: { text: "Explore Training →", href: "#" },
+    cta1: { text: "Explore Training →", href: "/programs/vector" },
     cta2: { text: "Talk to Us", href: "/contact" },
   },
   {
@@ -41,7 +41,7 @@ const slides = [
     title: "We study African teams.",
     description:
       "Our research programme looks at how African teams bond, perform, and break down. We publish what we find.",
-    cta1: { text: "See Our Research →", href: "#" },
+    cta1: { text: "See Our Research →", href: "https://ask.streetops.ng" },
     cta2: { text: "Talk to Us", href: "/contact" },
   },
 ];

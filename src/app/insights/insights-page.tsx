@@ -276,38 +276,44 @@ export default function InsightsPage() {
         {/* Insights Grid */}
         {blogs.length > 0 && (
           <div className="grid grid-cols-1 mdsm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {blogs.map((insight) => (
-              <Link
-                key={insight._id}
-                href={`/blog/${insight.title
-                  .replace(/ /g, "-")
-                  .toLocaleLowerCase()}---${insight._id}`}
-                className="border rounded overflow-hidden cursor-pointer transition-all hover:-translate-y-0.5 hover:shadow-md"
-                style={{
-                  backgroundColor: "#FFFFFF",
-                  borderColor: "rgba(26, 15, 0, 0.08)",
-                }}
-              >
-                <div
-                  className="h-[160px] sm:h-[170px] md:h-[180px] overflow-hidden relative"
-                  style={{ backgroundColor: "#FFF2E0" }}
+            {[...blogs]
+              .sort(
+                (a, b) =>
+                  new Date(b.createdAt).getTime() -
+                  new Date(a.createdAt).getTime(),
+              )
+              .map((insight) => (
+                <Link
+                  key={insight._id}
+                  href={`/blog/${insight.title
+                    .replace(/ /g, "-")
+                    .toLocaleLowerCase()}---${insight._id}`}
+                  className="border rounded overflow-hidden cursor-pointer transition-all hover:-translate-y-0.5 hover:shadow-md"
+                  style={{
+                    backgroundColor: "#FFFFFF",
+                    borderColor: "rgba(26, 15, 0, 0.08)",
+                  }}
                 >
-                  <img
-                    src={insight.imageUrl}
-                    alt=""
-                    className="w-full h-full object-cover transition-transform duration-400 group-hover:scale-105"
-                  />
-                </div>
-                <div className="p-4 sm:p-5 md:p-5.5">
-                  <div className="text-[8px] sm:text-[9px] md:text-[9.5px] font-bold tracking-[1.5px] sm:tracking-[2px] uppercase mb-1.5 sm:mb-2 text-terra">
-                    {insight.date}
+                  <div
+                    className="h-[160px] sm:h-[170px] md:h-[180px] overflow-hidden relative"
+                    style={{ backgroundColor: "#FFF2E0" }}
+                  >
+                    <img
+                      src={insight.imageUrl}
+                      alt=""
+                      className="w-full h-full object-cover transition-transform duration-400 group-hover:scale-105"
+                    />
                   </div>
-                  <h4 className="font-serif text-[14px] sm:text-[15px] md:text-base font-normal leading-[1.3] sm:leading-[1.35] tracking-[-0.1px] text-char">
-                    {insight.title}
-                  </h4>
-                </div>
-              </Link>
-            ))}
+                  <div className="p-4 sm:p-5 md:p-5.5">
+                    <div className="text-[8px] sm:text-[9px] md:text-[9.5px] font-bold tracking-[1.5px] sm:tracking-[2px] uppercase mb-1.5 sm:mb-2 text-terra">
+                      {insight.date}
+                    </div>
+                    <h4 className="font-serif text-[14px] sm:text-[15px] md:text-base font-normal leading-[1.3] sm:leading-[1.35] tracking-[-0.1px] text-char">
+                      {insight.title}
+                    </h4>
+                  </div>
+                </Link>
+              ))}
           </div>
         )}
       </div>

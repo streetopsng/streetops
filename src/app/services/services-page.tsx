@@ -192,7 +192,9 @@ export default function ServicesPage() {
         <h2 className="font-serif text-[clamp(24px,6vw,28px)] sm:text-[clamp(28px,5vw,38px)] md:text-[clamp(28px,3.8vw,46px)] font-light leading-[1.2] sm:leading-[1.1] tracking-[-0.5px] sm:tracking-[-0.7px] mb-4 sm:mb-[18px] text-char dark:text-cream">
           One methodology.
           <br />
-          <em className="not-italic text-terra">Five entry points.</em>
+          <em className="not-italic text-terra">
+            {services.length} entry points.
+          </em>
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 auto-rows-auto gap-3 mt-8 sm:mt-10 md:mt-12 rv rv1">
           {services.map((service) => (

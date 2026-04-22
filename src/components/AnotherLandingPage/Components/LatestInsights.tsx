@@ -160,45 +160,51 @@ const LatestInsights = () => {
             scrollbarWidth: "none",
           }}
         >
-          {blogs.map((item, index) => (
-            <Link
-              key={index}
-              href={`/blog/${item.title
-                .replace(/ /g, "-")
-                .toLocaleLowerCase()}---${item._id}`}
-              className="flex-shrink-0 w-[260px] sm:w-[280px] md:w-[300px] border rounded overflow-hidden cursor-pointer transition-all hover:-translate-y-0.5 hover:shadow-md scroll-snap-start"
-              style={{
-                backgroundColor: "#FFFFFF",
-                borderColor: "rgba(26, 15, 0, 0.08)",
-                scrollSnapAlign: "start",
-              }}
-            >
-              <div
-                className="h-[150px] sm:h-[165px] md:h-[180px] overflow-hidden relative"
-                style={{ backgroundColor: "#FFF2E0" }}
+          {[...blogs]
+            .sort(
+              (a, b) =>
+                new Date(b.createdAt).getTime() -
+                new Date(a.createdAt).getTime(),
+            )
+            .map((item, index) => (
+              <Link
+                key={index}
+                href={`/blog/${item.title
+                  .replace(/ /g, "-")
+                  .toLocaleLowerCase()}---${item._id}`}
+                className="flex-shrink-0 w-[260px] sm:w-[280px] md:w-[300px] border rounded overflow-hidden cursor-pointer transition-all hover:-translate-y-0.5 hover:shadow-md scroll-snap-start"
+                style={{
+                  backgroundColor: "#FFFFFF",
+                  borderColor: "rgba(26, 15, 0, 0.08)",
+                  scrollSnapAlign: "start",
+                }}
               >
-                <img
-                  src={item.imageUrl}
-                  alt=""
-                  className="w-full h-full object-cover transition-transform duration-400 group-hover:scale-105"
-                />
-              </div>
-              <div className="p-4 sm:p-5 md:p-5.5">
                 <div
-                  className="text-[8px] sm:text-[9px] md:text-[9.5px] font-bold tracking-[1.5px] sm:tracking-[2px] uppercase mb-1.5 sm:mb-2"
-                  style={{ color: "#C4512A" }}
+                  className="h-[150px] sm:h-[165px] md:h-[180px] overflow-hidden relative"
+                  style={{ backgroundColor: "#FFF2E0" }}
                 >
-                  {item.date}
+                  <img
+                    src={item.imageUrl}
+                    alt=""
+                    className="w-full h-full object-cover transition-transform duration-400 group-hover:scale-105"
+                  />
                 </div>
-                <h4
-                  className="font-serif text-[14px] sm:text-[15px] md:text-base font-normal leading-[1.3] sm:leading-[1.35] tracking-[-0.1px]"
-                  style={{ color: "#1A0F00" }}
-                >
-                  {item.title}
-                </h4>
-              </div>
-            </Link>
-          ))}
+                <div className="p-4 sm:p-5 md:p-5.5">
+                  <div
+                    className="text-[8px] sm:text-[9px] md:text-[9.5px] font-bold tracking-[1.5px] sm:tracking-[2px] uppercase mb-1.5 sm:mb-2"
+                    style={{ color: "#C4512A" }}
+                  >
+                    {item.date}
+                  </div>
+                  <h4
+                    className="font-serif text-[14px] sm:text-[15px] md:text-base font-normal leading-[1.3] sm:leading-[1.35] tracking-[-0.1px]"
+                    style={{ color: "#1A0F00" }}
+                  >
+                    {item.title}
+                  </h4>
+                </div>
+              </Link>
+            ))}
         </div>
       )}
     </div>
