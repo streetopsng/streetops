@@ -16,6 +16,7 @@ import WhatsAppWidget from "@/components/StreetopsLandingPage/WhatsAppWidget";
 import { ThemeProvider } from "@/components/AnotherLandingPage/Components/ThemeProvider";
 import Navbar from "@/components/AnotherLandingPage/Components/Navbar";
 import ScrollToTop from "@/components/AnotherLandingPage/Components/ScrollToTop";
+import SmartSupp from "@/components/SmartSupp";
 
 export const metadata: Metadata = {
   title: "StreetOps",
@@ -83,6 +84,7 @@ export default function RootLayout({
             <Modal />
             <MobileMenu />
             <FormModal />
+            <SmartSupp />
             {/* <WhatsAppWidget /> */}
             <ThemeProvider>
               <Navbar />
