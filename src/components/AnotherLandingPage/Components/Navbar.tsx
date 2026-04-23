@@ -177,7 +177,7 @@ const Navbar = () => {
             ))}
           </ul>
 
-          <button
+          {/* <button
             onClick={toggleTheme}
             className="w-9 sm:w-11 h-5 sm:h-6 rounded-full relative cursor-pointer border flex-shrink-0"
             style={{
@@ -206,7 +206,7 @@ const Navbar = () => {
                 boxShadow: "0 1px 3px rgba(0, 0, 0, 0.2)",
               }}
             />
-          </button>
+          </button> */}
           <Link
             href="/contact"
             className="px-3 sm:px-[18px] py-1 sm:py-1.5 text-[11px] sm:text-xs font-semibold rounded transition-all whitespace-nowrap"
