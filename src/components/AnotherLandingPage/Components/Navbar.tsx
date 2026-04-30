@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { useTheme } from "./ThemeProvider";
 import { usePathname } from "next/navigation";
+import ReportBanner from "@/components/ReportBanner";
 
 const Navbar = () => {
   const { theme, toggleTheme } = useTheme();
@@ -71,9 +72,10 @@ const Navbar = () => {
   };
 
   return (
-    <>
+    <header className="fixed top-0 left-0 right-0 z-[200]">
+      <ReportBanner />
       <nav
-        className="fixed top-0 left-0 right-0 z-200 h-[60px] flex items-center justify-between px-4 sm:px-6 md:px-10 backdrop-blur-[18px] border-b"
+        className="h-[60px] flex items-center justify-between px-4 sm:px-6 md:px-10 backdrop-blur-[18px] border-b"
         style={{
           backgroundColor: "rgba(255, 248, 238, 0.92)",
           borderBottomColor: "rgba(26, 15, 0, 0.08)",
@@ -324,7 +326,7 @@ const Navbar = () => {
           ))}
         </div>
       </div>
-    </>
+    </header>
   );
 };
 
