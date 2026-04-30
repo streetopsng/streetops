@@ -7,7 +7,7 @@ import ReportDownloadModal from "@/components/ReportDownloadModal";
 
 export default function ReportsPage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -23,15 +23,15 @@ export default function ReportsPage() {
     document.querySelectorAll(".rv").forEach((el) => observer.observe(el));
     return () => observer.disconnect();
   }, []);
-
+  //
   return (
     <>
-      <ReportDownloadModal 
-        isOpen={isModalOpen} 
+      <ReportDownloadModal
+        isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
         reportUrl="/report/Streetask_Issue01_Office_Romance_Report_by_Streetops_Consulting.pdf"
       />
-      
+
       {/* Hero */}
       <div className="relative min-h-[320px] sm:min-h-[340px] md:min-h-[360px] overflow-hidden flex items-end">
         <div
@@ -130,23 +130,40 @@ export default function ReportsPage() {
         <div className="border border-[rgba(26,15,0,0.08)] dark:border-[rgba(255,248,238,0.08)] p-6 sm:p-8 md:p-10 rounded-2xl mb-10 bg-white dark:bg-[#1C1200] shadow-sm relative overflow-hidden">
           <div className="max-w-3xl">
             <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-normal mb-4 text-char dark:text-cream leading-tight">
-              Romance & Relationships at Work — <em className="text-burgundy not-italic">The Office Palava</em>
+              Download report —{" "}
+              <em className="text-burgundy not-italic">The Office Palava</em>
             </h2>
             <p className="text-sm sm:text-base leading-relaxed font-light text-ink3 dark:text-[rgba(255,248,238,0.6)] mb-8">
-              Explore deep insights into how Nigerian workers navigate workplace romance and its impact on professional productivity. This report distills honest, anonymous feedback from over 1,000 professionals into actionable data for modern organizations.
+              Explore deep insights into how Nigerian workers navigate workplace
+              romance and its impact on professional productivity. This report
+              distills honest, anonymous feedback from over 1,000 professionals
+              into actionable data for modern organizations.
             </p>
 
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
-              <button 
+              <button
                 onClick={() => setIsModalOpen(true)}
                 className="inline-flex items-center gap-2 px-8 py-3.5 bg-burgundy hover:bg-burgundy/90 text-white font-semibold rounded-xl transition-all duration-300 shadow-lg shadow-burgundy/10"
               >
                 Download Report
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                  <polyline points="7 10 12 15 17 10" />
+                  <line x1="12" y1="15" x2="12" y2="3" />
+                </svg>
               </button>
             </div>
           </div>
-          
+
           {/* Subtle decoration */}
           <div className="absolute top-0 right-0 w-32 h-32 bg-burgundy/5 rounded-full -mr-16 -mt-16 blur-3xl"></div>
         </div>
