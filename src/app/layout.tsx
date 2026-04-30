@@ -88,7 +88,7 @@ export default function RootLayout({
             {/* <WhatsAppWidget /> */}
             <ThemeProvider>
               <Navbar />
-              <main className="pt-15">{children}</main>
+              <main className="pt-[110px] sm:pt-[100px]">{children}</main>
               <ScrollToTop />
             </ThemeProvider>
           </ClientProvider>

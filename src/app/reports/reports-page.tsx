@@ -2,9 +2,12 @@
 
 import Footer from "@/components/AnotherLandingPage/Components/Footer";
 import Link from "next/link";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import ReportDownloadModal from "@/components/ReportDownloadModal";
 
 export default function ReportsPage() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -23,6 +26,12 @@ export default function ReportsPage() {
 
   return (
     <>
+      <ReportDownloadModal 
+        isOpen={isModalOpen} 
+        onClose={() => setIsModalOpen(false)}
+        reportUrl="/report/Streetask-Issue01_Office-Romance-Report-by-Streetops-Consulting.pdf"
+      />
+      
       {/* Hero */}
       <div className="relative min-h-[320px] sm:min-h-[340px] md:min-h-[360px] overflow-hidden flex items-end">
         <div
@@ -85,7 +94,7 @@ export default function ReportsPage() {
       {/* Reports */}
       <div className="py-12 sm:py-16 md:py-20 lg:py-[88px] px-4 sm:px-6 md:px-10 lg:px-20 rv">
         {/* Main Report Card */}
-        <div className="border border-[rgba(26,15,0,0.08)] dark:border-[rgba(255,248,238,0.08)] p-5 sm:p-6 md:p-8 lg:p-10 rounded-lg flex flex-col lg:flex-row gap-6 sm:gap-8 md:gap-9 items-center mb-3.5 bg-white dark:bg-[#1C1200]">
+        <div className="border border-[rgba(26,15,0,0.08)] dark:border-[rgba(255,248,238,0.08)] p-5 sm:p-6 md:p-8 lg:p-10 rounded-lg flex flex-col lg:flex-row gap-6 sm:gap-8 md:gap-9 items-center mb-6 bg-white dark:bg-[#1C1200]">
           <div className="flex-1">
             <div className="text-[8px] sm:text-[9px] md:text-[9.5px] font-bold tracking-[1.5px] sm:tracking-[2px] uppercase mb-2 sm:mb-2.5 text-burgundy">
               Flagship Report · Coming 2026
@@ -98,12 +107,6 @@ export default function ReportsPage() {
               built from Street Ask data and real worker voices across
               industries.
             </p>
-            {/* <Link
-              href="/ask"
-              className="inline-flex items-center gap-1.5 text-[11px] sm:text-[12px] md:text-[12.5px] font-semibold transition-all hover:gap-2.5 text-burgundy"
-            >
-              Contribute to the Survey →
-            </Link> */}
           </div>
           <div className="w-full sm:w-[280px] flex-shrink-0 p-4 sm:p-5 md:p-5.5 text-center border border-[rgba(26,15,0,0.08)] dark:border-[rgba(255,248,238,0.08)] rounded-lg bg-[#FFF2E0] dark:bg-[#241800]">
             <div className="text-[9px] sm:text-[10px] font-bold tracking-[1.5px] uppercase mb-1.5 text-burgundy">
@@ -123,19 +126,38 @@ export default function ReportsPage() {
           </div>
         </div>
 
+        {/* Second Report Card - Romance & Relationships */}
+        <div className="border border-[rgba(26,15,0,0.08)] dark:border-[rgba(255,248,238,0.08)] p-6 sm:p-8 md:p-10 rounded-2xl mb-10 bg-white dark:bg-[#1C1200] shadow-sm relative overflow-hidden">
+          <div className="max-w-3xl">
+            <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-normal mb-4 text-char dark:text-cream leading-tight">
+              Romance & Relationships at Work — <em className="text-burgundy not-italic">The Office Palava</em>
+            </h2>
+            <p className="text-sm sm:text-base leading-relaxed font-light text-ink3 dark:text-[rgba(255,248,238,0.6)] mb-8">
+              We want to understand how Nigerian workers really feel about workplace romance, relationships, and all the palava that comes with them. Anonymous. Honest. No judgment. Your responses directly shape our April Street Pulse.
+            </p>
+
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+              <button 
+                onClick={() => setIsModalOpen(true)}
+                className="inline-flex items-center gap-2 px-8 py-3.5 bg-burgundy hover:bg-burgundy/90 text-white font-semibold rounded-xl transition-all duration-300 shadow-lg shadow-burgundy/10"
+              >
+                Download Report
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              </button>
+            </div>
+          </div>
+          
+          {/* Subtle decoration */}
+          <div className="absolute top-0 right-0 w-32 h-32 bg-burgundy/5 rounded-full -mr-16 -mt-16 blur-3xl"></div>
+        </div>
+
         {/* Coming Soon Card */}
-        <div className="mt-3.5 p-5 sm:p-6 md:p-8 border border-dashed border-[rgba(26,15,0,0.08)] dark:border-[rgba(255,248,238,0.08)] rounded-lg text-center rv rv2">
+        <div className="p-5 sm:p-6 md:p-8 border border-dashed border-[rgba(26,15,0,0.08)] dark:border-[rgba(255,248,238,0.08)] rounded-lg text-center rv rv2">
           <div className="text-[9px] sm:text-[10px] font-bold tracking-[1.5px] sm:tracking-[2px] uppercase mb-1.5 text-ink4 dark:text-[rgba(255,248,238,0.22)]">
             More Reports In Development
           </div>
           <p className="text-[12px] sm:text-[13px] md:text-[13.5px] text-ink4 dark:text-[rgba(255,248,238,0.22)] font-light">
             Each Street Ask survey feeds a future report.
-            {/* <Link
-              href="/ask"
-              className="inline-flex items-center gap-1.5 text-[11px] sm:text-[12px] md:text-[12.5px] font-semibold transition-all hover:gap-2.5 text-burgundy ml-1"
-            >
-              Participate →
-            </Link> */}
           </p>
         </div>
       </div>
