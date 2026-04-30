@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { X, Loader2, Download, CheckCircle2 } from "lucide-react";
+import toast from "react-hot-toast";
 
 interface ReportDownloadModalProps {
   isOpen: boolean;
@@ -9,7 +10,11 @@ interface ReportDownloadModalProps {
   reportUrl: string;
 }
 
-export default function ReportDownloadModal({ isOpen, onClose, reportUrl }: ReportDownloadModalProps) {
+export default function ReportDownloadModal({
+  isOpen,
+  onClose,
+  reportUrl,
+}: ReportDownloadModalProps) {
   const [isLoading, setIsLoading] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
 
@@ -29,24 +34,31 @@ export default function ReportDownloadModal({ isOpen, onClose, reportUrl }: Repo
     };
 
     try {
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 1500));
-      
-      setIsSuccess(true);
-      
-      // Trigger download
-      const link = document.createElement("a");
-      link.href = reportUrl;
-      link.download = "Streetask_Issue01_Office_Romance_Report_by_Streetops_Consulting.pdf";
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
+      const res = await fetch("/api/reports/street-ask", {
+        method: "POST",
+        body: JSON.stringify({
+          first_name: data.firstName,
+          last_name: data.lastName,
+          work_email: data.email,
+          role: data.role,
+          country: data.country,
+        }),
+      });
 
-      // Optionally close after a delay
-      setTimeout(() => {
-        // onClose();
-        // setIsSuccess(false);
-      }, 5000);
+      const response = await res.json();
+      if (response.success) {
+        setIsSuccess(true);
+        // Trigger download
+        const link = document.createElement("a");
+        link.href = reportUrl;
+        link.download =
+          "Streetask_Issue01_Office_Romance_Report_by_Streetops_Consulting.pdf";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      } else {
+        toast.error("something went wrong");
+      }
     } catch (error) {
       console.error("Submission error:", error);
     } finally {
@@ -71,9 +83,10 @@ export default function ReportDownloadModal({ isOpen, onClose, reportUrl }: Repo
               Download Started!
             </h3>
             <p className="text-sm text-ink3 dark:text-[rgba(255,248,238,0.6)] font-light leading-relaxed mb-8 max-w-[280px]">
-              Your details have been submitted successfully. The report should begin downloading in a few moments.
+              Your details have been submitted successfully. The report should
+              begin downloading in a few moments.
             </p>
-            <button 
+            <button
               onClick={handleClose}
               className="px-10 py-3 bg-burgundy text-white font-semibold rounded-xl hover:bg-burgundy/90 transition-all shadow-lg shadow-burgundy/10"
             >
@@ -89,10 +102,11 @@ export default function ReportDownloadModal({ isOpen, onClose, reportUrl }: Repo
                   Romance & Relationships
                 </h3>
                 <p className="text-[12px] text-ink3 dark:text-[rgba(255,248,238,0.42)] font-light leading-relaxed">
-                  Access deep insights from our study on how Nigerian workers feel about workplace romance and its impact on productivity.
+                  Access deep insights from our study on how Nigerian workers
+                  feel about workplace romance and its impact on productivity.
                 </p>
               </div>
-              <button 
+              <button
                 onClick={handleClose}
                 className="p-1.5 hover:bg-black/5 dark:hover:bg-white/5 rounded-full transition-colors flex-shrink-0"
               >
@@ -105,7 +119,9 @@ export default function ReportDownloadModal({ isOpen, onClose, reportUrl }: Repo
               <form onSubmit={handleSubmit} className="p-5 pt-1 space-y-3">
                 <div className="grid grid-cols-2 gap-3">
                   <div className="space-y-1">
-                    <label className="text-[10px] font-bold uppercase tracking-wider text-burgundy/80">First Name *</label>
+                    <label className="text-[10px] font-bold uppercase tracking-wider text-burgundy/80">
+                      First Name *
+                    </label>
                     <input
                       required
                       name="firstName"
@@ -115,7 +131,9 @@ export default function ReportDownloadModal({ isOpen, onClose, reportUrl }: Repo
                     />
                   </div>
                   <div className="space-y-1">
-                    <label className="text-[10px] font-bold uppercase tracking-wider text-burgundy/80">Last Name *</label>
+                    <label className="text-[10px] font-bold uppercase tracking-wider text-burgundy/80">
+                      Last Name *
+                    </label>
                     <input
                       required
                       name="lastName"
@@ -127,7 +145,9 @@ export default function ReportDownloadModal({ isOpen, onClose, reportUrl }: Repo
                 </div>
 
                 <div className="space-y-1">
-                  <label className="text-[10px] font-bold uppercase tracking-wider text-burgundy/80">Country *</label>
+                  <label className="text-[10px] font-bold uppercase tracking-wider text-burgundy/80">
+                    Country *
+                  </label>
                   <input
                     required
                     name="country"
@@ -138,7 +158,9 @@ export default function ReportDownloadModal({ isOpen, onClose, reportUrl }: Repo
                 </div>
 
                 <div className="space-y-1">
-                  <label className="text-[10px] font-bold uppercase tracking-wider text-burgundy/80">Role *</label>
+                  <label className="text-[10px] font-bold uppercase tracking-wider text-burgundy/80">
+                    Role *
+                  </label>
                   <input
                     required
                     name="role"
@@ -149,7 +171,9 @@ export default function ReportDownloadModal({ isOpen, onClose, reportUrl }: Repo
                 </div>
 
                 <div className="space-y-1">
-                  <label className="text-[10px] font-bold uppercase tracking-wider text-burgundy/80">Work Email *</label>
+                  <label className="text-[10px] font-bold uppercase tracking-wider text-burgundy/80">
+                    Work Email *
+                  </label>
                   <input
                     required
                     name="email"
@@ -179,7 +203,8 @@ export default function ReportDownloadModal({ isOpen, onClose, reportUrl }: Repo
 
             <div className="px-5 py-3 bg-gray-50 dark:bg-[#241800] border-t border-[rgba(26,15,0,0.05)] dark:border-[rgba(255,248,238,0.05)] flex-shrink-0">
               <p className="text-[9px] text-center text-ink4 leading-tight">
-                By downloading, you agree to receive research updates. Unsubscribe anytime.
+                By downloading, you agree to receive research updates.
+                Unsubscribe anytime.
               </p>
             </div>
           </>
