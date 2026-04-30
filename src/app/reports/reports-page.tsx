@@ -130,7 +130,7 @@ export default function ReportsPage() {
         <div className="border border-[rgba(26,15,0,0.08)] dark:border-[rgba(255,248,238,0.08)] p-6 sm:p-8 md:p-10 rounded-2xl mb-10 bg-white dark:bg-[#1C1200] shadow-sm relative overflow-hidden">
           <div className="max-w-3xl">
             <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-normal mb-4 text-char dark:text-cream leading-tight">
-              Romance & Relationships at Work — <em className="text-burgundy not-italic">The Office Palava</em>
+              Download report — <em className="text-burgundy not-italic">The Office Palava</em>
             </h2>
             <p className="text-sm sm:text-base leading-relaxed font-light text-ink3 dark:text-[rgba(255,248,238,0.6)] mb-8">
               Explore deep insights into how Nigerian workers navigate workplace romance and its impact on professional productivity. This report distills honest, anonymous feedback from over 1,000 professionals into actionable data for modern organizations.
