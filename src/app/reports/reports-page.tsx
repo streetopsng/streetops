@@ -133,7 +133,7 @@ export default function ReportsPage() {
               Romance & Relationships at Work — <em className="text-burgundy not-italic">The Office Palava</em>
             </h2>
             <p className="text-sm sm:text-base leading-relaxed font-light text-ink3 dark:text-[rgba(255,248,238,0.6)] mb-8">
-              We want to understand how Nigerian workers really feel about workplace romance, relationships, and all the palava that comes with them. Anonymous. Honest. No judgment. Your responses directly shape our April Street Pulse.
+              Explore deep insights into how Nigerian workers navigate workplace romance and its impact on professional productivity. This report distills honest, anonymous feedback from over 1,000 professionals into actionable data for modern organizations.
             </p>
 
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">

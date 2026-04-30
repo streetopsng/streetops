@@ -89,7 +89,7 @@ export default function ReportDownloadModal({ isOpen, onClose, reportUrl }: Repo
                   Romance & Relationships
                 </h3>
                 <p className="text-[12px] text-ink3 dark:text-[rgba(255,248,238,0.42)] font-light leading-relaxed">
-                  How do Nigerian workers feel about workplace romance?
+                  Access deep insights from our study on how Nigerian workers feel about workplace romance and its impact on productivity.
                 </p>
               </div>
               <button 
