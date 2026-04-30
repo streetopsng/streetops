@@ -7,7 +7,7 @@ import ReportDownloadModal from "@/components/ReportDownloadModal";
 
 export default function ReportsPage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -23,15 +23,15 @@ export default function ReportsPage() {
     document.querySelectorAll(".rv").forEach((el) => observer.observe(el));
     return () => observer.disconnect();
   }, []);
-
+  //
   return (
     <>
-      <ReportDownloadModal 
-        isOpen={isModalOpen} 
+      <ReportDownloadModal
+        isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
         reportUrl="/report/Streetask_Issue01_Office_Romance_Report_by_Streetops_Consulting.pdf"
       />
-      
+
       {/* Hero */}
       <div className="relative min-h-[320px] sm:min-h-[340px] md:min-h-[360px] overflow-hidden flex items-end">
         <div
