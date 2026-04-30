@@ -37,7 +37,7 @@ export default function ReportDownloadModal({ isOpen, onClose, reportUrl }: Repo
       // Trigger download
       const link = document.createElement("a");
       link.href = reportUrl;
-      link.download = "Streetask-Issue01_Office-Romance-Report-by-Streetops-Consulting.pdf";
+      link.download = "Streetask_Issue01_Office_Romance_Report_by_Streetops_Consulting.pdf";
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);

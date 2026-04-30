@@ -29,7 +29,7 @@ export default function ReportsPage() {
       <ReportDownloadModal 
         isOpen={isModalOpen} 
         onClose={() => setIsModalOpen(false)}
-        reportUrl="/report/Streetask-Issue01_Office-Romance-Report-by-Streetops-Consulting.pdf"
+        reportUrl="/report/Streetask_Issue01_Office_Romance_Report_by_Streetops_Consulting.pdf"
       />
       
       {/* Hero */}
