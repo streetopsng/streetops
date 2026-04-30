@@ -93,6 +93,31 @@ export default function ReportsPage() {
 
       {/* Reports */}
       <div className="py-12 sm:py-16 md:py-20 lg:py-[88px] px-4 sm:px-6 md:px-10 lg:px-20 rv">
+        {/* Second Report Card - Romance & Relationships */}
+        <div className="border border-[rgba(26,15,0,0.08)] dark:border-[rgba(255,248,238,0.08)] p-6 sm:p-8 md:p-10 rounded-2xl mb-10 bg-white dark:bg-[#1C1200] shadow-sm relative overflow-hidden">
+          <div className="max-w-3xl">
+            <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-normal mb-4 text-char dark:text-cream leading-tight">
+              Download Report - Office Romance <em className="text-burgundy not-italic">(Office Palava)</em>
+            </h2>
+            <p className="text-sm sm:text-base leading-relaxed font-light text-ink3 dark:text-[rgba(255,248,238,0.6)] mb-8">
+              Explore deep insights into how Nigerian workers navigate workplace romance and its impact on professional productivity. This report distills honest, anonymous feedback from over 1,000 professionals into actionable data for modern organizations.
+            </p>
+
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+              <button 
+                onClick={() => setIsModalOpen(true)}
+                className="inline-flex items-center gap-2 px-8 py-3.5 bg-burgundy hover:bg-burgundy/90 text-white font-semibold rounded-xl transition-all duration-300 shadow-lg shadow-burgundy/10"
+              >
+                Download Report
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              </button>
+            </div>
+          </div>
+          
+          {/* Subtle decoration */}
+          <div className="absolute top-0 right-0 w-32 h-32 bg-burgundy/5 rounded-full -mr-16 -mt-16 blur-3xl"></div>
+        </div>
+
         {/* Main Report Card */}
         <div className="border border-[rgba(26,15,0,0.08)] dark:border-[rgba(255,248,238,0.08)] p-5 sm:p-6 md:p-8 lg:p-10 rounded-lg flex flex-col lg:flex-row gap-6 sm:gap-8 md:gap-9 items-center mb-6 bg-white dark:bg-[#1C1200]">
           <div className="flex-1">
@@ -124,31 +149,6 @@ export default function ReportsPage() {
               Notify Me
             </button>
           </div>
-        </div>
-
-        {/* Second Report Card - Romance & Relationships */}
-        <div className="border border-[rgba(26,15,0,0.08)] dark:border-[rgba(255,248,238,0.08)] p-6 sm:p-8 md:p-10 rounded-2xl mb-10 bg-white dark:bg-[#1C1200] shadow-sm relative overflow-hidden">
-          <div className="max-w-3xl">
-            <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-normal mb-4 text-char dark:text-cream leading-tight">
-              Download report — <em className="text-burgundy not-italic">The Office Palava</em>
-            </h2>
-            <p className="text-sm sm:text-base leading-relaxed font-light text-ink3 dark:text-[rgba(255,248,238,0.6)] mb-8">
-              Explore deep insights into how Nigerian workers navigate workplace romance and its impact on professional productivity. This report distills honest, anonymous feedback from over 1,000 professionals into actionable data for modern organizations.
-            </p>
-
-            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
-              <button 
-                onClick={() => setIsModalOpen(true)}
-                className="inline-flex items-center gap-2 px-8 py-3.5 bg-burgundy hover:bg-burgundy/90 text-white font-semibold rounded-xl transition-all duration-300 shadow-lg shadow-burgundy/10"
-              >
-                Download Report
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-              </button>
-            </div>
-          </div>
-          
-          {/* Subtle decoration */}
-          <div className="absolute top-0 right-0 w-32 h-32 bg-burgundy/5 rounded-full -mr-16 -mt-16 blur-3xl"></div>
         </div>
 
         {/* Coming Soon Card */}
