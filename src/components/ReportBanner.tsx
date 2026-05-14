@@ -21,7 +21,8 @@ export default function ReportBanner() {
           Our May edition of the StreetAsk Survey is live:
           <em className="italic">
             {" "}
-            The Paycheck Edition — Are Nigerians Actually Paid Well?{" "}
+            <strong>The Paycheck Edition</strong> — Are Nigerians Actually Paid
+            Well ?{" "}
           </em>{" "}
           Share your experience by taking the survey here
           {/* The report on <em className="italic">The State of SME Productivity about Romance & Relationships at Work</em> is ready, click here to download the report */}
